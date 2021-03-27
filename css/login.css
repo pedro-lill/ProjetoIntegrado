@@ -4,6 +4,13 @@
     margin-top: 2%;
 }
 
+.logo-mst img{
+    width:100px;
+    height:100px;
+    margin: 10% 0 0 45%;
+    border-radius: 80px;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
 }

@@ -1,6 +1,32 @@
-.logo-mst img{
-    width:100px;
-    height:100px;
-    margin: 10% 0 0 45%;
-    border-radius: 80px;
+h1{
+    margin-left: 33%;
+    margin-top:40px;
+}
+
+.menu{
+	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+    margin-left: 30%;
+    margin-top: 40px;
+}
+
+.menu-funcionalidade{
+    margin: 10px;
+    width: 200px;
+    background-color:rgb(162, 158, 158);
+    height: 60px;
+    color:black;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    border-radius:10px;
+    margin-left:100px;
+
+}
+
+.menu-funcionalidade:hover{
+
+    background-color:rgb(136, 136, 136);
+
 }
