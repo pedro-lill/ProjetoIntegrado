@@ -13,19 +13,20 @@ input[type=text], input[type=password] {
     padding: 12px 20px;
     margin: 10px 0 10px 15%;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 0.5px solid rgb(85, 84, 84);
     box-sizing: border-box;
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #0ca011;
     color: white;
     padding: 14px 20px;
-    margin: 15px 0 0 35%;
+    margin: 15px 0 0 40%;
     border: none;
     cursor: pointer;
-    width: 30%;
-    
+    width: 20%;
+    font-size:15px;
+    font-weight: bold;
 }
 
 button:hover {
