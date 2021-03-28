@@ -125,7 +125,11 @@ input[type=number]{
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
+    width: 70%;
+  }
+
+  .modal-content h1{
+      margin-left: 350px;
   }
   
   .close {
