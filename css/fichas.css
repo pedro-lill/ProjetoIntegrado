@@ -77,3 +77,29 @@ input[type=number]{
 .button-delete:hover{
     background-color: rgb(194, 193, 193);
 }
+
+.container-historicos{
+    display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+    width: 1000px;
+    margin-left:25%;
+}
+
+.historico{
+    color:white;
+    background-color:rgba(38, 85, 29, 0.96);
+    border-radius: 13px;
+    padding: 20px;
+    font-size:23px;
+    text-align: center;
+    width: 250px;
+    margin: 1%;
+    height:55x;
+}
+
+.historico:hover, .historico label:hover {
+    background-color:rgba(40, 148, 18, 0.96);
+    cursor:pointer;
+}
