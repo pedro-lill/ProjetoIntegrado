@@ -50,10 +50,8 @@
 
   <h1 class="container-ficha-h1">FICHA DO ANIMAL</h1>
 
-  <form action="/html/index.html">
-
+  <form action="/html/adicionar-ficha.html">
     <div class="container-ficha">
-
       <h1>Dados da ficha</h1>
       <input type="number" placeholder="Número do animal" required>
       <input type="date" placeholder="Data de nascimento" required>
@@ -61,20 +59,30 @@
       <input type="text" placeholder="Nome da vaca-mãe" required>
       <input type="text" placeholder="Está morta" required>
       <input type="file" placeholder="Imagem do animal" required>
-
       <div class="container-historicos">
-        <div class="historico"><label>Adicionar histórico de inseminação</label></div>
-        <div class="historico"><label>Adicionar histórico de produção de leite</label></div>
-        <div class="historico"><label>Adicionar histórico de medicação</label></div>
+        <div id="myBtn" class="historico"><label>Adicionar histórico de inseminação</label></div>
+        <div id="myBtn" class="historico"><label>Adicionar histórico de produção de leite</label></div>
+        <div id="myBtn" class="historico"><label>Adicionar histórico de medicação</label></div>
       </div>
-
       <button class="button-form" type="submit">Salvar</button>
-
     </div>
-
-
-
   </form>
+
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form action="/html/adicionar-ficha.html">
+        <div class="container-ficha">
+          <h1>Adicionar historico de inseminação</h1>
+          <input type="number" placeholder="Número do animal" required>
+          <input type="date" placeholder="Data de nascimento" required>
+          <input type="text" placeholder="Nome do touro-pai" required>
+          <input type="text" placeholder="Nome da vaca-mãe" required>
+          <button class="button-form" type="submit">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
       
   <script src="/js/script.js"></script>
 
