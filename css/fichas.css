@@ -1,0 +1,27 @@
+.container-ficha{
+    width:70%;
+    margin-left: 15%;
+    margin-top: 2%;
+}
+
+input[type=text], 
+input[type=date], 
+input[type=checkbox], 
+input[type=file], 
+input[type=number]{
+    width: 60%;
+    padding: 12px 20px;
+    margin: 10px 0 10px 20%;
+    display: inline-block;
+    border: 0.5px solid rgb(85, 84, 84);
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+.container-ficha h3{
+    margin-left: 420px;
+}
+
+.container-ficha-h1{
+    margin-left: 540px;
+}

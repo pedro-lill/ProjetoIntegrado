@@ -48,9 +48,24 @@
       <a class="logo-header" href="/html/index.html"><img title="Logo do mst" src="/img/mst.png" /></a>
   </header>
 
-  <h1>FICHA DO ANIMAL</h1>
+  <h1 class="container-ficha-h1">FICHA DO ANIMAL</h1>
 
-  <button onclick="window.location.href='/html/adicionar-ficha.html'" >Adicionar ficha</button>
+  <form action="/html/index.html">
+
+    <div class="container-ficha">
+
+      <h3>Dados da ficha</h3>
+      <input type="number" placeholder="Número do animal" required>
+      <input type="date" placeholder="Data de nascimento" required>
+      <input type="text" placeholder="Nome do touro-pai" required>
+      <input type="text" placeholder="Nome da vaca-mãe" required>
+      <input type="text" placeholder="Está morta" required>
+      <input type="file" placeholder="Imagem do animal" required>
+
+      <button type="submit">Salvar</button>
+
+    </div>
+  </form>
       
   <script src="/js/script.js"></script>
 
