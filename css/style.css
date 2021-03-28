@@ -2,8 +2,7 @@
 
 :root {
   --modal-duration: 1s;
-  --primary-color: #070f55;
-  --secondary-color: #a05714;
+  --primary-color: #073a18;
 }
 
 body {
@@ -65,7 +64,7 @@ nav ul li a:hover {
 }
 
 .nav ul li:hover{
-  background-color:#2534bd;
+  background-color:#082412;
   cursor: pointer;
 }
 
@@ -87,7 +86,6 @@ header p {
 }
 
 button, input[type='submit'] {
-  background-color: var(--secondary-color);
   border: 0;
   border-radius: 5px;
   color: #fff;
