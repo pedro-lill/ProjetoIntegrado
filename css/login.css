@@ -16,9 +16,9 @@ body {
 }
 
 input[type=text], input[type=password] {
-    width: 70%;
+    width: 60%;
     padding: 12px 20px;
-    margin: 10px 0 10px 15%;
+    margin: 10px 0 10px 20%;
     display: inline-block;
     border: 0.5px solid rgb(85, 84, 84);
     box-sizing: border-box;

@@ -2,24 +2,45 @@
 <html lang="pt-br">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+      integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/login.css">
     <title>COOPTAR</title>
+    
 </head>
 
 <body>
-    <h1>TELA PRINCIPAL</h1>
 
-    <div class="menu">
-        <div class="menu-funcionalidade"><a>Previsoes</a></div>
-        <div class="menu-funcionalidade"><a>Previsoes</a></div>
-        <div class="menu-funcionalidade"><a>Previsoes</a></div>
-        <div class="menu-funcionalidade"><a>Previsoes</a></div>
-    </div>
-    <script src="./js/script.js"></script>
+    <nav id="nav" class="nav">
+        <div class="logo">
+          <img src="/img/mst.png" alt="user" />
+        </div>
+        <ul>
+          <li><a href="#">Fichas dos animais</a></li>
+          <li><a href="#">Gráficos</a></li>
+          <li><a href="#">Previsões</a></li>
+          <li><a href="#">Tabelas</a></li>
+        </ul>
+    </nav>
+  
+    <header>
+        <button id="toggle" class="toggle">
+            <i class="fa fa-bars fa-2x"></i>
+        </button>
+    </header>
+      
+    <script src="/js/script.js"></script>
+
 </body>
 
 </html>
