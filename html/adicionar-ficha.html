@@ -33,7 +33,7 @@
             <li><a href=/html/graficos.html>Gráficos</a></li>
             <li><a href="/html/previsoes.html">Previsões</a></li>
             <li><a href="/html/tabelas.html">Tabelas</a></li>
-            <li><a href="/html/tabelas.html">Adicionar produção de leite</a></li>
+            <li><a href="/html/producao-leite.html">Adicionar produção de leite</a></li>
         </ul>
     </nav>
 
@@ -48,16 +48,39 @@
 
     <form action="/html/adicionar-ficha.html">
         <div class="container-ficha">
-          <h1>Adicionar histórico de inseminação</h1>
-          <input type="number" placeholder="Número do animal" required>
-          <input placeholder="Data do parto" type="text" onfocus="(this.type = 'date')"  id="date">
-          <input placeholder="Data da inseminação" type="text" onfocus="(this.type = 'date')"  id="date">
-          <input type="text" placeholder="Nome do touro-pai" required>
-          <input type="text" placeholder="Inseminador" required>          
-          <input placeholder="Previsão do parto" type="text" onfocus="(this.type = 'date')"  id="date">
-          <input placeholder="Data de secagem" type="text" onfocus="(this.type = 'date')"  id="date">
-          <input type="text" placeholder="Observações: " required>   
+          
+           <h1>Dados da ficha</h1>
+            <input type="number" placeholder="Número do animal" required>
+            <input type="date" required>
+            <input type="text" placeholder="Nome do touro-pai" required>
+            <input type="text" placeholder="Nome da vaca-mãe" required>
+            <input type="text" placeholder="Está morta" required>
+            <input type="file" required>
+          
+           <div class="container-historicos">
+                <div id="button-historico-inseminacao" class="historico"><label>Adicionar histórico de inseminação</label></div>
+                <div id="button-historico-producao" class="historico"><label>Adicionar histórico de produção de leite</label></div>
+                <div id="button-historico-medicacao" class="historico"><label>Adicionar histórico de medicação</label></div>
+            </div>
+       
           <button class="button-form" type="submit">Salvar</button>
+           
+        </div>
+    </form>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form action="/html/adicionar-ficha.html">
+                <div class="container-ficha">
+                    <h1>Adicionar histórico de inseminação</h1>
+                    <input type="number" placeholder="Número do animal" required>
+                    <input type="date" required>
+                    <input type="text" placeholder="Nome do touro-pai" required>
+                    <input type="text" placeholder="Nome da vaca-mãe" required>
+                    <button class="button-form" type="submit">Salvar</button>
+                </div>
+            </form>
         </div>
     </div>
 
