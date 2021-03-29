@@ -41,7 +41,7 @@ input[type=number] {
     margin: 0px 20x 0 20px;
 }
 
-.ficha label {
+.ficha .label {
     display: flex;
     margin-top: 20px;
     margin-left: 20px;
