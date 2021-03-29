@@ -5,10 +5,21 @@ toggle.addEventListener('click', () =>
 );
 
 var modal = document.getElementById("myModal");
-var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
-btn.onclick = function() {
+var hist_insem = document.getElementById("button-historico-inseminacao");
+var hist_prod = document.getElementById("button-historico-producao");
+var hist_medi = document.getElementById("button-historico-medicacao");
+
+hist_insem.onclick = function() {
+    modal.style.display = "block";
+}
+
+hist_prod.onclick = function() {
+    modal.style.display = "block";
+}
+
+hist_medi.onclick = function() {
     modal.style.display = "block";
 }
 
