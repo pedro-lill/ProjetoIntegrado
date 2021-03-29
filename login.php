@@ -16,7 +16,7 @@
 
   <a class="logo-mst"><img title="Logo do mst" src="/img/mst.png"/></a>
 
-  <form  action="/html/index.html" onsubmit="return validar()">
+  <form  action="index.php" onsubmit="return validar()">
     <div class="container-login">
       <input type="text" placeholder="Enter Username" name="username" required>
       <input type="password" placeholder="Enter Password" name="password" required>
