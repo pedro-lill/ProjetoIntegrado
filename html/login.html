@@ -16,15 +16,16 @@
 
   <a class="logo-mst"><img title="Logo do mst" src="/img/mst.png"/></a>
 
-  <form action="/html/index.html">
+  <form  action="/html/index.html" onsubmit="return validar()">
     <div class="container-login">
-      <input type="text" placeholder="Enter Username" name="uname" required>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-      <button class="button-form" type="submit">Login</button>
+      <input type="text" placeholder="Enter Username" name="username" required>
+      <input type="password" placeholder="Enter Password" name="password" required>
+      <button class="button-form" type="submit" onclick="validacaoLogin()">Login</button>
     </div>
   </form>
 
-  <script src="./js/script.js"></script>
+  <script src="/js/script.js"></script>
+  <script src="/js/login.js"></script>
 
 </body>
 

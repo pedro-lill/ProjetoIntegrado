@@ -1,12 +1,12 @@
-.container-login{
-    width:70%;
+.container-login {
+    width: 70%;
     margin-left: 15%;
     margin-top: 2%;
 }
 
-.logo-mst img{
-    width:100px;
-    height:100px;
+.logo-mst img {
+    width: 100px;
+    height: 100px;
     margin: 10% 0 0 45%;
     border-radius: 80px;
 }
@@ -15,7 +15,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-input[type=text], 
+input[type=text],
 input[type=password] {
     width: 60%;
     padding: 12px 20px;
@@ -34,7 +34,7 @@ button {
     border: none;
     cursor: pointer;
     width: 20%;
-    font-size:19px;
+    font-size: 19px;
     font-weight: bold;
 }
 
@@ -46,7 +46,7 @@ button {
     border: none;
     cursor: pointer;
     width: 20%;
-    font-size:19px;
+    font-size: 19px;
     font-weight: bold;
 }
 
