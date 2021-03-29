@@ -11,7 +11,7 @@ body {
 }
 
 body.show-nav {
-  transform: translateX(400px);
+  transform: translateX(200px);
 }
 
 nav {
@@ -22,7 +22,7 @@ nav {
   left: 0;
   width: 400px;
   height: 100vh;
-  transform: translateX(-100%);
+  transform: translateX(00%);
 }
 
 nav .logo {
@@ -87,7 +87,7 @@ button:focus {
   position: absolute;
   top: 5px;
   font-size:20px;
-  left: -800px;
+  left: -700px;
 }
 
 h1{
