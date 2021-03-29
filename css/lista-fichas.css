@@ -1,8 +1,8 @@
-input[type=text], 
-input[type=date], 
-input[type=checkbox], 
-input[type=file], 
-input[type=number]{
+input[type=text],
+input[type=date],
+input[type=checkbox],
+input[type=file],
+input[type=number] {
     width: 60%;
     padding: 12px 20px;
     margin: 10px 0 10px 20%;
@@ -12,69 +12,69 @@ input[type=number]{
     font-size: 18px;
 }
 
-.lista_fichas{
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	flex-wrap: wrap;
-    margin-top:70px;
-} 
-.ficha{
-	width: 550px;
-	padding: 5px;
+.lista_fichas {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+
+.ficha {
+    width: 550px;
+    padding: 5px;
     height: 120px;
-	background-color: #eeeeee;
-	border: 1px solid #cccccc;
-	margin: 5px 5px 5px 25px;
-	transition: 0.3s;
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
+    margin: 5px 5px 5px 25px;
+    transition: 0.3s;
 }
 
-.ficha:hover{
-	box-shadow: 3px 3px 10px #176a35;
+.ficha:hover {
+    box-shadow: 3px 3px 10px #176a35;
 }
 
-.ficha img{
+.ficha img {
     height: 80px;
-	width: 80px;
-	border-radius: 40px;
-	margin: 0px 20x 0 20px;
+    width: 80px;
+    border-radius: 40px;
+    margin: 0px 20x 0 20px;
 }
 
-.ficha label{
-	display: flex;
-    margin-top:20px;
-    margin-left:20px;
-	align-items: center;
+.ficha label {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 20px;
+    align-items: center;
 }
 
-.ficha_descricao{
-    margin-left:20px;
-    font-size:18px;
-	display: flex;
-	flex-direction: column;
+.ficha_descricao {
+    margin-left: 20px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
 }
 
-.button-delete{
+.button-delete {
     background-color: rgba(77, 77, 77, 0.433);
-    color:rgb(243, 36, 36);
+    color: rgb(243, 36, 36);
     font-size: 23px;
     width: 60px;
     margin-left: 10px;
 }
 
-.button-edit{
+.button-edit {
     background-color: rgba(77, 77, 77, 0.433);
-    color:rgb(52, 130, 52);
+    color: rgb(52, 130, 52);
     font-size: 23px;
     width: 60px;
     margin-left: 30px;
 }
 
-.button-edit:hover{
+.button-edit:hover {
     background-color: rgb(194, 193, 193);
 }
 
-.button-delete:hover{
+.button-delete:hover {
     background-color: rgb(194, 193, 193);
 }
-
