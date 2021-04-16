@@ -18,31 +18,29 @@
     <link href="/css/graficos.css" rel="stylesheet">
     <link href="/css/tabelas.css" rel="stylesheet">
     <link href="/css/previsoes.css" rel="stylesheet">
+
     <title>COOPTAR</title>
 
 </head>
 
 <body>
 
-    <nav id="nav" class="nav">
-        <div class="logo">
-            <img src="/img/mst.png" alt="user" />
+    <?include "/js/script.js" ?>   
+
+    <div class="ficha">
+        <div class="label">
+          <div class="ficha_img">
+            <img src="/img/animal1.jpg" alt="imagem_animal">
+          </div>
+          <div class="ficha_descricao">
+            <strong>Mimosa</strong>
+            Código: 23 / Nasc.: 23/11/2011
+          </div>
+          <div>
+            <button class="button-edit"><i class="fa fa-edit fa-1x"></i></button>
+            <button class="button-delete"><i class="fa fa-trash-alt fa-1x"></i></button>
+          </div>
         </div>
-        <ul>
-            <li><a href="/lista-fichas.php">Fichas dos animais</a></li>
-            <li><a href="/graficos.php">Gráficos</a></li>
-            <li><a href="/previsoes.php">Previsões</a></li>
-            <li><a href="/tabelas.php">Tabelas</a></li>
-            <li><a href="/producao-leite.php">Adicionar produção de leite</a></li>
-
-        </ul>
-    </nav>
-
-    <header>
-        <button id="toggle" class="toggle">
-            <i class="fa fa-bars fa-2x"></i>
-        </button>
-        <a class="logo-header" href="index.php"><img title="Logo do mst" src="/img/mst.png" /></a>
-    </header>
-
-    <script src="/js/script.js"></script>
+      </div>
+      
+</body>

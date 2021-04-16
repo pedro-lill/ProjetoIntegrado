@@ -24,9 +24,9 @@
         </div>
     </form>
 
-    <div id="myModal" class="modal">
+    <div id="modal_insem" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <span id="close_insem" class="close">&times;</span>
             <form action="adicionar-ficha.php">
                 <div class="container-ficha">
                     <h1>Adicionar histórico de inseminação</h1>
@@ -40,9 +40,9 @@
         </div>
     </div>
 
-  <div id="myModal" class="modal">
+  <div id="modal_prod" class="modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <span id="close_prod" class="close">&times;</span>
       <form action="adicionar-ficha.php">
         <div class="container-ficha">
           <h1>Adicionar histórico de produção de leite</h1>
@@ -51,11 +51,13 @@
           <input type="number" placeholder="Produção em Litros" required>
           <button class="button-form" type="submit">Salvar</button>
         </div>
+      </form>
     </div>
+  </div>
 
-  <div id="myModal" class="modal">
+  <div id="modal_medi" class="modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <span id="close_medi" class="close">&times;</span>
       <form action="adicionar-ficha.php">
         <div class="container-ficha">
           <h1>Adicionar histórico de tratamento</h1>
@@ -65,6 +67,8 @@
           <input type="text" placeholder="Remédios usados" required>
           <button class="button-form" type="submit">Salvar</button>
         </div>
+      </form>
     </div>
+  </div>
 
-    <script src="/js/script.js"></script>
+  <script src="/js/fichas.js"></script>
