@@ -11,7 +11,7 @@ body {
 }
 
 body.show-nav {
-  transform: translateX(200px);
+  transform: translateX(300px);
 }
 
 nav {
@@ -21,7 +21,7 @@ nav {
   top: 0;
   left: 0;
   width: 300px;
-  height: 90vh;
+  height: 100vh;
   transform: translateX(-100%);
 }
 
@@ -50,7 +50,7 @@ nav ul li {
 }
 
 nav ul li a {
-  font-size:22px;
+  font-size:19px;
   font-weight: bold;
   color: #fff;
   text-decoration: none;
@@ -86,9 +86,9 @@ button:focus {
 .toggle {
   background-color: rgba(0, 0, 0, 0);
   position: absolute;
-  top: 5px;
-  font-size:20px;
-  left: -500px;
+  top: -5px;
+  font-size:17px;
+  left: -600px;
 }
 
 h1{
