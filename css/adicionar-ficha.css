@@ -64,3 +64,19 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+.button-form {
+    background-color: #0ca011;
+    color: white;
+    padding: 14px 20px;
+    margin: 15px 0 0 40%;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.button-form:hover {
+    background-color: #116814;
+}
