@@ -3,11 +3,12 @@ input[type=date],
 input[type=checkbox],
 input[type=file],
 input[type=number] {
+    background-color: #e2e1e1;
     width: 60%;
     padding: 12px 20px;
     margin: 10px 0 10px 20%;
     display: inline-block;
-    border: 0.5px solid rgb(85, 84, 84);
+    border: 0.5px solid #3c3b3b;
     box-sizing: border-box;
     font-size: 18px;
 }
