@@ -6,19 +6,17 @@
         <div class="container-ficha">
           
            <h1>Dados da ficha</h1>
-            <input type="number" placeholder="Número do animal" required>
+            <input type="number" placeholder="Código do animal" required>
             <input type="date" required>
             <input type="text" placeholder="Nome do touro-pai" required>
-            <input type="text" placeholder="Nome da vaca-mãe" required>
-            <input type="text" placeholder="Está morta" required>
+            <input type="text" placeholder="Número vaca-mãe" required>
+            <input type="text" placeholder="Estado de vida" required>
             <input type="file" required>
-          
            <div class="container-historicos">
                 <div id="button-historico-inseminacao" class="historico"><label>Adicionar histórico de inseminação</label></div>
                 <div id="button-historico-producao" class="historico"><label>Adicionar histórico de produção de leite</label></div>
                 <div id="button-historico-medicacao" class="historico"><label>Adicionar histórico de medicação</label></div>
             </div>
-       
           <button class="button-form" type="submit">Salvar</button>
            
         </div>
@@ -30,10 +28,15 @@
             <form action="adicionar-ficha.php">
                 <div class="container-ficha">
                     <h1>Adicionar histórico de inseminação</h1>
-                    <input type="number" placeholder="Número do animal" required>
+                    <input type="number" placeholder="Código da vaca-mãe" required>
                     <input type="date" required>
-                    <input type="text" placeholder="Nome do touro-pai" required>
-                    <input type="text" placeholder="Nome da vaca-mãe" required>
+                    <input type="text" placeholder="Nome do touro inseminador" required>
+                    <input type="text" placeholder="Inseminador responsável" required>
+                    <input type="text" placeholder="Retorno" required>
+                    <input type="date"> <!--data de retorno da nova inseminacao-->
+                    <input type="text" placeholder="Observação">
+                    <!--previsao de parto-->
+                    <!--previsao de secagem-->
                     <button class="button-form" type="submit">Salvar</button>
                 </div>
             </form>
@@ -46,8 +49,8 @@
       <form action="adicionar-ficha.php">
         <div class="container-ficha">
           <h1>Adicionar histórico de produção de leite</h1>
+          <input type="number" placeholder="Código do animal" required>
           <input type="date" required>
-          <input type="number" placeholder="Número do animal" required>
           <input type="number" placeholder="Produção em Litros" required>
           <button class="button-form" type="submit">Salvar</button>
         </div>
@@ -61,10 +64,15 @@
       <form action="adicionar-ficha.php">
         <div class="container-ficha">
           <h1>Adicionar histórico de tratamento</h1>
-          <input type="number" placeholder="Número do animal" required>
+          <input type="number" placeholder="Código do animal" required>
           <input type="date" required>
-          <input type="text" placeholder="Motivos do tratamento" required>
-          <input type="text" placeholder="Remédios usados" required>
+          <input type="text" placeholder="Motivos do tratamento">
+          <input type="text" placeholder="Nome do medicamento" required>
+          <input type="text" placeholder="Tempo tratamento">
+          <input type="text" placeholder="Quantidade de medicamento">
+          <input type="text" placeholder="Responsável" required>
+          <input type="text" placeholder="Restrição" required>
+          <input type="text" placeholder="Observação" required>
           <button class="button-form" type="submit">Salvar</button>
         </div>
       </form>

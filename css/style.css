@@ -8,6 +8,8 @@ body {
   font-family: 'Lato', sans-serif;
   margin: 0;
   transition: transform 0.3s;
+  background-color: #d6d5d5;
+  min-height: 2000px;
 }
 
 body.show-nav {
@@ -92,7 +94,7 @@ button:focus {
 }
 
 h1{
-  margin-left:765px;
+  margin-left:40%;
 }
 
 .logo-header {
