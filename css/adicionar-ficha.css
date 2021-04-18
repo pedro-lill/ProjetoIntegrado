@@ -3,20 +3,35 @@
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
-    width: 1000px;
-    margin-left: 25%;
+    width: 80vw;
+    margin-left: 20vw;
+}
+
+input[type=text],
+input[type=date],
+input[type=checkbox],
+input[type=file],
+input[type=number] {
+    background-color: #e2e1e1;
+    width: 50%;
+    padding: 6px 10px;
+    margin: 5px 0 5px 25%;
+    display: inline-block;
+    border: 0.5px solid #3c3b3b;
+    box-sizing: border-box;
+    font-size: 17px;
 }
 
 .historico {
     color: white;
     background-color: rgba(38, 85, 29, 0.96);
     border-radius: 13px;
-    padding: 20px;
-    font-size: 23px;
+    padding: 15px;
+    font-size: 17px;
     text-align: center;
-    width: 250px;
+    width: 20%;
     margin: 1%;
-    height: 55x;
+    height: 40px;
 }
 
 .historico:hover,
@@ -29,21 +44,12 @@
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 100px;
-    left: 0;
-    top: 100px;
-    width: 100%;
-    height: 100%;
+    margin: 5vw;
+    top: 30px;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.268);
-}
-
-.modal-content {
-    background-color: #d6d5d5;
-    margin: auto;
+    background-color: rgb(179, 178, 178);
+    border-radius: 10px;
     padding: 20px;
-    border: 1px solid #888;
-    width: 70%;
 }
 
 .modal-content h1 {

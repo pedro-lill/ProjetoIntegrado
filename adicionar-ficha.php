@@ -31,10 +31,10 @@
                     <input type="number" placeholder="Código da vaca-mãe" required>
                     <input type="date" required>
                     <input type="text" placeholder="Nome do touro inseminador" required>
-                    <input type="text" placeholder="Inseminador responsavel" required>
-                    <input type="checkbox" placeholder="Retorno" required>
+                    <input type="text" placeholder="Inseminador responsável" required>
+                    <input type="text" placeholder="Retorno" required>
                     <input type="date"> <!--data de retorno da nova inseminacao-->
-                    <input type="text" placeholder="Observaçãp">
+                    <input type="text" placeholder="Observação">
                     <!--previsao de parto-->
                     <!--previsao de secagem-->
                     <button class="button-form" type="submit">Salvar</button>
