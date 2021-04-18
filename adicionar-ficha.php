@@ -28,7 +28,7 @@
             <form action="adicionar-ficha.php">
                 <div class="container-ficha">
                     <h1>Adicionar histórico de inseminação</h1>
-                    <input type="number" placeholder="Código da vaca-mãe" required>
+                    <input class="campo-obrigatorio" type="number" placeholder="Código da vaca-mãe" required>
                     <input type="date" required>
                     <input type="text" placeholder="Nome do touro inseminador" required>
                     <input type="text" placeholder="Inseminador responsável" required>
