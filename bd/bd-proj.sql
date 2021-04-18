@@ -25,7 +25,7 @@ create table if not exists inseminacao (
 create table if not exists producao(
   codigo integer not null,
   dataColeta date not null,
-  litros integer not null,
+  litros float not null,
   periodoDia integer not null,/*booleano = manha ou tarde*/
   constraint fk_inseminacao_cadastro foreign key (codigo) references cadastro(codigo)
   
@@ -42,21 +42,32 @@ create table if not exists tratamento(
 );
 --
 insert into cadastro (codigo, dataNascimento, codigoMae, nomePai, estadoVida) values
-   (101,'13/08/2019','400','Kian','0'),
-   (102,'13/08/2019','401','Kian','0'),
-   (104,'13/08/2019','402','Kian','0'),
-   (106,'13/08/2019','403','Kian','0'),
-   (109,'13/08/2019','404','Kian','0'),
-   (134,'13/08/2019','405','Kian','0'),
-   (136,'13/08/2019','406','Kian','0'),
-   (144,'13/08/2019','407','Kian','0');
+  (101,'13/08/2019', 400,'Kian', 0),
+  (102,'13/08/2019', 401,'Kian', 0),
+  (104,'13/08/2019', 402,'Kian', 0),
+  (106,'13/08/2019', 403,'Kian', 0),
+  (109,'13/08/2019', 404,'Kian', 0),
+  (134,'13/08/2019', 405,'Kian', 0),
+  (136,'13/08/2019', 406,'Kian', 0),
+  (144,'13/08/2019', 407,'Kian', 0);
 --
 insert into inseminacao (codigo, dataInseminacao, touroInseminador, inseminadorResponsavel, retorno, observacao, previsaoSecagem,	previsaoParto,	novaDataInseminacao,	novaDataSecagem,	novaDataParto) values
   (101,'17/04/2021','benz','Gilmar', 0, 'ok', '25/12/2020', '23/02/2021', '11/07/2020', '20/02/2021', '21/04/2021'),
   (102,'17/04/2021','benz','Gilmar', 0, 'ok', '25/12/2020', '23/02/2021', '11/07/2020', '20/02/2021', '21/04/2021'),
   (104,'24/04/2021','benz','Gilmar', 0, 'ok', '29/12/2020', '28/02/2021', '18/07/2020', '27/02/2021', '28/04/2021'),
-  (144,'24/04/2021','benz','Gilmar', 0, 'ok', '29/12/2020', '28/02/2021', '18/07/2020', '27/02/2021', '28/04/2021'),
+  (144,'24/04/2021','benz','Gilmar', 0, 'ok', '29/12/2020', '28/02/2021', '18/07/2020', '27/02/2021', '28/04/2021');
 
 --
-
-  
+insert into producao(codigo, dataColeta, litros, periodoDia)values
+  (101,'13/08/2019',20.6,'manha'),
+  (101,'13/08/2019',18.6,'tarde'),
+  (102,'13/08/2019',23.6,'manha'),
+  (102,'13/08/2019',20.6,'tarde'),
+  (104,'13/08/2019',18.6,'manha'),
+  (104,'13/08/2019',15.6,'tarde');
+  --
+insert into tratamento(codigo, motivoTratamento, nomeMedicamento, quantidadeMedicamento, responsavel, observacao)values
+  (101,'mastite', 'promastite', 40, 'gilmar', 'ok'),
+  (102,'mastite', 'promastite', 40, 'gilmar', 'ok'),
+  (103,'mastite', 'promastite', 40, 'gilmar', 'ok'),
+  (104,'mastite', 'promastite', 40, 'gilmar', 'ok');
