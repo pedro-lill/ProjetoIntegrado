@@ -23,6 +23,7 @@ nav {
   top: 0;
   left: 0;
   width: 300px;
+  padding-top: 80px;
   height: 100vh;
   transform: translateX(-100%);
 }
@@ -67,7 +68,7 @@ header {
   background-color: var(--primary-color);
   color: #fff;
   font-size: 130%;
-  height: 80px;
+  height: 60px;
   position: relative;
   padding: 0px 15px;
   text-align: center;
@@ -108,5 +109,5 @@ h1{
   border-radius: 40px;
   width: 50px;
   height: 50px;
-  margin-top: 45px;
+  margin-top: 40px;
 }
