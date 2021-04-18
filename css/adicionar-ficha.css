@@ -52,11 +52,6 @@ input[type=number] {
     padding: 20px;
 }
 
-.campo-obrigatorio{
-    border: 1.5px solid #3c3b3b;
-
-}
-
 .modal-content h1 {
     margin-left: 350px;
 }
