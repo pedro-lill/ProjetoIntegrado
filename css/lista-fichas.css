@@ -8,11 +8,11 @@
 
 .ficha {
     width: 550px;
-    padding: 5px;
     height: 120px;
+    font-size: 15px;
     background-color: #eeeeee;
-    border: 1px solid #cccccc;
-    margin: 5px 5px 5px 25px;
+    border: 1px solid #707070;
+    margin: 10px;
     transition: 0.3s;
 }
 

@@ -29,7 +29,6 @@
             <li><a href="/previsoes.php">Previsões</a></li>
             <li><a href="/tabelas.php">Tabelas</a></li>
             <li><a href="/producao-leite.php">Adicionar produção de leite</a></li>
-
         </ul>
     </nav>
 
