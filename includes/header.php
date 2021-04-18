@@ -24,12 +24,11 @@
             <img src="/img/mst.png" alt="user" />
         </div>
         <ul>
-            <li><label href="/lista-fichas.php"><a>Fichas dos animais</a></label></li>
+            <li><a href="/lista-fichas.php">Fichas dos animais</a></li>
             <li><a href="/graficos.php">Gráficos</a></li>
             <li><a href="/previsoes.php">Previsões</a></li>
             <li><a href="/tabelas.php">Tabelas</a></li>
             <li><a href="/producao-leite.php">Adicionar produção de leite</a></li>
-
         </ul>
     </nav>
 
