@@ -27,11 +27,11 @@
             <form action="adicionar-ficha.php">
                 <div class="container-ficha">
                     <h1>Adicionar histórico de inseminação</h1>
-                    <input class="campo-obrigatorio" type="number" placeholder="Código da vaca-mãe" required>
-                    <input type="date" required>
+                    <input type="number" placeholder="Código da vaca-mãe" required>
+                    <input type="date" required> 
                     <input type="text" placeholder="Nome do touro inseminador" required>
                     <input type="text" placeholder="Inseminador responsável" required>
-                    <input type="text" placeholder="Retorno" required>
+                    <input type="text" placeholder="Retorno">
                     <input type="date"> <!--data de retorno da nova inseminacao-->
                     <input type="text" placeholder="Observação">
                     <!--previsao de parto-->
@@ -50,7 +50,11 @@
           <h1>Adicionar histórico de produção de leite</h1>
           <input type="number" placeholder="Código do animal" required>
           <input type="date" required>
-          <input type="number" placeholder="Produção em Litros" required>
+          <input type="number" step="0.01" placeholder="Produção em Litros" required>
+          <select name="periodoDia" required>
+            <option value="manha">Manhã</option>
+            <option value="tarde">Tarde</option>
+          </select>
           <button class="button-form" type="submit">Salvar</button>
         </div>
       </form>
