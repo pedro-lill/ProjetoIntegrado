@@ -20,9 +20,7 @@
 <body>
 
     <nav id="nav" class="nav">
-        <div class="logo">
-            <img src="/img/mst.png" alt="user" />
-        </div>
+        <div class="logo"><a href="index.php"><img src="/img/mst.png" alt="user"/></a></div>
         <ul>
             <li><a href="/lista-fichas.php">Fichas dos animais</a></li>
             <li><a href="/graficos.php">Gráficos</a></li>
