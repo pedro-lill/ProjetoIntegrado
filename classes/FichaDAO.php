@@ -11,7 +11,6 @@
         }
 
         public function listar(){
-            // select * from sabor order by nome
             try{
                 $query = $this->conexao->prepare("select * from cadastro order by codigoAnimal");
                 $query->execute();
@@ -23,11 +22,10 @@
             }
         }
 
-        public function buscar($cod){
-            // select * from sabor order by nome
+        public function buscar($codigoAnimal){
             try{
-                $query = $this->conexao->prepare("select * from codigo where codigo=:codigoAnimal");
-                $query->bindParam(":cod", $cod);
+                $query = $this->conexao->prepare("select * from cadastro where codigoAnimal=:codigoAnimal");
+                $query->bindParam(":codigoAnimal", $codigoAnimal);
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Ficha");
                 return $registros;
