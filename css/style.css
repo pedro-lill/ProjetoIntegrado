@@ -13,7 +13,7 @@ body {
 }
 
 body.show-nav {
-  transform: translateX(300px);
+  transform: translateX(240px);
 }
 
 nav {
@@ -22,9 +22,9 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  width: 300px;
+  width: 240px;
   padding-top: 80px;
-  height: 100vh;
+  height: 90vh;
   transform: translateX(-100%);
 }
 
@@ -34,8 +34,8 @@ nav .logo {
 }
 
 nav .logo img {
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   border-radius: 50%;
 }
 
@@ -44,17 +44,18 @@ nav ul {
   list-style-type: none;
   margin: 0;
   text-decoration: none;
+  margin-top: 20px;
 }
 
 nav ul li {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.179);
-  padding: 20px;
+  border-bottom: 2px solid #ffffff2e;
+  padding: 10px;
   text-align: center;
 }
 
 nav ul li a {
-  font-size:19px;
-  font-weight: bold;
+  font-size:15px;
+  font-weight: 600;
   color: #fff;
   text-decoration: none;
 }
@@ -88,7 +89,7 @@ button:focus {
 }
 
 .toggle {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #00000000;
   position: absolute;
   top: 5px;
   font-size:17px;

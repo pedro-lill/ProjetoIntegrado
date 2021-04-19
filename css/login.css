@@ -18,10 +18,10 @@ body {
 input[type=text],
 input[type=password] {
     width: 60%;
-    padding: 12px 20px;
+    padding: 10px ;
     margin: 10px 0 10px 20%;
     display: inline-block;
-    border: 0.5px solid rgb(85, 84, 84);
+    border: 0.5px solid #555454;
     box-sizing: border-box;
     font-size: 18px;
 }
@@ -29,8 +29,8 @@ input[type=password] {
 button {
     background-color: #0ca011;
     color: white;
-    padding: 14px 20px;
-    margin: 15px 0 0 40%;
+    padding: 10px;
+    margin: 15px 40% 0 40%;
     border: none;
     cursor: pointer;
     width: 20%;
@@ -38,3 +38,14 @@ button {
     font-weight: bold;
 }
 
+a{
+    margin-left:40%;
+    text-decoration: none;
+    color: #212121;
+    background-color: #858585;
+}
+
+a:hover{
+    background-color: #5c5c5c;
+
+}

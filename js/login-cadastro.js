@@ -2,14 +2,15 @@ function validarLogin(){
 
     var usuario = document.getElementsByName('username')[0].value;
     var senha = document.getElementsByName('password')[0].value;
-    debugger
+    var senhaConfirm = document.getElementsByName('password-confirm')[0].value;
+
     usuario = usuario.toLowerCase();
     console.log(usuario, senha)
 
-    if(usuario == "pedro" && senha == "123"){
+    if(usuario != "" && senha != "" && senhaConfirm != ""){
         return true;
     }else{
-      alert("usuario = pedro - senha = 123")
+      alert("Usuario ou senha inválidos")
       return false
     }
 
