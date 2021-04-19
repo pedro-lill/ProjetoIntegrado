@@ -11,6 +11,12 @@ CREATE USER 'admcooptar'@'localhost' IDENTIFIED BY '12345';
 
 GRANT SELECT, INSERT, UPDATE, DELETE ON proetointegrado.* TO 'admcooptar'@'localhost';
 
+CREATE TABLE usuarios (
+  codigoUsuario INTEGER AUTO_INCREMENT PRIMARY KEY,    
+  nomeLogin VARCHAR(30) NOT NULL, 
+  senha VARCHAR(30) NOT NULL,
+);
+
 CREATE TABLE cadastro (
   codigoAnimal INTEGER AUTO_INCREMENT PRIMARY KEY,    
   nomePai VARCHAR(30) NOT NULL, 

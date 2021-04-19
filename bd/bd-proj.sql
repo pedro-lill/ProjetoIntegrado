@@ -1,3 +1,10 @@
+create table if not exists usuarios(
+  codigoUsuario integer not null,
+  nomeLogin date not null,
+  senha integer not null,
+  constraint pk_usuario primary key (codigoUsuario)
+);
+
 create table if not exists cadastro(
   codigoAnimal integer not null,
   dataNascimento date not null,
