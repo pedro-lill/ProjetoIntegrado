@@ -3,6 +3,7 @@ create table if not exists cadastro(
   dataNascimento date not null,
   codigoMae integer not null,
   nomePai varchar(30) not null,
+  nomeImagem varchar(30) not null,
   estadoVida integer not null, /*booleano*/
   constraint pk_cadastro primary key (codigoAnimal)
 );

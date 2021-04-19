@@ -24,12 +24,13 @@
           </div>
           <div>
             <button class="button-edit"><i class="fa fa-edit fa-1x"></i></button>
-            <button class="button-delete"><i class="fa fa-trash-alt fa-1x"></i></button>
+            <button class="button-delete" onclick="verificarExcluir(4)"><i class="fa fa-trash-alt fa-1x"></i></button>
           </div>
         </div>
       </div>
     </div>
 
   <script src="/js/script.js"></script>
+  <script src="/js/lista-fichas.js"></script>
 
 </body>
