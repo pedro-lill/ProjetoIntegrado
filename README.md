@@ -10,7 +10,7 @@ A idéia do trabalho é projetar um sistema que organize o controle de dados do 
 
 ### Tecnologias Usadas:
 
-- Sql - banco de dados relacional
-- JavaScript
+- Sql - sqlMyAdmin / PostgreSQL
+- JavaScript / php
 - Html
 - CSS
