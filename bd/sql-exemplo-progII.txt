@@ -1,0 +1,67 @@
+
+DROP DATABASE IF EXISTS proetointegrado;
+
+CREATE DATABASE proetointegrado DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+
+USE proetointegrado;
+
+DROP USER IF EXISTS 'admcooptar'@'localhost';
+
+CREATE USER 'admcooptar'@'localhost' IDENTIFIED BY '12345'; 
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON proetointegrado.* TO 'admcooptar'@'localhost';
+
+CREATE TABLE cadastro (
+  codigoAnimal INTEGER AUTO_INCREMENT PRIMARY KEY,    
+  nomePai VARCHAR(30) NOT NULL, 
+  dataNascimento DATETIME NOT NULL,
+  codigoMae INTEGER NOT NULL,
+  nomeImagem VARCHAR(30),
+  estadoVida BOOLEAN NOT NULL,
+);
+
+CREATE TABLE inseminacao (
+  codigoInseminacao INTEGER AUTO_INCREMENT PRIMARY KEY,    
+  codigoAnimal INTEGER FOREIGN KEY (codigoAnimal) REFERENCES cadastro(codigoAnimal),
+  ingredientes VARCHAR(100),
+  nomeImagem VARCHAR(50)  
+);
+
+CREATE TABLE pedido (
+  numero INTEGER AUTO_INCREMENT PRIMARY KEY,  
+  codCliente INTEGER,
+  taxaEntrega REAL,
+  tipoEntrega tinyint(1),
+  dataPedido DATETIME,
+  status tinyint(1),
+  FOREIGN KEY (codCliente) REFERENCES cliente(codigo)
+);
+
+CREATE TABLE itemPedido (
+  codItem INTEGER AUTO_INCREMENT,
+  numPedido INTEGER,
+  sabor1 INTEGER,
+  sabor2 INTEGER,
+  sabor3 INTEGER,
+  sabor4 INTEGER,
+  quantidade INTEGER,
+  valor REAL,
+  PRIMARY KEY (codItem),
+  FOREIGN KEY (numPedido) REFERENCES pedido(numero),
+  FOREIGN KEY (sabor1) REFERENCES sabor(codigo),
+  FOREIGN KEY (sabor2) REFERENCES sabor(codigo),
+  FOREIGN KEY (sabor3) REFERENCES sabor(codigo),
+  FOREIGN KEY (sabor4) REFERENCES sabor(codigo)
+);
+
+INSERT INTO sabor values (NULL, "Calabresa", "Molho, calabresa e mussarela", "calabresa.jpg");
+INSERT INTO sabor values (NULL, "Alho e Óleo", "Molho, alho, óleo e mussarela", "alho.jpg");
+INSERT INTO sabor values (NULL, "Atum", "Molho, Atum, cebola e mussarela", "atum.jpg");
+INSERT INTO sabor values (NULL, "Marguerita", "Molho, mussarela, manjericão, tomate", "marguerita.jpg");
+INSERT INTO sabor values (NULL, "Milho", "Molho, milho e mussarela", "milho.jpg");
+INSERT INTO sabor values (NULL, "Vegetariana", "Molho, rúcula, tomate seco e mussarela", "vegetariana.jpg");
+INSERT INTO sabor values (NULL, "Mussarela", "Molho, mussarela e orégano", "mussarela.jpg");
+INSERT INTO sabor values (NULL, "Strogonoff", "Molho, strogonoff e batata palha", "strogonoff.jpg");
+INSERT INTO sabor values (NULL, "Frango", "Molho, frango, catupiry e mussarela", "frango.jpg");
+
+
