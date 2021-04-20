@@ -31,9 +31,7 @@
     </nav>
 
     <header>
-        <button id="toggle" class="toggle">
-            <i class="fa fa-bars fa-2x"></i>
-        </button>
+        <button id="toggle" class="toggle"><i class="fa fa-bars fa-2x"></i></button>
         <a class="logo-header" href="index.php"><img title="Logo do mst" src="/img/mst.png" /></a>
     </header>
 

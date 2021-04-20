@@ -15,12 +15,6 @@
 
 <div>
           <?php
-            // $conexao = mysqli_connect("localhost", "admpizza", "12345", "pizza");
-            // $sql = "select * from sabor";
-            // $resultado = mysqli_query($conexao, $sql);
-            // mysqli_close($conexao);            
-            // while($array = mysqli_fetch_assoc($resultado)){ // para cada sabor
-
             require_once "classes/FichaDAO.php";
             $obj = new FichaDAO();
             $lista = $obj->listar(); 

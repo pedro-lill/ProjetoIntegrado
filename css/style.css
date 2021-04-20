@@ -23,7 +23,7 @@ nav {
   top: 0;
   left: 0;
   width: 240px;
-  padding-top: 80px;
+  padding-top: 60px;
   height: 90vh;
   transform: translateX(-100%);
 }
@@ -92,8 +92,8 @@ button:focus {
   background-color: #00000000;
   position: absolute;
   top: 5px;
-  font-size:17px;
-  left:50px;
+  font-size:15px;
+  left:30px;
 }
 
 h1{
