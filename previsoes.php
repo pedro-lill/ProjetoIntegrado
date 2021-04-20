@@ -1,6 +1,61 @@
-<?php require_once("includes/header.php");?>
+<?php require_once("includes/conexao.php");
+    require_once("includes/calendario.php");
+    $info = array(
+        'tabela' => 'eventos',
+        'data' => 'data',
+        'titulo' => 'titulo',
+    );
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
 
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="shortcut icon" href="/img/mst.png">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" rel="stylesheet" />
+        <link href="/css/style.css" rel="stylesheet">
+        <link href="/css/adicionar-ficha.css" rel="stylesheet">
+        <link href="/css/lista-fichas.css" rel="stylesheet">
+        <link href="/css/graficos.css" rel="stylesheet">
+        <link href="/css/tabelas.css" rel="stylesheet">
+        <link href="/css/previsoes.css" rel="stylesheet">
+        <link href="/css/calendario.css" rel="stylesheet">
+        <title>COOPTAR</title>
+    </head>
 
-    <h1>PREVISÕES</h1>
+    <body>
 
+        <nav id="nav" class="nav">
+            <div class="logo"><a href="index.php"><img src="/img/mst.png" alt="user"/></a></div>
+            <ul>
+                <li><a href="/lista-fichas.php">Fichas dos animais</a></li>
+                <li><a href="/graficos.php">Gráficos</a></li>
+                <li><a href="/previsoes.php">Previsões</a></li>
+                <li><a href="/tabelas.php">Tabelas</a></li>
+                <li><a href="/producao-leite.php">Adicionar produção de leite</a></li>
+            </ul>
+        </nav>
+        <header>
+            <button id="toggle" class="toggle"><i class="fa fa-bars fa-2x"></i></button>
+            <a class="logo-header" href="index.php"><img title="Logo do mst" src="/img/mst.png" /></a>
+        </header>
+
+        <div class="calendario">
+            <?php 
+                $eventos = montaEventos($info);
+                montaCalendario($eventos);
+            ?>
+            <div class="legends">
+                <span class="legenda"><span class="blue"></span> Eventos</span>
+                <span class="legenda"><span class="red"></span> Hoje</span>
+            </div>
+        </div>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/calendario.js"></script>
     <script src="/js/script.js"></script>
+    </body>
+</html>
