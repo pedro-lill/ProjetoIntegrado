@@ -30,8 +30,8 @@
           <img src="/img/<?=$ficha->getNomeImagem()?>" alt="imagem_animal">
         </div>
         <div class="ficha_descricao">
-          <strong><?=$ficha->getCodigoAnimal()?></strong>
-          <?=$ficha->getDataNascimento()?>
+          <strong><?=$ficha->getCodAnimal()?></strong>
+          <?=$ficha->getDtNascimento()?>
         </div>
         <div>
           <button class="button-edit"><i class="fa fa-edit fa-1x"></i></button>

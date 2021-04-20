@@ -5,13 +5,5 @@
     <button class="button-form" onclick="window.location.href='adicionar-ficha.php'">Adicionar ficha</button>
 
     <div class="lista_fichas">
-      <?php require("includes/ficha.php");?>
-      <?php require("includes/ficha.php");?>
-      <?php require("includes/ficha.php");?>
-      <?php require("includes/ficha.php");?>
-      <?php require("includes/ficha.php");?>
-      <?php require("includes/ficha.php");?>
-      <?php require("includes/ficha.php");?>
-      <?php require("includes/ficha.php");?>
-      <?php require("includes/ficha.php");?>
+      <?php require_once("includes/ficha.php");?>
     </div>

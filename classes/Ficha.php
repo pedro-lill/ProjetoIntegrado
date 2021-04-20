@@ -3,37 +3,37 @@
 
         // atributos
 
-        private $codigoAnimal;
-        private $dataNascimento;
-        private $codigoMae;
+        private $codAnimal;
+        private $dtNascimento;
+        private $codMae;
         private $nomePai;
         private $estadoVida;
         private $nomeImagem;
 
         // métodos
 
-        public function getCodigoAnimal(){
-            return $this->codigoAnimal;
+        public function getCodAnimal(){
+            return $this->codAnimal;
         }
 
-        public function setCodigoAnimal($cod){
-            $this->codigoAnimal = $cod;
+        public function setCodAnimal($cod){
+            $this->codAnimal = $cod;
         }
 
-        public function getDataNascimento(){
-            return $this->dataNascimento;
+        public function getDtNascimento(){
+            return $this->dtNascimento;
         }
 
-        public function setDataNascimento($dataNascimento){
-            $this->dataNascimento = $dataNascimento;
+        public function setDtNascimento($dtNascimento){
+            $this->dtNascimento = $dtNascimento;
         }
 
-        public function getCodigoMae(){
-            return $this->codigoMae;
+        public function getCodMae(){
+            return $this->codMae;
         }
 
-        public function setCodigoMae($codigoMae){
-            $this->codigoMae = $codigoMae;
+        public function setCodMae($codMae){
+            $this->codMae = $codMae;
         }
 
         public function getNomePai(){
