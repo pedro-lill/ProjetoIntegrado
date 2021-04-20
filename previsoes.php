@@ -1,11 +1,3 @@
-<?php require_once("includes/conexao.php");
-    require_once("includes/calendario.php");
-    $info = array(
-        'tabela' => 'eventos',
-        'data' => 'data',
-        'titulo' => 'titulo',
-    );
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -38,6 +30,7 @@
                 <li><a href="/producao-leite.php">Adicionar produção de leite</a></li>
             </ul>
         </nav>
+
         <?php require_once("includes/conexao.php");
             require_once("includes/calendario.php");
             $info = array(
@@ -46,6 +39,7 @@
                 'titulo' => 'titulo',
             );
         ?>
+
         <header>
             <button id="toggle" class="toggle"><i class="fa fa-bars fa-2x"></i></button>
             <a class="logo-header" href="index.php"><img title="Logo do mst" src="/img/mst.png" /></a>
