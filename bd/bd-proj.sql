@@ -54,7 +54,7 @@ create table if not exists tratamento(
   constraint fk_tratamento_cadastro foreign key (codigoAnimal) references cadastro(codigoAnimal)
 );
 --
-insert into cadastro (codigoAnimal, dataNascimento, codigoMae, nomePai, estadoVida) values
+insert into cadastro (codAnimal, dtNascimento, codMae, nomePai, estadoVida) values
   (101,'13/08/2019', 400,'Kian', 0),
   (102,'13/08/2019', 401,'Kian', 0),
   (104,'13/08/2019', 402,'Kian', 0),
