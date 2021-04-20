@@ -31,7 +31,7 @@
         </div>
         <div class="ficha_descricao">
           <strong><?=$ficha->getCodAnimal()?></strong>
-          código mãe: <?=$ficha->getCodMae()?>
+          Código vaca-mãe: <?=$ficha->getCodMae()?>
         </div>
         <div>
           <button class="button-edit"><i class="fa fa-edit fa-1x"></i></button>

@@ -15,7 +15,7 @@
 
   <div class="logo-mst"><img title="Logo do mst" src="/img/mst.png"/></div>
 
-  <form  action="telaInicial.php" onsubmit="return validarLogin()">
+  <form  action="previsoes.php" onsubmit="return validarLogin()">
     <div class="container-login">
       <input type="text" placeholder="Login" name="username" required>
       <input type="password" placeholder="Senha" name="password" required>
