@@ -38,6 +38,14 @@
                 <li><a href="/producao-leite.php">Adicionar produção de leite</a></li>
             </ul>
         </nav>
+        <?php require_once("includes/conexao.php");
+            require_once("includes/calendario.php");
+            $info = array(
+                'tabela' => 'eventos',
+                'data' => 'data',
+                'titulo' => 'titulo',
+            );
+        ?>
         <header>
             <button id="toggle" class="toggle"><i class="fa fa-bars fa-2x"></i></button>
             <a class="logo-header" href="index.php"><img title="Logo do mst" src="/img/mst.png" /></a>
@@ -54,8 +62,8 @@
             </div>
         </div>
 
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/calendario.js"></script>
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript" src="/js/calendario.js"></script>
     <script src="/js/script.js"></script>
     </body>
 </html>

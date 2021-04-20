@@ -1,9 +1,9 @@
-$(function(){
+(function(){
     var data = new Date();
     var mesAtual = data.getMonth()+1;
     var diaAtual = data.getDate();
 
-    $('#mes_'+mesAtual).show().find('.dia_'+diaAtual).addClass('atual');
+    ('#mes_'+mesAtual).show().find('.dia_'+diaAtual).addClass('atual');
 
     function hideShow(){
         if(mesAtual > 12){
@@ -16,7 +16,7 @@ $(function(){
         $('#mes_'+mesAtual).show();
     }
 
-    $('#vai').on('click', function(e){
+    ('#vai').on('click', function(e){
         e.preventDefault();
         mesAtual++;
         hideShow();
@@ -24,7 +24,7 @@ $(function(){
         return false;
     });
 
-     $('#volta').on('click', function(e){
+    ('#volta').on('click', function(e){
         e.preventDefault();
         mesAtual--;
         hideShow();
