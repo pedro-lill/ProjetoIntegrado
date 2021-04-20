@@ -12,7 +12,7 @@
 
         public function listar(){
             try{
-                $query = $this->conexao->prepare("select * from cadastro order by codigoAnimal");
+                $query = $this->conexao->prepare("select * from cadastro order by codAnimal");
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Ficha");
                 return $registros;
@@ -22,10 +22,10 @@
             }
         }
 
-        public function buscar($codigoAnimal){
+        public function buscar($codAnimal){
             try{
-                $query = $this->conexao->prepare("select * from cadastro where codigoAnimal=:codigoAnimal");
-                $query->bindParam(":codigoAnimal", $codigoAnimal);
+                $query = $this->conexao->prepare("select * from cadastro where codAnimal=:codAnimal");
+                $query->bindParam(":codAnimal", $codAnimal);
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Ficha");
                 return $registros;
@@ -43,8 +43,15 @@
 
         }
 
-        public function excluir(){
-
+        public function excluir($cod){
+            try{
+                $query = $this->conexao->prepare("delete from cadastro where codAnimal = :cod");
+                $query->bindValue(":cod", $cod);
+                return $query->execute();
+            }
+            catch(PDOException $e){
+                echo "Erro no acesso aos dados: ". $e->getMessage();
+            }
         }
 
     }
