@@ -35,7 +35,7 @@
         </div>
         <div>
           <button class="button-edit"><i class="fa fa-edit fa-1x"></i></button>
-          <button class="button-delete" onclick="verificarExcluir(4)"><i class="fa fa-trash-alt fa-1x"></i></button>
+          <button class="button-delete" onclick="verificarExcluir($_GET['codAnimal'])"><i class="fa fa-trash-alt fa-1x"></i></button>
         </div>
       </div>
     </div>

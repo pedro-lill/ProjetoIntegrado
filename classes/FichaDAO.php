@@ -43,8 +43,15 @@
 
         }
 
-        public function excluir(){
-
+        public function excluir($cod){
+            try{
+                $query = $this->conexao->prepare("delete from cadastro where codAnimal = :cod");
+                $query->bindValue(":cod", $cod);
+                return $query->execute();
+            }
+            catch(PDOException $e){
+                echo "Erro no acesso aos dados: ". $e->getMessage();
+            }
         }
 
     }
