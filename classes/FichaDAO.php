@@ -50,11 +50,10 @@
                 echo "Erro no acesso aos dados: ". $e->getMessage();
             }
         }
-        }
 
-        public function alterar(){
+        public function alterar(ficha $ficha){
             try{
-                $query = $this->conexao->prepare("update cadastro set codAnimal = :c, dtNascimento = :d,
+                $query = $this->conexao->prepare("update cadastro set dtNascimento = :d,
                 codMae = :m, nomePai = :p, estadoVida = :e, nomeImagem = :i 
                     where codAnimal = :c");
                 $query->bindValue(":c", $ficha->getCodAnimal());
@@ -69,8 +68,6 @@
             catch(PDOException $e){
                 echo "Erro no acesso aos dados: ". $e->getMessage();
             }
-        }
-
         }
 
         public function excluir($cod){
