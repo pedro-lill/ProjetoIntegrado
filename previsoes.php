@@ -45,6 +45,8 @@
             <a class="logo-header" href="index.php"><img title="Logo do mst" src="/img/mst.png" /></a>
         </header>
 
+        <h1 class="container-ficha-h1">PREVISÕES</h1>
+
         <div class="calendario">
             <?php 
                 $eventos = montaEventos($info);

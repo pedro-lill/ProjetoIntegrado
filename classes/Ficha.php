@@ -58,6 +58,23 @@
 
         public function setNomeImagem($nomeImagem){
             $this->nomeImagem = $nomeImagem;
-        }  
+        } 
+
+        public function validate(){
+            $erros = array();
+            if(empty($this->getCodAnimal()))
+                $erros[] = "É necessário informar o codigo do animal";
+            if(empty($this->getCodMae()))
+                $erros[] = "É necessário informar o codigo da mae";
+            if(empty($this->getDtNascimento()))
+                $erros[] = "É necessário informar a data de nascimento da vaca";
+            if(empty($this->getNomePai()))
+                $erros[] = "É necessário informar o nome do pai";
+            if(empty($this->getEstadoVida()))
+                $erros[] = "É necessário informar o estado de vida da vaca";
+            if(empty($this->getNomeImagem()))
+                $erros[] = "É necessário selecionar uma imagem";
+            return $erros;                                 
+        }
     }
 ?>

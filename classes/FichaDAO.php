@@ -24,8 +24,8 @@
 
         public function buscar($codAnimal){
             try{
-                $query = $this->conexao->prepare("select * from cadastro where codAnimal=:codAnimal");
-                $query->bindParam(":codAnimal", $codAnimal);
+                $query = $this->conexao->prepare("select * from cadastro where codAnimal=:c");
+                $query->bindParam(":c", $codAnimal);
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Ficha");
                 return $registros;
@@ -36,17 +36,47 @@
         }        
 
         public function inserir(){
-
+            try{
+                $query = $this->conexao->prepare("insert into cadastro values (:c, :d, :m, :p, :e, :i)");
+                $query->bindValue(":c", $ficha->getCodAnimal());
+                $query->bindValue(":d", $ficha->getDtNascimento());
+                $query->bindValue(":m", $ficha->getCodMae());
+                $query->bindValue(":p", $ficha->getNomePai());
+                $query->bindValue(":e", $ficha->getEstadoVida());
+                $query->bindValue(":i", $ficha->getNomeImagem());
+                return $query->execute();
+            }
+            catch(PDOException $e){
+                echo "Erro no acesso aos dados: ". $e->getMessage();
+            }
+        }
         }
 
         public function alterar(){
+            try{
+                $query = $this->conexao->prepare("update cadastro set codAnimal = :c, dtNascimento = :d,
+                codMae = :m, nomePai = :p, estadoVida = :e, nomeImagem = :i 
+                    where codAnimal = :c");
+                $query->bindValue(":c", $ficha->getCodAnimal());
+                $query->bindValue(":d", $ficha->getDtNascimento());
+                $query->bindValue(":m", $ficha->getCodMae());
+                $query->bindValue(":p", $ficha->getNomePai());
+                $query->bindValue(":e", $ficha->getEstadoVida());
+                $query->bindValue(":i", $ficha->getNomeImagem());
+                
+                return $query->execute();
+            }
+            catch(PDOException $e){
+                echo "Erro no acesso aos dados: ". $e->getMessage();
+            }
+        }
 
         }
 
         public function excluir($cod){
             try{
-                $query = $this->conexao->prepare("delete from cadastro where codAnimal = :cod");
-                $query->bindValue(":cod", $cod);
+                $query = $this->conexao->prepare("delete from cadastro where codAnimal = :c");
+                $query->bindValue(":c", $cod);
                 return $query->execute();
             }
             catch(PDOException $e){
