@@ -56,7 +56,6 @@
                 echo "Erro no acesso aos dados: ". $e->getMessage();
             }
         }
-        }
 
         public function alterar(){
             try{
@@ -83,9 +82,7 @@
                 echo "Erro no acesso aos dados: ". $e->getMessage();
             }
         }
-
-        }
-
+        
         public function excluir($codInseminacao){
             try{
                 $query = $this->conexao->prepare("delete from inseminacao where codInseminacao = :i");
