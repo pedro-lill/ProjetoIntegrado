@@ -1,6 +1,6 @@
 <?php
     require_once "Conexao.php";
-    require_once "inseminacao.php";
+    require_once "Inseminacao.php";
 
     class inseminacaoDAO{
         
@@ -14,7 +14,7 @@
             try{
                 $query = $this->conexao->prepare("select * from inseminacao order by codInseminacao");
                 $query->execute();
-                $registros = $query->fetchAll(PDO::FETCH_CLASS, "inseminacao");
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
                 return $registros;
             }
             catch(PDOException $e){
