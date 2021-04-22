@@ -1,5 +1,5 @@
 <?php
-    class Ficha{
+    class Inseminacao{
 
         // atributos
 

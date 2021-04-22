@@ -22,7 +22,7 @@
             }
         }
 
-        public function buscar($codAnimal){
+        public function buscar($codInseminacao){
             try{
                 $query = $this->conexao->prepare("select * from inseminacao where codInseminacao = :i");
                 $query->bindParam(":i", $codInseminacao);
@@ -37,19 +37,18 @@
 
         public function inserir(){
             try{
-                $query = $this->conexao->prepare("insert into inseminacao values (:i, :c, :d, :t, :ir, :r, :o, :s, :p, :ni, :ns, :np)");
-                $query->bindValue(":i", $ficha->getCodInseminacao());/*esse nao precisa se pa*/
-                $query->bindValue(":c", $ficha->getCodAnimal());
-                $query->bindValue(":d", $ficha->getDtInseminacao());
-                $query->bindValue(":t", $ficha->getTouroInseminador());
-                $query->bindValue(":ir", $ficha->getInseminadorResponsavel());
-                $query->bindValue(":r", $ficha->getRetorno());
-                $query->bindValue(":o", $ficha->getObs());
-                $query->bindValue(":s", $ficha->getPrevisaoSecagem());
-                $query->bindValue(":p", $ficha->getPrevisaoParto());
-                $query->bindValue(":ni", $ficha->getNovaDtInseminacao());
-                $query->bindValue(":ns", $ficha->getNovaPrevisaoSecagem());
-                $query->bindValue(":np", $ficha->getNovaPrevisaoParto());
+                $query = $this->conexao->prepare("insert into inseminacao values (NULL, :c, :d, :t, :ir, :r, :o, :s, :p, :ni, :ns, :np)");
+                $query->bindValue(":c", $inseminacao->getCodAnimal());
+                $query->bindValue(":d", $inseminacao->getDtInseminacao());
+                $query->bindValue(":t", $inseminacao->getTouroInseminador());
+                $query->bindValue(":ir", $inseminacao->getInseminadorResponsavel());
+                $query->bindValue(":r", $inseminacao->getRetorno());
+                $query->bindValue(":o", $inseminacao->getObs());
+                $query->bindValue(":s", $inseminacao->getPrevisaoSecagem());
+                $query->bindValue(":p", $inseminacao->getPrevisaoParto());
+                $query->bindValue(":ni", $inseminacao->getNovaDtInseminacao());
+                $query->bindValue(":ns", $inseminacao->getNovaPrevisaoSecagem());
+                $query->bindValue(":np", $inseminacao->getNovaPrevisaoParto());
                 return $query->execute();
             }
             catch(PDOException $e){
@@ -64,18 +63,18 @@
                 obs = :o, previsaoSecagem = :s, previsaoParto = :p, 
                 novaDtInseminacao = :ni, novaPrevisaoSecagem = :ns,  novaPrevisaoParto = :np
                     where codInseminacao = :i");
-                $query->bindValue(":c", $ficha->getCodAnimal());
-                $query->bindValue(":d", $ficha->getDtInseminacao());
-                $query->bindValue(":t", $ficha->getTouroInseminador());
-                $query->bindValue(":ir", $ficha->getInseminadorResponsavel());
-                $query->bindValue(":r", $ficha->getRetorno());
-                $query->bindValue(":o", $ficha->getObs());
-                $query->bindValue(":s", $ficha->getPrevisaoSecagem());
-                $query->bindValue(":p", $ficha->getPrevisaoParto());
-                $query->bindValue(":ni", $ficha->getNovaDtInseminacao());
-                $query->bindValue(":ns", $ficha->getNovaPrevisaoSecagem());
-                $query->bindValue(":np", $ficha->getNovaPrevisaoParto());
-                $query->bindValue(":i", $ficha->getCodInseminacao());
+                $query->bindValue(":c", $inseminacao->getCodAnimal());
+                $query->bindValue(":d", $inseminacao->getDtInseminacao());
+                $query->bindValue(":t", $inseminacao->getTouroInseminador());
+                $query->bindValue(":ir", $inseminacao->getInseminadorResponsavel());
+                $query->bindValue(":r", $inseminacao->getRetorno());
+                $query->bindValue(":o", $inseminacao->getObs());
+                $query->bindValue(":s", $inseminacao->getPrevisaoSecagem());
+                $query->bindValue(":p", $inseminacao->getPrevisaoParto());
+                $query->bindValue(":ni", $inseminacao->getNovaDtInseminacao());
+                $query->bindValue(":ns", $inseminacao->getNovaPrevisaoSecagem());
+                $query->bindValue(":np", $inseminacao->getNovaPrevisaoParto());
+                $query->bindValue(":i", $inseminacao->getCodInseminacao());
                 return $query->execute();
             }
             catch(PDOException $e){
