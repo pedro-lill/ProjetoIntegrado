@@ -14,7 +14,7 @@
             try{
                 $query = $this->conexao->prepare("select * from cadastro order by codAnimal");
                 $query->execute();
-                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Ficha");
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "ficha");
                 return $registros;
             }
             catch(PDOException $e){
@@ -27,7 +27,7 @@
                 $query = $this->conexao->prepare("select * from cadastro where codAnimal=:c");
                 $query->bindParam(":c", $codAnimal);
                 $query->execute();
-                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Ficha");
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "ficha");
                 return $registros;
             }
             catch(PDOException $e){
@@ -35,7 +35,7 @@
             }
         }        
 
-        public function inserir(){
+        public function inserir(ficha $ficha){
             try{
                 $query = $this->conexao->prepare("insert into cadastro values (:c, :d, :m, :p, :e, :i)");
                 $query->bindValue(":c", $ficha->getCodAnimal());

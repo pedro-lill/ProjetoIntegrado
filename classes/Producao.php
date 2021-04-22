@@ -23,7 +23,7 @@
             return $this->codAnimal;
         }
 
-        public function setCodAnimal($cod){
+        public function setCodAnimal($codAnimal){
             $this->codAnimal = $codAnimal;
         }
 

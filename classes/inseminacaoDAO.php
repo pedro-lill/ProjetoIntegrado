@@ -35,7 +35,7 @@
             }
         }        
 
-        public function inserir(){
+        public function inserir(inseminacao $inseminacao){
             try{
                 $query = $this->conexao->prepare("insert into inseminacao values (NULL, :c, :d, :t, :ir, :r, :o, :s, :p, :ni, :ns, :np)");
                 $query->bindValue(":c", $inseminacao->getCodAnimal());
@@ -56,7 +56,7 @@
             }
         }
 
-        public function alterar(){
+        public function alterar(inseminacao $inseminacao){
             try{
                 $query = $this->conexao->prepare("update inseminacao set codAnimal = :c, dtInseminacao = :d, 
                 touroInseminador = :t, inseminadorResponsavel = :ir, retorno = :r, 

@@ -22,7 +22,7 @@
             }
         }
 
-        public function buscar($codAnimal){
+        public function buscar($codProducao){
             try{
                 $query = $this->conexao->prepare("select * from producao where codProducao = :p");
                 $query->bindParam(":p", $codProducao);
@@ -35,7 +35,7 @@
             }
         }        
 
-        public function inserir(){
+        public function inserir(producao $producao){
             try{
                 $query = $this->conexao->prepare("insert into producao values (:c, :d, :l, :pd)");
                 $query->bindValue(":c", $producao->getCodAnimal());
@@ -66,7 +66,7 @@
             }
         }
 
-        public function excluir($cod){
+        public function excluir($codProducao){
             try{
                 $query = $this->conexao->prepare("delete from producao where codProducao = :p");
                 $query->bindValue(":p", $codProducao);

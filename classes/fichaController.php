@@ -1,13 +1,12 @@
 <?php
-include_once "../classes/SaborDAO.php";
+include_once "../classes/FichaDAO.php";
 if(!isset($_GET['acao'])){
     // pg inicial de adm. de sabores; carrega lista de registros
-    $titulo = "Lista de Sabores";
-    $obj = new SaborDAO();
+    $titulo = "Lista de Fichas";
+    $obj = new FichaDAO();
     $lista = $obj->listar();
-    include "views/layout/topo.php";
-    include "views/listaSabor.php";
-    include "views/layout/rodape.php";
+    include "views/layout/header.php";
+    include "listaFicha.php";
 }
 else {    
 	switch($_GET['acao']){
@@ -16,36 +15,36 @@ else {
             $titulo = "Cadastro de Sabor";
             // logica para cadastro
             if(!isset($_POST['cadastrar'])){ // dados ainda nao submetidos
-                include "views/layout/topo.php";
-                include "views/cadastraSabor.php";
-                include "views/layout/rodape.php";                
+                include "include/header.php";
+                include "include/ficha.php";              
             }
             else{ // dados submetidos; trata a inserção
-                $novo = new Sabor();
-                $novo->setNome($_POST['field_nome']);
-                $novo->setIngredientes($_POST['field_ingredientes']);
-                $novo->setNomeImagem($_FILES['field_imagem']['name']);
+                $novo = new Ficha();
+                $obj->setCodAnimal($_POST['field_codAnimal']);
+                $obj->setDtNascimento($_POST['field_dtNascimento']);
+                $obj->setCodMae($_POST['field_codMae']);
+                $obj->setNomePai($_POST['field_nomePai']);
+                $obj->setEstadoVida($_POST['field_estadoVida']);
+                $obj->setNomeImagem($_FILES['field_imagem']['name']);
                 $erros = $novo->validate();
                 if(count($erros) != 0){ // algum campo em branco
-                    include "views/layout/topo.php";
-                    include "views/cadastraSabor.php";
-                    include "views/layout/rodape.php";                       
+                    include "/includes/header.php";
+                    include "../adicionar-ficha.php";                       
                 }
                 else{ // campos todos preenchidos
                     //upload
                     $destino = "../assets/images/".$_FILES['field_imagem']['name']; 
                     if(move_uploaded_file($_FILES['field_imagem']['tmp_name'], $destino)){
                         //inserção
-                        $bd = new SaborDAO();
+                        $bd = new FichaDAO();
                         if($bd->inserir($novo))
                             header("Location: saborController.php"); // redireciona
                     }
                     else{
                         // erro no upload
                         $erros[] = "Erro no upload";
-                        include "views/layout/topo.php";
-                        include "views/cadastraSabor.php";
-                        include "views/layout/rodape.php";                         
+                        include "/includes/header.php";
+                        include "../adicionar-ficha.php";                      
                     }
                 }
             }
@@ -53,41 +52,40 @@ else {
 
         
         case 'altera':
-            $titulo = "Alteração de Sabor";
+            $titulo = "Alteração de Ficha";
             if(!isset($_POST['alterar'])){ // dados ainda nao submetidos; carrega os dados atuais
-                $obj = new SaborDAO();
-                $sabor = $obj->buscar($_GET['cod']);
-                include "views/layout/topo.php";
-                include "views/alteraSabor.php";
-                include "views/layout/rodape.php"; 
+                $obj = new FichaDAO();
+                $sabor = $obj->buscar($_GET['codAnimal']);
+                include "../includes/header.php";
+                include "alteraFicha.php";
             }
             else{ // dados submetidos; efetua a alteração
-                $obj = new Sabor();
-                $obj->setNome($_POST['field_nome']);
-                $obj->setIngredientes($_POST['field_ingredientes']);
+                $obj = new Ficha();
+                $obj->setDtNascimento($_POST['field_dtNascimento']);
+                $obj->setCodMae($_POST['field_codMae']);
+                $obj->setNomePai($_POST['field_nomePai']);
+                $obj->setEstadoVida($_POST['field_estadoVida']);
                 $obj->setNomeImagem($_FILES['field_imagem']['name']);
-                $obj->setCodigo($_POST['field_codigo']);
+                $obj->setCodAnimal($_POST['field_codAnimal']);
                 $erros = $obj->validate();
                 if(count($erros) != 0){ // algum campo em branco
-                    include "views/layout/topo.php";
-                    include "views/alteraSabor.php";
-                    include "views/layout/rodape.php";                       
+                    include "../includes/header.php";
+                    include "alteraFicha.php";                      
                 }
                 else{ // campos todos preenchidos
                     //upload
                     $destino = "../assets/images/".$_FILES['field_imagem']['name']; 
                     if(move_uploaded_file($_FILES['field_imagem']['tmp_name'], $destino)){
                         //inserção
-                        $bd = new SaborDAO();
+                        $bd = new FichaDAO();
                         if($bd->alterar($obj))
-                            header("Location: saborController.php"); // redireciona
+                            header("Location: fichaController.php"); // redireciona
                     }
                     else{
                         // erro no upload
                         $erros[] = "Erro no upload";
-                        include "views/layout/topo.php";
-                        include "views/cadastraSabor.php";
-                        include "views/layout/rodape.php";                         
+                        include "../includes/header.php";
+                        include "cadastraFicha.php";                        
                     }
                 }
             }
@@ -95,9 +93,9 @@ else {
 
         
         case 'exclui':
-            $bd = new SaborDAO();
-            if($bd->excluir($_GET['cod']))
-                header("Location: saborController.php"); // redireciona
+            $bd = new FichaDAO();
+            if($bd->excluir($_GET['codAnimal']))
+                header("Location: fichaController.php"); // redireciona
 
             break;
         
