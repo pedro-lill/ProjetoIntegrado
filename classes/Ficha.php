@@ -1,5 +1,5 @@
 <?php
-    class Ficha{
+    class ficha{
 
         // atributos
 

@@ -17,7 +17,7 @@ CREATE TABLE usuarios(
   senha VARCHAR(30) NOT NULL
 );
 
-create table cadastro(
+create table ficha(
   codAnimal INTEGER,
   dtNascimento DATETIME NOT NULL,
   codMae INTEGER NOT NULL,

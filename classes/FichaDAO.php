@@ -2,7 +2,7 @@
     require_once "Conexao.php";
     require_once "Ficha.php";
 
-    class FichaDAO{
+    class fichaDAO{
         
         public $conexao;
 
@@ -12,9 +12,9 @@
 
         public function listar(){
             try{
-                $query = $this->conexao->prepare("select * from cadastro order by codAnimal");
+                $query = $this->conexao->prepare("select * from ficha order by codAnimal");
                 $query->execute();
-                $registros = $query->fetchAll(PDO::FETCH_CLASS, "ficha");
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Ficha");
                 return $registros;
             }
             catch(PDOException $e){
@@ -24,11 +24,11 @@
 
         public function buscar($codAnimal){
             try{
-                $query = $this->conexao->prepare("select * from cadastro where codAnimal=:c");
-                $query->bindParam(":c", $codAnimal);
+                $query = $this->conexao->prepare("select * from ficha where codAnimal=:c");
+                $query->bindParam(":c", $codAnimal, PDO::PARAM_INT);
                 $query->execute();
-                $registros = $query->fetchAll(PDO::FETCH_CLASS, "ficha");
-                return $registros;
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Ficha");
+                return $registros[0];
             }
             catch(PDOException $e){
                 echo "Erro no acesso aos dados: ". $e->getMessage();
@@ -37,7 +37,7 @@
 
         public function inserir(ficha $ficha){
             try{
-                $query = $this->conexao->prepare("insert into cadastro values (:c, :d, :m, :p, :e, :i)");
+                $query = $this->conexao->prepare("insert into ficha values (:c, :d, :m, :p, :e, :i)");
                 $query->bindValue(":c", $ficha->getCodAnimal());
                 $query->bindValue(":d", $ficha->getDtNascimento());
                 $query->bindValue(":m", $ficha->getCodMae());
@@ -53,7 +53,7 @@
 
         public function alterar(ficha $ficha){
             try{
-                $query = $this->conexao->prepare("update cadastro set dtNascimento = :d,
+                $query = $this->conexao->prepare("update ficha set dtNascimento = :d,
                 codMae = :m, nomePai = :p, estadoVida = :e, nomeImagem = :i 
                     where codAnimal = :c");
                 $query->bindValue(":c", $ficha->getCodAnimal());
@@ -72,7 +72,7 @@
 
         public function excluir($cod){
             try{
-                $query = $this->conexao->prepare("delete from cadastro where codAnimal = :c");
+                $query = $this->conexao->prepare("delete from ficha where codAnimal = :c");
                 $query->bindValue(":c", $cod);
                 return $query->execute();
             }
