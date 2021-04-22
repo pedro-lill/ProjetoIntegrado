@@ -5,8 +5,8 @@ if(!isset($_GET['acao'])){
     $titulo = "Lista de Fichas";
     $obj = new FichaDAO();
     $lista = $obj->listar();
-    include "/includes/header.php";
-    include "/lista-fichas.php";
+    include "includes/header.php";
+    include "lista-fichas.php";
 }
 else {    
 	switch($_GET['acao']){

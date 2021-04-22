@@ -19,34 +19,26 @@
     ?>
     </div>
     <br><br>
+    
+    <?php require_once("/includes/header.php");?>
 
     <form action="" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="field_codAnimal" value="<?=$codAnimal ?>">
-        <div>
-            <label for="id_nome">Data de Nascimento: </label>
-            <input type="date" name="field_dtNascimento" size="100" maxlength="100" id="id_dtNascimento" value="<?=$dtNascimento?>">
-        </div>
-        <div>
-            <label for="id_nome">Código da mãe: </label>
-            <input type="number" name="field_codMae" size="100" maxlength="100" id="id_codMae" value="<?=$codMae?>">
-        </div>
-        <div>
-            <label for="id_nome">Nome do pai: </label>
-            <input type="text" name="field_nomePai" size="50" maxlength="50" id="id_nomePai" autofocus value="<?=$nomePai?>">
-        </div>
-        <div>
-            <label for="id_nome">Estado de vida : </label>
-            <input type="number" name="field_estadoVida" size="50" maxlength="50" id="id_estadoVida" autofocus value="<?=$estadoVida?>">
-        </div>
-        <div>
-            <label for="id_nome">Imagem: </label>
-            <input type="file" name="field_imagem" id="id_imagem" >
-        </div>
-        <br>
-        <div>
-            <input type="submit" value="Confirmar" name="alterar">
-            <input type="reset" value="Limpar campos">
-        </div>
+      <div class="container-ficha">
+        <h1>Dados da ficha</h1>
+        <input type="number" placeholder="Código do animal" name="field_codAnimal" value="<?=$codAnimal ?>" required>
+        <input type="date" name="field_dtNascimento" maxlength="100" value="<?=$dtNascimento?>" required>
+        <input type="number" placeholder="Código mae" name="field_codMae" maxlength="100" value="<?=$codMae?>" required>
+        <input type="text" placeholder="Nome do touro-pai" name="field_nomePai" maxlength="50" autofocus value="<?=$nomePai?>" required>
+        <input type="number" placeholder="Estado de vida" name="field_estadoVida" maxlength="50" id="id_estadoVida" autofocus value="<?=$estadoVida?>" required>
+        <!-- <input type="file" required> -->
+        <!-- <div class="container-historicos">
+          <div id="button-historico-inseminacao" class="historico"><label>Adicionar histórico de inseminação</label></div>
+          <div id="button-historico-producao" class="historico"><label>Adicionar histórico de produção de leite</label></div>
+          <div id="button-historico-medicacao" class="historico"><label>Adicionar histórico de medicação</label></div>
+        </div> -->
+        <button class="button-form" type="submit">Alterar</button>
+          
+      </div>
     </form>
-    <br><br><br><br>
+
 </main>
