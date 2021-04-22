@@ -9,7 +9,7 @@
         <input type="date" required>
         <input type="number" placeholder="Código mae" required>
         <input type="text" placeholder="Nome do touro-pai" required>
-        <input type="number" placeholder="Estado de vida" required>
+        <input type="number" placeholder="Estado de vida" name="field_estadoVida" size="50" maxlength="50" id="id_estadoVida" autofocus value="<?=$estadoVida?>" required>
         <input type="file" required>
         <div class="container-historicos">
           <div id="button-historico-inseminacao" class="historico"><label>Adicionar histórico de inseminação</label></div>
