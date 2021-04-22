@@ -12,10 +12,10 @@
     }
 
     $codAnimal = isset($_POST['field_codAnimal']) ? $_POST['field_codAnimal'] : $ficha->getCodAnimal();
-    $dtNascimento = isset($_POST['field_dtNascimento']) ? $_POST['field_dtNascimento'] : $ficha->getdtNascimento();
-    $codMae = isset($_POST['field_codMae']) ? $_POST['field_codMae'] : $ficha->getcodMae();
-    $nomePai = isset($_POST['field_nomePai']) ? $_POST['field_nomePai'] : $ficha->getnomePai();
-    $estadoVida = isset($_POST['field_estadoVida']) ? $_POST['field_estadoVida'] : $ficha->getestadoVida();
+    $dtNascimento = isset($_POST['field_dtNascimento']) ? $_POST['field_dtNascimento'] : $ficha->getDtNascimento();
+    $codMae = isset($_POST['field_codMae']) ? $_POST['field_codMae'] : $ficha->getCodMae();
+    $nomePai = isset($_POST['field_nomePai']) ? $_POST['field_nomePai'] : $ficha->getNomePai();
+    $estadoVida = isset($_POST['field_estadoVida']) ? $_POST['field_estadoVida'] : $ficha->getEstadoVida();
     ?>
     </div>
     <br><br>
