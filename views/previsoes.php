@@ -20,10 +20,10 @@
 
     <body>
 
-    <?php require_once("includes/header.php");?>
+    <?php require_once("../includes/header.php");?>
 
-    <?php require_once("includes/conexao.php");
-        require_once("includes/calendario.php");
+    <?php require_once("../includes/conexao.php");
+        require_once("../includes/calendario.php");
         $info = array(
             'tabela' => 'eventos',
             'data' => 'data',
