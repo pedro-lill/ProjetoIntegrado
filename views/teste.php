@@ -1,4 +1,4 @@
-<?php require_once("/includes/header.php");?>
+<?php require_once("../includes/header.php");?>
 
     <h1>FICHA DO ANIMAL</h1>
     <div id="modal_insem" class="modal">
