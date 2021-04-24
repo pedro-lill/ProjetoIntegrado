@@ -30,6 +30,5 @@
         <a class="logo-header" href="index.php"><img title="Logo do mst" src="/img/mst.png" /></a>
     </header>
 
-    <script src="/js/script.js"></script>
 
 </body>

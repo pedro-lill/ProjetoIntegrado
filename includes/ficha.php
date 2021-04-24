@@ -47,7 +47,6 @@
     
   </div>
 
-  <script src="/js/script.js"></script>
   <script src="/js/lista-fichas.js"></script>
 
 </body>
