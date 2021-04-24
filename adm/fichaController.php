@@ -1,12 +1,11 @@
 <?php
-include_once "FichaDAO.php";
+include_once "../classes/FichaDAO.php";
 if(!isset($_GET['acao'])){
     // pg inicial de adm. de sabores; carrega lista de registros
     $titulo = "Lista de Fichas";
     $obj = new FichaDAO();
     $lista = $obj->listar();
-    include "../includes/header.php";
-    include "../lista-fichas.php";
+    include "../views/lista-fichas.php";
 }
 else {    
 	switch($_GET['acao']){
@@ -15,8 +14,7 @@ else {
             $titulo = "Adiciona Ficha";
             // logica para cadastro
             if(!isset($_POST['adiciona'])){ // dados ainda nao submetidos
-                include "../includes/header.php";
-                include "../adicionar-ficha.php";              
+                include "../views/adicionar-ficha.php";              
             }
             else{ // dados submetidos; trata a inserção
                 $novo = new Ficha();
@@ -28,8 +26,7 @@ else {
                 $obj->setNomeImagem($_FILES['field_imagem']['name']);
                 $erros = $novo->validate();
                 if(count($erros) != 0){ // algum campo em branco
-                    include "../includes/header.php";
-                    include "../adicionar-ficha.php";                       
+                    include "../views/adicionar-ficha.php";                       
                 }
                 else{ // campos todos preenchidos
                     //upload
@@ -43,8 +40,7 @@ else {
                     else{
                         // erro no upload
                         $erros[] = "Erro no upload";
-                        include "../includes/header.php";
-                        include "../adicionar-ficha.php";                      
+                        include "../views/adicionar-ficha.php";                      
                     }
                 }
             }
@@ -56,7 +52,7 @@ else {
             if(!isset($_POST['alterar'])){ // dados ainda nao submetidos; carrega os dados atuais
                 $obj = new FichaDAO();
                 $sabor = $obj->buscar($_GET['codAnimal']);
-                include "../includes/header.php";
+
                 include "views/alteraFicha.php";
             }
             else{ // dados submetidos; efetua a alteração
@@ -69,12 +65,11 @@ else {
                 $obj->setCodAnimal($_POST['field_codAnimal']);
                 $erros = $obj->validate();
                 if(count($erros) != 0){ // algum campo em branco
-                    include "../includes/header.php";
                     include "views/alteraFicha.php";                      
                 }
                 else{ // campos todos preenchidos
                     //upload
-                    $destino = "img/".$_FILES['field_imagem']['name']; 
+                    $destino = "../img/".$_FILES['field_imagem']['name']; 
                     if(move_uploaded_file($_FILES['field_imagem']['tmp_name'], $destino)){
                         //inserção
                         $bd = new FichaDAO();
@@ -84,7 +79,6 @@ else {
                     else{
                         // erro no upload
                         $erros[] = "Erro no upload";
-                        include "/includes/header.php";
                         include "views/cadastraFicha.php";                        
                     }
                 }

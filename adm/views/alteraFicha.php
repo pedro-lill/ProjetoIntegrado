@@ -25,11 +25,11 @@
     <form action="" method="post" enctype="multipart/form-data">
       <div class="container-ficha">
         <h1>Dados da ficha</h1>
-        <input type="hidden" placeholder="Código do animal" name="field_codAnimal" value="<?=$codAnimal ?>" required>
-        <input type="date" name="field_dtNascimento" maxlength="100" value="<?=$dtNascimento?>" required>
-        <input type="number" placeholder="Código mae" name="field_codMae" maxlength="100" value="<?=$codMae?>" required>
-        <input type="text" placeholder="Nome do touro-pai" name="field_nomePai" maxlength="50" autofocus value="<?=$nomePai?>" required>
-        <input type="number" placeholder="Estado de vida" name="field_estadoVida" maxlength="50" id="id_estadoVida" autofocus value="<?=$estadoVida?>" required>
+        <input type="hidden" placeholder="Código do animal" name="field_codAnimal" value="<?=$codAnimal ?>">
+        <input type="date" name="field_dtNascimento" maxlength="100" value="<?=$dtNascimento?>">
+        <input type="number" placeholder="Código mae" name="field_codMae" maxlength="100" value="<?=$codMae?>">
+        <input type="text" placeholder="Nome do touro-pai" name="field_nomePai" maxlength="50" autofocus value="<?=$nomePai?>">
+        <input type="number" placeholder="Estado de vida" name="field_estadoVida" maxlength="50" id="id_estadoVida" autofocus value="<?=$estadoVida?>">
         <!-- <input type="file" required> -->
         <!-- <div class="container-historicos">
           <div id="button-historico-inseminacao" class="historico"><label>Adicionar histórico de inseminação</label></div>
