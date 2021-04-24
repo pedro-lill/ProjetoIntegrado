@@ -16,7 +16,7 @@
 
     <h1>FICHA DO ANIMAL</h1>
 
-    <form action="adicionar-ficha.php">
+    <form>
       <div>
         <h1>Dados da ficha</h1>
         <input type="number" placeholder="Código do animal" name="field_codAnimal" value="<?=$codAnimal ?>" required>
@@ -30,7 +30,8 @@
           <div id="button-historico-producao" class="historico"><label>Adicionar histórico de produção de leite</label></div>
           <div id="button-historico-medicacao" class="historico"><label>Adicionar histórico de medicação</label></div>
         </div>
-        <button class="button-form" type="submit">Salvar</button>
+        
+        <button class="button-form" type="submit" onclick="window.location.href='fichaController.php?acao=adiciona&codAnimal=<?=$ficha->getCodAnimal()?>'">Salvar</button>
           
       </div>
     </form>

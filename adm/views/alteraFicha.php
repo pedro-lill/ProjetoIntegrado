@@ -1,7 +1,5 @@
 <main>
-    <h2><?= $titulo ?></h2>
-    <hr>
-    <br>
+
     <div class="erro_cadastro">
     <?php
     if(isset($erros) && count($erros) !=0){
@@ -18,14 +16,13 @@
     $estadoVida = isset($_POST['field_estadoVida']) ? $_POST['field_estadoVida'] : $ficha->getEstadoVida();
     ?>
     </div>
-    <br><br>
     
     <?php require_once("../includes/header.php");?>
 
     <form action="" method="post" enctype="multipart/form-data">
       <div class="container-ficha">
-        <h1>Dados da ficha</h1>
-        <input type="hidden" placeholder="Código do animal" name="field_codAnimal" value="<?=$codAnimal ?>">
+        <h1>Dados da ficha </h1>
+        <input type="number" placeholder="Código do animal" name="field_codAnimal" value="<?=$codAnimal ?>">
         <input type="date" name="field_dtNascimento" maxlength="100" value="<?=$dtNascimento?>">
         <input type="number" placeholder="Código mae" name="field_codMae" maxlength="100" value="<?=$codMae?>">
         <input type="text" placeholder="Nome do touro-pai" name="field_nomePai" maxlength="50" autofocus value="<?=$nomePai?>">

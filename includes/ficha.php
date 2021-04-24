@@ -30,8 +30,13 @@
           <img src="../img/<?=$ficha->getNomeImagem()?>" alt="imagem_animal">
         </div>
         <div class="ficha_descricao">
-          <strong><?=$ficha->getCodAnimal()?></strong>
-          Código vaca-mãe: <?=$ficha->getCodMae()?>
+          <strong>
+            <?=$ficha->getCodAnimal()?> 
+            <?=$ficha->getCodMae() ?>  
+            <?=$ficha->getNomePai() ?>  
+            <?=$ficha->getEstadoVida()?>  
+            <?=$ficha->getCodMae()?>
+            </strong>
         </div>
         <div>
           <button class="button-edit" onclick="window.location.href='fichaController.php?acao=altera&codAnimal=<?=$ficha->getCodAnimal() ?>'"><i class="fa fa-edit fa-1x"></i></button>

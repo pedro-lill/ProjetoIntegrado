@@ -5,7 +5,7 @@ if(!isset($_GET['acao'])){
     $titulo = "Lista de Fichas";
     $obj = new FichaDAO();
     $lista = $obj->listar();
-    include "../views/lista-fichas.php";
+    include "views/listaFicha.php";
 }
 else {    
 	switch($_GET['acao']){
@@ -14,7 +14,7 @@ else {
             $titulo = "Adiciona Ficha";
             // logica para cadastro
             if(!isset($_POST['adiciona'])){ // dados ainda nao submetidos
-                include "../views/adicionar-ficha.php";              
+                include "../views/cadastraFicha.php";              
             }
             else{ // dados submetidos; trata a inserção
                 $novo = new Ficha();
@@ -26,11 +26,11 @@ else {
                 $obj->setNomeImagem($_FILES['field_imagem']['name']);
                 $erros = $novo->validate();
                 if(count($erros) != 0){ // algum campo em branco
-                    include "../views/adicionar-ficha.php";                       
+                    include "../views/cadastraFicha.php";                       
                 }
                 else{ // campos todos preenchidos
                     //upload
-                    $destino = "img/".$_FILES['field_imagem']['name']; 
+                    $destino = "../img/".$_FILES['field_imagem']['name']; 
                     if(move_uploaded_file($_FILES['field_imagem']['tmp_name'], $destino)){
                         //inserção
                         $bd = new FichaDAO();
@@ -40,7 +40,7 @@ else {
                     else{
                         // erro no upload
                         $erros[] = "Erro no upload";
-                        include "../views/adicionar-ficha.php";                      
+                        include "views/cadastraFicha.php";                      
                     }
                 }
             }
@@ -49,10 +49,9 @@ else {
         
         case 'altera':
             $titulo = "Alteração de Ficha";
-            if(!isset($_POST['alterar'])){ // dados ainda nao submetidos; carrega os dados atuais
+            if(!isset($_POST['altera'])){ // dados ainda nao submetidos; carrega os dados atuais
                 $obj = new FichaDAO();
-                $sabor = $obj->buscar($_GET['codAnimal']);
-
+                $ficha = $obj->buscar($_GET['codAnimal']);
                 include "views/alteraFicha.php";
             }
             else{ // dados submetidos; efetua a alteração

@@ -1,7 +1,6 @@
+
 <main>
-    <h2><?= $titulo ?></h2>
-    <hr>
-    <br>
+    <h1>cadastro</h1>
     <div class="erro_cadastro">
     <?php
     if(isset($erros) && count($erros) !=0){
@@ -10,14 +9,16 @@
             echo "<li>$e</li>";
         echo "</ul>";
     }
+    
     $codAnimal = isset($_POST['field_codAnimal']) ? $_POST['field_codAnimal'] : "";
     $dtNascimento = isset($_POST['field_dtNascimento']) ? $_POST['field_dtNascimento'] : "";
     $codMae = isset($_POST['field_codMae']) ? $_POST['field_codMae'] : "";
     $nomePai = isset($_POST['field_nomePai']) ? $_POST['field_nomePai'] : "";
     $estadoVida = isset($_POST['field_estadoVida']) ? $_POST['field_estadoVida'] : "";
     ?>
+    
     </div>
-    <?php require_once("../includes/header.php");?>
+
     <br><br>
 
     <form action="" method="post" enctype="multipart/form-data">
