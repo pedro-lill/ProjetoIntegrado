@@ -21,7 +21,7 @@
 
     <header>
         <ul>
-            <li><a href="../views/lista-fichas.php">Fichas dos animais</a></li>
+            <li><a href="../adm/fichaController.php">Fichas dos animais</a></li>
             <li><a href="../views/graficos.php">Gráficos</a></li>
             <li><a href="../views/previsoes.php">Previsões</a></li>
             <li><a href="../views/tabelas.php">Tabelas</a></li>

@@ -7,7 +7,7 @@
     if(isset($erros) && count($erros) !=0){
         echo "<ul>";
         foreach($erros as $e)
-            echo "<li>$e</li>";
+          echo "<li>$e</li>";
         echo "</ul>";
     }
 
