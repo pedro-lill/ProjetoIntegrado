@@ -14,7 +14,7 @@ else {
             $titulo = "Adiciona Ficha";
             // logica para cadastro
             if(!isset($_POST['adiciona'])){ // dados ainda nao submetidos
-                include "../views/cadastraFicha.php";              
+                include "views/cadastraFicha.php";              
             }
             else{ // dados submetidos; trata a inserção
                 $novo = new Ficha();
@@ -26,7 +26,7 @@ else {
                 $obj->setNomeImagem($_FILES['field_imagem']['name']);
                 $erros = $novo->validate();
                 if(count($erros) != 0){ // algum campo em branco
-                    include "../views/cadastraFicha.php";                       
+                    include "views/cadastraFicha.php";                       
                 }
                 else{ // campos todos preenchidos
                     //upload

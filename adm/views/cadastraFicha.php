@@ -1,4 +1,4 @@
-
+<?php require_once("../includes/header.php");?>
 <main>
     <h1>cadastro</h1>
     <div class="erro_cadastro">
