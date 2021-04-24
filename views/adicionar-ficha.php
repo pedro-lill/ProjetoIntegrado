@@ -1,5 +1,5 @@
-<?php require_once("includes/header.php");?>
-<?php require_once("classes/conexao.php");?>
+<?php require_once("/includes/header.php");?>
+<?php require_once("/classes/conexao.php");?>
 <?php
     if(isset($erros) && count($erros) !=0){
         echo "<ul>";
