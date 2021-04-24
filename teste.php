@@ -1,11 +1,11 @@
 <?php require_once("includes/header.php");?>
 
-    <h1 class="container-ficha-h1">FICHA DO ANIMAL</h1>
+    <h1>FICHA DO ANIMAL</h1>
     <div id="modal_insem" class="modal">
         <div class="modal-content">
             <span id="close_insem" class="close">&times;</span>
             <form action="teste.php">
-                <div class="container-ficha">
+                <div>
                     <h1>Dados da ficha</h1>
                     <input type="number" placeholder="Código do animal" required>
                     <input type="date"  name="field_dtNascimento" size="100" maxlength="100" id="id_dtNascimento" value="<?=$dtNascimento?>" required>

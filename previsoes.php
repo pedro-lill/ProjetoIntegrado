@@ -20,16 +20,7 @@
 
     <body>
 
-        <nav id="nav" class="nav">
-            <div class="logo"><a href="index.php"><img src="/img/mst.png" alt="user"/></a></div>
-            <ul>
-                <li><a href="/lista-fichas.php">Fichas dos animais</a></li>
-                <li><a href="/graficos.php">Gráficos</a></li>
-                <li><a href="/previsoes.php">Previsões</a></li>
-                <li><a href="/tabelas.php">Tabelas</a></li>
-                <li><a href="/producao-leite.php">Adicionar produção de leite</a></li>
-            </ul>
-        </nav>
+    <?php require_once("includes/header.php");?>
 
         <?php require_once("includes/conexao.php");
             require_once("includes/calendario.php");
@@ -40,12 +31,7 @@
             );
         ?>
 
-        <header>
-            <button id="toggle" class="toggle"><i class="fa fa-bars fa-2x"></i></button>
-            <a class="logo-header" href="index.php"><img title="Logo do mst" src="/img/mst.png" /></a>
-        </header>
-
-        <h1 class="container-ficha-h1">PREVISÕES</h1>
+        <h1>PREVISÕES</h1>
 
         <div class="calendario">
             <?php 

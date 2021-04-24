@@ -14,10 +14,10 @@
     $estadoVida = isset($_POST['field_estadoVida']) ? $_POST['field_estadoVida'] : "";
     ?>
 
-    <h1 class="container-ficha-h1">FICHA DO ANIMAL</h1>
+    <h1>FICHA DO ANIMAL</h1>
 
     <form action="adicionar-ficha.php">
-      <div class="container-ficha">
+      <div>
         <h1>Dados da ficha</h1>
         <input type="number" placeholder="Código do animal" name="field_codAnimal" value="<?=$codAnimal ?>" required>
         <input type="date" name="field_dtNascimento" size="100" maxlength="100" id="id_dtNascimento" value="<?=$dtNascimento?>" required>
@@ -39,7 +39,7 @@
         <div class="modal-content">
             <span id="close_insem" class="close">&times;</span>
             <form action="adicionar-ficha.php">
-                <div class="container-ficha">
+                <div>
                     <h1>Adicionar histórico de inseminação</h1>
                     <input type="number" placeholder="Código da vaca-mãe" required>
                     <input type="date" required> 
@@ -60,7 +60,7 @@
     <div class="modal-content">
       <span id="close_prod" class="close">&times;</span>
       <form action="adicionar-ficha.php">
-        <div class="container-ficha">
+        <div>
           <h1>Adicionar histórico de produção de leite</h1>
           <input type="number" placeholder="Código do animal" required>
           <input type="date" required>
@@ -79,7 +79,7 @@
     <div class="modal-content">
       <span id="close_medi" class="close">&times;</span>
       <form action="adicionar-ficha.php">
-        <div class="container-ficha">
+        <div>
           <h1>Adicionar histórico de tratamento</h1>
           <input type="number" placeholder="Código do animal" required>
           <input type="date" required>

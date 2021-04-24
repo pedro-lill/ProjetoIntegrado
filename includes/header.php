@@ -19,8 +19,7 @@
 
 <body>
 
-    <nav id="nav" class="nav">
-        <div class="logo"><a href="index.php"><img src="/img/mst.png" alt="user"/></a></div>
+    <header>
         <ul>
             <li><a href="/lista-fichas.php">Fichas dos animais</a></li>
             <li><a href="/graficos.php">Gráficos</a></li>
@@ -28,10 +27,6 @@
             <li><a href="/tabelas.php">Tabelas</a></li>
             <li><a href="/producao-leite.php">Adicionar produção de leite</a></li>
         </ul>
-    </nav>
-
-    <header>
-        <button id="toggle" class="toggle"><i class="fa fa-bars fa-2x"></i></button>
         <a class="logo-header" href="index.php"><img title="Logo do mst" src="/img/mst.png" /></a>
     </header>
 
