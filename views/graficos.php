@@ -2,5 +2,3 @@
 
 
     <h1>GRÁFICOS</h1>
-
-    <script src="/js/script.js"></script>
