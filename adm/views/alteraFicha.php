@@ -23,7 +23,7 @@
     <?php require_once("/includes/header.php");?>
 
     <form action="" method="post" enctype="multipart/form-data">
-      <div>
+      <div class="container-ficha">
         <h1>Dados da ficha</h1>
         <input type="hidden" placeholder="Código do animal" name="field_codAnimal" value="<?=$codAnimal ?>" required>
         <input type="date" name="field_dtNascimento" maxlength="100" value="<?=$dtNascimento?>" required>
