@@ -11,12 +11,12 @@ if(!isset($_GET['acao'])){
 else {    
 	switch($_GET['acao']){
 
-        case 'cadastra':
-            $titulo = "Cadastro de Ficha";
+        case 'adiciona':
+            $titulo = "Adiciona Ficha";
             // logica para cadastro
-            if(!isset($_POST['cadastrar'])){ // dados ainda nao submetidos
+            if(!isset($_POST['adiciona'])){ // dados ainda nao submetidos
                 include "/includes/header.php";
-                include "/includes/ficha.php";              
+                include "/adicionar-ficha.php";              
             }
             else{ // dados submetidos; trata a inserção
                 $novo = new Ficha();

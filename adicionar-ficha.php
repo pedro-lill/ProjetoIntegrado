@@ -1,14 +1,28 @@
 <?php require_once("includes/header.php");?>
+<?php require_once("classes/conexao.php");?>
+<?php
+    if(isset($erros) && count($erros) !=0){
+        echo "<ul>";
+        foreach($erros as $e)
+            echo "<li>$e</li>";
+        echo "</ul>";
+    }
+    $codAnimal = isset($_POST['field_codAnimal']) ? $_POST['field_codAnimal'] : "";
+    $dtNascimento = isset($_POST['field_dtNascimento']) ? $_POST['field_dtNascimento'] : "";
+    $codMae = isset($_POST['field_codMae']) ? $_POST['field_codMae'] : "";
+    $nomePai = isset($_POST['field_nomePai']) ? $_POST['field_nomePai'] : "";
+    $estadoVida = isset($_POST['field_estadoVida']) ? $_POST['field_estadoVida'] : "";
+    ?>
 
     <h1 class="container-ficha-h1">FICHA DO ANIMAL</h1>
 
     <form action="adicionar-ficha.php">
       <div class="container-ficha">
         <h1>Dados da ficha</h1>
-        <input type="number" placeholder="Código do animal" required>
-        <input type="date" required>
-        <input type="number" placeholder="Código mae" required>
-        <input type="text" placeholder="Nome do touro-pai" required>
+        <input type="number" placeholder="Código do animal" name="field_codAnimal" value="<?=$codAnimal ?>" required>
+        <input type="date" name="field_dtNascimento" size="100" maxlength="100" id="id_dtNascimento" value="<?=$dtNascimento?>" required>
+        <input type="number" placeholder="Código mae" name="field_codMae" size="100" maxlength="100" id="id_codMae" value="<?=$codMae?>" required>
+        <input type="text" placeholder="Nome do touro-pai" name="field_nomePai" size="50" maxlength="50" id="id_nomePai" autofocus value="<?=$nomePai?>" required>
         <input type="number" placeholder="Estado de vida" name="field_estadoVida" size="50" maxlength="50" id="id_estadoVida" autofocus value="<?=$estadoVida?>" required>
         <input type="file" required>
         <div class="container-historicos">

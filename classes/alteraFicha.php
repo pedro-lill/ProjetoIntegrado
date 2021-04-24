@@ -25,7 +25,7 @@
     <form action="" method="post" enctype="multipart/form-data">
       <div class="container-ficha">
         <h1>Dados da ficha</h1>
-        <input type="number" placeholder="Código do animal" name="field_codAnimal" value="<?=$codAnimal ?>" required>
+        <input type="hidden" placeholder="Código do animal" name="field_codAnimal" value="<?=$codAnimal ?>" required>
         <input type="date" name="field_dtNascimento" maxlength="100" value="<?=$dtNascimento?>" required>
         <input type="number" placeholder="Código mae" name="field_codMae" maxlength="100" value="<?=$codMae?>" required>
         <input type="text" placeholder="Nome do touro-pai" name="field_nomePai" maxlength="50" autofocus value="<?=$nomePai?>" required>
