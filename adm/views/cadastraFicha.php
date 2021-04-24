@@ -17,6 +17,7 @@
     $estadoVida = isset($_POST['field_estadoVida']) ? $_POST['field_estadoVida'] : "";
     ?>
     </div>
+    <?php require_once("../includes/header.php");?>
     <br><br>
 
     <form action="" method="post" enctype="multipart/form-data">

@@ -6,16 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link href="/css/style.css" rel="stylesheet">
-  <link href="/css/adicionar-ficha.css" rel="stylesheet">
-  <link href="/css/lista-fichas.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+  <link href="../css/adicionar-ficha.css" rel="stylesheet">
+  <link href="../css/lista-fichas.css" rel="stylesheet">
 </head>
 
 <body>
 
   <div>
     <?php
-      require_once "classes/FichaDAO.php";
+      require_once "../classes/FichaDAO.php";
       $obj = new FichaDAO();
       $lista = $obj->listar(); 
       if(count($lista) == 0){
@@ -27,7 +27,7 @@
     <div class="ficha">
       <div class="label">
         <div class="ficha_img">
-          <img src="/img/<?=$ficha->getNomeImagem()?>" alt="imagem_animal">
+          <img src="../img/<?=$ficha->getNomeImagem()?>" alt="imagem_animal">
         </div>
         <div class="ficha_descricao">
           <strong><?=$ficha->getCodAnimal()?></strong>

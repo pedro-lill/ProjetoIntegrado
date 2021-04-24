@@ -20,7 +20,7 @@
     </div>
     <br><br>
     
-    <?php require_once("/includes/header.php");?>
+    <?php require_once("../includes/header.php");?>
 
     <form action="" method="post" enctype="multipart/form-data">
       <div class="container-ficha">
