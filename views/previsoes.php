@@ -46,5 +46,8 @@
 
     <script type="text/javascript" src="../js/jquery.js"></script>
     <script type="text/javascript" src="../js/calendario.js"></script>
+
+    <?php require_once("../includes/footer.php");?>
+
     </body>
 </html>

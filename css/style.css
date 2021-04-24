@@ -9,7 +9,6 @@ body {
   margin: 0;
   transition: transform 0.3s;
   background-color: #d6d5d5;
-  min-height: 2000px;
 }
 
 header ul {
@@ -48,7 +47,6 @@ header {
   font-size: 130%;
   height: 60px;
   position: relative;
-  width: 100%;
   padding: 0px 15px;
 }
 
