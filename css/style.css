@@ -11,6 +11,15 @@ body {
   background-color: #d6d5d5;
 }
 
+header {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 130%;
+  height: 60px;
+  position: relative;
+  padding: 0px 15px;
+}
+
 header ul {
   list-style-type: none;
   margin: 0;
@@ -19,7 +28,7 @@ header ul {
 
 header ul li {
   list-style: none;
-  padding-top:10px;
+  padding-top:15px;
   display: inline-block;
 }
 
@@ -41,15 +50,6 @@ header ul li a:hover{
   cursor: pointer;
 }
 
-header {
-  background-color: var(--primary-color);
-  color: #fff;
-  font-size: 130%;
-  height: 60px;
-  position: relative;
-  padding: 0px 15px;
-}
-
 button, input[type='submit'] {
   border: 0;
   border-radius: 5px;
@@ -67,7 +67,6 @@ h1{
 }
 
 .logo-header {
-  height: 30px;
   float: right;
   margin-right: 30px;
   margin-top:-35px;
