@@ -3,45 +3,43 @@ include_once "../controller/classes/ProducaoDAO.php";
 if(!isset($_GET['acao'])){
     $obj = new ProducaoDAO();
     $lista = $obj->listar();
-    include "views/cadastraFicha.php";
+    include "views/cadastraProducao.php";
 }
 else {    
 	switch($_GET['acao']){
 
         case 'adiciona':
             if(!isset($_POST['adiciona'])){ 
-                include "views/cadastraFicha.php";              
+                include "views/cadastraProducao.php";              
             }
             else{
                 $novo = new Producao();
                 $obj->setCodAnimal($_POST['field_codAnimal']);
-                $obj->setDtNascimento($_POST['field_dtNascimento']);
-                $obj->setCodMae($_POST['field_codMae']);
-                $obj->setNomePai($_POST['field_nomePai']);
-                $obj->setEstadoVida($_POST['field_estadoVida']);
+                $obj->setDtColeta($_POST['field_dtColeta']);
+                $obj->setLitros($_POST['field_litros']);
+                $obj->setPeriodoDia($_POST['field_periodoDia']);
                 $erros = $novo->validate();
                 if(count($erros) != 0){ 
-                    include "views/cadastraFicha.php";                       
+                    include "views/cadastraProducao.php";                       
                 }
             }
             break;
         
         case 'altera':
             if(!isset($_POST['altera'])){ 
-                $obj = new FichaDAO();
-                $ficha = $obj->buscar($_GET['codProducao']);
-                include "views/alteraFicha.php";
+                $obj = new ProducaoDAO();
+                $producao = $obj->buscar($_GET['codProducao']);
+                include "views/alteraProducao.php";
             }
             else{ 
                 $obj = new Producao();
-                $obj->setDtNascimento($_POST['field_dtNascimento']);
-                $obj->setCodMae($_POST['field_codMae']);
-                $obj->setNomePai($_POST['field_nomePai']);
-                $obj->setEstadoVida($_POST['field_estadoVida']);
                 $obj->setCodAnimal($_POST['field_codAnimal']);
+                $obj->setDtColeta($_POST['field_dtColeta']);
+                $obj->setLitros($_POST['field_litros']);
+                $obj->setPeriodoDia($_POST['field_periodoDia']);
                 $erros = $obj->validate();
                 if(count($erros) != 0){
-                    include "views/alteraFicha.php";                      
+                    include "views/alteraProducao.php";                      
                 }
             }
             break;
