@@ -17,7 +17,7 @@
     <link href="../css/adicionar-ficha.css" rel="stylesheet">
     <link href="../css/lista-fichas.css" rel="stylesheet">
     <link href="../css/graficos.css" rel="stylesheet">
-    <link href="../css/tabelas.css" rel="stylesheet">
+    <link href="../css/relatorios.css" rel="stylesheet">
     <link href="../css/previsoes.css" rel="stylesheet">
     <link href="../css/calendario.css" rel="stylesheet">
 
@@ -32,7 +32,7 @@
             <li><a href="../controller/fichaController.php">Animais</a></li>
             <li><a href="../views/graficos.php">Gráficos</a></li>
             <li><a href="../views/previsoes.php">Previsões</a></li>
-            <li><a href="../views/tabelas.php">Tabelas</a></li>
+            <li><a href="../views/relatorios.php">Relatórios</a></li>
             <li><a href="../controller/producaoController.php?acao=adiciona">+  Produção</a></li>
             <li><a href="../controller/fichaController.php?acao=adiciona">+  Ficha</a></li>
             <li><a href="../controller/inseminacaoController.php?acao=adiciona">+  Inseminação</a></li>
