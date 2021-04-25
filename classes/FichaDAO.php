@@ -53,16 +53,13 @@
 
         public function alterar(ficha $ficha){
             try{
-                $query = $this->conexao->prepare("update ficha set dtNascimento = :d,
-                codMae = :m, nomePai = :p, estadoVida = :e, nomeImagem = :i 
-                    where codAnimal = :c");
+                $query = $this->conexao->prepare("update ficha set dtNascimento = :d, codMae = :m, nomePai = :p, estadoVida = :e, nomeImagem = :i where codAnimal = :c");
                 $query->bindValue(":c", $ficha->getCodAnimal());
                 $query->bindValue(":d", $ficha->getDtNascimento());
                 $query->bindValue(":m", $ficha->getCodMae());
                 $query->bindValue(":p", $ficha->getNomePai());
                 $query->bindValue(":e", $ficha->getEstadoVida());
                 $query->bindValue(":i", $ficha->getNomeImagem());
-                
                 return $query->execute();
             }
             catch(PDOException $e){

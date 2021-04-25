@@ -5,8 +5,8 @@ footer {
     top: 6px;
     height: 200px;
     width: 100%;
-    border-top: 3px solid;
-    border-image-source: linear-gradient(-90deg, #052e05, #1b9702);
+    border-top: 4px solid;
+    border-image-source: linear-gradient(-90deg, #00ff00, #1a610b);
     border-image-slice: 1;
     margin-top: 500px;
 }

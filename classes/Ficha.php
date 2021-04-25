@@ -1,16 +1,12 @@
 <?php
     class ficha{
 
-        // atributos
-
         private $codAnimal;
         private $dtNascimento;
         private $codMae;
         private $nomePai;
         private $estadoVida;
         private $nomeImagem;
-
-        // métodos
 
         public function getCodAnimal(){
             return $this->codAnimal;
@@ -65,7 +61,7 @@
             if(empty($this->getCodAnimal()))
                 $erros[] = "É necessário informar o codigo do animal";
             if(empty($this->getCodMae()))
-                $erros[] = "É necessário informar o codigo da mae";
+                $erros[] = "É necessário informar o codigo da mãe do animal";
             if(empty($this->getDtNascimento()))
                 $erros[] = "É necessário informar a data de nascimento da vaca";
             if(empty($this->getNomePai()))
@@ -76,5 +72,6 @@
                 $erros[] = "É necessário selecionar uma imagem";
             return $erros;                                 
         }
+
     }
 ?>

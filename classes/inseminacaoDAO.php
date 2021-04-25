@@ -58,11 +58,8 @@
 
         public function alterar(inseminacao $inseminacao){
             try{
-                $query = $this->conexao->prepare("update inseminacao set codAnimal = :c, dtInseminacao = :d, 
-                touroInseminador = :t, inseminadorResponsavel = :ir, retorno = :r, 
-                obs = :o, previsaoSecagem = :s, previsaoParto = :p, 
-                novaDtInseminacao = :ni, novaPrevisaoSecagem = :ns,  novaPrevisaoParto = :np
-                    where codInseminacao = :i");
+                $query = $this->conexao->prepare("update inseminacao set codAnimal = :c, dtInseminacao = :d, touroInseminador = :t, inseminadorResponsavel = :ir, retorno = :r, 
+                obs = :o, previsaoSecagem = :s, previsaoParto = :p, novaDtInseminacao = :ni, novaPrevisaoSecagem = :ns,  novaPrevisaoParto = :np where codInseminacao = :i");
                 $query->bindValue(":c", $inseminacao->getCodAnimal());
                 $query->bindValue(":d", $inseminacao->getDtInseminacao());
                 $query->bindValue(":t", $inseminacao->getTouroInseminador());

@@ -51,14 +51,11 @@
 
         public function alterar(producao $producao){
             try{
-                $query = $this->conexao->prepare("update producao set codAnimal = : c, dtColeta = :d,
-                litros = :l, periodoDia = :pd
-                    where codProducao = :p");
+                $query = $this->conexao->prepare("update producao set codAnimal = : c, dtColeta = :d, litros = :l, periodoDia = :pd where codProducao = :p");
                 $query->bindValue(":c", $producao->getCodAnimal());
                 $query->bindValue(":d", $producao->getDtColeta());
                 $query->bindValue(":l", $producao->getLitros());
-                $query->bindValue(":pd", $producao->getPeriodoDia());
-                
+                $query->bindValue(":pd", $producao->getPeriodoDia());  
                 return $query->execute();
             }
             catch(PDOException $e){

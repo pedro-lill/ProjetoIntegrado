@@ -1,15 +1,11 @@
 <?php
     class Producao{
-
-        // atributos
         
         private $codProducao;
         private $codAnimal;
         private $dtColeta;
         private $litros;
         private $periodoDia;
-
-        // métodos
 
         public function getCodProducao(){
             return $this->codProducao;
@@ -28,7 +24,7 @@
         }
 
         public function getDtColeta(){
-            return $this->dtCoelta;
+            return $this->dtColeta;
         }
 
         public function setDtColeta($dtColeta){

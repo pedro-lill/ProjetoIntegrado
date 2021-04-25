@@ -1,8 +1,6 @@
 <?php
     class Inseminacao{
 
-        // atributos
-
         private $codInseminacao;
         private $codAnimal;
         private $dtInseminacao;
@@ -16,14 +14,12 @@
         private $novaPrevisaoSecagem;
         private $novaPrevisaoParto;
 
-        // métodos
-
         public function getCodInseminacao(){
-            return $this->getCodInseminacao;
+            return $this->codInseminacao;
         }
 
         public function setCodInseminacao($codInseminacao){
-            $this->CodInseminacao = $codInseminacao;
+            $this->codInseminacao = $codInseminacao;
         }
 
         public function getCodAnimal(){
@@ -114,21 +110,32 @@
             $this->novaPrevisaoParto = $novaPrevisaoParto;
         } 
 
-        /*public function validate(){
+        public function validate(){
             $erros = array();
             if(empty($this->getCodAnimal()))
                 $erros[] = "É necessário informar o codigo do animal";
-            if(empty($this->getCodMae()))
-                $erros[] = "É necessário informar o codigo da mae";
-            if(empty($this->getDtNascimento()))
-                $erros[] = "É necessário informar a data de nascimento da vaca";
-            if(empty($this->getNomePai()))
-                $erros[] = "É necessário informar o nome do pai";
-            if(empty($this->getEstadoVida()))
-                $erros[] = "É necessário informar o estado de vida da vaca";
-            if(empty($this->getobs()))
-                $erros[] = "É necessário selecionar uma imagem";
+            if(empty($this->getCodInseminacao()))
+                $erros[] = "É necessário informar o codigo de inseminação";
+            if(empty($this->getTouroInseminador()))
+                $erros[] = "É necessário informar o touro inseminador";
+            if(empty($this->getInseminadorResponsavel()))
+                $erros[] = "É necessário informar o inseminador responsavel";
+            if(empty($this->getRetorno()))
+                $erros[] = "É necessário informar o retorno da inseminação";
+            if(empty($this->getObs()))
+                $erros[] = "É necessário informar a observação";
+            if(empty($this->getPrevisaoSecagem()))
+                $erros[] = "É necessário informar a previsão de secagem";
+            if(empty($this->getPrevisaoParto()))
+                $erros[] = "É necessário informar a previsão de parto";
+            if(empty($this->getNovaDtInseminacao()))
+                $erros[] = "É necessário informar a nova data de inseminação";
+            if(empty($this->getNovaPrevisaoSecagem()))
+                $erros[] = "É necessário informar a nova previsão de secagem";
+            if(empty($this->getNovaPrevisaoParto()))
+                $erros[] = "É necessário informar a nova previsão de parto";
             return $erros;                                 
-        }*/
+        }
+        
     }
 ?>
