@@ -1,10 +1,6 @@
 <?php
 include_once "../controller/classes/InseminacaoDAO.php";
 if(!isset($_GET['acao'])){
-<<<<<<< HEAD
-    $titulo = "Inseminações";
-=======
->>>>>>> 8133b0f9514ae409527762651a12cfd1d5315bdf
     $obj = new InseminacaoDAO();
     $lista = $obj->listar();
     include "views/cadastraInseminacao.php";
