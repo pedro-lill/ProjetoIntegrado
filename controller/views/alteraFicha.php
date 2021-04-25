@@ -37,4 +37,92 @@
       </div>
     </form>
 
+    <div class="lista_fichas">
+      <h1>Histórico de inseminação</h1>  
+        <?php
+        require_once "../controller/classes/InseminacaoDAO.php";
+        $obj = new InseminacaoDAO();
+        $lista = $obj->listar(); 
+        if(count($lista) == 0){
+            echo "Nenhuma ficha encontrada.";
+        }else{
+            foreach ($lista as $inseminacao){
+        ?>     
+        <div class="ficha">
+            <div class="label">
+                <div class="ficha_descricao">
+                <strong>Código: <?=$inseminacao->getCodAnimal()?> </strong>
+                <strong>Touro inseminador: <?=$inseminacao->getTouroInseminador()?> </strong>
+                </div>
+                <div>
+                    <button class="button-edit" onclick=""><i class="fa fa-edit fa-1x"></i></button>
+                    <button class="button-delete" onclick=""><i class="fa fa-trash-alt fa-1x"></i></button>
+                </div>
+            </div>
+        </div>
+    <?php
+        }
+      }
+    ?>
+  </div>
+
+  <div class="lista_fichas">
+      <h1>Histórico de produção de leite</h1>  
+        <?php
+        require_once "../controller/classes/ProducaoDAO.php";
+        $obj = new ProducaoDAO();
+        $lista = $obj->listar(); 
+        if(count($lista) == 0){
+            echo "Nenhuma ficha encontrada.";
+        }else{
+            foreach ($lista as $producao){
+        ?>     
+        <div class="ficha">
+            <div class="label">
+                <div class="ficha_descricao">
+                <strong>Código: <?=$producao->getCodAnimal()?> </strong>
+                <strong>Litros: <?=$producao->getLitros()?> </strong>
+                </div>
+                <div>
+                    <button class="button-edit" onclick=""><i class="fa fa-edit fa-1x"></i></button>
+                    <button class="button-delete" onclick=""><i class="fa fa-trash-alt fa-1x"></i></button>
+                </div>
+            </div>
+        </div>
+    <?php
+        }
+      }
+    ?>
+  </div>
+
+  <div class="lista_fichas">
+      <h1>Histórico de tratamento</h1>  
+        <?php
+        require_once "../controller/classes/TratamentoDAO.php";
+        $obj = new TratamentoDAO();
+        $lista = $obj->listar(); 
+        if(count($lista) == 0){
+            echo "Nenhuma ficha encontrada.";
+        }else{
+            foreach ($lista as $tratamento){
+        ?>     
+        <div class="ficha">
+            <div class="label">
+                <div class="ficha_descricao">
+                <strong>Código: <?=$tratamento->getCodAnimal()?> </strong>
+                <strong>Nome do remédio: <?=$tratamento->getNomeMedicamento()?> </strong>
+                </div>
+                <div>
+                    <button class="button-edit" onclick=""><i class="fa fa-edit fa-1x"></i></button>
+                    <button class="button-delete" onclick=""><i class="fa fa-trash-alt fa-1x"></i></button>
+                </div>
+            </div>
+        </div>
+    <?php
+        }
+      }
+    ?>
+  </div>
+  
+
 </main>

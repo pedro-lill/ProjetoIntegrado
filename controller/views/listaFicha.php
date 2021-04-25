@@ -15,7 +15,7 @@
 
 <?php require_once("../includes/header.php");?>
 
-<iv class="lista_fichas">
+<div class="lista_fichas">
 
     <h1><?=$titulo ?></h1>
     <button class="button-form" onclick="window.location.href='fichaController.php?acao=adiciona'">Adicionar ficha</button>
