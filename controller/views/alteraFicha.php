@@ -27,14 +27,13 @@
         <input type="number" placeholder="Código mae" name="field_codMae" maxlength="100" value="<?=$codMae?>">
         <input type="text" placeholder="Nome do touro-pai" name="field_nomePai" maxlength="50" autofocus value="<?=$nomePai?>">
         <input type="number" placeholder="Estado de vida" name="field_estadoVida" maxlength="50" id="id_estadoVida" autofocus value="<?=$estadoVida?>">
-        <!-- <input type="file" required> -->
-        <!-- <div class="container-historicos">
+        <input type="file" required>
+        <div class="container-historicos">
           <div id="button-historico-inseminacao" class="historico"><label>Adicionar histórico de inseminação</label></div>
           <div id="button-historico-producao" class="historico"><label>Adicionar histórico de produção de leite</label></div>
           <div id="button-historico-medicacao" class="historico"><label>Adicionar histórico de medicação</label></div>
-        </div> -->
+        </div>
         <button class="button-form" type="submit">Alterar</button>
-          
       </div>
     </form>
 
