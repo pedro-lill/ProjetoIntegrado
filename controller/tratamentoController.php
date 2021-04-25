@@ -3,45 +3,46 @@ include_once "../controller/classes/TratamentoDAO.phpDAO.php";
 if(!isset($_GET['acao'])){
     $obj = new tratamentoDAO();
     $lista = $obj->listar();
-    include "views/cadastraFicha.php";
+    include "views/cadastraTratamento.php";
 }
 else {    
 	switch($_GET['acao']){
 
         case 'adiciona':
             if(!isset($_POST['adiciona'])){ 
-                include "views/cadastraFicha.php";              
+                include "views/cadastraTratamento.php";              
             }
             else{
                 $novo = new Tratamento();
                 $obj->setCodAnimal($_POST['field_codAnimal']);
-                $obj->setDtNascimento($_POST['field_dtNascimento']);
-                $obj->setCodMae($_POST['field_codMae']);
-                $obj->setNomePai($_POST['field_nomePai']);
-                $obj->setEstadoVida($_POST['field_estadoVida']);
+                $obj->setMotivoTratamento($_POST['field_motivoTratamento']);
+                $obj->setNomeMedicamento($_POST['field_nomeMedicamento']);
+                $obj->setQuantidadeMedicamento($_POST['field_quantidadeMedicamento']);
+                $obj->setResponsavel($_POST['field_responsavel']);
+                $obj->setObs($_POST['field_obs']);
                 $erros = $novo->validate();
                 if(count($erros) != 0){ 
-                    include "views/cadastraFicha.php";                       
+                    include "views/cadastraTratamento.php";                       
                 }
             }
             break;
         
         case 'altera':
             if(!isset($_POST['altera'])){ 
-                $obj = new FichaDAO();
+                $obj = new TratamentoDAO();
                 $tratamento = $obj->buscar($_GET['codAnimal']);
-                include "views/alteraFicha.php";
+                include "views/alteraTratamento.php";
             }
             else{ 
-                $obj = new Ficha();
-                $obj->setDtNascimento($_POST['field_dtNascimento']);
-                $obj->setCodMae($_POST['field_codMae']);
-                $obj->setNomePai($_POST['field_nomePai']);
-                $obj->setEstadoVida($_POST['field_estadoVida']);
                 $obj->setCodAnimal($_POST['field_codAnimal']);
+                $obj->setMotivoTratamento($_POST['field_motivoTratamento']);
+                $obj->setNomeMedicamento($_POST['field_nomeMedicamento']);
+                $obj->setQuantidadeMedicamento($_POST['field_quantidadeMedicamento']);
+                $obj->setResponsavel($_POST['field_responsavel']);
+                $obj->setObs($_POST['field_obs']);
                 $erros = $obj->validate();
                 if(count($erros) != 0){
-                    include "views/alteraFicha.php";                      
+                    include "views/alteraTratamento.php";                      
                 }
             }
             break;
