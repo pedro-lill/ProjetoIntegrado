@@ -4,7 +4,7 @@ if(!isset($_GET['acao'])){
     $titulo = "Tratamentos";
     $obj = new tratamentoDAO();
     $lista = $obj->listar();
-    include "views/cadastraFicha.php";
+    include "views/cadastraTratamento.php";
 }
 else {    
 	switch($_GET['acao']){
@@ -12,7 +12,7 @@ else {
         case 'adiciona':
             $titulo = "Adiciona tratamento";
             if(!isset($_POST['adiciona'])){ 
-                include "views/cadastraFicha.php";              
+                include "views/cadastraTratamento.php";              
             }
             else{
                 $novo = new Tratamento();
@@ -23,7 +23,7 @@ else {
                 $obj->setEstadoVida($_POST['field_estadoVida']);
                 $erros = $novo->validate();
                 if(count($erros) != 0){ 
-                    include "views/cadastraFicha.php";                       
+                    include "views/cadastraTratamento.php";                       
                 }
             }
             break;
@@ -31,12 +31,12 @@ else {
         case 'altera':
             $titulo = "Alteração de tratamento";
             if(!isset($_POST['altera'])){ 
-                $obj = new FichaDAO();
+                $obj = new TratamentoDAO();
                 $tratamento = $obj->buscar($_GET['codAnimal']);
-                include "views/alteraFicha.php";
+                include "views/alteraTratamento.php";
             }
             else{ 
-                $obj = new Ficha();
+                $obj = new Tratamento();
                 $obj->setDtNascimento($_POST['field_dtNascimento']);
                 $obj->setCodMae($_POST['field_codMae']);
                 $obj->setNomePai($_POST['field_nomePai']);
@@ -44,7 +44,7 @@ else {
                 $obj->setCodAnimal($_POST['field_codAnimal']);
                 $erros = $obj->validate();
                 if(count($erros) != 0){
-                    include "views/alteraFicha.php";                      
+                    include "views/alteraTratamento.php";                      
                 }
             }
             break;
