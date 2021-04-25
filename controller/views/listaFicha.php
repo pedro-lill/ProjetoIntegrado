@@ -21,7 +21,7 @@
     <button class="button-form" onclick="window.location.href='fichaController.php?acao=adiciona'">Adicionar ficha</button>
   
         <?php
-        require_once "../classes/FichaDAO.php";
+        require_once "../controller/classes/FichaDAO.php";
         $obj = new FichaDAO();
         $lista = $obj->listar(); 
         if(count($lista) == 0){

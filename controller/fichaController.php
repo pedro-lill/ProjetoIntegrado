@@ -1,5 +1,5 @@
 <?php
-include_once "../classes/FichaDAO.php";
+include_once "../controller/classes/FichaDAO.php";
 if(!isset($_GET['acao'])){
     $titulo = "Lista de Fichas";
     $obj = new FichaDAO();
