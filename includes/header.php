@@ -33,10 +33,10 @@
             <li><a href="../views/graficos.php">Gráficos</a></li>
             <li><a href="../views/previsoes.php">Previsões</a></li>
             <li><a href="../views/tabelas.php">Tabelas</a></li>
-            <li><a href="../views/producao-leite.php">+  Produção</a></li>
+            <li><a href="../controller/producaoController.php?acao=adiciona">+  Produção</a></li>
             <li><a href="../controller/fichaController.php?acao=adiciona">+  Ficha</a></li>
-            <li><a href="../views/producao-leite.php">+  Inseminação</a></li>
-            <li><a href="../views/producao-leite.php">+  Tratamento</a></li>
+            <li><a href="../controller/inseminacaoController.php?acao=adiciona">+  Inseminação</a></li>
+            <li><a href="../controller/tratamentoController.php?acao=adiciona">+  Tratamento</a></li>
         </ul>
         <a class="logo-header" href="../index.php"><img title="Logo do mst" src="/img/mst.png" /></a>
     </header>
