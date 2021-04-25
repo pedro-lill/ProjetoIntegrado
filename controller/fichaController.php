@@ -1,7 +1,6 @@
 <?php
 include_once "../controller/classes/FichaDAO.php";
 if(!isset($_GET['acao'])){
-    $titulo = "Lista de Fichas";
     $obj = new FichaDAO();
     $lista = $obj->listar();
     include "views/listaFicha.php";
@@ -10,7 +9,6 @@ else {
 	switch($_GET['acao']){
 
         case 'adiciona':
-            $titulo = "Adiciona Ficha";
             if(!isset($_POST['adiciona'])){ 
                 include "views/cadastraFicha.php";              
             }
@@ -43,7 +41,6 @@ else {
         break;
         
         case 'altera':
-            $titulo = "Alteração de Ficha";
             if(!isset($_POST['altera'])){ 
                 $obj = new FichaDAO();
                 $ficha = $obj->buscar($_GET['codAnimal']);

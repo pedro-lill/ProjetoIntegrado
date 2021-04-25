@@ -1,8 +1,7 @@
 <?php
 include_once "../controller/classes/InseminacaoDAO.php";
 if(!isset($_GET['acao'])){
-    $titulo = "Inseminações";
-    $obj = new ();
+    $obj = new InseminacaoDAO();
     $lista = $obj->listar();
     include "views/cadastraFicha.php";
 }
@@ -10,7 +9,6 @@ else {
 	switch($_GET['acao']){
 
         case 'adiciona':
-            $titulo = "Adiciona Inseminação";
             if(!isset($_POST['adiciona'])){ 
                 include "views/cadastraFicha.php";              
             }
@@ -32,7 +30,6 @@ else {
                 
         
         case 'altera':
-            $titulo = "Alteração de Inseminação";
             if(!isset($_POST['altera'])){ 
                 $obj = new InseminacaoDAO();
                 $ficha = $obj->buscar($_GET['codAnimal']);

@@ -27,7 +27,6 @@ else {
             break;
         
         case 'altera':
-            $titulo = "Alteração de producao de leite";
             if(!isset($_POST['altera'])){ 
                 $obj = new FichaDAO();
                 $ficha = $obj->buscar($_GET['codProducao']);
