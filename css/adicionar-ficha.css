@@ -3,7 +3,6 @@
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
-    width: 80vw;
     margin-left: 20vw;
 }
 
@@ -24,7 +23,7 @@ input[type=number] {
 
 .historico {
     color: white;
-    background-color: rgba(38, 85, 29, 0.96);
+    background-color: #26551df5;
     border-radius: 13px;
     padding: 15px;
     font-size: 17px;
@@ -36,7 +35,7 @@ input[type=number] {
 
 .historico:hover,
 .historico label:hover {
-    background-color: rgba(40, 148, 18, 0.96);
+    background-color: #289412f5;
     cursor: pointer;
 }
 
@@ -44,28 +43,32 @@ input[type=number] {
     display: none;
     position: fixed;
     z-index: 1;
-    margin: 5vw;
     top: 30px;
     overflow: auto;
-    background-color: rgb(179, 178, 178);
-    border-radius: 10px;
-    padding: 20px;
+    background-color: #a9a9a9;
+    border-radius: 3px;
+    padding: 10px;
+    width: 80vw;
+    min-height: 70vh;
+    margin:60px 10vw 0 10vw;
 }
 
 .modal-content h1 {
-    margin-left: 350px;
+    margin-left: 300px;
 }
 
 .close {
-    color: #3b3a3a;
+    color: #313131;
     float: right;
-    font-size: 33px;
+    font-size: 30px;
     font-weight: bold;
+    margin-top: -25px;
+    margin-right: 5px;
 }
 
 .close:hover,
 .close:focus {
-    color: red;
+    color: rgba(255, 0, 0, 0.501);
     text-decoration: none;
     cursor: pointer;
 }
