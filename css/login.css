@@ -38,14 +38,19 @@ button {
     font-weight: bold;
 }
 
-a{
-    margin-left:40%;
-    text-decoration: none;
-    color: #212121;
-    background-color: #858585;
+.container-login  .login-a{
+    margin: 15px 40% 0 40%;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    padding:5px;
 }
 
-a:hover{
-    background-color: #5c5c5c;
+a{
+    text-decoration: none;
+    color: #212121;
+}
 
+.container-login  .login-a:hover{
+    background-color: #949494;
 }

@@ -21,8 +21,7 @@
       <input type="password" placeholder="Senha" name="password" required>
       <input type="password" placeholder="Confirmar senha" name="password-confirm" required>
       <button class="button-form" type="submit">Cadastrar</button>
-      <a href="../index.php">Login</a>
-
+      <div class="login-a"><a href="../index.php">Voltar ao login</a></div>
     </div>
   </form>
 

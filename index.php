@@ -20,7 +20,7 @@
       <input type="text" placeholder="Login" name="username" required>
       <input type="password" placeholder="Senha" name="password" required>
       <button class="button-form" type="submit">Login</button>
-      <a href="cadastrar-usuario.php">Cadastrar novo usuario</a>
+      <div class="login-a"><a href="views/cadastrar-usuario.php">Cadastrar novo usuario</a></div>
     </div>
   </form>
 
