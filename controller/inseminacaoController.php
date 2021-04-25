@@ -10,7 +10,7 @@ else {
 	switch($_GET['acao']){
 
         case 'adiciona':
-            $titulo = "Adiciona Ficha";
+            $titulo = "Adiciona Inseminação";
             if(!isset($_POST['adiciona'])){ 
                 include "views/cadastraFicha.php";              
             }
