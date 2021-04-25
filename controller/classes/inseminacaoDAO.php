@@ -2,7 +2,7 @@
     require_once "Conexao.php";
     require_once "Inseminacao.php";
 
-    class inseminacaoDAO{
+    class InseminacaoDAO{
         
         public $conexao;
 

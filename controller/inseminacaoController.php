@@ -1,8 +1,8 @@
 <?php
-include_once "../controller/classes/inseminacaoDAO.php";
+include_once "../controller/classes/InseminacaoDAO.php";
 if(!isset($_GET['acao'])){
     $titulo = "Inseminações";
-    $obj = new inseminacaoDAO();
+    $obj = new ();
     $lista = $obj->listar();
     include "views/cadastraFicha.php";
 }
@@ -15,36 +15,26 @@ else {
                 include "views/cadastraFicha.php";              
             }
             else{
-                $novo = new Ficha();
+                $novo = new Inseminacao();
+                $obj->setCodInseminacao($_POST['field_codInseminacao']);
                 $obj->setCodAnimal($_POST['field_codAnimal']);
-                $obj->setDtNascimento($_POST['field_dtNascimento']);
-                $obj->setCodMae($_POST['field_codMae']);
-                $obj->setNomePai($_POST['field_nomePai']);
-                $obj->setEstadoVida($_POST['field_estadoVida']);
-                $obj->setNomeImagem($_FILES['field_imagem']['name']);
+                $obj->setDtInseminacao($_POST['field_dtInseminacao']);
+                $obj->seTouroInseminador($_POST['field_touroInseminador']);
+                $obj->setInseminadorResponsavel($_POST['field_inseminadorResponsavel']);
+                $obj->setRetorno( $_POST['field_retorno']);
+                $obj->setObs( $_POST['field_obs']);
+                $obj->setnovaDtInseminacao($_POST['field_novaDtInseminacao']);
                 $erros = $novo->validate();
                 if(count($erros) != 0){ 
                     include "views/cadastraFicha.php";                       
                 }
-                else{ 
-                    $destino = "../img/".$_FILES['field_imagem']['name']; 
-                    if(move_uploaded_file($_FILES['field_imagem']['tmp_name'], $destino)){
-                        $bd = new FichaDAO();
-                        if($bd->inserir($novo))
-                            header("Location: fichaController.php"); 
-                    }
-                    else{
-                        $erros[] = "Erro no upload";
-                        include "views/cadastraFicha.php";                      
-                    }
-                }
             }
-            break;
+                
         
         case 'altera':
-            $titulo = "Alteração de Ficha";
+            $titulo = "Alteração de Inseminação";
             if(!isset($_POST['altera'])){ 
-                $obj = new FichaDAO();
+                $obj = new InseminacaoDAO();
                 $ficha = $obj->buscar($_GET['codAnimal']);
                 include "views/alteraFicha.php";
             }
