@@ -25,7 +25,6 @@
  
       <form action="adicionar-ficha.php">
         <div>
-          <h1>Adicionar histórico de tratamento</h1>
           <input type="number" placeholder="Código do animal" required>
           <input type="date" required>
           <input type="text" placeholder="Motivos do tratamento">

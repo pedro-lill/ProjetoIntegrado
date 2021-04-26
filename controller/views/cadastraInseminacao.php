@@ -30,7 +30,6 @@
 
         <form action="adicionar-ficha.php">
           <div>
-            <h1>Adicionar histórico de inseminação</h1>
             <input type="number" placeholder="Código da vaca"  name="field_codAnimal" size="100" maxlength="100" id="id_codAnimal" value="<?=$codAnimal?>" required>
             <input type="date" name="field_dtInseminacao" size="100" maxlength="100" id="id_dtInseminacao" value="<?=$dtInseminacao?>" required> 
             <input type="text" placeholder="Nome do touro inseminador"  name="field_touroInseminador" size="100" maxlength="100" id="id_touroInseminador" value="<?=$touroInseminador?>"required>

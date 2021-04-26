@@ -22,7 +22,6 @@
 
       <form action="" method="post" enctype="multipart/form-data">
         <div>
-          <h1>Adicionar histórico de produção de leite</h1>
           <input type="number" placeholder="Código do animal" required>
           <input type="date" required>
           <input type="number" step="0.01" placeholder="Produção em Litros" required>
