@@ -23,7 +23,7 @@
       <div class="container-ficha">
         <h1>Dados da ficha </h1>
         <input type="number" placeholder="Código do animal" name="field_codAnimal" value="<?=$codAnimal ?>">
-        <input type="date" name="field_dtNascimento" maxlength="100" value="<?=$dtNascimento?>">
+        <input type="datetime-local" name="field_dtNascimento" maxlength="100" value="<?=$dtNascimento?>">
         <input type="number" placeholder="Código mae" name="field_codMae" maxlength="100" value="<?=$codMae?>">
         <input type="text" placeholder="Nome do touro-pai" name="field_nomePai" maxlength="50" autofocus value="<?=$nomePai?>">
         <input type="number" placeholder="Estado de vida" name="field_estadoVida" maxlength="50" id="id_estadoVida" autofocus value="<?=$estadoVida?>">
@@ -37,17 +37,19 @@
         <?php
         require_once "../controller/classes/InseminacaoDAO.php";
         $obj = new InseminacaoDAO();
-        $lista = $obj->listar(); 
+        $lista = $obj->buscar($codAnimal); 
         if(count($lista) == 0){
             echo "Nenhuma ficha encontrada.";
         }else{
             foreach ($lista as $inseminacao){
         ?>     
-        <div class="ficha">
+        <div class="ficha-historico">
             <div class="label">
                 <div class="ficha_descricao">
-                <strong>Código: <?=$inseminacao->getCodAnimal()?> </strong>
-                <strong>Touro inseminador: <?=$inseminacao->getTouroInseminador()?> </strong>
+                <strong>Cód.: <?=$inseminacao->getCodAnimal()?> </strong>
+                <strong>Touro: <?=$inseminacao->getTouroInseminador()?> </strong>
+                <?=$inseminacao->getDtInseminacao()?>
+
                 </div>
                 <div>
                     <button class="button-edit" onclick=""><i class="fa fa-edit fa-1x"></i></button>
@@ -66,17 +68,18 @@
         <?php
         require_once "../controller/classes/ProducaoDAO.php";
         $obj = new ProducaoDAO();
-        $lista = $obj->listar(); 
+        $lista = $obj->buscar($codAnimal); 
         if(count($lista) == 0){
             echo "Nenhuma ficha encontrada.";
         }else{
             foreach ($lista as $producao){
         ?>     
-        <div class="ficha">
+        <div class="ficha-historico">
             <div class="label">
                 <div class="ficha_descricao">
-                <strong>Código: <?=$producao->getCodAnimal()?> </strong>
+                <strong>Cód.: <?=$producao->getCodAnimal()?> </strong>
                 <strong>Litros: <?=$producao->getLitros()?> </strong>
+                <?=$producao->getDtColeta()?>  <?=$producao->getPeriodoDia()?>
                 </div>
                 <div>
                     <button class="button-edit" onclick=""><i class="fa fa-edit fa-1x"></i></button>
@@ -95,17 +98,17 @@
         <?php
         require_once "../controller/classes/TratamentoDAO.php";
         $obj = new TratamentoDAO();
-        $lista = $obj->listar(); 
+        $lista = $obj->buscar($codAnimal); 
         if(count($lista) == 0){
             echo "Nenhuma ficha encontrada.";
         }else{
             foreach ($lista as $tratamento){
         ?>     
-        <div class="ficha">
+        <div class="ficha-historico">
             <div class="label">
                 <div class="ficha_descricao">
-                <strong>Código: <?=$tratamento->getCodAnimal()?> </strong>
-                <strong>Nome do remédio: <?=$tratamento->getNomeMedicamento()?> </strong>
+                <strong>Cód.: <?=$tratamento->getCodAnimal()?> </strong>
+                <strong>Remédio: <?=$tratamento->getNomeMedicamento()?> </strong>
                 </div>
                 <div>
                     <button class="button-edit" onclick=""><i class="fa fa-edit fa-1x"></i></button>

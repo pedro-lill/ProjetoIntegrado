@@ -23,7 +23,7 @@
       <div class="container-ficha">
         <h1>Dados da ficha </h1>
         <input type="number" placeholder="Código do animal" name="field_codAnimal" value="<?=$codAnimal ?>">
-        <input type="date" name="field_dtNascimento" maxlength="100" value="<?=$dtNascimento?>">
+        <input type="datetime-local" name="field_dtNascimento" maxlength="100" value="<?=$dtNascimento?>">
         <input type="number" placeholder="Código mae" name="field_codMae" maxlength="100" value="<?=$codMae?>">
         <input type="text" placeholder="Nome do touro-pai" name="field_nomePai" maxlength="50" autofocus value="<?=$nomePai?>">
         <input type="number" placeholder="Estado de vida" name="field_estadoVida" maxlength="50" id="id_estadoVida" autofocus value="<?=$estadoVida?>">

@@ -1,7 +1,5 @@
 <?php require_once("../includes/header.php");?>
 
-<h1>Cadastro de tratamento</h1>
-
 <div class="erro_cadastro">
   <?php
   if(isset($erros) && count($erros) !=0){
@@ -26,7 +24,7 @@
       <form action="adicionar-ficha.php">
         <div>
           <input type="number" placeholder="Código do animal" required>
-          <input type="date" required>
+          <input type="datetime-local" required>
           <input type="text" placeholder="Motivos do tratamento">
           <input type="text" placeholder="Nome do medicamento">
           <input type="text" placeholder="Quantidade de medicamento">

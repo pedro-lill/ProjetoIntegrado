@@ -1,8 +1,8 @@
 function validarLogin(){
 
-    var usuario = document.getElementsByName('username')[0].value;
-    var senha = document.getElementsByName('password')[0].value;
-    debugger
+    var usuario = document.getElementsByName('field_nomeLogin')[0].value;
+    var senha = document.getElementsByName('field_senha')[0].value;
+
     usuario = usuario.toLowerCase();
     console.log(usuario, senha)
 

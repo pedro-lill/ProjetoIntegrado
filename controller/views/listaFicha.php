@@ -40,7 +40,7 @@
                 </div>
                 <div>
                     <button class="button-edit" onclick="window.location.href='fichaController.php?acao=altera&codAnimal=<?=$ficha->getCodAnimal() ?>'"><i class="fa fa-edit fa-1x"></i></button>
-                    <button class="button-delete" onclick="window.location.href='fichaController.php?acao=exclui&codAnimal=<?=$ficha->getCodAnimal() ?>'"><i class="fa fa-trash-alt fa-1x"></i></button>
+                    <button class="button-delete" onclick='verificarExcluir(<?=$ficha->getCodAnimal()?>)'><i class="fa fa-trash-alt fa-1x"></i></button>
                 </div>
             </div>
         </div>

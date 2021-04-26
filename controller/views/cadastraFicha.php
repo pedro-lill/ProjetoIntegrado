@@ -1,6 +1,5 @@
 <?php require_once("../includes/header.php");?>
 
-    <h1>Cadastro de ficha</h1>
 
     <div class="erro_cadastro">
       <?php
@@ -22,11 +21,12 @@
 
     <form action="" method="post" enctype="multipart/form-data">
       <div>
+        <h1>Adicionar ficha de animal</h1>
         <input type="number" placeholder="Código do animal" name="field_codAnimal" autofocus value="<?=$codAnimal ?>" required>
-        <input type="date" name="field_dtNascimento" size="100" maxlength="100" id="id_dtNascimento" value="<?=$dtNascimento?>" required>
-        <input type="number" placeholder="Código mae" name="field_codMae" size="100" maxlength="100" id="id_codMae" value="<?=$codMae?>" required>
-        <input type="text" placeholder="Nome do touro-pai" name="field_nomePai" size="50" maxlength="50" id="id_nomePai" value="<?=$nomePai?>" required>
-        <input type="number" placeholder="Estado de vida" name="field_estadoVida" size="50" maxlength="50" id="id_estadoVida" value="<?=$estadoVida?>" required>
+        <input type="datetime-local" name="field_dtNascimento" maxlength="100" id="id_dtNascimento" value="<?=$dtNascimento?>" required>
+        <input type="number" placeholder="Código mae" name="field_codMae" maxlength="100" id="id_codMae" value="<?=$codMae?>" required>
+        <input type="text" placeholder="Nome do touro-pai" name="field_nomePai" maxlength="50" id="id_nomePai" value="<?=$nomePai?>" required>
+        <input type="number" placeholder="Estado de vida" name="field_estadoVida" maxlength="50" id="id_estadoVida" value="<?=$estadoVida?>" required>
         <input type="file" name="field_imagem" id="id_imagem" required>
         <button class="button-form" type="submit">Salvar</button>
       </div>

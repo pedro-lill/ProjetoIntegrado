@@ -22,10 +22,10 @@
             }
         }
 
-        public function buscar($codProducao){
+        public function buscar($codAnimal){
             try{
-                $query = $this->conexao->prepare("select * from producao where codProducao = :p");
-                $query->bindParam(":p", $codProducao);
+                $query = $this->conexao->prepare("select * from producao where codAnimal = :a");
+                $query->bindParam(":a", $codAnimal);
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Producao");
                 return $registros;

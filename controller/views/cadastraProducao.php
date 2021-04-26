@@ -1,7 +1,5 @@
 <?php require_once("../includes/header.php");?>
 
-<h1>Cadastro de produção</h1>
-
 <div class="erro_cadastro">
   <?php
   if(isset($erros) && count($erros) !=0){
@@ -23,7 +21,7 @@
       <form action="" method="post" enctype="multipart/form-data">
         <div>
           <input type="number" placeholder="Código do animal" required>
-          <input type="date" required>
+          <input type="datetime-local" required>
           <input type="number" step="0.01" placeholder="Produção em Litros" required>
           <select name="periodoDia" required>
             <option value="manha">Manhã</option>
