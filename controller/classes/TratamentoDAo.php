@@ -22,10 +22,10 @@
             }
         }
 
-        public function buscar($codTratamento){
+        public function buscar($codAnimal){
             try{
-                $query = $this->conexao->prepare("select * from tratamento where codTratamento = :t");
-                $query->bindParam(":t", $codTratamento);
+                $query = $this->conexao->prepare("select * from tratamento where codAnimal = :a");
+                $query->bindParam(":a", $codAnimal);
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Tratamento");
                 return $registros;

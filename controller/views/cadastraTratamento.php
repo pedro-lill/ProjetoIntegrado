@@ -25,7 +25,7 @@
         <div>
           <h1>Adicionar histórico de tratamento</h1>
           <input type="number" placeholder="Código do animal" required>
-          <input type="date" required>
+          <input type="datetime-local" required>
           <input type="text" placeholder="Motivos do tratamento">
           <input type="text" placeholder="Nome do medicamento">
           <input type="text" placeholder="Quantidade de medicamento">

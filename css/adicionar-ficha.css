@@ -7,7 +7,7 @@
 }
 
 input[type=text],
-input[type=date],
+input[type=datetime-local],
 input[type=checkbox],
 input[type=file],
 input[type=number] {

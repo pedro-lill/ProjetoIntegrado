@@ -22,7 +22,7 @@
         <div>
           <h1>Adicionar histórico de produção de leite</h1>
           <input type="number" placeholder="Código do animal" required>
-          <input type="date" required>
+          <input type="datetime-local" required>
           <input type="number" step="0.01" placeholder="Produção em Litros" required>
           <select name="periodoDia" required>
             <option value="manha">Manhã</option>

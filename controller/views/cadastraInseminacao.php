@@ -30,11 +30,11 @@
           <div>
             <h1>Adicionar histórico de inseminação</h1>
             <input type="number" placeholder="Código da vaca"  name="field_codAnimal" size="100" maxlength="100" id="id_codAnimal" value="<?=$codAnimal?>" required>
-            <input type="date" name="field_dtInseminacao" size="100" maxlength="100" id="id_dtInseminacao" value="<?=$dtInseminacao?>" required> 
+            <input type="datetime-local" name="field_dtInseminacao" size="100" maxlength="100" id="id_dtInseminacao" value="<?=$dtInseminacao?>" required> 
             <input type="text" placeholder="Nome do touro inseminador"  name="field_touroInseminador" size="100" maxlength="100" id="id_touroInseminador" value="<?=$touroInseminador?>"required>
             <input type="text" placeholder="Inseminador responsável" name="field_inseminadorResponsavel" size="100" maxlength="100" id="id_inseminadorResponsavel" value="<?=$inseminadorResponsavel?>" required>
             <input type="text" placeholder="Retorno" name="field_retorno" size="100" maxlength="100" id="id_retorno" value="<?=$retorno?>">
-            <input type="date" name="field_novaDtInseminacao" size="100" maxlength="100" id="id_novaDtInseminacao" value="<?=$novaDtInseminacao?>"> <!--data de retorno da nova inseminacao-->
+            <input type="datetime-local" name="field_novaDtInseminacao" size="100" maxlength="100" id="id_novaDtInseminacao" value="<?=$novaDtInseminacao?>"> <!--data de retorno da nova inseminacao-->
             <input type="text" placeholder="Observação" name="field_obs" size="100" maxlength="100" id="id_obs" value="<?=$obs?>">
             <!--previsao de parto-->
             <!--previsao de secagem-->
