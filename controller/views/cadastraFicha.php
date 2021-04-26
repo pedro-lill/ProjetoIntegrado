@@ -21,7 +21,7 @@
 
     <form action="" method="post" enctype="multipart/form-data">
       <div>
-        <h1>Adicionar ficha de animal</h1>
+        <h1>Cadastro de ficha de animal</h1>
         <input type="number" placeholder="Código do animal" name="field_codAnimal" autofocus value="<?=$codAnimal ?>" required>
         <input type="datetime-local" name="field_dtNascimento" maxlength="100" id="id_dtNascimento" value="<?=$dtNascimento?>" required>
         <input type="number" placeholder="Código mae" name="field_codMae" maxlength="100" id="id_codMae" value="<?=$codMae?>" required>

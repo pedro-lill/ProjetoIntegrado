@@ -20,6 +20,7 @@
 
       <form action="" method="post" enctype="multipart/form-data">
         <div>
+        <h1>Cadastro de produção</h1>
           <input type="number" placeholder="Código do animal" required>
           <input type="datetime-local" required>
           <input type="number" step="0.01" placeholder="Produção em Litros" required>

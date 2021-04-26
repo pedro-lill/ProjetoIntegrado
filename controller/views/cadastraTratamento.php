@@ -23,6 +23,7 @@
  
       <form action="adicionar-ficha.php">
         <div>
+        <h1>Cadastro de tratamento</h1>
           <input type="number" placeholder="Código do animal" required>
           <input type="datetime-local" required>
           <input type="text" placeholder="Motivos do tratamento">
