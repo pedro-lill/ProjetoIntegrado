@@ -13,14 +13,14 @@ else {
                 include "views/cadastraTratamento.php";              
             }
             else{
-                $novo = new Tratamento();
+                $obj = new Tratamento();
                 $obj->setCodAnimal($_POST['field_codAnimal']);
                 $obj->setMotivoTratamento($_POST['field_motivoTratamento']);
                 $obj->setNomeMedicamento($_POST['field_nomeMedicamento']);
                 $obj->setQuantidadeMedicamento($_POST['field_quantidadeMedicamento']);
                 $obj->setResponsavel($_POST['field_responsavel']);
                 $obj->setObs($_POST['field_obs']);
-                $erros = $novo->validate();
+                $erros = $obj->validate();
                 if(count($erros) != 0){ 
                     include "views/cadastraTratamento.php";                       
                 }

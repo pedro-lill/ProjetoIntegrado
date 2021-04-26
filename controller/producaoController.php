@@ -13,12 +13,12 @@ else {
                 include "views/cadastraProducao.php";              
             }
             else{
-                $novo = new Producao();
+                $obj = new Producao();
                 $obj->setCodAnimal($_POST['field_codAnimal']);
                 $obj->setDtColeta($_POST['field_dtColeta']);
                 $obj->setLitros($_POST['field_litros']);
                 $obj->setPeriodoDia($_POST['field_periodoDia']);
-                $erros = $novo->validate();
+                $erros = $obj->validate();
                 if(count($erros) != 0){ 
                     include "views/cadastraProducao.php";                       
                 }

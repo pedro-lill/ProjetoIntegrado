@@ -13,14 +13,14 @@ else {
                 include "views/cadastraFicha.php";              
             }
             else{
-                $novo = new Ficha();
+                $obj = new Ficha();
                 $obj->setCodAnimal($_POST['field_codAnimal']);
                 $obj->setDtNascimento($_POST['field_dtNascimento']);
                 $obj->setCodMae($_POST['field_codMae']);
                 $obj->setNomePai($_POST['field_nomePai']);
                 $obj->setEstadoVida($_POST['field_estadoVida']);
                 $obj->setNomeImagem($_FILES['field_imagem']['name']);
-                $erros = $novo->validate();
+                $erros = $obj->validate();
                 if(count($erros) != 0){ 
                     include "views/cadastraFicha.php";                       
                 }
@@ -28,7 +28,7 @@ else {
                     $destino = "../img/".$_FILES['field_imagem']['name']; 
                     if(move_uploaded_file($_FILES['field_imagem']['tmp_name'], $destino)){
                         $bd = new FichaDAO();
-                        if($bd->inserir($novo))
+                        if($bd->inserir($obj))
                             header("Location: fichaController.php"); 
                     }
                     else{

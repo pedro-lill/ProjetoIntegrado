@@ -35,7 +35,7 @@
             }
         }        
 
-        public function inserir(ficha $ficha){
+        public function inserir(Ficha $ficha){
             try{
                 $query = $this->conexao->prepare("insert into ficha values (:c, :d, :m, :p, :e, :i)");
                 $query->bindValue(":c", $ficha->getCodAnimal());
@@ -51,7 +51,7 @@
             }
         }
 
-        public function alterar(ficha $ficha){
+        public function alterar(Ficha $ficha){
             try{
                 $query = $this->conexao->prepare("update ficha set dtNascimento = :d, codMae = :m, nomePai = :p, estadoVida = :e, nomeImagem = :i where codAnimal = :c");
                 $query->bindValue(":c", $ficha->getCodAnimal());
@@ -67,10 +67,10 @@
             }
         }
 
-        public function excluir($cod){
+        public function excluir($codAnimal){
             try{
                 $query = $this->conexao->prepare("delete from ficha where codAnimal = :c");
-                $query->bindValue(":c", $cod);
+                $query->bindValue(":c", $codAnimal);
                 return $query->execute();
             }
             catch(PDOException $e){

@@ -1,5 +1,5 @@
 <?php
-    class ficha{
+    class Ficha{
 
         private $codAnimal;
         private $dtNascimento;
@@ -12,8 +12,8 @@
             return $this->codAnimal;
         }
 
-        public function setCodAnimal($cod){
-            $this->codAnimal = $cod;
+        public function setCodAnimal($codAnimal){
+            $this->codAnimal = $codAnimal;
         }
 
         public function getDtNascimento(){

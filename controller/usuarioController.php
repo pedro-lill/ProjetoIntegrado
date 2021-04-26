@@ -13,11 +13,11 @@ else {
                 include "views/cadastraUsuario.php";              
             }
             else{
-                $novo = new Usuario();
+                $obj = new Usuario();
                 $obj->setCodUsuario($_POST['field_codUsuario']);
                 $obj->setNomeLogin($_POST['field_nomeLogin']);
                 $obj->setSenha($_POST['field_senha']);
-                $erros = $novo->validate();
+                $erros = $obj->validate();
                 if(count($erros) != 0){ 
                     include "views/cadastraUsuario.php";                       
                 }

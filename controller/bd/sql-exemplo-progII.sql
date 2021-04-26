@@ -35,7 +35,7 @@ create table inseminacao(
   inseminadorResponsavel VARCHAR(40) NOT NULL,
   retorno INTEGER, /*booleano, por padrao é false. if(true) cria novaDataInseminacao*/
   obs TEXT,
-  previsaoSecagem DATETIME,/*automatico =dataInseminacao + 7 meses*/
+  previsaoSecagem DATETIME,/*automatico =dataInseminacao + 7 meses    date_format   select date_format(...)*/ 
   previsaoParto DATETIME,/*automatico =dataInseminacao + 9 meses*/
   novaDtInseminacao DATETIME,/*if (retorno==true){crio uma novaDataInseminacao} */
   novaPrevisaoSecagem DATETIME,/*automatico =novaDataInseminacao + 7 meses*/

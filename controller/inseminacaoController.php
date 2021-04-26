@@ -13,16 +13,16 @@ else {
                 include "views/cadastraInseminacao.php";              
             }
             else{
-                $novo = new Inseminacao();
+                $obj = new Inseminacao();
                 $obj->setCodInseminacao($_POST['field_codInseminacao']);
                 $obj->setCodAnimal($_POST['field_codAnimal']);
                 $obj->setDtInseminacao($_POST['field_dtInseminacao']);
-                $obj->seTouroInseminador($_POST['field_touroInseminador']);
+                $obj->setTouroInseminador($_POST['field_touroInseminador']);
                 $obj->setInseminadorResponsavel($_POST['field_inseminadorResponsavel']);
                 $obj->setRetorno( $_POST['field_retorno']);
                 $obj->setObs( $_POST['field_obs']);
                 $obj->setnovaDtInseminacao($_POST['field_novaDtInseminacao']);
-                $erros = $novo->validate();
+                $erros = $obj->validate();
                 if(count($erros) != 0){ 
                     include "views/cadastraInseminacao.php";                       
                 }

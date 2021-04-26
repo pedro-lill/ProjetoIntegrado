@@ -15,6 +15,7 @@
       $codMae = isset($_POST['field_codMae']) ? $_POST['field_codMae'] : "";
       $nomePai = isset($_POST['field_nomePai']) ? $_POST['field_nomePai'] : "";
       $estadoVida = isset($_POST['field_estadoVida']) ? $_POST['field_estadoVida'] : "";
+      $nomeImagem = isset($_FILES['field_imagem'])?($_FILES['field_imagem']) : "";
 
         ?>
     </div>
@@ -27,8 +28,8 @@
         <input type="number" placeholder="Código mae" name="field_codMae" maxlength="100" id="id_codMae" value="<?=$codMae?>" required>
         <input type="text" placeholder="Nome do touro-pai" name="field_nomePai" maxlength="50" id="id_nomePai" value="<?=$nomePai?>" required>
         <input type="number" placeholder="Estado de vida" name="field_estadoVida" maxlength="50" id="id_estadoVida" value="<?=$estadoVida?>" required>
-        <input type="file" name="field_imagem" id="id_imagem" required>
-        <button class="button-form" type="submit">Salvar</button>
+        <input type="file" name="field_imagem" id="id_imagem" maxlength="50" id="id_nomeImagem" autofocus value="<?=$nomeImagem?>" required>
+        <button name="adiciona" class="button-form" type="submit">Salvar</button>
       </div>
     </form>
 
