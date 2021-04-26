@@ -1,7 +1,7 @@
 <?php
 include_once "../controller/classes/TratamentoDAO.php";
 if(!isset($_GET['acao'])){
-    $obj = new tratamentoDAO();
+    $obj = new TratamentoDAO();
     $lista = $obj->listar();
     include "views/cadastraTratamento.php";
 }

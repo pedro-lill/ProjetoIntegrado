@@ -1,3 +1,18 @@
+<div class="erro_cadastro">
+  <?php
+  if(isset($erros) && count($erros) !=0){
+      echo "<ul>";
+      foreach($erros as $e)
+          echo "<li>$e</li>";
+      echo "</ul>";
+  }
+
+  $codAnimal = isset($_POST['field_codAnimal']) ? $_POST['field_codAnimal'] : "";
+  $motivoTratamento = isset($_POST['field_motivoTratamento']) ? $_POST['field_motivoTratamento'] : "";
+  $nomeMedicamento = isset($_POST['field_nomeMedicamento']) ? $_POST['field_nomeMedicamento'] : "";
+  ?>
+</div>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -15,7 +30,7 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/login.css">
 
-  <title>Login</title>
+  <title>Login - COOPTAR</title>
 
 </head>
 
@@ -28,7 +43,7 @@
       <input type="text" placeholder="Login" name="username" required>
       <input type="password" placeholder="Senha" name="password" required>
       <button class="button-form" type="submit">Login</button>
-      <div class="login-a"><a href="views/cadastrar-usuario.php">Cadastrar novo usuario</a></div>
+      <div class="login-a"><a href="../controller/views/cadastraUsuario.php">Cadastrar novo usuario</a></div>
     </div>
   </form>
 

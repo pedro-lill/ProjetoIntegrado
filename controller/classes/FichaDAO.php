@@ -2,7 +2,7 @@
     require_once "Conexao.php";
     require_once "Ficha.php";
 
-    class fichaDAO{
+    class FichaDAO{
         
         public $conexao;
 

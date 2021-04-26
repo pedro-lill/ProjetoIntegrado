@@ -10,7 +10,8 @@ input[type=text],
 input[type=datetime-local],
 input[type=checkbox],
 input[type=file],
-input[type=number] {
+input[type=number],
+select {
     background-color: #e2e1e1;
     width: 50%;
     padding: 6px 10px;
