@@ -1,5 +1,5 @@
 <?php
-include_once "../controller/classes/TratamentoDAO.phpDAO.php";
+include_once "../controller/classes/TratamentoDAO.php";
 if(!isset($_GET['acao'])){
     $obj = new tratamentoDAO();
     $lista = $obj->listar();

@@ -1,7 +1,5 @@
 <?php require_once("../includes/header.php");?>
 
-<h1>Cadastro de inseminação</h1>
-
 <div class="erro_cadastro">
   <?php
   if(isset($erros) && count($erros) !=0){
