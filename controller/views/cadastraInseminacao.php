@@ -10,10 +10,6 @@
   }
 
   //inseminacao
-  $timezone = new DateTimeZone('America/Sao_Paulo');
-  $dtInseminacao = new DateTime('now', $timezone);
-  $dtInseminacao->format('d/m/Y H:i');
-  
   $codAnimal = isset($_POST['field_codAnimal']) ? $_POST['field_codAnimal'] : "";
   $codInseminacao = isset($_POST['field_codInseminacao']) ? $_POST['field_codInseminacao'] : "";
   $dtInseminacao = isset($_POST['field_dtInseminacao']) ? $_POST['field_dtInseminacao'] : "";
