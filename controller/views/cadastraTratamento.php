@@ -31,7 +31,7 @@
           <input type="text" placeholder="Quantidade de medicamento">
           <input type="text" placeholder="Responsável" required>
           <input type="text" placeholder="Observação">
-          <button class="button-form" type="submit">Salvar</button>
+          <button name="adiciona" class="button-form" type="submit">Salvar</button>
         </div>
       </form>
       <?php require_once("../includes/footer.php");?>

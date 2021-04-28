@@ -28,7 +28,7 @@
             <option value="manha">Manhã</option>
             <option value="tarde">Tarde</option>
           </select>
-          <button class="button-form" type="submit">Salvar</button>
+          <button name="adiciona" class="button-form" type="submit">Salvar</button>
         </div>
       </form>
 

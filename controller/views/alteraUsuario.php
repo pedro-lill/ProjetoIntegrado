@@ -21,7 +21,7 @@
       <input type="text" placeholder="Login" name="field_nomeLogin" value="<?=$nomeLogin ?>" required>
       <input type="password" placeholder="Senha" name="field_senha" value="<?=$senha ?>" required>
       <input type="password" placeholder="Confirmar senha" name="password-confirm" value="<?=$senha ?>" required>
-      <button class="button-form" type="submit">Cadastrar</button>
+      <button name="adiciona" class="button-form" type="submit">Cadastrar</button>
       <div class="login-a"><a href="acessoUsuario.php">Voltar ao login</a></div>
     </div>
   </form>

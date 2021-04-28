@@ -1,6 +1,4 @@
 <?php require_once("../includes/header.php");?>
-
-
     <div class="erro_cadastro">
       <?php
       if(isset($erros) && count($erros) !=0){

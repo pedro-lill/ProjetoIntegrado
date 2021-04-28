@@ -56,8 +56,8 @@
 
                 </div>
                 <div>
-                    <button class="button-edit" onclick=""><i class="fa fa-edit fa-1x"></i></button>
-                    <button class="button-delete" onclick=""><i class="fa fa-trash-alt fa-1x"></i></button>
+                    <button name="altera" class="button-edit" onclick=""><i class="fa fa-edit fa-1x"></i></button>
+                    <button name="exclui" class="button-delete" onclick=""><i class="fa fa-trash-alt fa-1x"></i></button>
                 </div>
             </div>
         </div>
@@ -86,8 +86,8 @@
                 <?=$producao->getDtColeta()?>  <?=$producao->getPeriodoDia()?>
                 </div>
                 <div>
-                    <button class="button-edit" onclick=""><i class="fa fa-edit fa-1x"></i></button>
-                    <button class="button-delete" onclick=""><i class="fa fa-trash-alt fa-1x"></i></button>
+                    <button name="altera" class="button-edit" onclick=""><i class="fa fa-edit fa-1x"></i></button>
+                    <button name="exclui" class="button-delete" onclick=""><i class="fa fa-trash-alt fa-1x"></i></button>
                 </div>
             </div>
         </div>
@@ -115,8 +115,8 @@
                 <strong>Remédio: <?=$tratamento->getNomeMedicamento()?> </strong>
                 </div>
                 <div>
-                    <button class="button-edit" onclick=""><i class="fa fa-edit fa-1x"></i></button>
-                    <button class="button-delete" onclick=""><i class="fa fa-trash-alt fa-1x"></i></button>
+                    <button name="altera" class="button-edit" onclick=""><i class="fa fa-edit fa-1x"></i></button>
+                    <button name="exclui" class="button-delete" onclick=""><i class="fa fa-trash-alt fa-1x"></i></button>
                 </div>
             </div>
         </div>

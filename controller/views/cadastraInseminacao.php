@@ -42,7 +42,7 @@
             <input type="text" placeholder="Observação" name="field_obs" size="100" maxlength="100" id="id_obs" value="<?=$obs?>">
             <!--previsao de parto-->
             <!--previsao de secagem-->
-            <button class="button-form" type="submit">Salvar</button>
+            <button name="adiciona" class="button-form" type="submit">Salvar</button>
           </div>
         </form>
 
