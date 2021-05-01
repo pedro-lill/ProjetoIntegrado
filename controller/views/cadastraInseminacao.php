@@ -10,10 +10,6 @@
   }
 
   //inseminacao
-  $timezone = new DateTimeZone('America/Sao_Paulo');
-  $dtInseminacao = new DateTime('now', $timezone);
-  $dtInseminacao->format('d/m/Y H:i');
-  
   $codAnimal = isset($_POST['field_codAnimal']) ? $_POST['field_codAnimal'] : "";
   $codInseminacao = isset($_POST['field_codInseminacao']) ? $_POST['field_codInseminacao'] : "";
   $dtInseminacao = isset($_POST['field_dtInseminacao']) ? $_POST['field_dtInseminacao'] : "";
@@ -33,7 +29,7 @@
           <div>
           <h1>Cadastro de inseminação</h1>
 
-            <input type="number" placeholder="Código da vaca"  name="field_codAnimal" size="100" maxlength="100" id="id_codAnimal" value="<?=$codAnimal?>" required>
+            <input type="number" placeholder="Código do animal"  name="field_codAnimal" size="100" maxlength="100" id="id_codAnimal" value="<?=$codAnimal?>" required>
             <input type="datetime-local" name="field_dtInseminacao" size="100" maxlength="100" id="id_dtInseminacao" value="<?=$dtInseminacao?>" required> 
             <input type="text" placeholder="Nome do touro inseminador"  name="field_touroInseminador" size="100" maxlength="100" id="id_touroInseminador" value="<?=$touroInseminador?>"required>
             <input type="text" placeholder="Inseminador responsável" name="field_inseminadorResponsavel" size="100" maxlength="100" id="id_inseminadorResponsavel" value="<?=$inseminadorResponsavel?>" required>
