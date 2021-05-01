@@ -27,13 +27,7 @@
             echo "Nenhuma ficha encontrada.";
         }else{
             foreach ($lista as $ficha){
-        ?>
-          <?php
-        }
-      }
-    ?>
-    
-  </div>
+        ?>     
    
         <div class="ficha">
             <div class="label">
@@ -51,7 +45,12 @@
             </div>
         </div>
 
-  
+    <?php
+        }
+      }
+    ?>
+    
+  </div>
 
   <?php require_once("../includes/footer.php");?>
   

@@ -69,8 +69,8 @@
             $erros = array();
             if(empty($this->getCodAnimal()))
                 $erros[] = "É necessário informar o codigo do animal";
-            if(empty($this->getCodTratamento()))
-                $erros[] = "É necessário informar o codigo do tratamento";
+            //if(empty($this->getCodTratamento()))
+              //  $erros[] = "É necessário informar o codigo do tratamento";
             if(empty($this->getMotivoTratamento()))
                 $erros[] = "É necessário informar o motivo do tratamento";
             if(empty($this->getNomeMedicamento()))

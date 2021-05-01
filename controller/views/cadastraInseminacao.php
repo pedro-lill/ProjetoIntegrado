@@ -8,6 +8,7 @@
           echo "<li>$e</li>";
       echo "</ul>";
   }
+  
 
   //inseminacao
   $codAnimal = isset($_POST['field_codAnimal']) ? $_POST['field_codAnimal'] : "";
@@ -25,7 +26,7 @@
     ?>
 </div>
 
-        <form action="adicionar-ficha.php">
+        <form action="" method="post" enctype="multipart/form-data">
           <div>
           <h1>Cadastro de inseminação</h1>
 
@@ -41,5 +42,7 @@
             <button name="adiciona" class="button-form" type="submit">Salvar</button>
           </div>
         </form>
+    
+  </div>
 
-        <?php require_once("../includes/footer.php");?>
+<?php require_once("../includes/footer.php");?>

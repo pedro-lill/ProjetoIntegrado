@@ -9,11 +9,13 @@
         echo "</ul>";
     }
 
-    $codAnimal = isset($_POST['field_codAnimal']) ? $_POST['field_codAnimal'] : $ficha->getCodAnimal();
-    $dtNascimento = isset($_POST['field_dtNascimento']) ? $_POST['field_dtNascimento'] : $ficha->getDtNascimento();
-    $codMae = isset($_POST['field_codMae']) ? $_POST['field_codMae'] : $ficha->getCodMae();
-    $nomePai = isset($_POST['field_nomePai']) ? $_POST['field_nomePai'] : $ficha->getNomePai();
-    $estadoVida = isset($_POST['field_estadoVida']) ? $_POST['field_estadoVida'] : $ficha->getEstadoVida();
+    $codAnimal = isset($_POST['field_codAnimal']) ? $_POST['field_codAnimal'] : "";
+    $dtTratamento = isset($_POST['field_dtTratamento']) ? $_POST['field_dtTratamento'] : "";
+    $motivoTratamento = isset($_POST['field_motivoTratamento']) ? $_POST['field_motivoTratamento'] : "";
+    $nomeMedicamento = isset($_POST['field_nomeMedicamento']) ? $_POST['field_nomeMedicamento'] : "";
+    $quantidadeMedicamento = isset($_POST['field_quantidadeMedicamento']) ? $_POST['field_quantidadeMedicamento'] : "";
+    $responsavel = isset($_POST['field_responsavel']) ? $_POST['field_responsavel'] : "";
+    $obs = isset($_POST['field_obs']) ? $_POST['field_obs'] : "";
     ?>
     </div>
     
@@ -23,11 +25,12 @@
       <div class="container-ficha">
         <h1>Dados da ficha </h1>
         <input type="number" placeholder="Código do animal" name="field_codAnimal" value="<?=$codAnimal ?>">
-        <input type="datetime-local" name="field_dtNascimento" maxlength="100" value="<?=$dtNascimento?>">
-        <input type="number" placeholder="Código mae" name="field_codMae" maxlength="100" value="<?=$codMae?>">
-        <input type="text" placeholder="Nome do touro-pai" name="field_nomePai" maxlength="50" autofocus value="<?=$nomePai?>">
-        <input type="number" placeholder="Estado de vida" name="field_estadoVida" maxlength="50" id="id_estadoVida" autofocus value="<?=$estadoVida?>">
-        <input type="file" required>
+        <input type="datetime-local" name="field_dtTratamento" maxlength="100" value="<?=$dtTratamento?>">
+        <input type="number" placeholder="Motivo Tratamento" name="field_motivoTratamento" maxlength="100" value="<?=$motivoTratamento?>">
+        <input type="text" placeholder="nome Medicamento" name="field_nomeMedicamento" maxlength="50" autofocus value="<?=$nomeMedicamento?>">
+        <input type="number" placeholder="quantidadeMedicamento" name="field_quantidadeMedicamento" maxlength="50" id="id_quantidadeMedicamento" autofocus value="<?=$quantidadeMedicamento?>">
+        <input type="text" placeholder="" name="field_responsavel" maxlength="50" autofocus value="<?=$responsavel?>">
+        <input type="text" placeholder="obs" name="field_obs" maxlength="50" autofocus value="<?=$obs?>">
         <button name="altera" class="button-form" type="submit">Alterar</button>
       </div>
     </form>
