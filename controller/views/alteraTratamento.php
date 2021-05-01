@@ -9,13 +9,13 @@
         echo "</ul>";
     }
 
-    $codAnimal = isset($_POST['field_codAnimal']) ? $_POST['field_codAnimal'] : "";
-    $dtTratamento = isset($_POST['field_dtTratamento']) ? $_POST['field_dtTratamento'] : "";
-    $motivoTratamento = isset($_POST['field_motivoTratamento']) ? $_POST['field_motivoTratamento'] : "";
-    $nomeMedicamento = isset($_POST['field_nomeMedicamento']) ? $_POST['field_nomeMedicamento'] : "";
-    $quantidadeMedicamento = isset($_POST['field_quantidadeMedicamento']) ? $_POST['field_quantidadeMedicamento'] : "";
-    $responsavel = isset($_POST['field_responsavel']) ? $_POST['field_responsavel'] : "";
-    $obs = isset($_POST['field_obs']) ? $_POST['field_obs'] : "";
+    $codAnimal = isset($_POST['field_codAnimal']) ? $_POST['field_codAnimal'] : $tratamento->getCodAnimal();
+    $dtTratamento = isset($_POST['field_dtTratamento']) ? $_POST['field_dtTratamento'] : $tratamento->getDtTratamento();
+    $motivoTratamento = isset($_POST['field_motivoTratamento']) ? $_POST['field_motivoTratamento'] : $tratamento->getMotivoTratamento();
+    $nomeMedicamento = isset($_POST['field_nomeMedicamento']) ? $_POST['field_nomeMedicamento'] : $tratamento->getNomeMedicamento();
+    $quantidadeMedicamento = isset($_POST['field_quantidadeMedicamento']) ? $_POST['field_quantidadeMedicamento'] : $tratamento->getMotivoTratamento();
+    $responsavel = isset($_POST['field_responsavel']) ? $_POST['field_responsavel'] : $tratamento->getResponsavel();
+    $obs = isset($_POST['field_obs']) ? $_POST['field_obs'] : $tratamento->getObs();
     ?>
     </div>
     

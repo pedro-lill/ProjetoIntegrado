@@ -7,7 +7,6 @@ if(!isset($_GET['acao'])){
 }
 else {    
 	switch($_GET['acao']){
-
         case 'adiciona':
             if(!isset($_POST['adiciona'])){ 
                 include "views/cadastraFicha.php";              

@@ -26,8 +26,8 @@
             return $this->codAnimal;
         }
 
-        public function setCodAnimal($cod){
-            $this->codAnimal = $cod;
+        public function setCodAnimal($codAnimal){
+            $this->codAnimal = $codAnimal;
         }
 
         public function getDtInseminacao(){
@@ -114,8 +114,8 @@
             $erros = array();
             if(empty($this->getCodAnimal()))
                 $erros[] = "É necessário informar o codigo do animal";
-            if(empty($this->getCodInseminacao()))
-                $erros[] = "É necessário informar o codigo de inseminação";
+            //if(empty($this->getCodInseminacao()))
+              //  $erros[] = "É necessário informar o codigo de inseminação";
             if(empty($this->getTouroInseminador()))
                 $erros[] = "É necessário informar o touro inseminador";
             if(empty($this->getInseminadorResponsavel()))
@@ -124,16 +124,16 @@
                 $erros[] = "É necessário informar o retorno da inseminação";
             if(empty($this->getObs()))
                 $erros[] = "É necessário informar a observação";
-            if(empty($this->getPrevisaoSecagem()))
-                $erros[] = "É necessário informar a previsão de secagem";
-            if(empty($this->getPrevisaoParto()))
-                $erros[] = "É necessário informar a previsão de parto";
-            if(empty($this->getNovaDtInseminacao()))
-                $erros[] = "É necessário informar a nova data de inseminação";
-            if(empty($this->getNovaPrevisaoSecagem()))
-                $erros[] = "É necessário informar a nova previsão de secagem";
-            if(empty($this->getNovaPrevisaoParto()))
-                $erros[] = "É necessário informar a nova previsão de parto";
+            //if(empty($this->getPrevisaoSecagem()))
+               // $erros[] = "É necessário informar a previsão de secagem";
+           // if(empty($this->getPrevisaoParto()))
+             //   $erros[] = "É necessário informar a previsão de parto";
+            //if(empty($this->getNovaDtInseminacao()))
+           //     $erros[] = "É necessário informar a nova data de inseminação";
+            //if(empty($this->getNovaPrevisaoSecagem()))
+              //  $erros[] = "É necessário informar a nova previsão de secagem";
+            //if(empty($this->getNovaPrevisaoParto()))
+                //$erros[] = "É necessário informar a nova previsão de parto";
             return $erros;                                 
         }
         

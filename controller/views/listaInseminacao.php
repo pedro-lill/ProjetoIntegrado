@@ -36,7 +36,7 @@
                 </div>
                 <div class="ficha_descricao">
                     <strong>Código: <?=$inseminacao->getCodAnimal()?> </strong>
-                    <strong>Código da mãe: <?=$inseminacao->getCodMae() ?> </strong>
+                    <strong>Código da mãe: <?=$inseminacao->getCodInseminacao() ?> </strong>
                 </div>
                 <div>
                     <button class="button-edit" onclick="window.location.href='inseminacaoController.php?acao=altera&codAnimal=<?=$inseminacao->getCodAnimal() ?>'"><i class="fa fa-edit fa-1x"></i></button>

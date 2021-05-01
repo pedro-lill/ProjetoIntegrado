@@ -34,6 +34,7 @@ else {
                 include "views/alteraTratamento.php";
             }
             else{ 
+                $obj = new Tratamento();
                 $obj->setCodAnimal($_POST['field_codAnimal']);
                 $obj->setMotivoTratamento($_POST['field_motivoTratamento']);
                 $obj->setNomeMedicamento($_POST['field_nomeMedicamento']);
