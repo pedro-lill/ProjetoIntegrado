@@ -3,7 +3,7 @@ include_once "../controller/classes/InseminacaoDAO.php";
 if(!isset($_GET['acao'])){
     $obj = new InseminacaoDAO();
     $lista = $obj->listar();
-    include "views/listaInseminacao.php";
+    include "views/alteraInseminacao.php";
 }
 else {    
 	switch($_GET['acao']){
@@ -46,18 +46,6 @@ else {
                 $erros = $obj->validate();
                 if(count($erros) != 0){
                     include "views/alteraInseminacao.php";                      
-                }
-                else{ 
-                    $destino = "../img/".$_FILES['field_imagem']['name']; 
-                    if(move_uploaded_file($_FILES['field_imagem']['tmp_name'], $destino)){
-                        $bd = new InseminacaoDAO();
-                        if($bd->alterar($obj))
-                            header("Location: inseminacaoController.php"); 
-                    }
-                    else{
-                        $erros[] = "Erro no upload";
-                        include "views/cadastraInseminacao.php";                        
-                    }
                 }
             }
             break;

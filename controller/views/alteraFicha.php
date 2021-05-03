@@ -55,8 +55,8 @@
 
                 </div>
                 <div>
-                    <button name="altera" class="button-edit" onclick=""><i class="fa fa-edit fa-1x"></i></button>
-                    <button name="exclui" class="button-delete" onclick=""><i class="fa fa-trash-alt fa-1x"></i></button>
+                <button name="altera" class="button-edit" onclick="window.location.href='inseminacaoController.php?acao=altera&codAnimal=<?=$inseminacao->getCodAnimal() ?>'"><i class="fa fa-edit fa-1x"></i></button>
+                <button name="exclui" class="button-delete" onclick=""><i class="fa fa-trash-alt fa-1x"></i></button>
                 </div>
             </div>
         </div>
@@ -85,7 +85,7 @@
                 <?=$producao->getDtColeta()?>  <?=$producao->getPeriodoDia()?>
                 </div>
                 <div>
-                    <button name="altera" class="button-edit" onclick=""><i class="fa fa-edit fa-1x"></i></button>
+                <button class="button-edit" onclick="window.location.href='fichaController.php?acao=altera&codAnimal=<?=$ficha->getCodAnimal() ?>'"><i class="fa fa-edit fa-1x"></i></button>
                     <button name="exclui" class="button-delete" onclick=""><i class="fa fa-trash-alt fa-1x"></i></button>
                 </div>
             </div>
