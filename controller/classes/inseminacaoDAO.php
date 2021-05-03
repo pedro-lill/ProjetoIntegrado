@@ -12,7 +12,7 @@
 
         public function listar(){
             try{
-                $query = $this->conexao->prepare("select * from inseminacao order by codInseminacao");
+                $query = $this->conexao->prepare("select * from inseminacao order by codAnimal");
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
                 return $registros;

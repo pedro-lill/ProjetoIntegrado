@@ -8,8 +8,6 @@
             echo "<li>$e</li>";
         echo "</ul>";
     }
-    
-
     //inseminacao
     $codAnimal = isset($_POST['field_codAnimal']) ? $_POST['field_codAnimal'] : "";
     $codInseminacao = isset($_POST['field_codInseminacao']) ? $_POST['field_codInseminacao'] : "";
@@ -23,7 +21,8 @@
     $novaDtInseminacao = isset($_POST['field_novaDtInseminacao']) ? $_POST['field_novaDtInseminacao'] : "";
     //$novaPrevisaoSecagem = isset($_POST['field_novaPrevisaoSecagem']) ? $_POST['field_novaPrevisaoSecagem'] : "";
     //$novaPrevisaoParto = isset($_POST['field_novaPrevisaoParto']) ? $_POST['field_novaPrevisaoParto'] : "";
-  ?>
+    ?>
+  </div>
 
   <form action="" method="post" enctype="multipart/form-data">
     <div>
