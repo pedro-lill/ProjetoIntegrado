@@ -25,13 +25,34 @@
     <form action="" method="post" enctype="multipart/form-data">
       <div class="container-ficha">
         <h1>Dados da ficha </h1>
-        <input type="number" placeholder="Código do animal" name="field_codAnimal" value="<?=$codAnimal ?>">
-        <input type="datetime-local" name="field_dtTratamento" maxlength="100" value="<?=$dtTratamento?>">
-        <input type="number" placeholder="Motivo Tratamento" name="field_motivoTratamento" maxlength="100" value="<?=$motivoTratamento?>">
-        <input type="text" placeholder="nome Medicamento" name="field_nomeMedicamento" maxlength="50" autofocus value="<?=$nomeMedicamento?>">
-        <input type="number" placeholder="quantidadeMedicamento" name="field_quantidadeMedicamento" maxlength="50" id="id_quantidadeMedicamento" autofocus value="<?=$quantidadeMedicamento?>">
-        <input type="text" placeholder="" name="field_responsavel" maxlength="50" autofocus value="<?=$responsavel?>">
-        <input type="text" placeholder="obs" name="field_obs" maxlength="50" autofocus value="<?=$obs?>">
+        <div>
+        <label class="label-cadastra" for="id_codAnimal">Código do animal: </label>
+        <input type="number" name="field_codAnimal" id="id_codAnimal" autofocus value="<?=$codAnimal ?>" required>
+      </div>
+      <div>
+        <label class="label-cadastra" for="id_dtTratamento">Data do tratamento: </label>
+        <input type="datetime-local" name="field_dtTratamento" id="id_dtTratamento" maxlength="100" value="<?=$dtTratamento?>">
+      </div>
+      <div>
+        <label class="label-cadastra" for="id_motivoTratamento">Motivo do tratamento: </label>
+        <input type="text" name="field_motivoTratamento" maxlength="100" id="id_motivoTratamento" value="<?=$motivoTratamento?>">
+      </div>
+      <div>
+        <label class="label-cadastra" for="id_nomeMedicamento">Nome do medicamento: </label>
+        <input type="text" name="field_nomeMedicamento" id="id_nomeMedicamento" maxlength="50" autofocus value="<?=$nomeMedicamento?>">
+      </div>
+      <div>
+        <label class="label-cadastra" for="id_quantidadeMedicamento">Quantidade de medicamento: </label>
+        <input type="number" name="field_quantidadeMedicamento" maxlength="50" id="id_quantidadeMedicamento" autofocus value="<?=$quantidadeMedicamento?>">
+      </div>
+      <div>
+        <label class="label-cadastra" for="id_responsavel">Responsável: </label>
+        <input type="text" name="field_responsavel" maxlength="50" id="id_responsavel" autofocus value="<?=$responsavel?>">
+      </div>
+      <div>
+        <label class="label-cadastra" for="id_obs">Observação: </label>
+        <input type="text" name="field_obs" maxlength="50" id="id_obs" autofocus value="<?=$obs?>">
+      </div>
         <button name="altera" class="button-form" type="submit">Alterar</button>
       </div>
     </form>

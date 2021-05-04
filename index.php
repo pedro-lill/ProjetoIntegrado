@@ -40,8 +40,14 @@
 
   <form  action="/views/previsoes.php" onsubmit="return validarLogin()">
     <div class="container-login">
-      <input type="text" placeholder="Login" name="username" required>
-      <input type="password" placeholder="Senha" name="password" required>
+      <div>
+        <label class="label-cadastra" for="id_login">Login</label>
+        <input type="text" id="id_login" name="field_nomeLogin" value="" required>
+      </div>
+      <div>
+        <label class="label-cadastra" for="id_senha">Senha</label>
+        <input type="password" id="id_senha" name="field_senha" value="" required>
+      </div>
       <button class="button-form" type="submit">Login</button>
       <div class="login-a"><a href="../controller/views/cadastraUsuario.php">Cadastrar novo usuario</a></div>
     </div>

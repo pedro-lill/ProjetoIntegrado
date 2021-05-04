@@ -18,9 +18,19 @@
 
     <form  action="" method="post" enctype="multipart/form-data">
     <div class="container-login">
-      <input type="text" placeholder="Login" name="field_nomeLogin" value="<?=$nomeLogin ?>" required>
-      <input type="password" placeholder="Senha" name="field_senha" value="<?=$senha ?>" required>
-      <input type="password" placeholder="Confirmar senha" name="password-confirm" value="<?=$senha ?>" required>
+      <div>
+        <label class="label-cadastra" for="id_login">Login</label>
+        <input type="text" id="id_login" name="field_nomeLogin" value="<?=$nomeLogin ?>" required>
+      </div>
+      <div>
+        <label class="label-cadastra" for="id_senha">Senha</label>
+        <input type="password" id="id_senha" name="field_senha" value="<?=$senha ?>" required>
+      </div>
+      <div>
+        <label class="label-cadastra" for="id_confirmarSenha">Confirmar senha</label>
+        <input type="password" name="password-confirm" id="id_confirmarSenha" value="<?=$senha ?>" required>
+      </div>
+
       <button name="adiciona" class="button-form" type="submit">Cadastrar</button>
       <div class="login-a"><a href="acessoUsuario.php">Voltar ao login</a></div>
     </div>
