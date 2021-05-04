@@ -23,11 +23,12 @@
         }
 
         public function buscar($codAnimal){
+            
             try{
-                $query = $this->conexao->prepare("select * from inseminacao where codAnimal = :a");
-                $query->bindParam(":a", $codAnimal);
+                $query = $this->conexao->prepare("select * from inseminacao where codAnimal = :c");
+                $query->bindParam(":c", $codAnimal, PDO::PARAM_INT);
                 $query->execute();
-                $registros = $query->fetchAll(PDO::FETCH_CLASS, "inseminacao");
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
                 return $registros;
             }
             catch(PDOException $e){
@@ -35,7 +36,7 @@
             }
         }        
 
-        public function inserir(inseminacao $inseminacao){
+        public function inserir(Inseminacao $inseminacao){
             try{
                 $query = $this->conexao->prepare("insert into inseminacao values (NULL, :c, :d, :t, :ir, :r, :o, :s, :p, :ni, :ns, :np)");
                 $query->bindValue(":c", $inseminacao->getCodAnimal());
@@ -56,7 +57,7 @@
             }
         }
 
-        public function alterar(inseminacao $inseminacao){
+        public function alterar(Inseminacao $inseminacao){
             try{
                 $query = $this->conexao->prepare("update inseminacao set codAnimal = :c, dtInseminacao = :d, touroInseminador = :t, inseminadorResponsavel = :ir, retorno = :r, 
                 obs = :o, previsaoSecagem = :s, previsaoParto = :p, novaDtInseminacao = :ni, novaPrevisaoSecagem = :ns,  novaPrevisaoParto = :np where codInseminacao = :i");

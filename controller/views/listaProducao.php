@@ -16,40 +16,33 @@
 <?php require_once("../includes/header.php");?>
 
 <div class="lista_fichas">
-
-    <button class="button-form" onclick="window.location.href='fichaController.php?acao=adiciona'">Adicionar ficha</button>
-  
+      <h1>Histórico de produção de leite</h1>  
         <?php
-        require_once "../controller/classes/FichaDAO.php";
-        $obj = new FichaDAO();
-        $lista = $obj->listar(); 
+        require_once "../controller/classes/ProducaoDAO.php";
+        $obj = new ProducaoDAO();
+        $lista = $obj->buscar($codAnimal); 
         if(count($lista) == 0){
             echo "Nenhuma ficha encontrada.";
         }else{
-            foreach ($lista as $ficha){
+            foreach ($lista as $producao){
         ?>     
-   
-        <div class="ficha">
+        <div class="ficha-historico">
             <div class="label">
-                <div class="ficha_img">
-                    <img src="../img/<?=$ficha->getNomeImagem()?>" alt="imagem_animal">
-                </div>
                 <div class="ficha_descricao">
-                    <strong>Código: <?=$ficha->getCodAnimal()?> </strong>
-                    <strong>Código da mãe: <?=$ficha->getCodMae() ?> </strong>
+                <strong>Cód.: <?=$producao->getCodAnimal()?> </strong>
+                <strong>Litros: <?=$producao->getLitros()?> </strong>
+                <?=$producao->getDtColeta()?>  <?=$producao->getPeriodoDia()?>
                 </div>
                 <div>
-                    <button class="button-edit" onclick="window.location.href='fichaController.php?acao=altera&codAnimal=<?=$ficha->getCodAnimal() ?>'"><i class="fa fa-edit fa-1x"></i></button>
-                    <button class="button-delete" onclick='verificarExcluir(<?=$ficha->getCodAnimal()?>)'><i class="fa fa-trash-alt fa-1x"></i></button>
+                    <button name="altera" class="button-edit" onclick=""><i class="fa fa-edit fa-1x"></i></button>
+                    <button name="exclui" class="button-delete" onclick=""><i class="fa fa-trash-alt fa-1x"></i></button>
                 </div>
             </div>
         </div>
-
     <?php
         }
       }
     ?>
-    
   </div>
 
   <?php require_once("../includes/footer.php");?>

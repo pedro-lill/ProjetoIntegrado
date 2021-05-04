@@ -16,40 +16,34 @@
 <?php require_once("../includes/header.php");?>
 
 <div class="lista_fichas">
-
-    <button class="button-form" onclick="window.location.href='inseminacaoController.php?acao=adiciona'">Adicionar inseminacao</button>
-  
+      <h1>Histórico de inseminação</h1>  
         <?php
         require_once "../controller/classes/InseminacaoDAO.php";
         $obj = new InseminacaoDAO();
-        $lista = $obj->listar(); 
+        $lista = $obj->buscar($codAnimal); 
         if(count($lista) == 0){
-            echo "Nenhuma inseminacao encontrada.";
+            echo "Nenhuma ficha encontrada.";
         }else{
             foreach ($lista as $inseminacao){
         ?>     
-   
-        <div class="ficha">
+        <div class="ficha-historico">
             <div class="label">
-                <div class="ficha_img">
-                    <img src="../img/<?=$inseminacao->getNomeImagem()?>" alt="imagem_animal">
-                </div>
                 <div class="ficha_descricao">
-                    <strong>Código: <?=$inseminacao->getCodAnimal()?> </strong>
-                    <strong>Código da mãe: <?=$inseminacao->getCodInseminacao() ?> </strong>
+                <strong>Cód.: <?=$inseminacao->getCodAnimal()?> </strong>
+                <strong>Touro: <?=$inseminacao->getTouroInseminador()?> </strong>
+                <?=$inseminacao->getDtInseminacao()?>
+
                 </div>
                 <div>
-                    <button class="button-edit" onclick="window.location.href='inseminacaoController.php?acao=altera&codAnimal=<?=$inseminacao->getCodAnimal() ?>'"><i class="fa fa-edit fa-1x"></i></button>
-                    <button class="button-delete" onclick='verificarExcluir(<?=$inseminacao->getCodAnimal()?>)'><i class="fa fa-trash-alt fa-1x"></i></button>
+                    <button name="altera" class="button-edit" onclick=""><i class="fa fa-edit fa-1x"></i></button>
+                    <button name="exclui" class="button-delete" onclick=""><i class="fa fa-trash-alt fa-1x"></i></button>
                 </div>
             </div>
         </div>
-
     <?php
         }
       }
     ?>
-    
   </div>
 
   <?php require_once("../includes/footer.php");?>
