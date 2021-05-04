@@ -23,7 +23,6 @@
         }
 
         public function buscarAltera($codInseminacao){
-            
             try{
                 $query = $this->conexao->prepare("select * from inseminacao where codInseminacao = :i");
                 $query->bindParam(":i", $codInseminacao);
@@ -37,10 +36,9 @@
         }  
 
         public function buscaLista($codAnimal){
-            
             try{
                 $query = $this->conexao->prepare("select * from inseminacao where codAnimal = :c");
-                $query->bindParam(":c", $codAnimal);
+                $query->bindParam(":c", $codAnimal, PDO::PARAM_INT);
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
                 return $registros;

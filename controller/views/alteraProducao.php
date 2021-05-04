@@ -16,11 +16,13 @@
     $litros = isset($_POST['field_litros']) ? $_POST['field_litros'] : $producao->getLitros();
     ?>
     </div>
+    
+    <?php require_once("../includes/header.php");?>
 
     <form action="" method="post" enctype="multipart/form-data">
       <div class="container-ficha">
         <h1>Dados da producao </h1>
-        <div>
+          <div>
             <label class="label-cadastra" for="id_codAnimal">Código do animal: </label>
             <input type="number" name="field_codAnimal" id="id_codAnimal" autofocus value="<?=$codAnimal ?>" required>
           </div>

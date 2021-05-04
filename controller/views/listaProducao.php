@@ -20,7 +20,7 @@
         <?php
         require_once "../controller/classes/ProducaoDAO.php";
         $obj = new ProducaoDAO();
-        $lista = $obj->buscar($codAnimal); 
+        $lista = $obj->buscaLista($codAnimal); 
         if(count($lista) == 0){
             echo "Nenhuma ficha encontrada.";
         }else{
@@ -34,8 +34,8 @@
                 <?=$producao->getDtColeta()?>  <?=$producao->getPeriodoDia()?>
                 </div>
                 <div>
-                <button name="altera" class="button-edit" onclick="window.location.href='producaoController.php?acao=altera&codAnimal=<?=$producao->getCodAnimal() ?>'"><i class="fa fa-edit fa-1x"></i></button>
-                    <button name="exclui" class="button-delete" onclick=""><i class="fa fa-trash-alt fa-1x"></i></button>
+                  <button name="altera" class="button-edit" onclick="window.location.href='producaoController.php?acao=altera&codProducao=<?=$producao->getCodProducao() ?>'"><i class="fa fa-edit fa-1x"></i></button>
+                  <button name="exclui" class="button-delete" onclick=""><i class="fa fa-trash-alt fa-1x"></i></button>
                 </div>
             </div>
         </div>

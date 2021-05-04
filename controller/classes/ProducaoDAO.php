@@ -22,10 +22,23 @@
             }
         }
 
-        public function buscar($codAnimal){
+        public function buscarAltera($codProducao){
             try{
-                $query = $this->conexao->prepare("select * from producao where codAnimal = :a");
-                $query->bindParam(":a", $codAnimal);
+                $query = $this->conexao->prepare("select * from producao where codProducao = :i");
+                $query->bindParam(":i", $codProducao);
+                $query->execute();
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Producao");
+                return $registros[0];
+            }
+            catch(PDOException $e){
+                echo "Erro no acesso aos dados: ". $e->getMessage();
+            }
+        }  
+
+        public function buscaLista($codAnimal){
+            try{
+                $query = $this->conexao->prepare("select * from producao where codAnimal = :c");
+                $query->bindParam(":c", $codAnimal, PDO::PARAM_INT);
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Producao");
                 return $registros;
