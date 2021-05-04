@@ -22,7 +22,7 @@ create table ficha(
   dtNascimento DATETIME NOT NULL,
   codMae INTEGER NOT NULL,
   nomePai VARCHAR(30) NOT NULL,
-  estadoVida BOOLEAN NOT NULL,/*tinyint*/
+  estadoVida INTEGER NOT NULL,/*tinyint*/
   nomeImagem VARCHAR(30) NOT NULL,
   PRIMARY KEY (codAnimal)
 );
@@ -55,6 +55,7 @@ create table producao(
 create table tratamento(
   codTratamento INTEGER AUTO_INCREMENT PRIMARY KEY,
   codAnimal INTEGER,
+  dtTratamento DATETIMENOT NULL,
   motivoTratamento VARCHAR(100) NOT NULL,
   nomeMedicamento VARCHAR(80) NOT NULL,
   quantidadeMedicamento INTEGER NOT NULL,
@@ -64,31 +65,30 @@ create table tratamento(
 );
 
 insert into ficha (codAnimal, dtNascimento, codMae, nomePai, nomeImagem, estadoVida) values
-  (101,'13/08/2019', 400,'Kian', "101.jpg", TRUE),
-  (102,'13/08/2019', 401,'Kian', "102.jpg", TRUE),
-  (104,'13/08/2019', 402,'Kian', "104.jpg", TRUE),
-  (106,'13/08/2019', 403,'Kian', "106.jpg", TRUE),
-  (109,'13/08/2019', 404,'Kian', "109.jpg", TRUE),
-  (144,'13/08/2019', 407,'Kian', "144.jpg", TRUE);
+  (101,'2021-05-04 13:57:42', 400,'Kian', "101.jpg", '1'),
+  (102,'2021-05-04 13:57:42', 401,'Kian', "102.jpg", '1'),
+  (104,'2021-05-04 13:57:42', 402,'Kian', "104.jpg", '1'),
+  (106,'2021-05-04 13:57:42', 403,'Kian', "106.jpg", '1'),
+  (109,'2021-05-04 13:57:42', 404,'Kian', "109.jpg", '1'),
+  (144,'2021-05-04 13:57:42', 407,'Kian', "144.jpg", '1');
 --
 insert into inseminacao (codInseminacao, codAnimal, dtInseminacao, touroInseminador, inseminadorResponsavel, retorno, obs, previsaoSecagem, previsaoParto, novadtInseminacao, novaprevisaoSecagem, novaprevisaoParto) values
-  (NULL, 101,'17/04/2021','benz','Gilmar', 0, 'ok', '25/12/2020', '23/02/2021', '11/07/2020', '20/02/2021', '21/04/2021'),
-  (NULL, 102,'17/04/2021','benz','Gilmar', 0, 'ok', '25/12/2020', '23/02/2021', '11/07/2020', '20/02/2021', '21/04/2021'),
-  (NULL, 104,'24/04/2021','benz','Gilmar', 0, 'ok', '29/12/2020', '28/02/2021', '18/07/2020', '27/02/2021', '28/04/2021'),
-  (NULL, 144,'24/04/2021','benz','Gilmar', 0, 'ok', '29/12/2020', '28/02/2021', '18/07/2020', '27/02/2021', '28/04/2021');
+  (NULL, 101,'2021-05-04 13:57:42','benz','Gilmar', 0, 'ok', '2021-05-15 13:57:42', '2021-07-04 13:57:42', '2021-05-03 13:57:42', '2021-05-04 13:57:42', '2021-05-04 13:57:42'),
+  (NULL, 102,'2021-25-04 14:57:42','polita','Felipe', 0, 'ok', '2021-05-15 13:57:42', '2021-07-09 13:57:42', '2021-05-03 13:57:42', '2021-06-04 13:57:42', '2021-12-04 13:57:42'),
+  (NULL, 104,'2021-15-04 15:57:42','polita','Felipe', 0, 'ok', '2021-05-18 13:57:42', '2021-01-08 13:57:42', '2021-09-01 13:57:42', '2021-06-04 13:57:42', '2021-12-04 17:57:42'),
+  (NULL, 144,'2021-05-04 16:57:42','benz','Gilmar', 0, 'ok', '2021-05-18 13:57:42', '2021-01-09 13:57:42', '2021-09-01 13:57:42', '2021-05-04 13:57:42', '2021-05-04 17:57:42');
 
 --
 insert into producao(codProducao, codAnimal, dtColeta, litros, periodoDia)values
-  (NULL, 101,'13/08/2019',20.6, 'manha'),
-  (NULL, 101,'13/08/2019',18.6, 'tarde'),
-  (NULL, 102,'13/08/2019',23.6, 'manha'),
-  (NULL, 102,'13/08/2019',20.6, 'tarde'),
-  (NULL, 104,'13/08/2019',18.6, 'manha'),
-  (NULL, 104,'13/08/2019',15.6, 'tarde');
+  (NULL, 101,'2021-05-04 13:57:42',20.6, 'manha'),
+  (NULL, 101,'2021-05-04 13:57:42',18.6, 'tarde'),
+  (NULL, 102,'2021-05-04 13:57:42',23.6, 'manha'),
+  (NULL, 102,'2021-05-04 13:57:42',20.6, 'tarde'),
+  (NULL, 104,'2021-05-04 13:57:42',18.6, 'manha'),
+  (NULL, 104,'2021-05-04 13:57:42',15.6, 'tarde');
   --
-insert into tratamento(codTratamento, codAnimal, motivoTratamento, nomeMedicamento, quantidadeMedicamento, responsavel, obs)values
-  (NULL, 101,'mastite', 'promastite', 40, 'gilmar', 'ok'),
-  (NULL, 102,'mastite', 'promastite', 40, 'gilmar', 'ok'),
-  (NULL, 104,'mastite', 'promastite', 40, 'gilmar', 'ok'),
-  (NULL, 109,'mastite', 'promastite', 40, 'gilmar', 'ok');
-
+insert into tratamento(codTratamento, codAnimal, dtTratamento, motivoTratamento, nomeMedicamento, quantidadeMedicamento, responsavel, obs)values
+  (NULL, '101,2021-05-04 13:57:42','mastite', 'promastite', 40, 'gilmar', 'ok'),
+  (NULL, '102,2021-05-04 13:57:42','mastite', 'promastite', 40, 'gilmar', 'ok'),
+  (NULL, '104,2021-05-04 13:57:42','mastite', 'promastite', 40, 'gilmar', 'ok'),
+  (NULL, '109,2021-05-04 13:57:42','mastite', 'promastite', 40, 'gilmar', 'ok');
