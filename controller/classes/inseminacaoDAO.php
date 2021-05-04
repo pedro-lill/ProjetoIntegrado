@@ -22,7 +22,21 @@
             }
         }
 
-        public function buscar($codAnimal){
+        public function buscarAltera($codInseminacao){
+            
+            try{
+                $query = $this->conexao->prepare("select * from inseminacao where codInseminacao = :i");
+                $query->bindParam(":i", $codInseminacao);
+                $query->execute();
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
+                return $registros;
+            }
+            catch(PDOException $e){
+                echo "Erro no acesso aos dados: ". $e->getMessage();
+            }
+        }  
+
+        public function buscaLista($codAnimal){
             
             try{
                 $query = $this->conexao->prepare("select * from inseminacao where codAnimal = :c");

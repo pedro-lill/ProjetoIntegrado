@@ -33,8 +33,8 @@
             <li><a href="../views/graficos.php">Gráficos</a></li>
             <li><a href="../views/previsoes.php">Previsões</a></li>
             <li><a href="../views/relatorios.php">Relatórios</a></li>
-            <li><a href="../controller/producaoController.php?acao=adiciona">+  Produção</a></li>
             <li><a href="../controller/fichaController.php?acao=adiciona">+  Ficha</a></li>
+            <li><a href="../controller/producaoController.php?acao=adiciona">+  Produção</a></li>
             <li><a href="../controller/inseminacaoController.php?acao=adiciona">+  Inseminação</a></li>
             <li><a href="../controller/tratamentoController.php?acao=adiciona">+  Tratamento</a></li>
         </ul>

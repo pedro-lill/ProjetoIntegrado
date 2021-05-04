@@ -32,7 +32,7 @@ else {
         case 'altera':
             if(!isset($_POST['altera'])){ 
                 $obj = new InseminacaoDAO();
-                $inseminacao = $obj->buscar($_GET['codAnimal']);
+                $inseminacao = $obj->buscarAltera($_GET['codInseminacao']);
                 include "views/alteraInseminacao.php";
             }
             else{ 
