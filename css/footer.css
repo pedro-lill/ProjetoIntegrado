@@ -3,7 +3,7 @@ footer {
     position: relative;
     bottom: 0;
     top: 6px;
-    height: 200px;
+    height: 100px;
     width: 100%;
     border-top: 4px solid;
     border-image-source: linear-gradient(-90deg, #00ff00, #1a610b);
@@ -15,34 +15,24 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 91%;
-    padding: 15px 15px 0px 45.8px;
+    padding: 2vh;
 }
 
 .container__text {
     flex-direction: column;
     text-align: center;
     height: 100%;
-    display: flex;
     justify-content: center;
     align-content: center;
 }
 
 .container__text span {
-    font-size: 17px;
-    color: rgb(255, 255, 255);
+    font-size: 15px;
+    color: rgb(209, 209, 209);
     font-weight: bold;
     font-family: "Montserrat Bold", Helvetica, sans-serif;
 }
 
 .container__text span:not(:first-child) {
     margin-top: 4px;
-}
-
-.container__location {
-    height: 160px;
-}
-
-.container__location .map--google {
-    height: 160px;
 }
