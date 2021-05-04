@@ -15,15 +15,15 @@
 
 <div class="lista_fichas">
       <h1>Histórico de inseminação</h1>  
-        <?php
-        require_once "../controller/classes/InseminacaoDAO.php";
-        $obj = new InseminacaoDAO();
-        $lista = $obj->buscar($codAnimal); 
+      <?php
+        require_once "../controller/classes/inseminacaoDAO.php";
+        $obj = new inseminacaoDAO();
+        $lista = $obj->listar(); 
         if(count($lista) == 0){
             echo "Nenhuma ficha encontrada.";
         }else{
             foreach ($lista as $inseminacao){
-        ?>     
+        ?>   
         <div class="ficha-historico">
             <div class="label">
                 <div class="ficha_descricao">
