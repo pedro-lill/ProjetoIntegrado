@@ -29,7 +29,7 @@
                 $query->bindParam(":i", $codInseminacao);
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
-                return $registros;
+                return $registros[0];
             }
             catch(PDOException $e){
                 echo "Erro no acesso aos dados: ". $e->getMessage();
