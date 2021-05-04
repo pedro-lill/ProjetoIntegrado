@@ -9,7 +9,7 @@ function validarLogin(){
     if(usuario == "pedro" && senha == "123"){
         return true;
     }else{
-      alert("usuario = pedro - senha = 123")
+      alert("usuario = pedro || senha = 123")
       return false
     }
 
