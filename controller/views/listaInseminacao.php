@@ -18,7 +18,7 @@
       <?php
         require_once "../controller/classes/inseminacaoDAO.php";
         $obj = new inseminacaoDAO();
-        $lista = $obj->listar(); 
+        $lista = $obj->buscar($codAnimal); 
         if(count($lista) == 0){
             echo "Nenhuma ficha encontrada.";
         }else{

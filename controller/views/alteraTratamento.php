@@ -9,6 +9,7 @@
         echo "</ul>";
     }
 
+    $codTratamento = isset($_POST['field_codTratamento']) ? $_POST['field_codTratamento'] : $tratamento->getCodTratamento();
     $codAnimal = isset($_POST['field_codAnimal']) ? $_POST['field_codAnimal'] : $tratamento->getCodAnimal();
     $dtTratamento = isset($_POST['field_dtTratamento']) ? $_POST['field_dtTratamento'] : $tratamento->getDtTratamento();
     $motivoTratamento = isset($_POST['field_motivoTratamento']) ? $_POST['field_motivoTratamento'] : $tratamento->getMotivoTratamento();

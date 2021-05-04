@@ -40,7 +40,7 @@ create table inseminacao(
   novaDtInseminacao DATETIME,/*if (retorno==true){crio uma novaDataInseminacao} */
   novaPrevisaoSecagem DATETIME,/*automatico =novaDataInseminacao + 7 meses*/
   novaPrevisaoParto DATETIME,/*automatico =novaDataInseminacao + 9 meses*/
-  FOREIGN KEY (codAnimal) REFERENCES cadastro(codAnimal)
+  FOREIGN KEY (codAnimal) REFERENCES ficha(codAnimal)
 );
 
 create table producao(
@@ -49,7 +49,7 @@ create table producao(
   dtColeta DATETIME NOT NULL,
   litros FLOAT NOT NULL,
   periodoDia VARCHAR(8) NOT NULL,/*booleano = manha ou tarde*/
-  FOREIGN KEY (codAnimal) REFERENCES cadastro(codAnimal)
+  FOREIGN KEY (codAnimal) REFERENCES ficha(codAnimal)
 );
 
 create table tratamento(
@@ -60,10 +60,10 @@ create table tratamento(
   quantidadeMedicamento INTEGER NOT NULL,
   responsavel VARCHAR(30) NOT NULL,
   obs TEXT,
-  FOREIGN KEY (codAnimal) REFERENCES cadastro(codAnimal)
+  FOREIGN KEY (codAnimal) REFERENCES ficha(codAnimal)
 );
 
-insert into cadastro (codAnimal, dtNascimento, codMae, nomePai, nomeImagem, estadoVida) values
+insert into ficha (codAnimal, dtNascimento, codMae, nomePai, nomeImagem, estadoVida) values
   (101,'13/08/2019', 400,'Kian', "101.jpg", TRUE),
   (102,'13/08/2019', 401,'Kian', "102.jpg", TRUE),
   (104,'13/08/2019', 402,'Kian', "104.jpg", TRUE),
