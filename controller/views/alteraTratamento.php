@@ -14,6 +14,7 @@
     $dtTratamento = isset($_POST['field_dtTratamento']) ? $_POST['field_dtTratamento'] : $tratamento->getDtTratamento();
     $motivoTratamento = isset($_POST['field_motivoTratamento']) ? $_POST['field_motivoTratamento'] : $tratamento->getMotivoTratamento();
     $nomeMedicamento = isset($_POST['field_nomeMedicamento']) ? $_POST['field_nomeMedicamento'] : $tratamento->getNomeMedicamento();
+    $dtTratamento = isset($_POST['field_dtTratamento']) ? $_POST['field_dtTratamento'] : $tratamento->getDtTratamento();
     $quantidadeMedicamento = isset($_POST['field_quantidadeMedicamento']) ? $_POST['field_quantidadeMedicamento'] : $tratamento->getMotivoTratamento();
     $responsavel = isset($_POST['field_responsavel']) ? $_POST['field_responsavel'] : $tratamento->getResponsavel();
     $obs = isset($_POST['field_obs']) ? $_POST['field_obs'] : $tratamento->getObs();

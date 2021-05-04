@@ -50,11 +50,12 @@
 
         public function inserir(tratamento $tratamento){
             try{
-                $query = $this->conexao->prepare("insert into tratamento values (:c, :t, :mt, :nm, :qm, :r, :o)");
+                $query = $this->conexao->prepare("insert into tratamento values (:c, :t, :mt, :nm, :dt, :qm, :r, :o)");
                 $query->bindValue(":c", $tratamento->getCodAnimal());
                 $query->bindValue(":t", $tratamento->getCodTratamento());
                 $query->bindValue(":mt", $tratamento->getMotivoTratamento());
                 $query->bindValue(":nm", $tratamento->getNomeMedicamento());
+                $query->bindValue("dt", $tratamento->getDtTratamento());
                 $query->bindValue(":qm", $tratamento->getQuantidadeMedicamento());
                 $query->bindValue(":r", $tratamento->getResponsavel());
                 $query->bindValue(":o", $tratamento->getObs());

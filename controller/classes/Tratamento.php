@@ -5,6 +5,7 @@
         private $codAnimal;
         private $motivoTratamento;
         private $nomeMedicamento;
+        private $dtTratamento;
         private $quantidadeMedicamento;
         private $responsavel	;
         private $obs;
@@ -23,6 +24,14 @@
 
         public function setCodAnimal($codAnimal){
             $this->codAnimal = $codAnimal;
+        }
+
+        public function getDtTratamento(){
+            return $this->dtTratamento;
+        }
+
+        public function setDtTratamento($dtTratamento){
+            $this->dtTratamento = $dtTratamento;
         }
 
         public function getMotivoTratamento(){
