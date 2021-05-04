@@ -14,6 +14,7 @@ else {
             }
             else{
                 $obj = new Inseminacao();
+                $obj->setCodInseminacao($_POST['field_codInseminacao']);
                 $obj->setCodAnimal($_POST['field_codAnimal']);
                 $obj->setDtInseminacao($_POST['field_dtInseminacao']);
                 $obj->setTouroInseminador($_POST['field_touroInseminador']);
@@ -36,6 +37,7 @@ else {
             }
             else{ 
                 $obj = new Inseminacao();
+                $obj->setCodInseminacao($_POST['field_codInseminacao']);
                 $obj->setCodAnimal($_POST['field_codAnimal']);
                 $obj->setDtInseminacao($_POST['field_dtInseminacao']);
                 $obj->setTouroInseminador($_POST['field_touroInseminador']);
@@ -53,7 +55,7 @@ else {
 
         case 'exclui':
             $bd = new InseminacaoDAO();
-            if($bd->excluir($_GET['codAnimal']))
+            if($bd->excluir($_GET['CodInseminacao']))
                 header("Location: inseminacaoController.php"); 
 
             break;

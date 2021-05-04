@@ -28,12 +28,13 @@
             <div class="label">
                 <div class="ficha_descricao">
                 <strong>Cód.: <?=$inseminacao->getCodAnimal()?> </strong>
+                <strong>Cód.: <?=$inseminacao->getCodInseminacao()?> </strong>
                 <strong>Touro: <?=$inseminacao->getTouroInseminador()?> </strong>
                 <?=$inseminacao->getDtInseminacao()?>
 
               </div>
               <div>
-                <button name="altera" class="button-edit" onclick="window.location.href='inseminacaoController.php?acao=altera&codAnimal=<?=$inseminacao->getCodAnimal() ?>'"><i class="fa fa-edit fa-1x"></i></button>
+                <button name="altera" class="button-edit" onclick="window.location.href='inseminacaoController.php?acao=altera&codInseminacao=<?=$inseminacao->getCodInseminacao() ?>'"><i class="fa fa-edit fa-1x"></i></button>
                 <button name="exclui" class="button-delete" onclick=""><i class="fa fa-trash-alt fa-1x"></i></button>
               </div>
             </div>

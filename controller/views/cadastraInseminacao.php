@@ -26,8 +26,9 @@
 
   <form action="" method="post" enctype="multipart/form-data">
     <div>
-    <h1>Cadastro de inseminação</h1>
-      <input type="number" placeholder="Código do animal"  name="field_codAnimal" size="100" maxlength="100"  value="<?=$codAnimal?>" required>
+      <h1>Cadastro de inseminação</h1>
+      <input type="hidden" name="field_codAnimal" value="<?=$codAnimal?>" > 
+      <input type="hidden" name="field_codInseminacao" value="<?=$codInseminacao?>" >  
       <input type="datetime-local" name="field_dtInseminacao" size="100" maxlength="100" id="id_dtInseminacao" value="<?=$dtInseminacao?>" required> 
       <input type="text" placeholder="Nome do touro inseminador"  name="field_touroInseminador" size="100" maxlength="100" id="id_touroInseminador" value="<?=$touroInseminador?>"required>
       <input type="text" placeholder="Inseminador responsável" name="field_inseminadorResponsavel" size="100" maxlength="100" id="id_inseminadorResponsavel" value="<?=$inseminadorResponsavel?>" required>

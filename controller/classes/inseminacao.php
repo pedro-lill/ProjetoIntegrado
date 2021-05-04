@@ -114,8 +114,8 @@
             $erros = array();
             if(empty($this->getCodAnimal()))
                 $erros[] = "É necessário informar o codigo do animal";
-            //if(empty($this->getCodInseminacao()))
-              //  $erros[] = "É necessário informar o codigo de inseminação";
+            if(empty($this->getCodInseminacao()))
+                $erros[] = "É necessário informar o codigo de inseminação";
             if(empty($this->getTouroInseminador()))
                 $erros[] = "É necessário informar o touro inseminador";
             if(empty($this->getInseminadorResponsavel()))
