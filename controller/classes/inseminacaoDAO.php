@@ -12,7 +12,7 @@
 
         public function listar(){
             try{
-                $query = $this->conexao->prepare("select * from inseminacao order by codAnimal");
+                $query = $this->conexao->prepare("select * from inseminacao order by codInseminacao");
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
                 return $registros;
@@ -51,7 +51,6 @@
         public function inserir(Inseminacao $inseminacao){
             try{
                 $query = $this->conexao->prepare("insert into inseminacao values (NULL, :c, :d, :t, :ir, :r, :o, :s, :p, :ni, :ns, :np)");
-                $query->bindValue(":i", $inseminacao->getCodInseminacao());
                 $query->bindValue(":c", $inseminacao->getCodAnimal());
                 $query->bindValue(":d", $inseminacao->getDtInseminacao());
                 $query->bindValue(":t", $inseminacao->getTouroInseminador());
@@ -86,7 +85,6 @@
                 $query->bindValue(":ni", $inseminacao->getNovaDtInseminacao());
                 $query->bindValue(":ns", $inseminacao->getNovaPrevisaoSecagem());
                 $query->bindValue(":np", $inseminacao->getNovaPrevisaoParto());
-                $query->bindValue(":i", $inseminacao->getCodInseminacao());
                 return $query->execute();
             }
             catch(PDOException $e){

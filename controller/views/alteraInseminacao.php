@@ -8,8 +8,8 @@
       echo "<li>$e</li>";
     echo "</ul>";
   }
-  $codAnimal = isset($_POST['field_codAnimal']) ? $_POST['field_codAnimal'] : $inseminacao->getCodAnimal();
   $codInseminacao = isset($_POST['field_codInseminacao']) ? $_POST['field_codInseminacao'] : $inseminacao->getCodInseminacao();
+  $codAnimal = isset($_POST['field_codAnimal']) ? $_POST['field_codAnimal'] : $inseminacao->getCodAnimal();
   $dtInseminacao = isset($_POST['field_dtInseminacao']) ? $_POST['field_dtInseminacao'] : $inseminacao->getDtInseminacao();
   $touroInseminador = isset($_POST['field_touroInseminador']) ? $_POST['field_touroInseminador'] : $inseminacao->getTouroInseminador();
   $inseminadorResponsavel = isset($_POST['field_inseminadorResponsavel']) ? $_POST['field_inseminadorResponsavel'] : $inseminacao->getInseminadorResponsavel();
@@ -28,8 +28,6 @@
     <form action="" method="post" enctype="multipart/form-data">
       <div class="container-ficha">
       <h1>Dados da inseminacao </h1>
-      <input type="hidden" name="field_codAnimal" value="<?=$codAnimal?>" > 
-      <input type="hidden" name="field_codInseminacao" value="<?=$codInseminacao?>" >  
       <div>
         <label class="label-cadastra" for="id_codAnimal">Código do animal: </label>
         <input type="number" name="field_codAnimal" id="id_codAnimal" value="<?=$codAnimal?>" > 

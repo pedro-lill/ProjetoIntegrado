@@ -28,7 +28,6 @@
             <div class="label">
                 <div class="ficha_descricao">
                 <strong>Cód.: <?=$inseminacao->getCodAnimal()?> </strong>
-                <strong>Cód.: <?=$inseminacao->getCodInseminacao()?> </strong>
                 <strong>Touro: <?=$inseminacao->getTouroInseminador()?> </strong>
                 <?=$inseminacao->getDtInseminacao()?>
 

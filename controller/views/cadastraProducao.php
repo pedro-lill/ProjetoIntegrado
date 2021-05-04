@@ -9,7 +9,6 @@
       echo "</ul>";
   }
 
-  //$codAnimal = isset($_POST['field_codAnimal']) ? $_POST['field_codAnimal'] : "";
   $codAnimal = isset($_POST['field_codAnimal']) ? $_POST['field_codAnimal'] : "";
   $dtColeta = isset($_POST['field_dtColeta']) ? $_POST['field_dtColeta'] : "";
   $litros = isset($_POST['field_litros']) ? $_POST['field_litros'] : "";
