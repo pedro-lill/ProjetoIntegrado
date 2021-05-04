@@ -12,7 +12,7 @@
 
         public function listar(){
             try{
-                $query = $this->conexao->prepare("select * from inseminacao order by codAnimal");
+                $query = $this->conexao->prepare("select distinct codAnimal, codInseminacao from inseminacao");
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
                 return $registros;
@@ -22,11 +22,11 @@
             }
         }
 
-        public function buscar($codAnimal){
+        public function buscar($codInseminacao){
             
             try{
-                $query = $this->conexao->prepare("select * from inseminacao where codAnimal = :c");
-                $query->bindParam(":c", $codAnimal, PDO::PARAM_INT);
+                $query = $this->conexao->prepare("select * from inseminacao where codInseminacao = :i");
+                $query->bindParam(":i", $codInseminacao, PDO::PARAM_INT);
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
                 return $registros;
@@ -39,6 +39,7 @@
         public function inserir(Inseminacao $inseminacao){
             try{
                 $query = $this->conexao->prepare("insert into inseminacao values (NULL, :c, :d, :t, :ir, :r, :o, :s, :p, :ni, :ns, :np)");
+                $query->bindValue(":i", $inseminacao->getCodInseminacao());
                 $query->bindValue(":c", $inseminacao->getCodAnimal());
                 $query->bindValue(":d", $inseminacao->getDtInseminacao());
                 $query->bindValue(":t", $inseminacao->getTouroInseminador());
@@ -61,6 +62,7 @@
             try{
                 $query = $this->conexao->prepare("update inseminacao set codAnimal = :c, dtInseminacao = :d, touroInseminador = :t, inseminadorResponsavel = :ir, retorno = :r, 
                 obs = :o, previsaoSecagem = :s, previsaoParto = :p, novaDtInseminacao = :ni, novaPrevisaoSecagem = :ns,  novaPrevisaoParto = :np where codInseminacao = :i");
+                $query->bindValue(":i", $inseminacao->getCodInseminacao());
                 $query->bindValue(":c", $inseminacao->getCodAnimal());
                 $query->bindValue(":d", $inseminacao->getDtInseminacao());
                 $query->bindValue(":t", $inseminacao->getTouroInseminador());
