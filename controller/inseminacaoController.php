@@ -32,7 +32,7 @@ else {
         case 'altera':
             if(!isset($_POST['altera'])){ 
                 $obj = new InseminacaoDAO();
-                $inseminacao = $obj->buscar($_GET['codInseminacao']);
+                $inseminacao = $obj->buscar($_GET['codAnimal']);
                 include "views/alteraInseminacao.php";
             }
             else{ 
@@ -55,7 +55,7 @@ else {
 
         case 'exclui':
             $bd = new InseminacaoDAO();
-            if($bd->excluir($_GET['CodInseminacao']))
+            if($bd->excluir($_GET['codAnimal']))
                 header("Location: inseminacaoController.php"); 
 
             break;

@@ -12,7 +12,7 @@
 
         public function listar(){
             try{
-                $query = $this->conexao->prepare("select distinct codAnimal, codInseminacao from inseminacao");
+                $query = $this->conexao->prepare("select * from inseminacao order by codAnimal");
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
                 return $registros;
@@ -22,11 +22,11 @@
             }
         }
 
-        public function buscar($codInseminacao){
+        public function buscar($codAnimal){
             
             try{
-                $query = $this->conexao->prepare("select * from inseminacao where codInseminacao = :i");
-                $query->bindParam(":i", $codInseminacao, PDO::PARAM_INT);
+                $query = $this->conexao->prepare("select * from inseminacao where codAnimal = :c");
+                $query->bindParam(":c", $codAnimal);
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
                 return $registros;
