@@ -22,10 +22,23 @@
             }
         }
 
-        public function buscar($codAnimal){
+        public function buscarAltera($codTratamento){
             try{
-                $query = $this->conexao->prepare("select * from tratamento where codAnimal = :a");
-                $query->bindParam(":a", $codAnimal);
+                $query = $this->conexao->prepare("select * from tratamento where codTratamento = :i");
+                $query->bindParam(":i", $codTratamento);
+                $query->execute();
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Tratamento");
+                return $registros[0];
+            }
+            catch(PDOException $e){
+                echo "Erro no acesso aos dados: ". $e->getMessage();
+            }
+        }  
+
+        public function buscaLista($codAnimal){
+            try{
+                $query = $this->conexao->prepare("select * from tratamento where codAnimal = :c");
+                $query->bindParam(":c", $codAnimal, PDO::PARAM_INT);
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Tratamento");
                 return $registros;
@@ -33,15 +46,16 @@
             catch(PDOException $e){
                 echo "Erro no acesso aos dados: ". $e->getMessage();
             }
-        }        
+        }           
 
         public function inserir(tratamento $tratamento){
             try{
-                $query = $this->conexao->prepare("insert into tratamento values (:c, :t, :mt, :nm, :qm, :r, :o)");
+                $query = $this->conexao->prepare("insert into tratamento values (:c, :t, :mt, :nm, :dt, :qm, :r, :o)");
                 $query->bindValue(":c", $tratamento->getCodAnimal());
                 $query->bindValue(":t", $tratamento->getCodTratamento());
                 $query->bindValue(":mt", $tratamento->getMotivoTratamento());
                 $query->bindValue(":nm", $tratamento->getNomeMedicamento());
+                $query->bindValue("dt", $tratamento->getDtTratamento());
                 $query->bindValue(":qm", $tratamento->getQuantidadeMedicamento());
                 $query->bindValue(":r", $tratamento->getResponsavel());
                 $query->bindValue(":o", $tratamento->getObs());

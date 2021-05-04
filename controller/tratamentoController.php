@@ -30,11 +30,13 @@ else {
         case 'altera':
             if(!isset($_POST['altera'])){ 
                 $obj = new TratamentoDAO();
-                $tratamento = $obj->buscar($_GET['codAnimal']);
+                $tratamento = $obj->buscarAltera($_GET['codTratamento']);
                 include "views/alteraTratamento.php";
             }
             else{ 
                 $obj = new Tratamento();
+                $obj->setCodTratamento($_POST['field_codTratamento']);
+                $obj->setDtTratamento($_POST['field_dtTratamento']);
                 $obj->setCodAnimal($_POST['field_codAnimal']);
                 $obj->setMotivoTratamento($_POST['field_motivoTratamento']);
                 $obj->setNomeMedicamento($_POST['field_nomeMedicamento']);

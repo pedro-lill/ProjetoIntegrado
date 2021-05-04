@@ -7,9 +7,8 @@
       echo "</ul>";
   }
 
-  $codAnimal = isset($_POST['field_codAnimal']) ? $_POST['field_codAnimal'] : "";
-  $motivoTratamento = isset($_POST['field_motivoTratamento']) ? $_POST['field_motivoTratamento'] : "";
-  $nomeMedicamento = isset($_POST['field_nomeMedicamento']) ? $_POST['field_nomeMedicamento'] : "";
+  $login = isset($_POST['field_login']) ? $_POST['field_login'] : "";
+  $senha = isset($_POST['field_senha']) ? $_POST['field_senha'] : "";
   ?>
 </div>
 
@@ -42,7 +41,7 @@
     <div class="container-login">
       <div>
         <label class="label-cadastra" for="id_login">Login</label>
-        <input type="text" id="id_login" name="field_nomeLogin" value="" required>
+        <input type="text" id="id_login" name="field_login" value="" required>
       </div>
       <div>
         <label class="label-cadastra" for="id_senha">Senha</label>

@@ -28,11 +28,12 @@ else {
         case 'altera':
             if(!isset($_POST['altera'])){ 
                 $obj = new ProducaoDAO();
-                $producao = $obj->buscar($_GET['codAnimal']);
+                $producao = $obj->buscarAltera($_GET['codProducao']);
                 include "views/alteraProducao.php";
             }
             else{ 
                 $obj = new Producao();
+                $obj->setCodProducao($_POST['field_codProducao']);
                 $obj->setCodAnimal($_POST['field_codAnimal']);
                 $obj->setDtColeta($_POST['field_dtColeta']);
                 $obj->setLitros($_POST['field_litros']);
