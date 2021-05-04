@@ -22,6 +22,14 @@ select {
     font-size: 17px;
 }
 
+.label {
+    width: 50%;
+    margin: 5px 0 0px 25%;
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
 .historico {
     color: white;
     background-color: #26551df5;
