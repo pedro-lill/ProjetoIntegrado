@@ -1,5 +1,5 @@
 <?php
-include_once "../controller/classes/InseminacaoDAO.php";
+include_once "../controller/classes/inseminacaoDAO.php";
 if(!isset($_GET['acao'])){
     $obj = new InseminacaoDAO();
     $lista = $obj->listar();
@@ -26,6 +26,7 @@ else {
                     include "views/cadastraInseminacao.php";                       
                 }
             }
+            break;
                 
         
         case 'altera':

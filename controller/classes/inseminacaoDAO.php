@@ -1,6 +1,6 @@
 <?php
     require_once "Conexao.php";
-    require_once "Inseminacao.php";
+    require_once "inseminacao.php";
 
     class InseminacaoDAO{
         
@@ -37,7 +37,7 @@
 
         public function buscaLista($codAnimal){
             try{
-                $query = $this->conexao->prepare("select * from inseminacao where codAnimal = :c");
+                $query = $this->conexao->prepare("select * from inseminacao where codAnimal = :c");//data
                 $query->bindParam(":c", $codAnimal, PDO::PARAM_INT);
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
