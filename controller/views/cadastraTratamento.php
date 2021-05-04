@@ -27,10 +27,10 @@
     <input type="number" placeholder="Código do animal" name="field_codAnimal" value="<?=$codAnimal ?>">
     <input type="datetime-local" name="field_dtTratamento" maxlength="100" value="<?=$dtTratamento?>">
     <input type="number" placeholder="Motivo Tratamento" name="field_motivoTratamento" maxlength="100" value="<?=$motivoTratamento?>">
-    <input type="text" placeholder="nome Medicamento" name="field_nomeMedicamento" maxlength="50" autofocus value="<?=$nomeMedicamento?>">
-    <input type="number" placeholder="quantidadeMedicamento" name="field_quantidadeMedicamento" maxlength="50" id="id_quantidadeMedicamento" autofocus value="<?=$quantidadeMedicamento?>">
-    <input type="text" placeholder="" name="field_responsavel" maxlength="50" autofocus value="<?=$responsavel?>">
-    <input type="text" placeholder="obs" name="field_obs" maxlength="50" autofocus value="<?=$obs?>">
+    <input type="text" placeholder="Nome do Medicamento" name="field_nomeMedicamento" maxlength="50" autofocus value="<?=$nomeMedicamento?>">
+    <input type="number" placeholder="Quantidade de medicamento" name="field_quantidadeMedicamento" maxlength="50" id="id_quantidadeMedicamento" autofocus value="<?=$quantidadeMedicamento?>">
+    <input type="text" placeholder="Responsável" name="field_responsavel" maxlength="50" autofocus value="<?=$responsavel?>">
+    <input type="text" placeholder="Observação" name="field_obs" maxlength="50" autofocus value="<?=$obs?>">
       <button name="adiciona" class="button-form" type="submit">Salvar</button>
     </div>
   </form>

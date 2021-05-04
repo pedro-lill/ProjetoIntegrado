@@ -29,7 +29,7 @@
     <h1>Cadastro de inseminação</h1>
       <input type="number" placeholder="Código do animal"  name="field_codAnimal" size="100" maxlength="100"  value="<?=$codAnimal?>" required>
       <input type="datetime-local" name="field_dtInseminacao" size="100" maxlength="100" id="id_dtInseminacao" value="<?=$dtInseminacao?>" required> 
-      <input type="text" placeholder="Nome do touro inseminador"  name="field_touroInseminador" size="100" maxlength="100" id="id_touroInseminador" value="<?=$touroInseminador?>"required>
+      <input type="text" placeholder="Touro inseminador"  name="field_touroInseminador" size="100" maxlength="100" id="id_touroInseminador" value="<?=$touroInseminador?>"required>
       <input type="text" placeholder="Inseminador responsável" name="field_inseminadorResponsavel" size="100" maxlength="100" id="id_inseminadorResponsavel" value="<?=$inseminadorResponsavel?>" required>
       <input type="text" placeholder="Retorno" name="field_retorno" size="100" maxlength="100" id="id_retorno" value="<?=$retorno?>">
       <input type="datetime-local" name="field_novaDtInseminacao" size="100" maxlength="100" id="id_novaDtInseminacao" value="<?=$novaDtInseminacao?>"> <!--data de retorno da nova inseminacao-->
