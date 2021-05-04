@@ -27,8 +27,8 @@
         <input type="password" id="id_senha" name="field_senha" value="<?=$senha ?>" required>
       </div>
       <div>
-        <label class="label-cadastra" for="id_confirmarSenha">Confirmar senha</label>
-        <input type="password" name="password-confirm" id="id_confirmarSenha" value="<?=$senha ?>" required>
+        <label class="label-cadastra" for="id_senhaConfirma">Confirmar senha</label>
+        <input type="password" name="senha-confirmar" id="id_senhaConfirma" value="<?=$senha ?>" required>
       </div>
 
       <button name="adiciona" class="button-form" type="submit">Cadastrar</button>

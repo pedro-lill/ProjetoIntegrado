@@ -7,7 +7,7 @@
       echo "</ul>";
   }
 
-  $login = isset($_POST['field_login']) ? $_POST['field_login'] : "";
+  $nomeLogin = isset($_POST['field_nomeLogin']) ? $_POST['field_nomeLogin'] : "";
   $senha = isset($_POST['field_senha']) ? $_POST['field_senha'] : "";
   ?>
 </div>
@@ -40,8 +40,8 @@
   <form  action="/views/previsoes.php" onsubmit="return validarLogin()">
     <div class="container-login">
       <div>
-        <label class="label-cadastra" for="id_login">Login</label>
-        <input type="text" id="id_login" name="field_login" value="" required>
+        <label class="label-cadastra" for="id_nomeLogin">Login</label>
+        <input type="text" id="id_nomeLogin" name="field_nomeLogin" value="" required>
       </div>
       <div>
         <label class="label-cadastra" for="id_senha">Senha</label>

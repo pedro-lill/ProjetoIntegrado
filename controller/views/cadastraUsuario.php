@@ -9,6 +9,8 @@
 
   $nomeLogin = isset($_POST['field_nomeLogin']) ? $_POST['field_nomeLogin'] : "";
   $senha = isset($_POST['field_senha']) ? $_POST['field_senha'] : "";
+  $senhaConfirma = isset($_POST['field_senhaConfirma']) ? $_POST['field_senhaConfirma'] : "";
+
     ?>
 </div>
 
@@ -40,16 +42,16 @@
   <form  action="" onsubmit="return validarCadastro()">
     <div class="container-login">
       <div>
-        <label class="label-cadastra" for="id_login">Login</label>
-        <input type="text" id="id_login" name="field_nomeLogin" value="<?=$nomeLogin ?>" required>
+        <label class="label-cadastra" for="id_nomeLogin">Login</label>
+        <input type="text" id="id_nomeLogin" name="field_nomeLogin" value="<?=$nomeLogin ?>" required>
       </div>
       <div>
         <label class="label-cadastra" for="id_senha">Senha</label>
         <input type="password" id="id_senha" name="field_senha" value="<?=$senha ?>" required>
       </div>
       <div>
-        <label class="label-cadastra" for="id_confirmarSenha">Confirmar senha</label>
-        <input type="password" name="password-confirm" id="id_confirmarSenha" value="<?=$senha ?>" required>
+        <label class="label-cadastra" for="id_senhaConfirma">Confirmar senha</label>
+        <input type="password" name="field_senhaConfirma" id="id_senhaConfirma" value="<?=$senha ?>" required>
       </div>
       <button class="button-form" type="submit">Cadastrar</button>
       <div class="login-a"><a href="../../index.php">Voltar ao login</a></div>
