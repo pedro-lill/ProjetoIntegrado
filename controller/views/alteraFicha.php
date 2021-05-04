@@ -32,9 +32,9 @@
       </div>
     </form>
     
-    <?php require_once("listaInseminacao.php");?>
-    <?php require_once("listaProducao.php");?>
-    <?php require_once("listaTratamento.php");?>
+    <?php include("listaInseminacao.php");?>
+    <?php include("listaProducao.php");?>
+    <?php include("listaTratamento.php");?>
 
   <?php require_once("../includes/footer.php");?>
 

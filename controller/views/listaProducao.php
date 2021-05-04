@@ -13,7 +13,7 @@
 
 <body>
 
-<?php require_once("../includes/header.php");?>
+
 
 <div class="lista_fichas">
       <h1>Histórico de produção de leite</h1>  
@@ -34,7 +34,7 @@
                 <?=$producao->getDtColeta()?>  <?=$producao->getPeriodoDia()?>
                 </div>
                 <div>
-                    <button name="altera" class="button-edit" onclick=""><i class="fa fa-edit fa-1x"></i></button>
+                <button name="altera" class="button-edit" onclick="window.location.href='producaoController.php?acao=altera&codAnimal=<?=$producao->getCodAnimal() ?>'"><i class="fa fa-edit fa-1x"></i></button>
                     <button name="exclui" class="button-delete" onclick=""><i class="fa fa-trash-alt fa-1x"></i></button>
                 </div>
             </div>
@@ -44,8 +44,6 @@
       }
     ?>
   </div>
-
-  <?php require_once("../includes/footer.php");?>
   
   <script src="/js/lista-fichas.js"></script>
 

@@ -13,8 +13,6 @@
 
 <body>
 
-<?php require_once("../includes/header.php");?>
-
 <div class="lista_fichas">
       <h1>Histórico de inseminação</h1>  
         <?php
@@ -33,11 +31,11 @@
                 <strong>Touro: <?=$inseminacao->getTouroInseminador()?> </strong>
                 <?=$inseminacao->getDtInseminacao()?>
 
-                </div>
-                <div>
-                    <button name="altera" class="button-edit" onclick=""><i class="fa fa-edit fa-1x"></i></button>
-                    <button name="exclui" class="button-delete" onclick=""><i class="fa fa-trash-alt fa-1x"></i></button>
-                </div>
+              </div>
+              <div>
+                <button name="altera" class="button-edit" onclick="window.location.href='inseminacaoController.php?acao=altera&codAnimal=<?=$inseminacao->getCodAnimal() ?>'"><i class="fa fa-edit fa-1x"></i></button>
+                <button name="exclui" class="button-delete" onclick=""><i class="fa fa-trash-alt fa-1x"></i></button>
+              </div>
             </div>
         </div>
     <?php
@@ -45,8 +43,6 @@
       }
     ?>
   </div>
-
-  <?php require_once("../includes/footer.php");?>
   
   <script src="/js/lista-fichas.js"></script>
 

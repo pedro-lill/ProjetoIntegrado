@@ -28,7 +28,7 @@ else {
         case 'altera':
             if(!isset($_POST['altera'])){ 
                 $obj = new ProducaoDAO();
-                $producao = $obj->buscar($_GET['codProducao']);
+                $producao = $obj->buscar($_GET['codAnimal']);
                 include "views/alteraProducao.php";
             }
             else{ 
