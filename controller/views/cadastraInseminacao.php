@@ -29,12 +29,30 @@
       <h1>Cadastro de inseminação</h1>
       <input type="hidden" name="field_codAnimal" value="<?=$codAnimal?>" > 
       <input type="hidden" name="field_codInseminacao" value="<?=$codInseminacao?>" >  
-      <input type="datetime-local" name="field_dtInseminacao" size="100" maxlength="100" id="id_dtInseminacao" value="<?=$dtInseminacao?>" required> 
-      <input type="text" placeholder="Touro inseminador"  name="field_touroInseminador" size="100" maxlength="100" id="id_touroInseminador" value="<?=$touroInseminador?>"required>
-      <input type="text" placeholder="Inseminador responsável" name="field_inseminadorResponsavel" size="100" maxlength="100" id="id_inseminadorResponsavel" value="<?=$inseminadorResponsavel?>" required>
-      <input type="text" placeholder="Retorno" name="field_retorno" size="100" maxlength="100" id="id_retorno" value="<?=$retorno?>">
-      <input type="datetime-local" name="field_novaDtInseminacao" size="100" maxlength="100" id="id_novaDtInseminacao" value="<?=$novaDtInseminacao?>"> <!--data de retorno da nova inseminacao-->
-      <input type="text" placeholder="Observação" name="field_obs" size="100" maxlength="100" id="id_obs" value="<?=$obs?>">
+      <div>
+        <label class="label-cadastra" for="id_codAnimal">Código do animal: </label>
+        <input type="number" name="field_codAnimal" id="id_codAnimal" value="<?=$codAnimal?>" > 
+      </div>
+      <div>
+        <label class="label-cadastra" for="id_touroInseminador">Touro inseminador: </label>
+        <input type="text"  name="field_touroInseminador" maxlength="100" id="id_touroInseminador" value="<?=$touroInseminador?>"required>
+      </div>
+      <div>
+        <label class="label-cadastra" for="id_touroInseminador">Inseminador responsável: </label>
+        <input type="text" name="field_inseminadorResponsavel" maxlength="100" id="id_inseminadorResponsavel" value="<?=$inseminadorResponsavel?>" required>
+      </div>
+      <div>
+        <label class="label-cadastra" for="id_retorno">Retorno: </label>
+        <input type="text" name="field_retorno" maxlength="100" id="id_retorno" value="<?=$retorno?>">
+      </div>
+      <div>
+        <label class="label-cadastra" for="id_novaDtInseminacao">Nova data de inseminação: </label>
+        <input type="datetime-local" name="field_novaDtInseminacao" id="id_novaDtInseminacao" value="<?=$novaDtInseminacao?>"> <!--data de retorno da nova inseminacao-->
+      </div>
+      <div>
+        <label class="label-cadastra" for="id_obs">Observação: </label>
+        <input type="text" name="field_obs" maxlength="100" id="id_obs" value="<?=$obs?>">
+      </div>
       <!--previsao de parto-->
       <!--previsao de secagem-->
       <button name="adiciona" class="button-form" type="submit">Salvar</button>
