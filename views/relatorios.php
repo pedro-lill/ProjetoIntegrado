@@ -10,6 +10,7 @@
     }
 
     $mes = isset($_POST['field_mes']) ? $_POST['field_mes'] : "";
+
     ?>
   </div>
 
@@ -17,21 +18,21 @@
 
     <form action="" method="post" enctype="multipart/form-data">
         <div>
-            <select id="id_mes" required >
-                <option name="field_mes" value="jan" value="<?=$mes?>">Janeiro</option>
-                <option name="field_mes" value="fev" value="<?=$mes?>">Fevereiro</option>
-                <option name="field_mes" value="mar" value="<?=$mes?>">Março</option>
-                <option name="field_mes" value="mai" value="<?=$mes?>">Maio</option>
-                <option name="field_mes" value="abr" value="<?=$mes?>">Abril</option>
-                <option name="field_mes" value="jun" value="<?=$mes?>">Junho</option>
-                <option name="field_mes" value="jul" value="<?=$mes?>">Julho</option>
-                <option name="field_mes" value="ago" value="<?=$mes?>">Agosto</option>
-                <option name="field_mes" value="set" value="<?=$mes?>">Setembro</option>
-                <option name="field_mes" value="out" value="<?=$mes?>">Outubro</option>
-                <option name="field_mes" value="nov" value="<?=$mes?>">Novembro</option>
-                <option name="field_mes" value="dez" value="<?=$mes?>">Dezembro</option>
+            <select id="id_mes"  name="field_mes" required >
+                <option value="jan" value="<?=$mes?>">Janeiro</option>
+                <option value="fev" value="<?=$mes?>">Fevereiro</option>
+                <option value="mar" value="<?=$mes?>">Março</option>
+                <option value="mai" value="<?=$mes?>">Maio</option>
+                <option value="abr" value="<?=$mes?>">Abril</option>
+                <option value="jun" value="<?=$mes?>">Junho</option>
+                <option value="jul" value="<?=$mes?>">Julho</option>
+                <option value="ago" value="<?=$mes?>">Agosto</option>
+                <option value="set" value="<?=$mes?>">Setembro</option>
+                <option value="out" value="<?=$mes?>">Outubro</option>
+                <option value="nov" value="<?=$mes?>">Novembro</option>
+                <option value="dez" value="<?=$mes?>">Dezembro</option>
             </select>
-            <button class="button-form" type="submit" onclick="window.location.href='../controller/relatorioController.php?acao=adiciona&filtroMes=<?=$_POST['field_mes'] ?>'"><i class="fas fa-search"></i></button>
+            <button class="button-form" type="submit" onclick="window.location.href='../controller/relatorioController.php?acao=filtro&filtroMes=<?=['field_mes'] ?>'"><i class="fas fa-search"></i></button>
         <div>
     </form>
     
