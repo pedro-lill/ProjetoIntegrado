@@ -18,7 +18,7 @@
 
     <form action="" method="post" enctype="multipart/form-data">
         <div>
-            <select id="id_mes"  name="field_mes" required >
+            <select class="select-relatorio" id="id_mes"  name="field_mes" required >
                 <option value="jan" value="<?=$mes?>">Janeiro</option>
                 <option value="fev" value="<?=$mes?>">Fevereiro</option>
                 <option value="mar" value="<?=$mes?>">Março</option>
@@ -32,7 +32,7 @@
                 <option value="nov" value="<?=$mes?>">Novembro</option>
                 <option value="dez" value="<?=$mes?>">Dezembro</option>
             </select>
-            <button class="button-form" type="submit" onclick="window.location.href='../controller/relatorioController.php?acao=filtro&filtroMes=<?=['field_mes'] ?>'"><i class="fas fa-search"></i></button>
+            <button class="relatorio-a" type="submit" onclick="window.location.href='../controller/relatorioController.php?acao=filtro&filtroMes=<?=['field_mes'] ?>'"><i class="fas fa-search"></i></button>
         <div>
     </form>
 

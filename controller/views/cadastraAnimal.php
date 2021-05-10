@@ -18,7 +18,7 @@
         ?>
     </div>
 
-    <form action="" method="post" enctype="multipart/form-data">
+    <form action="" name="form-inseminacao" method="post" enctype="multipart/form-data">
       <div>
         <h1>Cadastro de animal de animal</h1>
         <div>
@@ -39,7 +39,7 @@
         </div>
         <div>
           <label class="label-cadastra" for="id_estadoVida">Estado de vida </label>
-          <select name="field_estadoVida" id="id_estadoVida" required >
+          <select name="field_estadoVida" id="id_estadoVida" onChange="estadoVida()" required >
               <option value="Viva" value="<?=$estadoVida?>">Viva</option>
               <option value="Morta" value="<?=$estadoVida?>">Morta</option>
         </select>
