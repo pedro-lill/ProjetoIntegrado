@@ -35,11 +35,11 @@ create table inseminacao(
   inseminadorResponsavel VARCHAR(40) NOT NULL,
   retorno INTEGER, /*booleano, por padrao é false. if(true) cria novaDataInseminacao*/
   obs TEXT,
-  novaDtInseminacao DATE,/*if (retorno==true){crio uma novaDataInseminacao} */
-  /*previsaoSecagem DATE, automatico =dataInseminacao + 7 meses    DATE_format   select DATE_format(...) 
-  previsaoParto DATE,/*automatico =dataInseminacao + 9 meses*/
-  /*novaPrevisaoSecagem DATE,automatico =novaDataInseminacao + 7 meses
-  novaPrevisaoParto DATE,/*automatico =novaDataInseminacao + 9 meses*/
+  novaDtInseminacao DATE,/*if (retorno==true){crio uma novaDataInseminacao} 
+  previsaoSecagem DATE, automatico =dataInseminacao + 7 meses    DATE_format   select DATE_format(...) 
+  previsaoParto DATE,automatico =dataInseminacao + 9 meses
+  novaPrevisaoSecagem DATE,automatico =novaDataInseminacao + 7 meses
+  novaPrevisaoParto DATE,automatico =novaDataInseminacao + 9 meses*/
   FOREIGN KEY (codAnimal) REFERENCES ficha(codAnimal)
 );
 
