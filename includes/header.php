@@ -24,7 +24,7 @@
 
     <header>
         <ul>
-            <li><a href="../controller/animalController.php">Animals</a></li>
+            <li><a href="../controller/animalController.php">Animais</a></li>
             <li><a href="../views/graficos.php">Gráficos</a></li>
             <li><a href="../views/previsoes.php">Previsões</a></li>
             <li><a href="../views/relatorios.php">Relatórios</a></li>
