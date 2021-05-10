@@ -43,7 +43,7 @@
         <input type="password" id="id_senha" name="field_senha" value="" required>
       </div>
       <button class="button-form" type="submit">Login</button>
-      <div class="login-a"><a href="../controller/views/cadastraUsuario.php">Cadastrar novo usuario</a></div>
+      <div class="login-a"><a href="controller/usuarioController.php?acao=adiciona">Cadastrar novo usuario</a></div>
     </div>
   </form>
 

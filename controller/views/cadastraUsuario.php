@@ -19,7 +19,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="../img/mst.png">
+    <link rel="shortcut icon" href="../../img/mst.png">
     <meta name="author" content="Fabrício Romani e Pedro Lill">
     <meta name="description" content="Cooptar - cooperativa agropecuária">
     <meta name="keywords" content="mst, cooperativa, pontão, agropecuária, bovino">
@@ -41,16 +41,17 @@
       </div>
       <div>
         <label class="label-cadastra" for="id_senha">Senha</label>
-        <input type="password" id="id_senha" name="field_senha" value="<?=$senha ?>" required>
+        <input type="password" id="id_senha" minlength="6" name="field_senha" value="<?=$senha ?>" required>
       </div>
       <div>
         <label class="label-cadastra" for="id_senhaConfirma">Confirmar senha</label>
-        <input type="password" name="field_senhaConfirma" id="id_senhaConfirma" value="<?=$senha ?>" required>
+        <input type="password" name="field_senhaConfirma" minlength="6" id="id_senhaConfirma" value="<?=$senha ?>" required>
       </div>
       <button class="button-form" type="submit">Cadastrar</button>
       <div class="login-a"><a href="../../index.php">Voltar ao login</a></div>
     </div>
   </form>
+  <script src="../../js/cadastro-login.js"></script>
 
 </body>
 

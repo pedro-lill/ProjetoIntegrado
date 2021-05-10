@@ -12,7 +12,7 @@
 
         public function buscar($nomeLogin){
             try{
-                $query = $this->conexao->prepare("select * from usuarios where nomeLogin = :u");
+                $query = $this->conexao->prepare("select * from usuario where nomeLogin = :u");
                 $query->bindParam(":u", $nomeLogin);
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Usuario");
@@ -25,7 +25,7 @@
 
         public function inserir(Usuario $usuario){
             try{
-                $query = $this->conexao->prepare("insert into usuarios values (NULL, :nl, :s)");
+                $query = $this->conexao->prepare("insert into usuario values (NULL, :nl, :s)");
                 $query->bindValue(":nl", $usuario->getNomeLogin());
                 $query->bindValue(":s", $usuario->getSenha());
                 return $query->execute();

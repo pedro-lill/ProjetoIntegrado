@@ -28,7 +28,6 @@ else {
             }
             break;
                 
-        
         case 'altera':
             if(!isset($_POST['altera'])){ 
                 $obj = new InseminacaoDAO();

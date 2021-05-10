@@ -19,6 +19,11 @@ else {
                 if(count($erros) != 0){ 
                     include "views/cadastraUsuario.php";                       
                 }
+                else{
+                    $bd = new UsuarioDAO();
+                    if($bd->inserir($obj))
+                        header("Location: usuarioController.php"); 
+                }
             }
             break;
         

@@ -1,4 +1,4 @@
-create table if not exists usuarios(
+create table if not exists usuario(
   codigoUsuario integer not null,
   nomeLogin date not null,
   senha integer not null,
