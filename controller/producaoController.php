@@ -22,6 +22,11 @@ else {
                 if(count($erros) != 0){ 
                     include "views/cadastraProducao.php";                       
                 }
+                else{
+                    $bd = new ProducaoDAO();
+                    if($bd->inserir($obj))
+                        header("Location: producaoController.php"); 
+                }
             }
             break;
         

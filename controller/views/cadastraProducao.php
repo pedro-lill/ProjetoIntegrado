@@ -32,11 +32,12 @@
             <label class="label-cadastra" for="id_litros">Produção em litros: </label>
             <input type="number" step="0.01" name="field_litros" id="id_litros" autofocus value="<?=$litros?>" required>
           </div>
+          
           <div>
             <label class="label-cadastra" for="id_periodoDia">Periodo do dia: </label>
-            <select id="id_periodoDia" required >
-              <option  name="field_periodoDia" value="manha" autofocus value="<?=$periodoDia?>">Manhã</option>
-              <option  name="field_periodoDia" value="tarde" autofocus value="<?=$periodoDia?>">Tarde</option>
+            <select name="field_periodoDia" id="id_periodoDia" required >
+              <option value="manha" autofocus value="<?=$periodoDia?>">Manhã</option>
+              <option value="tarde" autofocus value="<?=$periodoDia?>">Tarde</option>
             </select>
           </div>
             <button name="adiciona" class="button-form" type="submit">Salvar</button>

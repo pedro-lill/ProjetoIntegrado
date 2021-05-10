@@ -1,13 +1,12 @@
 <?php
 include_once "../controller/classes/inseminacaoDAO.php";
 if(!isset($_GET['acao'])){
-    $obj = new InseminacaoDAO();
+    $obj = new inseminacaoDAO();
     $lista = $obj->listar();
-    include "views/alteraInseminacao.php";
+    include "views/listaAnimal.php";
 }
 else {    
 	switch($_GET['acao']){
-
         case 'adiciona':
             if(!isset($_POST['adiciona'])){ 
                 include "views/cadastraInseminacao.php";              
@@ -20,10 +19,15 @@ else {
                 $obj->setInseminadorResponsavel($_POST['field_inseminadorResponsavel']);
                 $obj->setRetorno( $_POST['field_retorno']);
                 $obj->setObs( $_POST['field_obs']);
-                $obj->setnovaDtInseminacao($_POST['field_novaDtInseminacao']);
+                $obj->setNovaDtInseminacao($_POST['field_novaDtInseminacao']);
                 $erros = $obj->validate();
                 if(count($erros) != 0){ 
                     include "views/cadastraInseminacao.php";                       
+                }
+                else{
+                    $bd = new inseminacaoDAO();
+                    if($bd->inserir($obj))
+                        header("Location: inseminacaoController.php"); 
                 }
             }
             break;
