@@ -21,8 +21,8 @@
                 <option value="01" value="<?=$mes?>">Janeiro</option>
                 <option value="02" value="<?=$mes?>">Fevereiro</option>
                 <option value="03" value="<?=$mes?>">Março</option>
-                <option value="04" value="<?=$mes?>">Maio</option>
-                <option value="05" value="<?=$mes?>">Abril</option>
+                <option value="04" value="<?=$mes?>">Abril</option>
+                <option value="05" value="<?=$mes?>">Maio</option>
                 <option value="06" value="<?=$mes?>">Junho</option>
                 <option value="07" value="<?=$mes?>">Julho</option>
                 <option value="08" value="<?=$mes?>">Agosto</option>

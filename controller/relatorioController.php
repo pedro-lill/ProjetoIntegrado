@@ -1,3 +1,4 @@
+<?php require_once("../includes/header.php");?>
 <?php
 include_once "../controller/classes/inseminacaoDAO.php";
 if(!isset($_GET['acao'])){
@@ -7,88 +8,31 @@ if(!isset($_GET['acao'])){
 }
 else {    
 	switch($_GET['acao']){
-
-        case 'inseminacao':
-            if(!isset($_POST['inseminacao'])){ 
-                include "../controller/views/relatorioInseminacao.php";              
-            }
-            else{
-                
-                // $obj = new Producao();
-                // $obj->setCodAnimal($_POST['field_codAnimal']);
-                // $obj->setDtColeta($_POST['field_dtColeta']);
-                // $obj->setLitros($_POST['field_litros']);
-                // $obj->setPeriodoDia($_POST['field_periodoDia']);
-                // $erros = $obj->validate();
-                if(count($erros) != 0){ 
-                    include "views/cadastraProducao.php";                       
-                }
-                else{
-                    $bd = new ProducaoDAO();
-                    if($bd->inserir($obj))
-                        header("Location: producaoController.php"); 
-                }
-            }
-            break;
-        
-            case 'producao':
-                if(!isset($_POST['producao'])){ 
-                    include "../controller/views/relatorioProducao.php";              
-                }
-                else{
-                    
-                    // $obj = new Producao();
-                    // $obj->setCodAnimal($_POST['field_codAnimal']);
-                    // $obj->setDtColeta($_POST['field_dtColeta']);
-                    // $obj->setLitros($_POST['field_litros']);
-                    // $obj->setPeriodoDia($_POST['field_periodoDia']);
-                    // $erros = $obj->validate();
-                    if(count($erros) != 0){ 
-                        include "views/cadastraProducao.php";                       
-                    }
-                    else{
-                        $bd = new ProducaoDAO();
-                        if($bd->inserir($obj))
-                            header("Location: producaoController.php"); 
-                    }
-                }
-                break;
-        
-            case 'tratamento':
-                if(!isset($_POST['tratamento'])){ 
-                    include "../controller/views/relatorioTratamento.php";              
-                }
-                else{
-                    
-                    // $obj = new Producao();
-                    // $obj->setCodAnimal($_POST['field_codAnimal']);
-                    // $obj->setDtColeta($_POST['field_dtColeta']);
-                    // $obj->setLitros($_POST['field_litros']);
-                    // $obj->setPeriodoDia($_POST['field_periodoDia']);
-                    // $erros = $obj->validate();
-                    if(count($erros) != 0){ 
-                        include "views/cadastraProducao.php";                       
-                    }
-                    else{
-                        $bd = new ProducaoDAO();
-                        if($bd->inserir($obj))
-                            header("Location: producaoController.php"); 
-                    }
-                }
-                break;
-        
         
         case 'filtro':
             if(!isset($_POST['filtro'])){ 
-                $obj = new InseminacaoDAO();
-                $inseminacao = $obj->buscaMes($_GET['filtroMes']);
-            }
-            else{ 
-                
                
-                if(count($erros) != 0){
-                    ;                      
+                require_once "../controller/classes/inseminacaoDAO.php";
+                $obj = new inseminacaoDAO();
+                $lista = $obj->buscaMes($_GET['filtroMes']);
+                if(count($lista) == 0){
+                    echo "Nenhuma animal encontrada.";
+                }else{
+                    foreach ($lista as $inseminacao){
+                ?>     
+                <div class="animal">
+                    <div class="label">
+                        <div class="animal_descricao">
+                            <strong>Código Animal: <?=$inseminacao->getCodAnimal()?> </strong>
+                            <strong>Touro inseminador: <?=$inseminacao->getTouroInseminador()?> </strong>
+                            <strong>Data inseminação: <?=$inseminacao->getDtInseminacao()?> </strong>
+                        </div>
+                    </div>
+                </div>
+            <?php
                 }
+              }
+                
             }
             break;
         

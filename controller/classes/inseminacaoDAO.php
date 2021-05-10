@@ -50,7 +50,6 @@
         
         public function buscaMes($mes){
             try{
-                echo ("ola $mes");
                 $query = $this->conexao->prepare("select * FROM inseminacao WHERE MONTH(dtInseminacao) = :m");//data
                 $query->bindParam(":m", $mes, PDO::PARAM_INT);
                 $query->execute();
