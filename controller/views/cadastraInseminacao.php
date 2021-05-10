@@ -44,7 +44,10 @@
       </div>
       <div>
         <label class="label-cadastra" for="id_retorno">Retorno: </label>
-        <input type="text" name="field_retorno" maxlength="100" id="id_retorno" value="<?=$retorno?>">
+        <select name="field_retorno" id="id_retorno" required >
+              <option value="Não" value="<?=$retorno?>">Não</option>
+              <option value="Sim" value="<?=$retorno?>">Sim</option>
+        </select>
       </div>
       <div>
         <label class="label-cadastra" for="id_novaDtInseminacao">Nova data de inseminação: </label>

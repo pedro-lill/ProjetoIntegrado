@@ -20,7 +20,7 @@
 
     <form action="" method="post" enctype="multipart/form-data">
       <div>
-        <h1>Cadastro de animal</h1>
+        <h1>Cadastro de animal de animal</h1>
         <div>
           <label class="label-cadastra" for="id_codAnimal">Código do animal: </label>
           <input type="number" name="field_codAnimal" id="id_codAnimal" autofocus value="<?=$codAnimal ?>" required>
@@ -39,7 +39,10 @@
         </div>
         <div>
           <label class="label-cadastra" for="id_estadoVida">Estado de vida </label>
-          <input type="number" name="field_estadoVida" maxlength="50" id="id_estadoVida" value="<?=$estadoVida?>" required>
+          <select name="field_estadoVida" id="id_estadoVida" required >
+              <option value="Viva" value="<?=$estadoVida?>">Viva</option>
+              <option value="Morta" value="<?=$estadoVida?>">Morta</option>
+        </select>
         </div>
         <div>
           <label class="label-cadastra" for="id_nomeImagem">Imagem do animal: </label>

@@ -5,7 +5,7 @@ create table if not exists usuario(
   constraint pk_usuario primary key (codigoUsuario)
 );
 
-create table if not exists cadastro(
+create table if not exists animal(
   codigoAnimal integer not null,
   dataNascimento date not null,
   codigoMae integer not null,
@@ -55,18 +55,18 @@ create table if not exists tratamento(
 );
 --
 insert into cadastro (codAnimal, dtNascimento, codMae, nomePai, estadoVida) values
-  (101,'13/08/2019', 400,'Kian', 0),
-  (102,'13/08/2019', 401,'Kian', 0),
-  (104,'13/08/2019', 402,'Kian', 0),
-  (106,'13/08/2019', 403,'Kian', 0),
-  (109,'13/08/2019', 404,'Kian', 0),
-  (144,'13/08/2019', 407,'Kian', 0);
+  (101,'13/08/2019', 400,'Kian', 'Viva'),
+  (102,'13/08/2019', 401,'Kian', 'Viva'),
+  (104,'13/08/2019', 402,'Kian', 'Viva'),
+  (106,'13/08/2019', 403,'Kian', 'Viva'),
+  (109,'13/08/2019', 404,'Kian', 'Viva'),
+  (144,'13/08/2019', 407,'Kian', 'Viva');
 --
 insert into inseminacao (codigoAnimal, dataInseminacao, touroInseminador, inseminadorResponsavel, retorno, observacao, previsaoSecagem,	previsaoParto,	novaDataInseminacao,	novaprevisaoSecagem,	novaprevisaoParto) values
-  (101,'17/04/2021','benz','Gilmar', 0, 'ok', '25/12/2020', '23/02/2021', '11/07/2020', '20/02/2021', '21/04/2021'),
-  (102,'17/04/2021','benz','Gilmar', 0, 'ok', '25/12/2020', '23/02/2021', '11/07/2020', '20/02/2021', '21/04/2021'),
-  (104,'24/04/2021','benz','Gilmar', 0, 'ok', '29/12/2020', '28/02/2021', '18/07/2020', '27/02/2021', '28/04/2021'),
-  (144,'24/04/2021','benz','Gilmar', 0, 'ok', '29/12/2020', '28/02/2021', '18/07/2020', '27/02/2021', '28/04/2021');
+  (101,'17/04/2021','benz','Gilmar', 'Não', 'ok', '25/12/2020', '23/02/2021', '11/07/2020', '20/02/2021', '21/04/2021'),
+  (102,'17/04/2021','benz','Gilmar', 'Não', 'ok', '25/12/2020', '23/02/2021', '11/07/2020', '20/02/2021', '21/04/2021'),
+  (104,'24/04/2021','benz','Gilmar', 'Não', 'ok', '29/12/2020', '28/02/2021', '18/07/2020', '27/02/2021', '28/04/2021'),
+  (144,'24/04/2021','benz','Gilmar', 'Não', 'ok', '29/12/2020', '28/02/2021', '18/07/2020', '27/02/2021', '28/04/2021');
 
 --
 insert into producao(codigoAnimal, dataColeta, litros, periodoDia)values

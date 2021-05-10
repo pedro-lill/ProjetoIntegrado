@@ -22,7 +22,7 @@ create table animal(
   dtNascimento DATE NOT NULL,
   codMae INTEGER NOT NULL,
   nomePai VARCHAR(30) NOT NULL,
-  estadoVida INTEGER NOT NULL,/*tinyint*/
+  estadoVida VARCHAR(10) NOT NULL,
   nomeImagem VARCHAR(30) NOT NULL,
   PRIMARY KEY (codAnimal)
 );
@@ -33,14 +33,14 @@ create table inseminacao(
   dtInseminacao DATE NOT NULL,
   touroInseminador VARCHAR(20) NOT NULL,
   inseminadorResponsavel VARCHAR(40) NOT NULL,
-  retorno INTEGER, /*booleano, por padrao é false. if(true) cria novaDataInseminacao*/
+  retorno VARCHAR(10) NOT NULL,
   obs TEXT,
   novaDtInseminacao DATE,/*if (retorno==true){crio uma novaDataInseminacao} 
   previsaoSecagem DATE, automatico =dataInseminacao + 7 meses    DATE_format   select DATE_format(...) 
   previsaoParto DATE,automatico =dataInseminacao + 9 meses
   novaPrevisaoSecagem DATE,automatico =novaDataInseminacao + 7 meses
   novaPrevisaoParto DATE,automatico =novaDataInseminacao + 9 meses*/
-  FOREIGN KEY (codAnimal) REFERENCES ficha(codAnimal)
+  FOREIGN KEY (codAnimal) REFERENCES animal(codAnimal)
 );
 
 create table producao(
@@ -65,18 +65,18 @@ create table tratamento(
 );
 
 insert into animal (codAnimal, dtNascimento, codMae, nomePai, nomeImagem, estadoVida) values
-  (101,'2021-05-04', 400,'Kian', "101.jpg", '1'),
-  (102,'2021-05-04', 401,'Kian', "102.jpg", '1'),
-  (104,'2021-05-04', 402,'Kian', "104.jpg", '1'),
-  (106,'2021-05-04', 403,'Kian', "106.jpg", '1'),
-  (109,'2021-05-04', 404,'Kian', "109.jpg", '1'),
-  (144,'2021-05-04', 407,'Kian', "144.jpg", '1');
+  (101,'2021-05-04', 400,'Kian', "101.jpg", 'Viva'),
+  (102,'2021-05-04', 401,'Kian', "102.jpg", 'Viva'),
+  (104,'2021-05-04', 402,'Kian', "104.jpg", 'Viva'),
+  (106,'2021-05-04', 403,'Kian', "106.jpg", 'Viva'),
+  (109,'2021-05-04', 404,'Kian', "109.jpg", 'Viva'),
+  (144,'2021-05-04', 407,'Kian', "144.jpg", 'Viva');
 --
 insert into inseminacao (codInseminacao, codAnimal, dtInseminacao, touroInseminador, inseminadorResponsavel, retorno, obs, novadtInseminacao) values
-  (NULL, 101,'2021-05-04','benz','Gilmar', 0, 'ok', '2021-05-15'),
-  (NULL, 102,'2021-10-04','polita','Felipe', 0, 'ok', '2021-05-15'),
-  (NULL, 104,'2021-12-04','polita','Felipe', 0, 'ok', '2021-05-18'),
-  (NULL, 144,'2021-05-04','benz','Gilmar', 0, 'ok', '2021-05-18');
+  (NULL, 101,'2021-05-04','benz','Gilmar', 'Não', 'ok', '2021-05-15'),
+  (NULL, 102,'2021-10-04','polita','Felipe', 'Não', 'ok', '2021-05-15'),
+  (NULL, 104,'2021-12-04','polita','Felipe', 'Não', 'ok', '2021-05-18'),
+  (NULL, 144,'2021-05-04','benz','Gilmar', 'Não', 'ok', '2021-05-18');
 
 --
 insert into producao(codProducao, codAnimal, dtColeta, litros, periodoDia)values

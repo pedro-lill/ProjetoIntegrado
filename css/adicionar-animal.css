@@ -7,7 +7,6 @@
 }
 
 input[type=text],
-input[type=checkbox],
 input[type=file],
 input[type=number],
 select {
@@ -22,6 +21,17 @@ select {
 }
 
 input[type=date]{
+    background-color: #e2e1e1;
+    width: 13%;
+    padding: 6px 10px;
+    margin: 5px 0 5px 25%;
+    display: inline-block;
+    border: 0.5px solid #3c3b3b;
+    box-sizing: border-box;
+    font-size: 17px;
+}
+
+input[type=checkbox]{
     background-color: #e2e1e1;
     width: 13%;
     padding: 6px 10px;
