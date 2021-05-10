@@ -80,8 +80,8 @@ else {
         
         case 'filtro':
             if(!isset($_POST['filtro'])){ 
-                $inseminacao = $obj->buscaMes($_GET['mes']);
-                echo $_GET['mes'];
+                $obj = new InseminacaoDAO();
+                $inseminacao = $obj->buscaMes($_GET['filtroMes']);
             }
             else{ 
                 
