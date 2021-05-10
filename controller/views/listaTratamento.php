@@ -8,13 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link href="../css/style.css" rel="stylesheet">
-  <link href="../css/adicionar-ficha.css" rel="stylesheet">
-  <link href="../css/lista-fichas.css" rel="stylesheet">
+  <link href="../css/adicionar-animal.css" rel="stylesheet">
+  <link href="../css/lista-animais.css" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="lista_fichas">
+<div class="lista_animais">
   <h1>Histórico de tratamento</h1>  
   <button class="button-form" onclick="window.location.href='tratamentoController.php?acao=adiciona'">Adicionar tratamento</button>
     
@@ -23,14 +23,14 @@
     $obj = new TratamentoDAO();
     $lista = $obj->buscaLista($codAnimal); 
     if(count($lista) == 0){
-        echo "Nenhuma ficha encontrada.";
+        echo "Nenhuma animal encontrada.";
     }else{
         foreach ($lista as $tratamento){
     ?>
          
-      <div class="ficha-historico">
+      <div class="animal-historico">
         <div class="label">
-          <div class="ficha_descricao">
+          <div class="animal_descricao">
           <strong>Cód.: <?=$tratamento->getCodAnimal()?> </strong>
           <strong>Remédio: <?=$tratamento->getNomeMedicamento()?> </strong>
           </div>
@@ -46,6 +46,6 @@
     ?>
   </div>
   
-  <script src="/js/lista-fichas.js"></script>
+  <script src="/js/lista-animais.js"></script>
 
 </body>    

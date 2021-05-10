@@ -17,7 +17,7 @@ CREATE TABLE usuario(
   senha VARCHAR(30) NOT NULL
 );
 
-create table ficha(
+create table animal(
   codAnimal INTEGER,
   dtNascimento DATE NOT NULL,
   codMae INTEGER NOT NULL,
@@ -40,7 +40,7 @@ create table inseminacao(
   previsaoParto DATE,/*automatico =dataInseminacao + 9 meses*/
   /*novaPrevisaoSecagem DATE,automatico =novaDataInseminacao + 7 meses
   novaPrevisaoParto DATE,/*automatico =novaDataInseminacao + 9 meses*/
-  FOREIGN KEY (codAnimal) REFERENCES ficha(codAnimal)
+  FOREIGN KEY (codAnimal) REFERENCES animal(codAnimal)
 );
 
 create table producao(
@@ -49,7 +49,7 @@ create table producao(
   dtColeta DATE NOT NULL,
   litros FLOAT NOT NULL,
   periodoDia VARCHAR(8) NOT NULL,/*booleano = manha ou tarde*/
-  FOREIGN KEY (codAnimal) REFERENCES ficha(codAnimal)
+  FOREIGN KEY (codAnimal) REFERENCES animal(codAnimal)
 );
 
 create table tratamento(
@@ -61,10 +61,10 @@ create table tratamento(
   quantidadeMedicamento INTEGER NOT NULL,
   responsavel VARCHAR(30) NOT NULL,
   obs TEXT,
-  FOREIGN KEY (codAnimal) REFERENCES ficha(codAnimal)
+  FOREIGN KEY (codAnimal) REFERENCES animal(codAnimal)
 );
 
-insert into ficha (codAnimal, dtNascimento, codMae, nomePai, nomeImagem, estadoVida) values
+insert into animal (codAnimal, dtNascimento, codMae, nomePai, nomeImagem, estadoVida) values
   (101,'2021-05-04', 400,'Kian', "101.jpg", '1'),
   (102,'2021-05-04', 401,'Kian', "102.jpg", '1'),
   (104,'2021-05-04', 402,'Kian', "104.jpg", '1'),

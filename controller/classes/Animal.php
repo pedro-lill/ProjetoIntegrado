@@ -1,5 +1,5 @@
 <?php
-    class Ficha{
+    class Animal{
 
         private $codAnimal;
         private $dtNascimento;
