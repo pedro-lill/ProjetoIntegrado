@@ -48,12 +48,12 @@
             }
         }
         
-        public function buscaMes($dtInseminacao){
+        public function buscaMes($mes){
             try{
-                $query = $this->conexao->prepare("select * FROM inseminacao WHERE MONTH(data) = '05'");//data
-                $query->bindParam(":d", $dtInseminacao, PDO::PARAM_INT);
+                $query = $this->conexao->prepare("select * FROM inseminacao WHERE MONTH(dtInseminacao) = :m");//data
+                $query->bindParam(":m", $mes, PDO::PARAM_INT);
                 $query->execute();
-                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "inseminacao");
                 return $registros;
             }
             catch(PDOException $e){
