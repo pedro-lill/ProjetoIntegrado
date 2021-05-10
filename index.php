@@ -1,17 +1,3 @@
-<div class="erro_cadastro">
-  <?php
-  if(isset($erros) && count($erros) !=0){
-      echo "<ul>";
-      foreach($erros as $e)
-          echo "<li>$e</li>";
-      echo "</ul>";
-  }
-
-  $nomeLogin = isset($_POST['field_nomeLogin']) ? $_POST['field_nomeLogin'] : "";
-  $senha = isset($_POST['field_senha']) ? $_POST['field_senha'] : "";
-  ?>
-</div>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -27,6 +13,20 @@
   <link rel="stylesheet" href="/css/login.css">
   <title>Login - COOPTAR</title>
 </head>
+
+<div class="erro_cadastro">
+  <?php
+  if(isset($erros) && count($erros) !=0){
+      echo "<ul>";
+      foreach($erros as $e)
+          echo "<li>$e</li>";
+      echo "</ul>";
+  }
+
+  $nomeLogin = isset($_POST['field_nomeLogin']) ? $_POST['field_nomeLogin'] : "";
+  $senha = isset($_POST['field_senha']) ? $_POST['field_senha'] : "";
+  ?>
+</div>
 
 <body>
 

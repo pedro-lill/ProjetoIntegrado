@@ -2,7 +2,7 @@
 include_once "../controller/classes/UsuarioDAO.php";
 if(!isset($_GET['acao'])){
     $obj = new UsuarioDAO();
-    include "views/cadastraUsuario.php";
+    include "../index.php";
 }
 else {    
 	switch($_GET['acao']){
