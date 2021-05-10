@@ -27,7 +27,7 @@
         </div>
         <div>
           <label class="label-cadastra" for="id_dtNascimento">Data de nascimento: </label>
-          <input type="datetime-local" name="field_dtNascimento" maxlength="100" id="id_dtNascimento" value="<?=$dtNascimento?>" required>
+          <input type="date" name="field_dtNascimento" maxlength="100" id="id_dtNascimento" value="<?=$dtNascimento?>" required>
         </div>
         <div>
           <label class="label-cadastra" for="id_codMae">Código da vaca-mãe: </label>

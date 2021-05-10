@@ -3,9 +3,9 @@
         
         private $codTratamento ;
         private $codAnimal;
+        private $dtTratamento;
         private $motivoTratamento;
         private $nomeMedicamento;
-        private $dtTratamento;
         private $quantidadeMedicamento;
         private $responsavel	;
         private $obs;

@@ -32,7 +32,7 @@
       </div>
       <div>
         <label class="label-cadastra" for="id_dtTratamento">Data do tratamento: </label>
-        <input type="datetime-local" name="field_dtTratamento" id="id_dtTratamento" maxlength="100" value="<?=$dtTratamento?>">
+        <input type="date" name="field_dtTratamento" id="id_dtTratamento" maxlength="100" value="<?=$dtTratamento?>">
       </div>
       <div>
         <label class="label-cadastra" for="id_motivoTratamento">Motivo do tratamento: </label>

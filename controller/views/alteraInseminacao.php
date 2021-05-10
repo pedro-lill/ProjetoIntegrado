@@ -33,6 +33,10 @@
         <input type="number" name="field_codAnimal" id="id_codAnimal" value="<?=$codAnimal?>" > 
       </div>
       <div>
+        <label class="label-cadastra" for="id_dtInseminacao">Data de Inseminação: </label>
+        <input type="date" name="field_dtInseminacao" id="id_dtInseminacao" value="<?=$dtInseminacao?>" > 
+      </div>
+      <div>
         <label class="label-cadastra" for="id_touroInseminador">Touro inseminador: </label>
         <input type="text"  name="field_touroInseminador" maxlength="100" id="id_touroInseminador" value="<?=$touroInseminador?>"required>
       </div>
@@ -46,7 +50,7 @@
       </div>
       <div>
         <label class="label-cadastra" for="id_novaDtInseminacao">Nova data de inseminação: </label>
-        <input type="datetime-local" name="field_novaDtInseminacao" id="id_novaDtInseminacao" value="<?=$novaDtInseminacao?>"> <!--data de retorno da nova inseminacao-->
+        <input type="date" name="field_novaDtInseminacao" id="id_novaDtInseminacao" value="<?=$novaDtInseminacao?>"> <!--data de retorno da nova inseminacao-->
       </div>
       <div>
         <label class="label-cadastra" for="id_obs">Observação: </label>

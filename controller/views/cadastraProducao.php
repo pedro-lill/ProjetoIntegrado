@@ -26,7 +26,7 @@
           </div>
           <div>
             <label class="label-cadastra" for="id_dtColeta">Data da coleta: </label>
-            <input type="datetime-local" name="field_dtColeta" maxlength="100" id="id_dtColeta" value="<?=$dtColeta?>" required>
+            <input type="date" name="field_dtColeta" maxlength="100" id="id_dtColeta" value="<?=$dtColeta?>" required>
           </div>
           <div>
             <label class="label-cadastra" for="id_litros">Produção em litros: </label>

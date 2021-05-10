@@ -46,7 +46,20 @@
             catch(PDOException $e){
                 echo "Erro no acesso aos dados: ". $e->getMessage();
             }
-        }        
+        }
+        
+        public function buscaMes($dtInseminacao){
+            try{
+                $query = $this->conexao->prepare("select * FROM inseminacao WHERE MONTH(data) = '05'");//data
+                $query->bindParam(":d", $dtInseminacao, PDO::PARAM_INT);
+                $query->execute();
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
+                return $registros;
+            }
+            catch(PDOException $e){
+                echo "Erro no acesso aos dados: ". $e->getMessage();
+            }
+        } 
 
         public function inserir(Inseminacao $inseminacao){
             try{

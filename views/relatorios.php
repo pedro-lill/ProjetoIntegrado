@@ -30,7 +30,7 @@
         <option name="field_mes" value="nov" value="<?=$mes?>">Novembro</option>
         <option name="field_mes" value="dez" value="<?=$mes?>">Dezembro</option>
     </select>
-    <a class="relatorio-a" href="../controller/relatorioController.php?acao=XXX"><i class="fas fa-search"></i></a>
+    <a class="relatorio-a" href="../controller/relatorioController.php?acao=adiciona&filtroMes=<?$_POST['field_mes'] ?>'"><i class="fas fa-search"></i></a>
 </div>
 
 <?php require_once("../includes/footer.php");?>
