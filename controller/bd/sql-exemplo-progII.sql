@@ -12,13 +12,13 @@ CREATE USER 'admcooptar'@'localhost' IDENTIFIED BY '12345';
 GRANT SELECT, INSERT, UPDATE, DELETE ON projetointegrado.* TO 'admcooptar'@'localhost';
 
 CREATE TABLE usuario(
-  codUsuario INTEGER AUTO_INCREMENT PRIMARY KEY,/* nao sei se precisa disso aqui*/
   nomeLogin VARCHAR(40) NOT NULL, 
-  senha VARCHAR(30) NOT NULL
+  senha VARCHAR(30) NOT NULL,
+  PRIMARY KEY (nomeLogin),
 );
 
 create table animal(
-  codAnimal INTEGER,
+  codAnimal INTEGER NOT NULL,
   dtNascimento DATE NOT NULL,
   codMae INTEGER NOT NULL,
   nomePai VARCHAR(30) NOT NULL,
@@ -29,7 +29,7 @@ create table animal(
 
 create table inseminacao(
   codInseminacao INTEGER AUTO_INCREMENT PRIMARY KEY,
-  codAnimal INTEGER,
+  codAnimal INTEGER NOT NULL,
   dtInseminacao DATE NOT NULL,
   touroInseminador VARCHAR(20) NOT NULL,
   inseminadorResponsavel VARCHAR(40) NOT NULL,
@@ -45,20 +45,20 @@ create table inseminacao(
 
 create table producao(
   codProducao INTEGER AUTO_INCREMENT PRIMARY KEY,
-  codAnimal INTEGER,
+  codAnimal INTEGER NOT NULL,
   dtColeta DATE NOT NULL,
   litros FLOAT NOT NULL,
-  periodoDia VARCHAR(8) NOT NULL,/*booleano = manha ou tarde*/
+  periodoDia VARCHAR(8) NOT NULL,
   FOREIGN KEY (codAnimal) REFERENCES animal(codAnimal)
 );
 
 create table tratamento(
   codTratamento INTEGER AUTO_INCREMENT PRIMARY KEY,
-  codAnimal INTEGER,
+  codAnimal INTEGER NOT NULL,
   dtTratamento DATE NOT NULL,
   motivoTratamento VARCHAR(100) NOT NULL,
-  nomeMedicamento VARCHAR(80) NOT NULL,
-  quantidadeMedicamento INTEGER NOT NULL,
+  nomeMedicamento VARCHAR(50) NOT NULL,
+  quantidadeMedicamento FLOAT NOT NULL,
   responsavel VARCHAR(30) NOT NULL,
   obs TEXT,
   FOREIGN KEY (codAnimal) REFERENCES animal(codAnimal)
@@ -71,14 +71,13 @@ insert into animal (codAnimal, dtNascimento, codMae, nomePai, nomeImagem, estado
   (106,'2021-05-04', 403,'Kian', "106.jpg", 'Viva'),
   (109,'2021-05-04', 404,'Kian', "109.jpg", 'Viva'),
   (144,'2021-05-04', 407,'Kian', "144.jpg", 'Viva');
---
+
 insert into inseminacao (codInseminacao, codAnimal, dtInseminacao, touroInseminador, inseminadorResponsavel, retorno, obs, novadtInseminacao) values
   (NULL, 101,'2021-05-04','benz','Gilmar', 'Não', 'ok', '2021-05-15'),
   (NULL, 102,'2021-10-04','polita','Felipe', 'Não', 'ok', '2021-05-15'),
   (NULL, 104,'2021-12-04','polita','Felipe', 'Não', 'ok', '2021-05-18'),
   (NULL, 144,'2021-05-04','benz','Gilmar', 'Não', 'ok', '2021-05-18');
 
---
 insert into producao(codProducao, codAnimal, dtColeta, litros, periodoDia)values
   (NULL, 101,'2021-05-04', 20.6, 'manha'),
   (NULL, 101,'2021-05-04', 18.6, 'tarde'),
@@ -86,9 +85,9 @@ insert into producao(codProducao, codAnimal, dtColeta, litros, periodoDia)values
   (NULL, 102,'2021-05-04', 20.6, 'tarde'),
   (NULL, 104,'2021-05-04', 18.6, 'manha'),
   (NULL, 104,'2021-05-04', 15.6, 'tarde');
-  -- 
+
 insert into tratamento(codTratamento, codAnimal, dtTratamento, motivoTratamento, nomeMedicamento, quantidadeMedicamento, responsavel, obs)values
-  (NULL, 101, '2021-05-04','mastite', 'promastite', 40, 'gilmar', 'ok'),
-  (NULL, 102, '2021-05-04','mastite', 'promastite', 40, 'gilmar', 'ok'),
-  (NULL, 104, '2021-05-04','mastite', 'promastite', 40, 'gilmar', 'ok'),
-  (NULL, 109, '2021-05-04','mastite', 'promastite', 40, 'gilmar', 'ok');
+  (NULL, 101, '2021-05-04','mastite', 'promastite', 0.40, 'gilmar', 'ok'),
+  (NULL, 102, '2021-05-04','mastite', 'promastite', 0.40, 'gilmar', 'ok'),
+  (NULL, 104, '2021-05-04','mastite', 'promastite', 0.40, 'gilmar', 'ok'),
+  (NULL, 109, '2021-05-04','mastite', 'promastite', 0.40, 'gilmar', 'ok');
