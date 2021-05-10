@@ -40,7 +40,10 @@
         </div>
         <div>
           <label class="label-cadastra" for="id_estadoVida">Estado de vida </label>
-          <input type="number" name="field_estadoVida" maxlength="50" id="id_estadoVida" value="<?=$estadoVida?>" required>
+          <select name="field_estadoVida" id="id_estadoVida" onChange="estadoVida()" required >
+              <option value="Viva" value="<?=$estadoVida?>">Viva</option>
+              <option value="Morta" value="<?=$estadoVida?>">Morta</option>
+        </select>
         </div>
         <div>
           <label class="label-cadastra" for="id_nomeImagem">Imagem do animal: </label>

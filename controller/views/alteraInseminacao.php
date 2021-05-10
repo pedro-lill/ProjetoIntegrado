@@ -45,12 +45,15 @@
         <input type="text" name="field_inseminadorResponsavel" maxlength="100" id="id_inseminadorResponsavel" value="<?=$inseminadorResponsavel?>" required>
       </div>
       <div>
-        <label class="label-cadastra" for="id_retorno">Retorno: </label>
-        <input type="text" name="field_retorno" maxlength="100" id="id_retorno" value="<?=$retorno?>">
+      <label class="label-cadastra" for="id_retorno">Retorno: </label>
+        <select name="field_retorno" id="id_retorno" onChange="retorno()" required >
+              <option value="Não" value="<?=$retorno?>">Não</option>
+              <option value="Sim" value="<?=$retorno?>">Sim</option>
+        </select>
       </div>
       <div>
-        <label class="label-cadastra" for="id_novaDtInseminacao">Nova data de inseminação: </label>
-        <input type="date" name="field_novaDtInseminacao" id="id_novaDtInseminacao" value="<?=$novaDtInseminacao?>"> <!--data de retorno da nova inseminacao-->
+        <label class="label-cadastra" for="id_novaDtInseminacao" id="id_novaDtInseminacao_label">Nova data de inseminação: </label>
+        <input type="hidden" name="field_novaDtInseminacao" id="id_novaDtInseminacao" value="<?=$novaDtInseminacao?>"> <!--data de retorno da nova inseminacao-->
       </div>
       <div>
         <label class="label-cadastra" for="id_obs">Observação: </label>
@@ -59,3 +62,5 @@
       <button name="altera" class="button-form" type="submit">Alterar</button>
     </div>
   </form>
+
+  <script src="../js/script.js"></script>

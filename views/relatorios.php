@@ -36,9 +36,6 @@
         <div>
     </form>
     
-<?php include("../controller/views/listaAnimal.php");?>
-<?php include("../controller/views/listaInseminacao.php");?>
-<?php include("../controller/views/listaProducao.php");?>
-<?php include("../controller/views/listaTratamento.php");?>
+<?php include("../controller/views/relatorioInseminacao.php");?>
 
 <?php require_once("../includes/footer.php");?>
