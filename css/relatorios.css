@@ -1,0 +1,20 @@
+input{
+    border:solid 2px rgba(53, 53, 53, 0.8);
+    height:6vh;
+    width:5vw;
+    background-color:transparent;
+}
+
+.relatorio-a{
+    text-decoration: none;
+    padding: 10px;
+    color:rgb(39, 39, 39);
+    background-color:rgb(189, 189, 189);
+
+    border-radius: 5px;
+}
+
+a:hover{
+    background-color:rgb(214, 214, 214);
+    color:#00a236;
+}
