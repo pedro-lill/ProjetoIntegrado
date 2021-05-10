@@ -34,6 +34,17 @@
             <button class="button-form" type="submit" onclick="window.location.href='../controller/relatorioController.php?acao=adiciona&filtroMes=<?=$_POST['field_mes'] ?>'"><i class="fas fa-search"></i></button>
         <div>
     </form>
+
+    <?php
+        require_once "../controller/classes/inseminacaoDAO.php";
+        $obj = new inseminacaoDAO();
+        $lista = $obj->buscaMes($inseminacao->getDtInseminacao()); 
+        if(count($lista) == 0){
+            echo "Nenhuma animal encontrada.";
+        }else{
+            foreach ($lista as $inseminacao);
+        }
+        ?> 
     
 
 <?php require_once("../includes/footer.php");?>
