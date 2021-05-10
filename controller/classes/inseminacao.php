@@ -92,8 +92,8 @@
                // $erros[] = "É necessário informar a previsão de secagem";
            // if(empty($this->getPrevisaoParto()))
              //   $erros[] = "É necessário informar a previsão de parto";
-            if(empty($this->getNovaDtInseminacao()))
-               $erros[] = "É necessário informar a nova data de inseminação";
+            //if(empty($this->getNovaDtInseminacao()))
+               //$erros[] = "É necessário informar a nova data de inseminação";
             //if(empty($this->getNovaPrevisaoSecagem()))
               //  $erros[] = "É necessário informar a nova previsão de secagem";
             //if(empty($this->getNovaPrevisaoParto()))
