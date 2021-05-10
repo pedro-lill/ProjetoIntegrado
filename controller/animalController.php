@@ -1,18 +1,18 @@
 <?php
-include_once "../controller/classes/FichaDAO.php";
+include_once "../controller/classes/AnimalDAO.php";
 if(!isset($_GET['acao'])){
-    $obj = new FichaDAO();
+    $obj = new AnimalDAO();
     $lista = $obj->listar();
-    include "views/listaFicha.php";
+    include "views/listaAnimal.php";
 }
 else {    
 	switch($_GET['acao']){
         case 'adiciona':
             if(!isset($_POST['adiciona'])){ 
-                include "views/cadastraFicha.php";              
+                include "views/cadastraAnimal.php";              
             }
             else{
-                $obj = new Ficha();
+                $obj = new Animal();
                 $obj->setCodAnimal($_POST['field_codAnimal']);
                 $obj->setDtNascimento($_POST['field_dtNascimento']);
                 $obj->setCodMae($_POST['field_codMae']);
@@ -21,18 +21,18 @@ else {
                 $obj->setNomeImagem($_FILES['field_imagem']['name']);
                 $erros = $obj->validate();
                 if(count($erros) != 0){ 
-                    include "views/cadastraFicha.php";                       
+                    include "views/cadastraAnimal.php";                       
                 }
                 else{ 
                     $destino = "../img/".$_FILES['field_imagem']['name']; 
                     if(move_uploaded_file($_FILES['field_imagem']['tmp_name'], $destino)){
-                        $bd = new FichaDAO();
+                        $bd = new AnimalDAO();
                         if($bd->inserir($obj))
-                            header("Location: fichaController.php"); 
+                            header("Location: animalController.php"); 
                     }
                     else{
                         $erros[] = "Erro no upload";
-                        include "views/cadastraFicha.php";                      
+                        include "views/cadastraAnimal.php";                      
                     }
                 
                 }
@@ -41,12 +41,12 @@ else {
         
         case 'altera':
             if(!isset($_POST['altera'])){ 
-                $obj = new FichaDAO();
-                $ficha = $obj->buscar($_GET['codAnimal']);
-                include "views/alteraFicha.php";
+                $obj = new AnimalDAO();
+                $animal = $obj->buscar($_GET['codAnimal']);
+                include "views/alteraAnimal.php";
             }
             else{ 
-                $obj = new Ficha();
+                $obj = new Animal();
                 $obj->setDtNascimento($_POST['field_dtNascimento']);
                 $obj->setCodMae($_POST['field_codMae']);
                 $obj->setNomePai($_POST['field_nomePai']);
@@ -55,27 +55,27 @@ else {
                 $obj->setCodAnimal($_POST['field_codAnimal']);
                 $erros = $obj->validate();
                 if(count($erros) != 0){
-                    include "views/alteraFicha.php";                      
+                    include "views/alteraAnimal.php";                      
                 }
                 else{ 
                     $destino = "../img/".$_FILES['field_imagem']['name']; 
                     if(move_uploaded_file($_FILES['field_imagem']['tmp_name'], $destino)){
-                        $bd = new FichaDAO();
+                        $bd = new AnimalDAO();
                         if($bd->alterar($obj))
-                            header("Location: fichaController.php"); 
+                            header("Location: animalController.php"); 
                     }
                     else{
                         $erros[] = "Erro no upload";
-                        include "views/cadastraFicha.php";                        
+                        include "views/cadastraAnimal.php";                        
                     }
                 }
             }
             break;
 
         case 'exclui':
-            $bd = new FichaDAO();
+            $bd = new AnimalDAO();
             if($bd->excluir($_GET['codAnimal']))
-                header("Location: fichaController.php"); 
+                header("Location: animalController.php"); 
 
             break;
         

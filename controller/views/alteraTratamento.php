@@ -24,8 +24,8 @@
     <?php require_once("../includes/header.php");?>
 
     <form action="" method="post" enctype="multipart/form-data">
-      <div class="container-ficha">
-        <h1>Dados da ficha </h1>
+      <div class="container-animal">
+        <h1>Dados da animal </h1>
         <div>
         <label class="label-cadastra" for="id_codAnimal">Código do animal: </label>
         <input type="number" name="field_codAnimal" id="id_codAnimal" autofocus value="<?=$codAnimal ?>" required>

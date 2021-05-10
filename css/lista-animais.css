@@ -1,4 +1,4 @@
-.lista_fichas {
+.lista_animais {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -6,7 +6,7 @@
     margin-top: 10px;
 }
 
-.ficha {
+.animal {
     cursor: pointer;
     width: 40vw;
     height: 120px;
@@ -18,7 +18,7 @@
     transition: 0.3s;
 }
 
-.ficha-historico {
+.animal-historico {
     cursor: pointer;
     width: 40vw;
     font-size: 15px;
@@ -29,35 +29,35 @@
     transition: 0.3s;
 }
 
-.ficha-historico:hover {
+.animal-historico:hover {
     box-shadow: 3px 3px 10px #176a35;
 }
 
-.ficha:hover {
+.animal:hover {
     box-shadow: 3px 3px 10px #176a35;
 }
 
-.ficha img {
+.animal img {
     height: 80px;
     width: 80px;
     border-radius: 40px;
     margin: 0px 20x 0 20px;
 }
 
-.ficha-historico .label {
+.animal-historico .label {
     display: flex;
     margin: 15px;
     align-items: center;
 }
 
-.ficha .label {
+.animal .label {
     display: flex;
     margin-top: 20px;
     margin-left: 20px;
     align-items: center;
 }
 
-.ficha_descricao {
+.animal_descricao {
     margin-left: 20px;
     font-size: 18px;
     display: flex;

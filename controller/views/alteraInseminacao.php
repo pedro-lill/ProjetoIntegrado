@@ -26,7 +26,7 @@
   <?php require_once("../includes/header.php");?>
 
     <form action="" method="post" enctype="multipart/form-data">
-      <div class="container-ficha">
+      <div class="container-animal">
       <h1>Dados da inseminacao </h1>
       <div>
         <label class="label-cadastra" for="id_codAnimal">Código do animal: </label>

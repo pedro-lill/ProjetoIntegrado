@@ -3,7 +3,7 @@ include_once "../controller/classes/TratamentoDAO.php";
 if(!isset($_GET['acao'])){
     $obj = new TratamentoDAO();
     $lista = $obj->listar();
-    include "views/listaFicha.php";
+    include "views/listaAnimal.php";
 }
 else {    
 	switch($_GET['acao']){
