@@ -14,7 +14,7 @@ else {
                
                 include("../views/relatorios.php");
                 include("views/relatorioInseminacao.php");
-                //include("views/relatorioProducao.php");
+                include("../includes/footer.php");
 
             }
             break;
