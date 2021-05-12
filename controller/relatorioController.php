@@ -12,27 +12,10 @@ else {
         case 'filtro':
             if(!isset($_POST['filtro'])){ 
                
-                require_once "../controller/classes/inseminacaoDAO.php";
-                $obj = new inseminacaoDAO();
-                $lista = $obj->buscaMes($_GET['filtroMes']);
-                if(count($lista) == 0){
-                    echo "Nenhuma animal encontrada.";
-                }else{
-                    foreach ($lista as $inseminacao){
-                ?>     
-                <div class="animal">
-                    <div class="label">
-                        <div class="animal_descricao">
-                            <strong>Código Animal: <?=$inseminacao->getCodAnimal()?> </strong>
-                            <strong>Touro inseminador: <?=$inseminacao->getTouroInseminador()?> </strong>
-                            <strong>Data inseminação: <?=$inseminacao->getDtInseminacao()?> </strong>
-                        </div>
-                    </div>
-                </div>
-            <?php
-                }
-              }
-                
+                include("../views/relatorios.php");
+                include("views/relatorioInseminacao.php");
+                //include("views/relatorioProducao.php");
+
             }
             break;
         

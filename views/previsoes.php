@@ -1,14 +1,3 @@
-<?php require_once("../includes/header.php");?>
-
-<?php require_once("../includes/conexao.php");
-    require_once("../includes/calendario.php");
-    $info = array(
-        'tabela' => 'eventos',
-        'data' => 'data',
-        'titulo' => 'titulo',
-    );
-?>
-
 <h1>PREVISÕES</h1>
 
 <div class="calendario">

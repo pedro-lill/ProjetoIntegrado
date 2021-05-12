@@ -3,16 +3,36 @@
     height:40px;
     width:20vw;
     background-color:transparent;
+    margin-left: 70%;
 }
 
 .relatorio-a{
     text-decoration: none;
-    height: 42px;
+    height: 40px;
     color:rgb(39, 39, 39);
-    background-color:rgb(189, 189, 189);
+    background-color:rgb(138, 138, 138);
 }
 
 .relatorio-a:hover{
     background-color:rgb(214, 214, 214);
     color:#00a236;
 }
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 100px;
+    margin-top: 30px;
+
+  }
+  
+  td, th, tr {
+    border: 1px solid #a9a9a9;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #acacac;
+  }

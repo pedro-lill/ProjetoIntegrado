@@ -1,10 +1,25 @@
+<table>
+  <tr>
+    <th>Código Animal:</th>
+    <th>Touro inseminador</th>
+    <th>Data inseminação</th>
+  </tr>
 <?php
-        require_once "../controller/classes/inseminacaoDAO.php";
-        $obj = new inseminacaoDAO();
-        $lista = $obj->buscaLista($codAnimal); 
-        if(count($lista) == 0){
-            echo "Nenhuma animal encontrada.";
-        }else{
-            foreach ($lista as $inseminacao);
-        }
-        ?>   
+$obj = new inseminacaoDAO();
+$lista = $obj->buscaMes($_GET['filtroMes']);
+if(count($lista) == 0){
+    echo "Nenhuma animal encontrada.";
+}else{
+    foreach ($lista as $inseminacao){
+?>     
+  <tr>
+    <td><?=$inseminacao->getCodAnimal()?> </td>
+    <td><?=$inseminacao->getTouroInseminador()?></td>
+    <td><?=$inseminacao->getDtInseminacao()?></td>
+  </tr>
+
+<?php
+    }
+    }
+?>
+</table>

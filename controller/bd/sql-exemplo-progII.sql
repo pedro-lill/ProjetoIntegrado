@@ -75,6 +75,12 @@ insert into animal (codAnimal, dtNascimento, codMae, nomePai, nomeImagem, estado
 insert into inseminacao (codInseminacao, codAnimal, dtInseminacao, touroInseminador, inseminadorResponsavel, retorno, obs, novadtInseminacao) values
   (NULL, 101,'2021-05-04','benz','Gilmar', 'Não', 'ok', '2021-05-15'),
   (NULL, 102,'2021-10-04','polita','Felipe', 'Não', 'ok', '2021-05-15'),
+   (NULL, 101,'2021-05-04','benz','Gilmar', 'Não', 'ok', '2021-05-15'),
+  (NULL, 102,'2021-10-04','polita','Felipe', 'Não', 'ok', '2021-05-15'),
+   (NULL, 101,'2021-05-04','benz','Gilmar', 'Não', 'ok', '2021-05-15'),
+  (NULL, 102,'2021-10-04','polita','Felipe', 'Não', 'ok', '2021-05-15'),
+   (NULL, 101,'2021-05-04','benz','Gilmar', 'Não', 'ok', '2021-05-15'),
+  (NULL, 102,'2021-10-04','polita','Felipe', 'Não', 'ok', '2021-05-15'),
   (NULL, 104,'2021-12-04','polita','Felipe', 'Não', 'ok', '2021-05-18'),
   (NULL, 144,'2021-05-04','benz','Gilmar', 'Não', 'ok', '2021-05-18');
 
