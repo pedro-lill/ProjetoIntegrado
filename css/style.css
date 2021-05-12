@@ -32,6 +32,22 @@ header ul li {
   display: inline-block;
 }
 
+.icone-configuracoes{
+  text-decoration: none;
+  margin-left: 250px;
+  font-size:25px;
+  padding: 13px;
+  margin-top: 30px;
+}
+
+.icone-configuracoes i{
+ color: rgb(104, 104, 104);
+ font-size:24px;
+}
+.icone-configuracoes i:hover{
+  color: rgb(170, 170, 170);
+}
+
 header ul li a {    
   padding: 8px;
   font-size:15px;
@@ -69,7 +85,7 @@ h1{
 .logo-header {
   float: right;
   margin-right: 30px;
-  margin-top:-35px;
+  margin-top:-40px;
 }
 
 .logo-header img {

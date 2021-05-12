@@ -16,6 +16,9 @@
     <link href="../css/graficos.css" rel="stylesheet">
     <link href="../css/relatorios.css" rel="stylesheet">
     <link href="../css/previsoes.css" rel="stylesheet">
+    <link href="../css/configuracoes.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/login.css">
     <title>COOPTAR</title>
 </head>
 
@@ -31,7 +34,9 @@
             <li><a href="../controller/producaoController.php?acao=adiciona">+  Produção</a></li>
             <li><a href="../controller/inseminacaoController.php?acao=adiciona">+  Inseminação</a></li>
             <li><a href="../controller/tratamentoController.php?acao=adiciona">+  Tratamento</a></li>
+            <a class="icone-configuracoes" href="../views/configuracoes.php"><i class="fas fa-cog"></i></a>
         </ul>
+        
         <a class="logo-header" href="../index.php"><img title="Logo do mst" src="/img/mst.png" /></a>
     </header>
 

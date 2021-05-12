@@ -1,0 +1,42 @@
+.lista-configuracoes li a{
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+}
+  
+.lista-configuracoes{
+    list-style: none;
+}
+
+.lista-configuracoes li{
+    width: 250px;
+    margin: 20px 0 0 30%;
+    padding:10px;
+    background-color:rgb(191, 191, 191);
+    border-radius: 10px;
+}
+
+.lista-configuracoes li:hover{
+    background-color:rgb(158, 158, 158);
+}
+
+.container-cadastra-login {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 1%;
+}
+
+.container-cadastra-login  .login-a{
+    margin: 15px 40% 0 40%;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    padding:5px;
+}
+
+.container-cadastra-login  .login-a:hover{
+    background-color: #949494;
+}

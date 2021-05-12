@@ -1,18 +1,14 @@
 .container-login {
     width: 70%;
     margin-left: 15%;
-    margin-top: 2%;
+    margin-top: 1%;
 }
 
 .logo-mst img {
     width: 100px;
     height: 100px;
-    margin: 10% 0 0 45%;
+    margin: 6% 0 0 45%;
     border-radius: 80px;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .label-cadastra {
@@ -35,7 +31,7 @@ input[type=password] {
     font-size: 17px;
 }
 
-button {
+.button-login {
     background-color: #0ca011;
     color: white;
     padding: 10px;
