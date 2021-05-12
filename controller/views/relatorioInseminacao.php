@@ -1,8 +1,8 @@
 <table>
   <tr>
-    <th>Código Animal:</th>
+    <th>Código do Animal</th>
     <th>Touro inseminador</th>
-    <th>Data inseminação</th>
+    <th>Data da inseminação</th>
   </tr>
 <?php
 $obj = new inseminacaoDAO();

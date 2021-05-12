@@ -16,7 +16,6 @@
     <link href="../css/graficos.css" rel="stylesheet">
     <link href="../css/relatorios.css" rel="stylesheet">
     <link href="../css/previsoes.css" rel="stylesheet">
-    <link href="../css/calendario.css" rel="stylesheet">
     <title>COOPTAR</title>
 </head>
 
