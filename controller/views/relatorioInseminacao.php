@@ -6,15 +6,15 @@
   </tr>
 <?php
 $obj = new inseminacaoDAO();
-$lista = $obj->buscaMes($_GET['filtroMes']);
+$lista = $obj->buscaMes($_GET['field_mes']);
 if(count($lista) == 0){
-    echo "Nenhuma animal encontrada.";
+    //echo "Nenhum relatório encontrado.";
 }else{
     foreach ($lista as $inseminacao){
 ?>     
 
   <tr>
-    <td><?=$inseminacao->getCodAnimal() + 10000?> </td>
+    <td><?=$inseminacao->getCodAnimal()?> </td>
     <td><?=$inseminacao->getTouroInseminador()?></td>
     <td><?=date('d/m/Y', strtotime("+284 days",strtotime($inseminacao->getDtInseminacao())));?></td>
   </tr>

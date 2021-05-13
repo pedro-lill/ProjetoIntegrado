@@ -1,6 +1,6 @@
 <?php require_once("../includes/header.php");?>
 
-<h1>GRÁFICOS</h1>
+<h3>GRÁFICOS</h3>
 <?php
 $consulta="select dtInseminacao from inseminacao"
 

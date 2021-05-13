@@ -5,6 +5,12 @@
     flex-wrap: wrap;
     margin-top: 10px;
 }
+h3{
+    margin-left: 45vw;
+    font-size:25px;
+    font-weight: bold;
+}
+
 .lista_animais h3 {
     width: 100%;
     margin-left: 35vw;
