@@ -15,11 +15,13 @@
 <body>
 
 <div class="lista_animais">
-      <h3>HISTÓRICOS DE INSEMINAÇÕES</h3>  
       <?php
         require_once "../controller/classes/inseminacaoDAO.php";
         $obj = new inseminacaoDAO();
         $lista = $obj->buscaLista($codAnimal); 
+        ?>
+       <h3>Históricos de inseminações do animal (cód. <?=$codAnimal?>)</h3>      
+       <?php
         if(count($lista) == 0){
             echo "Nenhuma animal encontrada.";
         }else{
@@ -28,8 +30,8 @@
         <div class="animal-historico">
             <div class="label">
                 <div class="animal_descricao">
-                <strong>Cód. animal: </strong> <?=$inseminacao->getCodAnimal()?> <br>
                 <strong>Touro: </strong> <?=$inseminacao->getTouroInseminador()?> <br>
+                <strong>Responsável: </strong> <?=$inseminacao->getInseminadorResponsavel()?> <br>
                 <strong>Data: </strong> <?=date('d/m/Y', strtotime("+0 days",strtotime($inseminacao->getDtInseminacao())));?>
 
               </div>

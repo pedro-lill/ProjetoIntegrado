@@ -17,11 +17,13 @@
 
 
 <div class="lista_animais">
-      <h3>HISTÓRICOS DE PRODUÇÃO DE LEITE</h3>  
         <?php
         require_once "../controller/classes/ProducaoDAO.php";
         $obj = new ProducaoDAO();
         $lista = $obj->buscaLista($codAnimal); 
+        ?>
+       <h3>Históricos de produção do animal (cód. <?=$codAnimal?>)</h3>      
+       <?php
         if(count($lista) == 0){
             echo "Nenhuma animal encontrada.";
         }else{
@@ -30,9 +32,8 @@
         <div class="animal-historico">
             <div class="label">
                 <div class="animal_descricao">
-                  <strong>Cód. animal: </strong> <?=$producao->getCodAnimal()?> <br>
                   <strong>Litros: </strong> <?=$producao->getLitros()?><br>
-                  <strong>Data: </strong> <?=date('d/m/Y', strtotime("+0 days",strtotime($producao->getDtColeta())));?> <?=$producao->getPeriodoDia()?>
+                  <strong>Data: </strong> <?=date('d/m/Y', strtotime("+0 days",strtotime($producao->getDtColeta())));?> <?=  $producao->getPeriodoDia()?>
                 </div>
                 <div>
                   <button name="altera" class="button-edit" onclick="window.location.href='producaoController.php?acao=altera&codProducao=<?=$producao->getCodProducao() ?>'"><i class="fa fa-edit fa-1x"></i></button>

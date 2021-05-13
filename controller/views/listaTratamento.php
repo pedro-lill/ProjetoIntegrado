@@ -15,11 +15,13 @@
 <body>
 
 <div class="lista_animais">
-  <h3>HISTÓRICOS DE TRATAMENTO</h3>      
     <?php
     require_once "../controller/classes/TratamentoDAO.php";
     $obj = new TratamentoDAO();
     $lista = $obj->buscaLista($codAnimal); 
+    ?>
+    <h3>Históricos de tratamentos do animal (cód. <?=$codAnimal?>)</h3>      
+    <?php
     if(count($lista) == 0){
         echo "Nenhuma animal encontrada.";
     }else{
@@ -29,8 +31,9 @@
       <div class="animal-historico">
         <div class="label">
           <div class="animal_descricao">
-          <strong>Cód. animal:  </strong> <?=$tratamento->getCodAnimal()?> <br> 
+          <strong>Motivo:  </strong> <?=$tratamento->getMotivoTratamento()?> <br> 
           <strong>Remédio:  </strong> <?=$tratamento->getNomeMedicamento()?> <br>
+          <strong>Data:  </strong> <?=date('d/m/Y', strtotime("+0 days",strtotime($tratamento->getDtTratamento())));?> <br>
           </div>
           <div>
             <button name="altera" class="button-edit" onclick="window.location.href='tratamentoController.php?acao=altera&codTratamento=<?=$tratamento->getCodTratamento() ?>'"><i class="fa fa-edit fa-1x"></i></button>
