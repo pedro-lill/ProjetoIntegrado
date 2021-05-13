@@ -14,7 +14,7 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON projetointegrado.* TO 'admcooptar'@'loca
 CREATE TABLE usuario(
   nomeLogin VARCHAR(40) NOT NULL, 
   senha VARCHAR(30) NOT NULL,
-  PRIMARY KEY (nomeLogin),
+  PRIMARY KEY (nomeLogin)
 );
 
 create table animal(
@@ -70,19 +70,52 @@ insert into animal (codAnimal, dtNascimento, codMae, nomePai, nomeImagem, estado
   (104,'2021-05-04', 402,'Kian', "104.jpg", 'Viva'),
   (106,'2021-05-04', 403,'Kian', "106.jpg", 'Viva'),
   (109,'2021-05-04', 404,'Kian', "109.jpg", 'Viva'),
-  (144,'2021-05-04', 407,'Kian', "144.jpg", 'Viva');
+  (144,'2021-05-04', 407,'Kian', "144.jpg", 'Viva'),
+  (1, '209-05-04', 888,'padrao', "101.jpg", 'Viva'), 
+  (8, '209-05-04', 888,'padrao', "101.jpg", 'Viva'),
+  (13, '209-05-04', 888,'padrao', "101.jpg", 'Viva'),  
+  (20, '209-05-04', 888,'padrao', "101.jpg", 'Viva'),  
+  (27, '209-05-04', 888,'padrao', "101.jpg", 'Viva'),   
+  (196, '209-05-04', 888, 'padrao', "101.jpg", 'Viva'),  
+  (218, '209-05-04', 888, 'padrao', "101.jpg", 'Viva'),  
+  (226, '209-05-04', 888, 'padrao', "101.jpg", 'Viva'),  
+  (240, '209-05-04', 888, 'padrao', "101.jpg", 'Viva'),  
+  (243, '209-05-04', 888, 'padrao', "101.jpg", 'Viva'),  
+  (246, '209-05-04', 888, 'padrao', "101.jpg", 'Viva'),  
+  (291, '209-05-04', 888, 'padrao', "101.jpg", 'Viva'),  
+  (319, '209-05-04', 888, 'padrao', "101.jpg", 'Viva'),  
+  (852, '209-05-04', 888, 'padrao', "101.jpg", 'Viva'),  
+  (853, '209-05-04', 888, 'padrao', "101.jpg", 'Viva'),  
+  (861, '209-05-04', 888, 'padrao', "101.jpg", 'Viva');
 
 insert into inseminacao (codInseminacao, codAnimal, dtInseminacao, touroInseminador, inseminadorResponsavel, retorno, obs, novadtInseminacao) values
   (NULL, 101,'2021-05-04','benz','Gilmar', 'Não', 'ok', '2021-05-15'),
   (NULL, 102,'2021-10-04','polita','Felipe', 'Não', 'ok', '2021-05-15'),
-   (NULL, 101,'2021-05-04','benz','Gilmar', 'Não', 'ok', '2021-05-15'),
+  (NULL, 101,'2021-05-04','benz','Gilmar', 'Não', 'ok', '2021-05-15'),
   (NULL, 102,'2021-10-04','polita','Felipe', 'Não', 'ok', '2021-05-15'),
-   (NULL, 101,'2021-05-04','benz','Gilmar', 'Não', 'ok', '2021-05-15'),
+  (NULL, 101,'2021-05-04','benz','Gilmar', 'Não', 'ok', '2021-05-15'),
   (NULL, 102,'2021-10-04','polita','Felipe', 'Não', 'ok', '2021-05-15'),
-   (NULL, 101,'2021-05-04','benz','Gilmar', 'Não', 'ok', '2021-05-15'),
+  (NULL, 101,'2021-05-04','benz','Gilmar', 'Não', 'ok', '2021-05-15'),
   (NULL, 102,'2021-10-04','polita','Felipe', 'Não', 'ok', '2021-05-15'),
   (NULL, 104,'2021-12-04','polita','Felipe', 'Não', 'ok', '2021-05-18'),
-  (NULL, 144,'2021-05-04','benz','Gilmar', 'Não', 'ok', '2021-05-18');
+  (NULL, 144,'2021-05-04','benz','Gilmar', 'Não', 'ok', '2021-05-18'),
+  (NULL, 1, '2020-03-29', 'sekita troler', 'gilmar', 'Não', 'ok', '2020-03-29'),
+  (NULL, 8, '2020-03-06', 'sekita troler', 'gilmar', 'sim', 'ok', '2020-03-25'),	
+  (NULL, 13, '2020-03-02', 'sekita troler', 'gilmar', 'Não', 'ok','2020-03-02'),
+  (NULL, 20, '2020-03-05', 'seleno', 'gilmar', 'Não', 'ok','2020-03-05'),
+  (NULL, 27, '2020-03-26', 'sekita troler', 'gilmar'	, 'Não', 'ok','2020-03-26'),
+  (NULL, 101, '2020-03-26', 'sekita troler', 'gilmar', 'Não', 'ok','2020-03-26'),	
+  (NULL, 196, '2020-03-11', 'lockdon', 'gilmar', 'Não', 'ok',	'2020-03-11'),
+  (NULL, 218, '2020-03-16', 'sekita troler', 'gilmar', 'Não', 'ok','2020-03-16'),	
+  (NULL, 226, '2020-03-18', 'sekita troler', 'gilmar', 'Não', 'ok','2020-03-18'),	
+  (NULL, 240, '2020-03-04', 'sekita troler', 'gilmar', 'Não', 'ok','2020-03-04'),	
+  (NULL, 243, '2020-03-11', 'lockdon', 'gilmar', 'Não', 'ok',	'2020-03-11'),
+  (NULL, 246, '2020-03-12', 'sembra', 'gilmar', 'Não', 'ok','2020-03-12'),
+  (NULL, 291, '2020-03-16', 'sekita troler', 'gilmar', 'Não', 'ok','2020-03-16'),	
+  (NULL, 319, '2020-03-04', 'masas','gilmar', 'Não', 'ok', '2020-03-04'),
+  (NULL, 852, '2020-03-25', 'sekita troler', 'gilmar', 'Não', 'ok','2020-03-25'),	
+  (NULL, 853, '2020-03-06', 'sekita troler', 'gilmar', 'Não', 'ok','2020-03-06'),
+  (NULL, 861, '2020-03-06', 'sekita troler', 'gilmar', 'Não', 'ok','2020-03-06');
 
 insert into producao(codProducao, codAnimal, dtColeta, litros, periodoDia)values
   (NULL, 101,'2021-05-04', 20.6, 'manha'),
