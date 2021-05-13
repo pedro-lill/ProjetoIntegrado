@@ -22,7 +22,7 @@ input[type=date],
 select,
 input[type=number]{
     background-color: #e2e1e1;
-    width: 13%;
+    width: 50%;
     padding: 6px 10px;
     margin: 5px 0 5px 25%;
     display: inline-block;
@@ -33,7 +33,7 @@ input[type=number]{
 
 input[type=checkbox]{
     background-color: #e2e1e1;
-    width: 13%;
+    width: 50%;
     padding: 6px 10px;
     margin: 5px 0 5px 25%;
     display: inline-block;
