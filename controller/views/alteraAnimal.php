@@ -19,9 +19,8 @@
     
     <?php require_once("../includes/header.php");?>
 
-    <form action="" method="post" enctype="multipart/form-data">
-      <div class="container-animal">
-        <h1>Dados da animal </h1>
+    <form action="" class="container-historicos" method="post" enctype="multipart/form-data">
+        <h2>ALTERAR DADOS DO ANIMAL</h2>
         <div>
           <label class="label-cadastra" for="id_codAnimal">Código do animal: </label>
           <input type="number" name="field_codAnimal" id="id_codAnimal" autofocus value="<?=$codAnimal ?>" required>
@@ -50,9 +49,9 @@
           <input type="file" name="field_imagem" id="id_imagem" maxlength="50" id="id_nomeImagem" autofocus value="<?=$nomeImagem?>" required>
         </div>
         <button name="altera" class="button-form" type="submit">Alterar</button>
-      </div>
     </form>
-    
+    <br>
+    <br>
     <?php include("listaInseminacao.php");?>
     <?php include("listaProducao.php");?>
     <?php include("listaTratamento.php");?>

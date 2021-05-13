@@ -18,9 +18,8 @@
         ?>
     </div>
 
-    <form action="" name="form-inseminacao" method="post" enctype="multipart/form-data">
-      <div>
-        <h1>Cadastro de animal de animal</h1>
+    <form action="" class="container-historicos" name="form-inseminacao" method="post" enctype="multipart/form-data">
+        <h2>CADASTRO DE ANIMAL</h2>
         <div>
           <label class="label-cadastra" for="id_codAnimal">Código do animal: </label>
           <input type="number" name="field_codAnimal" id="id_codAnimal" autofocus value="<?=$codAnimal ?>" required>
@@ -49,7 +48,6 @@
           <input type="file" name="field_imagem" id="id_imagem" maxlength="50" id="id_nomeImagem" autofocus value="<?=$nomeImagem?>" required>
         </div>
         <button name="adiciona" class="button-form" type="submit">Salvar</button>
-      </div>
     </form>
 
   <?php require_once("../includes/footer.php");?>

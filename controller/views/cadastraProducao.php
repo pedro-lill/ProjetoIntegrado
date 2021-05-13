@@ -17,9 +17,8 @@
     ?>
 </div>
 
-      <form action="" method="post" enctype="multipart/form-data">
-        <div>
-          <h1>Cadastro de produção</h1>
+      <form action="" class="container-historicos" method="post" enctype="multipart/form-data">
+          <h2>CADASTRO DE PRODUÇÃO</h2>
           <div>
             <label class="label-cadastra" for="id_codAnimal">Código do animal: </label>
             <input type="number" name="field_codAnimal" id="id_codAnimal" autofocus value="<?=$codAnimal ?>" required>
@@ -41,7 +40,6 @@
             </select>
           </div>
             <button name="adiciona" class="button-form" type="submit">Salvar</button>
-        </div>
       </form>
 
       <?php require_once("../includes/footer.php");?>

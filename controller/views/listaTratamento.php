@@ -15,9 +15,7 @@
 <body>
 
 <div class="lista_animais">
-  <h1>Histórico de tratamento</h1>  
-  <button class="button-form" onclick="window.location.href='tratamentoController.php?acao=adiciona'">Adicionar tratamento</button>
-    
+  <h3>HISTÓRICOS DE TRATAMENTO</h3>      
     <?php
     require_once "../controller/classes/TratamentoDAO.php";
     $obj = new TratamentoDAO();
@@ -31,8 +29,8 @@
       <div class="animal-historico">
         <div class="label">
           <div class="animal_descricao">
-          <strong>Cód.: <?=$tratamento->getCodAnimal()?> </strong>
-          <strong>Remédio: <?=$tratamento->getNomeMedicamento()?> </strong>
+          <strong>Cód. animal:  </strong> <?=$tratamento->getCodAnimal()?> <br> 
+          <strong>Remédio:  </strong> <?=$tratamento->getNomeMedicamento()?> <br>
           </div>
           <div>
             <button name="altera" class="button-edit" onclick="window.location.href='tratamentoController.php?acao=altera&codTratamento=<?=$tratamento->getCodTratamento() ?>'"><i class="fa fa-edit fa-1x"></i></button>

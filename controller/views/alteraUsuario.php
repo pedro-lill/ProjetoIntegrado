@@ -19,9 +19,8 @@
     
     <?php require_once("../includes/header.php");?>
 
-    <form action="" method="post" enctype="multipart/form-data">
-      <div class="container-animal">
-        <h1>Dados da producao </h1>
+    <form action="" class="container-historicos" method="post" enctype="multipart/form-data">
+        <h2>ALTERAR DADOS DE USUÁRIO</h2>
           <div>
             <label class="label-cadastra" for="id_codAnimal">Código do animal: </label>
             <input type="number" name="field_codAnimal" id="id_codAnimal" autofocus value="<?=$codAnimal ?>" required>
@@ -42,5 +41,4 @@
             </select>
           </div>
         <button name="altera" class="button-form" type="submit">Alterar</button>
-      </div>
     </form>

@@ -23,9 +23,8 @@
     ?>
   </div>
 
-  <form action="" method="post" enctype="multipart/form-data">
-    <div>
-      <h1>Cadastro de inseminação</h1>
+  <form action="" class="container-historicos" method="post" enctype="multipart/form-data">
+      <h2>CADASTRO DE INSEMINAÇÃO</h2>
       <div>
         <label class="label-cadastra" for="id_codAnimal">Código do animal: </label>
         <input type="number" name="field_codAnimal" id="id_codAnimal" value="<?=$codAnimal?>" > 
@@ -60,7 +59,6 @@
       <!--previsao de parto-->
       <!--previsao de secagem-->
       <button name="adiciona" class="button-form" type="submit">Salvar</button>
-    </div>
   </form>
   <script src="../js/script.js"></script>
 <?php require_once("../includes/footer.php");?>

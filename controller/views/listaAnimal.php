@@ -18,7 +18,7 @@
 
 <div class="lista_animais">
 
-    <button class="button-form" onclick="window.location.href='animalController.php?acao=adiciona'">Adicionar animal</button>
+    <button class="button-form-adicionar-animal" onclick="window.location.href='animalController.php?acao=adiciona'">Adicionar animal</button>
   
         <?php
         require_once "../controller/classes/AnimalDAO.php";
@@ -36,8 +36,8 @@
                     <img src="../img/<?=$animal->getNomeImagem()?>" alt="imagem_animal">
                 </div>
                 <div class="animal_descricao">
-                    <strong>Código: <?=$animal->getCodAnimal()?> </strong>
-                    <strong>Código da mãe: <?=$animal->getCodMae() ?> </strong>
+                    <strong>Cód.: </strong> <?=$animal->getCodAnimal()?> <br>
+                    <strong>Cód. da mãe: </strong> <?=$animal->getCodMae() ?>
                 </div>
                 <div>
                     <button class="button-edit" onclick="window.location.href='animalController.php?acao=altera&codAnimal=<?=$animal->getCodAnimal() ?>'"><i class="fa fa-edit fa-1x"></i></button>

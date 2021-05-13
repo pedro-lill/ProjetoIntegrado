@@ -25,9 +25,8 @@
 
   <?php require_once("../includes/header.php");?>
 
-    <form action="" method="post" enctype="multipart/form-data">
-      <div class="container-animal">
-      <h1>Dados da inseminacao </h1>
+    <form action="" class="container-historicos" method="post" enctype="multipart/form-data">
+      <h2>ALTERAR DADOS DE INSEMINAÇÃO</h2>
       <div>
         <label class="label-cadastra" for="id_codAnimal">Código do animal: </label>
         <input type="number" name="field_codAnimal" id="id_codAnimal" value="<?=$codAnimal?>" > 
@@ -60,7 +59,6 @@
         <input type="text" name="field_obs" maxlength="100" id="id_obs" value="<?=$obs?>">
       </div>
       <button name="altera" class="button-form" type="submit">Alterar</button>
-    </div>
   </form>
 
   <script src="../js/script.js"></script>

@@ -15,8 +15,8 @@
     ?>
 </div>
 
-  <form  action="" method="post" enctype="multipart/form-data">
-    <div class="container-cadastra-login">
+  <form  action="" class="container-historicos" method="post" enctype="multipart/form-data">
+  <h2>CADASTRO DE USUÁRIOS</h2>
       <div>
         <label class="label-cadastra" for="id_nomeLogin">Login</label>
         <input type="text" id="id_nomeLogin" name="field_nomeLogin" value="<?=$nomeLogin ?>" required>
@@ -31,7 +31,6 @@
       </div>
       <button class="button-form" type="submit">Cadastrar</button>
       <div class="login-a"><a href="../views/configuracoes.php">Voltar</a></div>
-    </div>
   </form>
 
 <!-- <script src="../../js/cadastro-login.js"></script> -->

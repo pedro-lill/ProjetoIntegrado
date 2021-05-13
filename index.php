@@ -11,6 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/login.css">
+  <link rel="stylesheet" href="/css/adicionar-animal.css">
   <title>Login - COOPTAR</title>
 </head>
 
@@ -32,8 +33,7 @@
 
   <div class="logo-mst"><img title="Logo do mst" src="/img/mst.png"/></div>
 
-  <form  action="/views/previsoes.php" onsubmit="return validarLogin()">
-    <div class="container-login">
+  <form  action="/views/previsoes.php" class="container-historicos" onsubmit="return validarLogin()">
       <div>
         <label class="label-cadastra" for="id_nomeLogin">Login</label>
         <input type="text" id="id_nomeLogin" name="field_nomeLogin" value="" required>
@@ -42,8 +42,7 @@
         <label class="label-cadastra" for="id_senha">Senha</label>
         <input type="password" id="id_senha" name="field_senha" value="" required>
       </div>
-      <button class="button-login" type="submit">Login</button>
-    </div>
+      <button class="button-form" type="submit">Login</button>
   </form>
 
   <script src="/js/login.js"></script>

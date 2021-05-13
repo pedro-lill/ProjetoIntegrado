@@ -15,7 +15,7 @@
 <body>
 
 <div class="lista_animais">
-      <h1>Histórico de inseminação</h1>  
+      <h3>HISTÓRICOS DE INSEMINAÇÕES</h3>  
       <?php
         require_once "../controller/classes/inseminacaoDAO.php";
         $obj = new inseminacaoDAO();
@@ -28,9 +28,9 @@
         <div class="animal-historico">
             <div class="label">
                 <div class="animal_descricao">
-                <strong>Cód.: <?=$inseminacao->getCodAnimal()?> </strong>
-                <strong>Touro: <?=$inseminacao->getTouroInseminador()?> </strong>
-                <?=$inseminacao->getDtInseminacao()?>
+                <strong>Cód. animal: </strong> <?=$inseminacao->getCodAnimal()?> <br>
+                <strong>Touro: </strong> <?=$inseminacao->getTouroInseminador()?> <br>
+                <strong>Data: </strong> <?=date('d/m/Y', strtotime("+0 days",strtotime($inseminacao->getDtInseminacao())));?>
 
               </div>
               <div>

@@ -1,34 +1,8 @@
-.container-login {
-    width: 70%;
-    margin-left: 15%;
-    margin-top: 1%;
-}
-
 .logo-mst img {
     width: 100px;
     height: 100px;
     margin: 6% 0 0 45%;
     border-radius: 80px;
-}
-
-.label-cadastra {
-    width: 50%;
-    margin: 5px 0 0px 25%;
-    display: inline-block;
-    box-sizing: border-box;
-    font-size: 15px;
-}
-
-input[type=text],
-input[type=password] {
-    background-color: #ebebeb;
-    width: 50%;
-    padding: 6px 10px;
-    margin: 5px 0 5px 25%;
-    display: inline-block;
-    border: 0.5px solid #3c3b3b;
-    box-sizing: border-box;
-    font-size: 17px;
 }
 
 .button-login {
@@ -43,19 +17,11 @@ input[type=password] {
     font-weight: bold;
 }
 
-.container-login  .login-a{
-    margin: 15px 40% 0 40%;
-    border-radius: 4px;
-    text-align: center;
-    cursor: pointer;
-    padding:5px;
-}
-
 a{
     text-decoration: none;
     color: #212121;
 }
 
-.container-login  .login-a:hover{
+.container-historicos  .login-a:hover{
     background-color: #949494;
 }

@@ -17,7 +17,7 @@
 
 
 <div class="lista_animais">
-      <h1>Histórico de produção de leite</h1>  
+      <h3>HISTÓRICOS DE PRODUÇÃO DE LEITE</h3>  
         <?php
         require_once "../controller/classes/ProducaoDAO.php";
         $obj = new ProducaoDAO();
@@ -30,9 +30,9 @@
         <div class="animal-historico">
             <div class="label">
                 <div class="animal_descricao">
-                <strong>Cód.: <?=$producao->getCodAnimal()?> </strong>
-                <strong>Litros: <?=$producao->getLitros()?> </strong>
-                <?=$producao->getDtColeta()?>  <?=$producao->getPeriodoDia()?>
+                  <strong>Cód. animal: </strong> <?=$producao->getCodAnimal()?> <br>
+                  <strong>Litros: </strong> <?=$producao->getLitros()?><br>
+                  <strong>Data: </strong> <?=date('d/m/Y', strtotime("+0 days",strtotime($producao->getDtColeta())));?> <?=$producao->getPeriodoDia()?>
                 </div>
                 <div>
                   <button name="altera" class="button-edit" onclick="window.location.href='producaoController.php?acao=altera&codProducao=<?=$producao->getCodProducao() ?>'"><i class="fa fa-edit fa-1x"></i></button>
