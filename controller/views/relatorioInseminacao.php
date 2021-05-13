@@ -12,10 +12,11 @@ if(count($lista) == 0){
 }else{
     foreach ($lista as $inseminacao){
 ?>     
+
   <tr>
-    <td><?=$inseminacao->getCodAnimal()?> </td>
+    <td><?=$inseminacao->getCodAnimal() + 10000?> </td>
     <td><?=$inseminacao->getTouroInseminador()?></td>
-    <td><?=$inseminacao->getDtInseminacao()?></td>
+    <td><?=date('d/m/Y', strtotime("+284 days",strtotime($inseminacao->getDtInseminacao())));?></td>
   </tr>
 
 <?php
