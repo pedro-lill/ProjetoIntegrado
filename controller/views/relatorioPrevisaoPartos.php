@@ -1,8 +1,7 @@
 <table>
   <tr>
     <th>Código do Animal</th>
-    <th>Touro inseminador</th>
-    <th>Data da inseminação</th>
+    <th>Data de previsão do parto</th>
   </tr>
 <?php
 $obj = new inseminacaoDAO();
@@ -15,8 +14,7 @@ if(count($lista) == 0){
 
   <tr>
     <td><?=$inseminacao->getCodAnimal()?> </td>
-    <td><?=$inseminacao->getTouroInseminador()?></td>
-    <td><?=date('d/m/Y', strtotime("+0 days",strtotime($inseminacao->getDtInseminacao())));?></td>
+    <td><?=date('d/m/Y', strtotime("+284 days",strtotime($inseminacao->getDtInseminacao())));?></td>
   </tr>
 
 <?php

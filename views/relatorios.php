@@ -13,6 +13,14 @@
 </div>
 
     <h3>RELATÓRIOS</h3>
+
+    <select class="select-relatorio" id="id_mes"  name="field_mes" required >
+        <option value="01" value="<?=$mes?>" <?=($_GET['field_mes']  == '01')?'selected':''?>>Produção</option>
+        <option value="02" value="<?=$mes?>" <?=($_GET['field_mes']  == '02')?'selected':''?>>Inseminação</option>
+        <option value="03" value="<?=$mes?>" <?=($_GET['field_mes']  == '03')?'selected':''?>>Previsão de parto</option>
+    </select>
+    <button class="relatorio-a" type="submit" onClick="fazerRelatorioTipo()"><i class="fas fa-search"></i></button>
+
     <select class="select-relatorio" id="id_mes"  name="field_mes" required >
         <option value="01" value="<?=$mes?>" <?=($_GET['field_mes']  == '01')?'selected':''?>>Janeiro</option>
         <option value="02" value="<?=$mes?>" <?=($_GET['field_mes']  == '02')?'selected':''?>>Fevereiro</option>
@@ -27,6 +35,6 @@
         <option value="11" value="<?=$mes?>" <?=($_GET['field_mes']  == '11')?'selected':''?>>Novembro</option>
         <option value="12" value="<?=$mes?>" <?=($_GET['field_mes']  == '12')?'selected':''?>>Dezembro</option>
     </select>
-    <button class="relatorio-a" type="submit" onClick="fazerRelatorioIns()"><i class="fas fa-search"></i></button>
-    <button class="relatorio-a" type="submit" onClick="fazerRelatorioProd()"><i class="fas fa-search"></i></button>
+    <button class="relatorio-a" type="submit" onClick="fazerRelatorio()"><i class="fas fa-search"></i></button>
+
     <script src="../js/relatorio.js"></script>
