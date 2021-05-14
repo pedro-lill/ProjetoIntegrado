@@ -23,7 +23,11 @@
        <h3>Históricos de inseminações do animal (cód. <?=$codAnimal?>)</h3>      
        <?php
         if(count($lista) == 0){
-            echo "Nenhuma animal encontrada.";
+          ?>
+           <div>
+            <p>Nenhum histórico de inseminação foi encontrado.</p>
+           </div>
+          <?php
         }else{
             foreach ($lista as $inseminacao){
         ?>   

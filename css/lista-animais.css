@@ -19,7 +19,6 @@ h3{
 .animal {
     cursor: pointer;
     width: 40vw;
-    height: 120px;
     font-size: 15px;
     background-color: #eeeeee;
     border: 1px solid #707070;
@@ -38,12 +37,25 @@ h3{
     border-radius: 5px;
     transition: 0.3s;
 }
+ 
+.div-nenhum-historico{
+    background-color: rgb(204, 204, 204);
+    font-size: 15px;
+    padding: 20px;
+    margin-left: 40vw;
+    border-radius: 5px;
+}
+
+.div-nenhum-historico p{
+    margin: 0;
+}
 
 .animal-historico:hover {
     box-shadow: 3px 3px 10px #176a35;
 }
 
 .animal:hover {
+    background-color: #dddddd;
     box-shadow: 3px 3px 10px #176a35;
 }
 
@@ -62,39 +74,42 @@ h3{
 
 .animal .label {
     display: flex;
-    margin-top: 20px;
-    margin-left: 20px;
+    padding: 20px;
     align-items: center;
 }
 
 .animal_descricao {
     margin-left: 20px;
     font-size: 18px;
-    width: 50%;
+    width: 40%;
     display: block;
     flex-direction: column;
 }
 
 .button-delete {
-    background-color: #4d4d4d6e;
+    background-color: #8888885f;
     color: #ff0000;
     font-size: 20px;
-    width: 50px;
+    font-weight: 200;
+    width: 45px;
+    height: 45px;
     margin-left: 10px;
 }
 
 .button-edit {
-    background-color: #4d4d4d6e;
+    background-color: #8888885f;
     color: #097c09;
     font-size: 20px;
-    width: 50px;
-    margin-left: 100px;
+    font-weight: 200;
+    width: 45px;
+    height: 45px;
+    margin-left: 50px;
 }
 
 .button-edit:hover {
-    background-color: #c2c1c1;
+    background-color: #5c924694;
 }
 
 .button-delete:hover {
-    background-color: #c2c1c1;
+    background-color: #a34b4b7a;
 }

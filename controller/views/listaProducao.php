@@ -25,7 +25,11 @@
        <h3>Históricos de produção do animal (cód. <?=$codAnimal?>)</h3>      
        <?php
         if(count($lista) == 0){
-            echo "Nenhuma animal encontrada.";
+          ?>
+          <div class="div-nenhum-historico">
+           <p>Nenhum histórico de produção foi encontrado.</p>
+          </div>
+         <?php
         }else{
             foreach ($lista as $producao){
         ?>     

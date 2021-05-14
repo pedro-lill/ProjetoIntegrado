@@ -23,7 +23,11 @@
     <h3>Históricos de tratamentos do animal (cód. <?=$codAnimal?>)</h3>      
     <?php
     if(count($lista) == 0){
-        echo "Nenhuma animal encontrada.";
+      ?>
+      <div class="div-nenhum-historico">
+       <p>Nenhum histórico de tratamento foi encontrado.</p>
+      </div>
+     <?php
     }else{
         foreach ($lista as $tratamento){
     ?>

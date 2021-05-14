@@ -37,7 +37,9 @@
                 </div>
                 <div class="animal_descricao">
                     <strong>Cód.: </strong> <?=$animal->getCodAnimal()?> <br>
-                    <strong>Cód. da mãe: </strong> <?=$animal->getCodMae() ?>
+                    <strong>Cód. mãe: </strong> <?=$animal->getCodMae() ?> <br>
+                    <strong>Nome pai: </strong>  <?=$animal->getNomePai() ?> <br>
+                    <strong>Data nasc.: </strong> <?=date('d/m/Y', strtotime("+0 days",strtotime($animal->getDtNascimento())));?>
                 </div>
                 <div>
                     <button class="button-edit" onclick="window.location.href='animalController.php?acao=altera&codAnimal=<?=$animal->getCodAnimal() ?>'"><i class="fa fa-edit fa-1x"></i></button>
