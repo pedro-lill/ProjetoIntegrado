@@ -1,7 +1,7 @@
 <table>
   <tr>
     <th>Código do Animal</th>
-    <th>Data de Coleta</th>
+    <th>Data da Coleta</th>
     <th>Produção</th>
   </tr>
 <?php
