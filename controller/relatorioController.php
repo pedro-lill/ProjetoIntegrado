@@ -19,13 +19,15 @@ else {
             break;
 
             case 'filtroprod':
-                if(!isset($_POST['filtroprod'])){ 
-                    include("../views/relatorios.php"); 
-                }
-                else{
-                    $bd = new inseminacaoDAO();
-                    if($bd->inserir($obj))
-                        header("Location: inseminacaoController.php"); 
+                include_once "../controller/classes/ProducaoDAO.php";
+                if(!isset($_GET['acao'])){
+                    $obj = new ProducaoDAO();
+                    $lista = $obj->listar();
+                    include "../views/relatorios.php";
+                }else{
+                    include("../views/relatorios.php");
+                    include("views/relatorioProducao.php");
+                    include("../includes/footer.php");
                 }
                 break;
     
