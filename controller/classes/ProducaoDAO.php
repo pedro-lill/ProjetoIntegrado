@@ -35,7 +35,7 @@
             }
         }
         
-        public function buscaProd($mes){
+        public function buscaMes($mes){
             try{
                 $query = $this->conexao->prepare("select * FROM producao WHERE MONTH(dtColeta) = :d");//data
                 $query->bindParam(":d", $mes, PDO::PARAM_INT);

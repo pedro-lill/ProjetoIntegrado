@@ -6,7 +6,7 @@
   </tr>
 <?php
 $obj = new ProducaoDAO();
-$lista = $obj->buscaProd($_GET['field_mes']);
+$lista = $obj->buscaMes($_GET['filtroMes']);
 if(count($lista) == 0){
     //echo "Nenhum relatório encontrado.";
 }else{

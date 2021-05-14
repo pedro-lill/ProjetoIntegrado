@@ -1,12 +1,11 @@
 <table>
   <tr>
     <th>Código do Animal</th>
-    <th>Touro inseminador</th>
-    <th>Data da inseminação</th>
+    <th>Previsao de Secagem</th>
   </tr>
 <?php
 $obj = new inseminacaoDAO();
-$lista = $obj->buscaMes($_GET['field_mes']);
+$lista = $obj->buscaMes($_GET['filtroMes']);
 if(count($lista) == 0){
     //echo "Nenhum relatório encontrado.";
 }else{
@@ -15,8 +14,7 @@ if(count($lista) == 0){
 
   <tr>
     <td><?=$inseminacao->getCodAnimal()?> </td>
-    <td><?=$inseminacao->getTouroInseminador()?></td>
-    <td><?=date('d/m/Y', strtotime("+0 days",strtotime($inseminacao->getDtInseminacao())));?></td>
+    <td><?=date('d/m/Y', strtotime("+224 days",strtotime($inseminacao->getDtInseminacao())));?></td>
   </tr>
 
 <?php
