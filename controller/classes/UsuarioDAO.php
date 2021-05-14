@@ -25,7 +25,7 @@
 
         public function inserir(Usuario $usuario){
             try{
-                $query = $this->conexao->prepare("insert into usuario values (NULL, :nl, :s)");
+                $query = $this->conexao->prepare("insert into usuario values (:nl, :s)");
                 $query->bindValue(":nl", $usuario->getNomeLogin());
                 $query->bindValue(":s", $usuario->getSenha());
                 return $query->execute();

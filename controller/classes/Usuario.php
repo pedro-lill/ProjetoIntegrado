@@ -1,17 +1,8 @@
 <?php
     class Usuario{
         
-        private $codUsuario ;
         private $nomeLogin;
         private $senha;
-
-        public function getCodUsuario (){
-            return $this->codUsuario ;
-        }
-
-        public function setCodUsuario($codUsuario ){
-            $this->codUsuario  = $codUsuario ;
-        }
 
         public function getNomeLogin(){
             return $this->nomeLogin;

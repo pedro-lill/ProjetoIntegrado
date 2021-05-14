@@ -2,6 +2,7 @@
 include_once "../controller/classes/UsuarioDAO.php";
 if(!isset($_GET['acao'])){
     $obj = new UsuarioDAO();
+    
     include "views/listaAnimal.php";
 }
 else {    

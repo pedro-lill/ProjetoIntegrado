@@ -65,7 +65,7 @@
             }
         }
 
-        public function alterar(tratamento $tratamento){
+        public function alterar(Tratamento $tratamento){
             try{
                 $query = $this->conexao->prepare("update tratamento set codAnimal = : c, codTratamento = :t, motivoTratamento = :mt, nomeMedicamento = :nm, quantidadeMedicamento = :qm, responsavel = :r, obs = :o where codTratamento = :t");
                 $query->bindValue(":c", $tratamento->getCodAnimal());
