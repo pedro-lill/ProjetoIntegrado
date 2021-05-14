@@ -1,10 +1,26 @@
+<table>
+  <tr>
+    <th>Código do Animal</th>
+    <th>Touro inseminador</th>
+    <th>Data da inseminação</th>
+  </tr>
 <?php
-    require_once "../controller/classes/AnimalDAO.php";
-    $obj = new AnimalDAO();
-    $lista = $obj->listar(); 
-    if(count($lista) == 0){
-        echo "Nenhuma animal encontrada.";
-    }else{
-        foreach ($lista as $animal);
-    }
+$obj = new inseminacaoDAO();
+$lista = $obj->buscaMes($_GET['field_mes']);
+if(count($lista) == 0){
+    //echo "Nenhum relatório encontrado.";
+}else{
+    foreach ($lista as $inseminacao){
 ?>     
+
+  <tr>
+    <td><?=$inseminacao->getCodAnimal()?> </td>
+    <td><?=$inseminacao->getTouroInseminador()?></td>
+    <td><?=date('d/m/Y', strtotime("+0 days",strtotime($inseminacao->getDtInseminacao())));?></td>
+  </tr>
+
+<?php
+    }
+    }
+?>
+</table>

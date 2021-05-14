@@ -9,21 +9,33 @@ if(!isset($_GET['acao'])){
 else {    
 	switch($_GET['acao']){
         
-        case 'filtro':
-            if(!isset($_POST['filtro'])){ 
-               
+        case 'filtromes':
+            if(!isset($_POST['filtromes'])){ 
                 include("../views/relatorios.php");
                 include("views/relatorioInseminacao.php");
                 include("../includes/footer.php");
 
             }
             break;
-        
-        default:
-            echo "Ação não permitida";  
-                      
+
+            case 'filtroprod':
+                if(!isset($_POST['filtroprod'])){ 
+                    include("../views/relatorios.php"); 
+                }
+                else{
+                    $bd = new inseminacaoDAO();
+                    if($bd->inserir($obj))
+                        header("Location: inseminacaoController.php"); 
+                }
+                break;
+    
+            default:
+                echo "Ação não permitida"; 
+        }
+
     }
-} 
+    
+
 
 ?>
 

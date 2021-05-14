@@ -1,5 +1,11 @@
-function fazerRelatorio(x){
+function fazerRelatorioIns(x){
     console.log(x)
-    var filtro = document.getElementById("id_mes").value
-    return window.location.href='../controller/relatorioController.php?acao=filtro&field_mes=' + filtro
+    var filtromes = document.getElementById("id_mes").value
+    return window.location.href='../controller/relatorioController.php?acao=filtromes&field_mes=' + filtromes
+}
+
+function fazerRelatorioProd(x){
+    console.log(x)
+    var filtroprod = document.getElementById("id_mes").value
+    return window.location.href='../controller/relatorioController.php?acao=filtroprod&field_mes=' + filtroprod
 }

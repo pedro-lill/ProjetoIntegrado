@@ -33,7 +33,20 @@
             catch(PDOException $e){
                 echo "Erro no acesso aos dados: ". $e->getMessage();
             }
-        }  
+        }
+        
+        public function buscaProd($mes){
+            try{
+                $query = $this->conexao->prepare("select * FROM producao WHERE MONTH(dtColeta) = :d");//data
+                $query->bindParam(":d", $mes, PDO::PARAM_INT);
+                $query->execute();
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "producao");
+                return $registros;
+            }
+            catch(PDOException $e){
+                echo "Erro no acesso aos dados: ". $e->getMessage();
+            }
+        }
 
         public function buscaLista($codAnimal){
             try{

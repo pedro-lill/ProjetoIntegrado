@@ -27,5 +27,6 @@
         <option value="11" value="<?=$mes?>" <?=($_GET['field_mes']  == '11')?'selected':''?>>Novembro</option>
         <option value="12" value="<?=$mes?>" <?=($_GET['field_mes']  == '12')?'selected':''?>>Dezembro</option>
     </select>
-    <button class="relatorio-a" type="submit" onClick="fazerRelatorio()"><i class="fas fa-search"></i></button>
+    <button class="relatorio-a" type="submit" onClick="fazerRelatorioIns()"><i class="fas fa-search"></i></button>
+    <button class="relatorio-a" type="submit" onClick="fazerRelatorioProd()"><i class="fas fa-search"></i></button>
     <script src="../js/relatorio.js"></script>
