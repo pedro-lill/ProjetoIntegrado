@@ -107,7 +107,7 @@ button:focus {
         text-align: center;
         transition: all .5s;
         display: inline;
-        width: 20vw;
+        width: 40vw;
         position: absolute;
         float: left;
         padding-inline-start: 0;
