@@ -20,10 +20,13 @@
         $obj = new inseminacaoDAO();
         $lista = $obj->buscaLista($codAnimal); 
         ?>
+       <h3>Históricos de inseminações do animal (cód. <?=$codAnimal?>)</h3>      
        <?php
         if(count($lista) == 0){
           ?>
-          <h3>Históricos de inseminação foi encontrado</h3>     
+           <div class="div-nenhum-historico"> 
+            <p>Nenhum histórico de inseminação foi encontrado.</p>
+           </div>
           <?php
         }else{
             foreach ($lista as $inseminacao){
