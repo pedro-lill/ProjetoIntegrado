@@ -25,7 +25,9 @@
 <body>
 
     <header>
-        <ul>
+        <input type="checkbox" id="check" onclick="MeuBotaoMenu()">
+        <label for="check" class="checkbtn">&#9776;</label>
+        <ul id="PrecisoParajs">
             <li><a href="../controller/animalController.php">Animais</a></li>
             <li><a href="../views/graficos.php">Gráficos</a></li>
             <li><a href="../views/previsoes.php">Previsões</a></li>
@@ -34,11 +36,10 @@
             <li><a href="../controller/producaoController.php?acao=adiciona">+  Produção</a></li>
             <li><a href="../controller/inseminacaoController.php?acao=adiciona">+  Inseminação</a></li>
             <li><a href="../controller/tratamentoController.php?acao=adiciona">+  Tratamento</a></li>
-            <a class="icone-configuracoes" href="../views/configuracoes.php"><i class="fas fa-cog"></i></a>
         </ul>
-        
+        <a class="icone-configuracoes" href="../views/configuracoes.php"><i class="fas fa-cog"></i></a>
         <a class="logo-header" href="../index.php"><img title="Logo do mst" src="/img/mst.png" /></a>
     </header>
 
-
+<script src="../js/header.js"></script>
 </body>

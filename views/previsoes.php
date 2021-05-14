@@ -2,3 +2,4 @@
 
 <h3>PREVISÕES</h3>
 
+<?php require_once("../includes/footer.php");?>
