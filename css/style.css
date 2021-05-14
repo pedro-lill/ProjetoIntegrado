@@ -77,12 +77,12 @@ button:focus {
 }
 
 .checkbtn {
-  font-size: 35px;
+  font-size: 40px;
   color: #cbf2be;
   float: left;
   cursor: pointer;
   display: none;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .checkbtn:hover {
@@ -107,28 +107,30 @@ button:focus {
         text-align: center;
         transition: all .5s;
         display: inline;
-        width: 30%;
+        width: 20vw;
         position: absolute;
         float: left;
         padding-inline-start: 0;
-        height: 70vw;
+        height: 80vh;
     }
 
     header ul li {
       padding:0;
         width: 100%;
+        height: 10vh;
         float: none;
         display: block;
-    }
+        align-items: center;
+      }
     
     header ul li a {
       float: left;
-      padding: 20px 0 10px 0px;
-      margin: 0 0 0 0;
+      padding: 2vh 0 2vh 0;
       width: 100%;
-      font-size: 18px;
+      margin: 0 0 0 0;
+      font-size: 15px;
       line-height: 30px;
-      height: 5vh;
+      height: 6vh;
       border-radius: 0px;
 
   }

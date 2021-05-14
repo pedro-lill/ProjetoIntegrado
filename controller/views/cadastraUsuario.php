@@ -30,7 +30,7 @@
         <input type="password" name="field_senhaConfirma" minlength="6" id="id_senhaConfirma" value="<?=$senha ?>" required>
       </div>
       <button class="button-form" type="submit">Cadastrar</button>
-      <div class="login-a"><a href="../views/configuracoes.php">Voltar</a></div>
+      <button class="login-a"><a href="../views/configuracoes.php">Voltar</a></button>
   </form>
 
 <!-- <script src="../../js/cadastro-login.js"></script> -->

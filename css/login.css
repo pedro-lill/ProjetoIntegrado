@@ -1,7 +1,7 @@
 .logo-mst img {
     width: 100px;
     height: 100px;
-    margin: 6% 0 0 45%;
+    margin: 6% 0 0 45vw;
     border-radius: 80px;
 }
 
@@ -20,6 +20,18 @@
 a{
     text-decoration: none;
     color: #212121;
+}
+
+.login-a{
+    background-color: #c0c0c0;
+    color: white;
+    padding: 5px;
+    margin: 15px 0 0 10vw;
+    border: none;
+    cursor: pointer;
+    width: 10vw;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .container-historicos  .login-a:hover{

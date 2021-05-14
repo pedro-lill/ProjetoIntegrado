@@ -7,34 +7,13 @@
     width: 30vw;
 }
 
-input[type=text],
-input[type=file]{
-    background-color: #e2e1e1;
-    width: 30vw;
-    margin: 5px 0 5px 0;
-    padding: 6px 10px;
-    display: inline-block;
-    border: 0.5px solid #3c3b3b;
-    box-sizing: border-box;
-    font-size: 17px;
-}
-
 input[type=date],
+input[type=text],
+input[type=file],
 select,
 input[type=number],
-input[type=password] {
-
-    background-color: #e2e1e1;
-    width: 30vw;
-    padding: 6px 10px;
-    margin: 5px 0 5px 0;
-    display: inline-block;
-    border: 0.5px solid #3c3b3b;
-    box-sizing: border-box;
-    font-size: 17px;
-}
-
-input[type=checkbox]{
+input[type=password],
+input[type=checkbox] {
     background-color: #e2e1e1;
     width: 30vw;
     padding: 6px 10px;
@@ -106,4 +85,40 @@ input[type=checkbox]{
 
 .button-form:hover {
     background-color: #116814;
+}
+
+@media (max-width:800px) {
+
+    .container-historicos {
+        margin-left: 20vw;
+        width: 60vw;
+    }
+    
+    input[type=date],
+    input[type=text],
+    input[type=file],
+    select,
+    input[type=number],
+    input[type=password],
+    input[type=checkbox] {
+        width: 60vw;
+        font-size: 15px;
+    }
+
+    .button-form {
+        margin: 15px 0 0 20vw;
+        width: 20vw;
+        font-size: 13px;
+    }
+    .button-form-adicionar-animal {
+        margin: 15px 0 0 20vw;
+        width: 20vw;
+        margin-left: 80vw;  
+        height: 30px;
+        font-size: 15px;
+    }
+    .label-cadastra {
+        width:60vw;
+        font-size: 13px;
+    }
 }

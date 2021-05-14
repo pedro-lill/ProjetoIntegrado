@@ -12,11 +12,11 @@
 }
 
 .lista-configuracoes li{
-    width: 250px;
-    margin: 20px 0 0 30%;
+    width: 20vw;
+    margin: 10px 0 0 5vw;
     padding:10px;
-    background-color:rgb(191, 191, 191);
-    border-radius: 10px;
+    background-color:rgb(213, 213, 213);
+    border-radius: 5px;
 }
 
 .lista-configuracoes li:hover{
@@ -38,3 +38,9 @@
   .icone-configuracoes i:hover{
     color: rgb(170, 170, 170);
   }
+
+  @media (max-width:1100px) {
+    .icone-configuracoes{
+        margin-top: 0px;
+      }
+}
