@@ -30,7 +30,11 @@
 </div>
 
 <body>
-
+<br>
+<br>
+<br>
+<br>
+<br>
   <div class="logo-mst"><img title="Logo do mst" src="/img/mst.png"/></div>
 
   <form  action="/views/previsoes.php" class="container-historicos" onsubmit="return validarLogin()">

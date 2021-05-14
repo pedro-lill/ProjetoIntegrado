@@ -23,3 +23,18 @@
     background-color:rgb(158, 158, 158);
 }
 
+.icone-configuracoes{
+    text-decoration: none;
+    font-size:25px;
+    padding: 13px;
+    margin-top: 0px;
+    float: right;
+  }
+  
+  .icone-configuracoes i{
+   color: rgb(104, 104, 104);
+   font-size:24px;
+  }
+  .icone-configuracoes i:hover{
+    color: rgb(170, 170, 170);
+  }
