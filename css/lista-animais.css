@@ -12,7 +12,7 @@ h3{
 }
 
 .lista_animais h3 {
-    width: 100%;
+    border-top: 1.5px solid #109431;
     margin-left: 35vw;
 }
 
@@ -37,7 +37,7 @@ h3{
     border-radius: 5px;
     transition: 0.3s;
 }
- 
+
 .div-nenhum-historico{
     background-color: rgb(204, 204, 204);
     font-size: 15px;
