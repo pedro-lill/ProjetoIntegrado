@@ -17,40 +17,38 @@
 
 <div class="erro_cadastro">
   <?php
-  if(isset($erros) && count($erros) !=0){
+    if(isset($erros) && count($erros) !=0){
       echo "<ul>";
       foreach($erros as $e)
-          echo "<li>$e</li>";
-      echo "</ul>";
-  }
-
-  $nomeLogin = isset($_POST['field_nomeLogin']) ? $_POST['field_nomeLogin'] : "";
-  $senha = isset($_POST['field_senha']) ? $_POST['field_senha'] : "";
+        echo "<li>$e</li>";
+    }
+    $nomeLogin = isset($_POST['field_nomeLogin']) ? $_POST['field_nomeLogin'] : "";
+    $senha = isset($_POST['field_senha']) ? $_POST['field_senha'] : "";
   ?>
 </div>
 
 <body>
-<br>
-<br>
-<br>
-<br>
-<br>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
   <div class="logo-mst"><img title="Logo do mst" src="/img/mst.png"/></div>
 
   <form  action="/views/previsoes.php" class="container-historicos" onsubmit="return validarLogin()">
-      <div>
-        <label class="label-cadastra" for="id_nomeLogin">Login</label>
-        <input type="text" id="id_nomeLogin" name="field_nomeLogin" value="" required>
-      </div>
-      <div>
-        <label class="label-cadastra" for="id_senha">Senha</label>
-        <input type="password" id="id_senha" name="field_senha" value="" required>
-      </div>
-      <button class="button-form" type="submit">Login</button>
+    <div class="div-inteira">
+      <label class="label-cadastra" for="id_nomeLogin">Login</label>
+      <input type="text" id="id_nomeLogin" name="field_nomeLogin" value="" required>
+    </div>
+    <div class="div-inteira">
+      <label class="label-cadastra" for="id_senha">Senha</label>
+      <input type="password" id="id_senha" name="field_senha" value="" required>
+    </div>
+    <button class="button-form" type="submit">Login</button>
   </form>
 
   <script src="/js/login.js"></script>
 
 </body>
-
 </html>

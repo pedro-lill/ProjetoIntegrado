@@ -6,7 +6,6 @@
         echo "<ul>";
         foreach($erros as $e)
             echo "<li>$e</li>";
-        echo "</ul>";
     }
     $mes = isset($_POST['filtroMes']) ? $_POST['filtroMes'] : "";
     $tipo = isset($_POST['filtroTipo']) ? $_POST['filtroTipo'] : "";
