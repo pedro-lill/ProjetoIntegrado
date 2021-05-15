@@ -4,7 +4,7 @@
 
 ## Devs:
 
-<a href="https://github.com/pedro-lill" target="_blank"><b>Pedro Manfio  e  </b></a>
+<a href="https://github.com/pedro-lill" target="_blank"><b>Pedro Manfio</b></a> <b>  e  </b>
 <a href="https://github.com/fabricioromanii" target="_blank"><b>Fabrício Romani</b></a>
 
  <h2>👨‍💻 Linguagens e ferramentas utilizadas:</h2>
