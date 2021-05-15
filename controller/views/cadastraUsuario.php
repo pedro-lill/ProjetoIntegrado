@@ -31,9 +31,9 @@
   </div>
   <div class="div-metade">
     <label class="label-cadastra" for="id_senhaConfirma">Confirmar senha</label>
-    <input type="password" name="field_senhaConfirma" minlength="6" id="id_senhaConfirma" value="<?=$senha ?>" required>
+    <input type="password" name="field_senhaConfirma" minlength="6" id="id_senhaConfirma" value="<?=$senha?>" required>
   </div>
-  <button name="adiciona" class="button-form" type="submit" onClick="validarCadastroLogin()">Cadastrar</button>
+  <button name="adiciona" class="button-form" type="submit" onclick="validarCadastroLogin()">Cadastrar</button>
   <button class="login-a"><a href="../views/configuracoes.php">Voltar</a></button>
 
 </form>
