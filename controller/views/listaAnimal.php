@@ -12,51 +12,47 @@
   <link href="../css/lista-animais.css" rel="stylesheet">
 </head>
 
-<body>
+    <?php require_once("../includes/header.php");?>
 
-<?php require_once("../includes/header.php");?>
+    <div class="lista_animais">
 
-<div class="lista_animais">
+        <button class="button-form-adicionar-animal" onclick="window.location.href='animalController.php?acao=adiciona'">Adicionar animal</button>
 
-    <button class="button-form-adicionar-animal" onclick="window.location.href='animalController.php?acao=adiciona'">Adicionar animal</button>
-  
-        <?php
-        require_once "../controller/classes/AnimalDAO.php";
-        $obj = new AnimalDAO();
-        $lista = $obj->listar(); 
-        if(count($lista) == 0){
-            echo "Nenhuma animal encontrada.";
-        }else{
-            foreach ($lista as $animal){
-        ?>     
-   
-        <div class="animal">
-            <div class="label">
-                <div class="animal_img">
-                    <img src="../img/<?=$animal->getNomeImagem()?>" alt="imagem_animal">
-                </div>
-                <div class="animal_descricao">
-                    <strong>Cód.: </strong> <?=$animal->getCodAnimal()?> <br>
-                    <strong>Cód. mãe: </strong> <?=$animal->getCodMae() ?> <br>
-                    <strong>Nome pai: </strong>  <?=$animal->getNomePai() ?> <br>
-                    <strong>Data nasc.: </strong> <?=date('d/m/Y', strtotime("+0 days",strtotime($animal->getDtNascimento())));?>
-                </div>
-                <div>
-                    <button class="button-edit" onclick="window.location.href='animalController.php?acao=altera&codAnimal=<?=$animal->getCodAnimal() ?>'"><i class="fa fa-edit fa-1x"></i></button>
-                    <button class="button-delete" onclick='verificarExcluir(<?=$animal->getCodAnimal()?>)'><i class="fa fa-trash-alt fa-1x"></i></button>
-                </div>
-            </div>
-        </div>
+          <?php
+          require_once "../controller/classes/AnimalDAO.php";
+          $obj = new AnimalDAO();
+          $lista = $obj->listar(); 
+          if(count($lista) == 0){
+              echo "Nenhuma animal encontrada.";
+          }else{
+              foreach ($lista as $animal){
+          ?>     
 
-    <?php
+          <div class="animal">
+              <div class="label">
+                  <div class="animal_img">
+                      <img src="../img/<?=$animal->getNomeImagem()?>" alt="imagem_animal">
+                  </div>
+                  <div class="animal_descricao">
+                      <strong>Cód.: </strong> <?=$animal->getCodAnimal()?> <br>
+                      <strong>Cód. mãe: </strong> <?=$animal->getCodMae() ?> <br>
+                      <strong>Nome pai: </strong>  <?=$animal->getNomePai() ?> <br>
+                      <strong>Data nasc.: </strong> <?=date('d/m/Y', strtotime("+0 days",strtotime($animal->getDtNascimento())));?>
+                  </div>
+                  <div>
+                      <button class="button-edit" onclick="window.location.href='animalController.php?acao=altera&codAnimal=<?=$animal->getCodAnimal() ?>'"><i class="fa fa-edit fa-1x"></i></button>
+                      <button class="button-delete" onclick='verificarExcluir(<?=$animal->getCodAnimal()?>)'><i class="fa fa-trash-alt fa-1x"></i></button>
+                  </div>
+              </div>
+          </div>
+            
+      <?php
+          }
         }
-      }
-    ?>
-    
-  </div>
+      ?>
 
-  <?php require_once("../includes/footer.php");?>
-  
-  <script src="/js/lista-animais.js"></script>
+    </div>
 
-</body>    
+    <?php require_once("../includes/footer.php");?>
+
+    <script src="/js/lista-animais.js"></script>

@@ -12,45 +12,40 @@
   <link href="../css/lista-animais.css" rel="stylesheet">
 </head>
 
-<body>
-
 <div class="lista_animais">
-      <?php
-        require_once "../controller/classes/inseminacaoDAO.php";
-        $obj = new inseminacaoDAO();
-        $lista = $obj->buscaLista($codAnimal); 
-        ?>
-       <h3>Históricos de inseminações do animal (cód. <?=$codAnimal?>)</h3>      
-       <?php
-        if(count($lista) == 0){
-          ?>
-           <div class="div-nenhum-historico">
-            <p>Nenhum histórico de inseminação foi encontrado.</p>
-           </div>
-          <?php
-        }else{
-            foreach ($lista as $inseminacao){
-        ?>   
-        <div class="animal-historico">
-            <div class="label">
-                <div class="animal_descricao">
-                <strong>Touro: </strong> <?=$inseminacao->getTouroInseminador()?> <br>
-                <strong>Responsável: </strong> <?=$inseminacao->getInseminadorResponsavel()?> <br>
-                <strong>Data: </strong> <?=date('d/m/Y', strtotime("+0 days",strtotime($inseminacao->getDtInseminacao())));?>
-
-              </div>
-              <div>
-                <button name="altera" class="button-edit" onclick="window.location.href='inseminacaoController.php?acao=altera&codInseminacao=<?=$inseminacao->getCodInseminacao() ?>'"><i class="fa fa-edit fa-1x"></i></button>
-                <button name="exclui" class="button-delete" onclick=""><i class="fa fa-trash-alt fa-1x"></i></button>
-              </div>
-            </div>
-        </div>
-    <?php
-        }
-      }
+  <?php
+    require_once "../controller/classes/inseminacaoDAO.php";
+    $obj = new inseminacaoDAO();
+    $lista = $obj->buscaLista($codAnimal); 
     ?>
-  </div>
-  
-  <script src="/js/lista-animais.js"></script>
+    <h3>Históricos de inseminações do animal (cód. <?=$codAnimal?>)</h3>      
+    <?php
+    if(count($lista) == 0){
+    ?>
+       <div class="div-nenhum-historico">
+        <p>Nenhum histórico de inseminação foi encontrado.</p>
+       </div>
+    <?php
+    }else{
+      foreach ($lista as $inseminacao){
+    ?>   
+      <div class="animal-historico">
+          <div class="label">
+              <div class="animal_descricao">
+              <strong>Touro: </strong> <?=$inseminacao->getTouroInseminador()?> <br>
+              <strong>Responsável: </strong> <?=$inseminacao->getInseminadorResponsavel()?> <br>
+              <strong>Data: </strong> <?=date('d/m/Y', strtotime("+0 days",strtotime($inseminacao->getDtInseminacao())));?>
+            </div>
+            <div>
+              <button name="altera" class="button-edit" onclick="window.location.href='inseminacaoController.php?acao=altera&codInseminacao=<?=$inseminacao->getCodInseminacao() ?>'"><i class="fa fa-edit fa-1x"></i></button>
+              <button name="exclui" class="button-delete" onclick=""><i class="fa fa-trash-alt fa-1x"></i></button>
+            </div>
+          </div>
+      </div>
+    <?php
+      }
+    }
+  ?>
+</div>
 
-</body>    
+<script src="/js/lista-animais.js"></script>   

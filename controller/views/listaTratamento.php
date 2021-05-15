@@ -12,45 +12,41 @@
   <link href="../css/lista-animais.css" rel="stylesheet">
 </head>
 
-<body>
-
 <div class="lista_animais">
-    <?php
-    require_once "../controller/classes/TratamentoDAO.php";
-    $obj = new TratamentoDAO();
-    $lista = $obj->buscaLista($codAnimal); 
+  <?php
+  require_once "../controller/classes/TratamentoDAO.php";
+  $obj = new TratamentoDAO();
+  $lista = $obj->buscaLista($codAnimal); 
+  ?>
+  <h3>Históricos de tratamentos do animal (cód. <?=$codAnimal?>)</h3>      
+  <?php
+  if(count($lista) == 0){
     ?>
-    <h3>Históricos de tratamentos do animal (cód. <?=$codAnimal?>)</h3>      
-    <?php
-    if(count($lista) == 0){
-      ?>
-      <div class="div-nenhum-historico">
-       <p>Nenhum histórico de tratamento foi encontrado.</p>
-      </div>
-     <?php
-    }else{
-        foreach ($lista as $tratamento){
-    ?>
-         
-      <div class="animal-historico">
-        <div class="label">
-          <div class="animal_descricao">
-          <strong>Motivo:  </strong> <?=$tratamento->getMotivoTratamento()?> <br> 
-          <strong>Remédio:  </strong> <?=$tratamento->getNomeMedicamento()?> <br>
-          <strong>Data:  </strong> <?=date('d/m/Y', strtotime("+0 days",strtotime($tratamento->getDtTratamento())));?> <br>
-          </div>
-          <div>
-            <button name="altera" class="button-edit" onclick="window.location.href='tratamentoController.php?acao=altera&codTratamento=<?=$tratamento->getCodTratamento() ?>'"><i class="fa fa-edit fa-1x"></i></button>
-            <button name="exclui" class="button-delete" onclick=""><i class="fa fa-trash-alt fa-1x"></i></button>
-          </div>
+    <div class="div-nenhum-historico">
+     <p>Nenhum histórico de tratamento foi encontrado.</p>
+    </div>
+   <?php
+  }else{
+      foreach ($lista as $tratamento){
+  ?>
+       
+    <div class="animal-historico">
+      <div class="label">
+        <div class="animal_descricao">
+        <strong>Motivo:  </strong> <?=$tratamento->getMotivoTratamento()?> <br> 
+        <strong>Remédio:  </strong> <?=$tratamento->getNomeMedicamento()?> <br>
+        <strong>Data:  </strong> <?=date('d/m/Y', strtotime("+0 days",strtotime($tratamento->getDtTratamento())));?> <br>
+        </div>
+        <div>
+          <button name="altera" class="button-edit" onclick="window.location.href='tratamentoController.php?acao=altera&codTratamento=<?=$tratamento->getCodTratamento() ?>'"><i class="fa fa-edit fa-1x"></i></button>
+          <button name="exclui" class="button-delete" onclick=""><i class="fa fa-trash-alt fa-1x"></i></button>
         </div>
       </div>
-    <?php
-        }
+    </div>
+  <?php
       }
-    ?>
-  </div>
-  
-  <script src="/js/lista-animais.js"></script>
+    }
+  ?>
+</div>
 
-</body>    
+<script src="/js/lista-animais.js"></script>
