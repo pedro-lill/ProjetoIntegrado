@@ -1,38 +1,53 @@
-.select-relatorio{
-    border:solid 2px rgba(53, 53, 53, 0.8);
-    height:40px;
-    width:20vw;
-    background-color:transparent;
-    margin-left: 70%;
+.container-filtros-relatorio{
+display: flex;
 }
 
 .relatorio-a{
     text-decoration: none;
     height: 40px;
-    color:rgb(39, 39, 39);
-    background-color:rgb(138, 138, 138);
+    color:#272727;
+    background-color:#c9c9c9;
+    margin-left: 10px;
+    margin-top:24px;
+}
+
+.div-filtros-relatorio-tipo{
+  margin-left: 20vw;
+}
+
+.div-filtros-relatorio-mes{
+  margin-left: 1vw;
 }
 
 .relatorio-a:hover{
-    background-color:rgb(214, 214, 214);
-    color:#00a236;
+    background-color:#2b9e2bb1;
+    color:#ffffff;
 }
 
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 80%;
-    margin-left: 100px;
+    margin-left: 10%;
     margin-top: 30px;
 
   }
   
   td, th, tr {
-    border: 1px solid #a9a9a9;
+    border-bottom: 1px solid #797979;
     text-align: left;
     padding: 8px;
   }
   
   tr:nth-child(even) {
-    background-color: #acacac;
+    background-color: #cacaca;
+  }
+
+  @media (max-width:800px) {
+
+    select{
+        width: 34vw;
+        font-size: 15px;
+    }
+
   }
