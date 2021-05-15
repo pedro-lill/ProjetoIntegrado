@@ -24,7 +24,7 @@
        <?php
         if(count($lista) == 0){
           ?>
-           <div class="div-nenhum-historico"> 
+           <div class="div-nenhum-historico">
             <p>Nenhum histórico de inseminação foi encontrado.</p>
            </div>
           <?php
