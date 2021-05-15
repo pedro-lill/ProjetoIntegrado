@@ -53,9 +53,7 @@
         <label class="label-cadastra" for="id_obs">Observação: </label>
         <input type="text" name="field_obs" maxlength="100" id="id_obs" value="<?=$obs?>">
       </div>
-      <!--previsao de parto-->
-      <!--previsao de secagem-->
-      <button name="adiciona" class="button-form" type="submit">Salvar</button>
+      <button name="adiciona" class="button-form" type="submit">Alterar</button>
   </form>
 
   <script src="../js/script.js"></script>
