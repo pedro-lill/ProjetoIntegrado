@@ -34,13 +34,13 @@ table {
   }
   
   td, th, tr {
-    border-bottom: 1px solid #797979;
+    border-bottom: 1px solid #8d8d8d;
     text-align: left;
     padding: 8px;
   }
   
   tr:nth-child(even) {
-    background-color: #cacaca;
+    background-color: #c4c3c3;
   }
 
   @media (max-width:800px) {

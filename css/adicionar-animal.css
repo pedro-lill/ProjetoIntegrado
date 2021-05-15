@@ -81,7 +81,7 @@ input[type=checkbox]:focus {
 }
 
 .button-form {
-    background-color: #0ca011;
+    background-color: #115a13;
     color: white;
     padding: 10px;
     margin: 15px 0 0 40%;
@@ -92,14 +92,14 @@ input[type=checkbox]:focus {
     font-weight: bold;
 }
 .button-form-adicionar-animal {
-    background-color: #0ca011;
+    background-color: #115a13;
     color: white;
     padding: 10px;
     margin: 15px 0 0 10vw;
     border: none;
     cursor: pointer;
     width: 15vw;
-    margin-left: 80vw;  
+    margin-left: 75vw;  
     height: 40px;
     font-size: 15px;
     font-weight: bold;
@@ -116,11 +116,11 @@ input[type=checkbox]:focus {
 }
 
 .button-form-adicionar-animal:hover {
-    background-color: #116814;
+    background-color: #03a308;
 }
 
 .button-form:hover {
-    background-color: #116814;
+    background-color: #03a308;
 }
 
 @media (max-width:800px) {

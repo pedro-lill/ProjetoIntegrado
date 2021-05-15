@@ -9,7 +9,6 @@
  <META http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate" />
  <META http-equiv="Cache-Control" content="post-check=0, pre-check=0" />
  <META http-equiv="Pragma" content="no-cache" />
- <link rel="shortcut icon" href="../_lib/img/scriptcase__NM__ico__NM__favicon.ico">
  <link rel="stylesheet" type="text/css" href="/scriptcase/prod/third/jquery_plugin/fullcalendar-3.4.0/fullcalendar.min.css" />
  <link rel="stylesheet" type="text/css" href="/scriptcase/prod/third/jquery_plugin/thickbox/thickbox.css" media="screen" />
  <link rel="stylesheet" type="text/css" href="/scriptcase/app/previsoesProjIntegrado/_lib/css/Sc9_SweetBlue/Sc9_SweetBlue_appcalendar.css" />
