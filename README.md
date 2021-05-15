@@ -1,6 +1,4 @@
-# COOPTAR - MST
-
-[<img src="img/mst.png" width="40" height="40" border-radius:"50">](https://mst.org.br/)
+[<img src="img/mst.png" width="40" height="40">](https://mst.org.br/) COOPTAR - MST
 
 ## Sistema de controle de dados do setor bovino leiteiro  
 
