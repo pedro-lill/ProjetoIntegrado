@@ -4,7 +4,7 @@
 
 ## Sistema de controle de dados do setor bovino leiteiro  
 
-### Devs:
+## Devs:
 
 <a href="https://github.com/pedro-lill" target="_blank">Pedro</a>
 <a href="https://github.com/fabricioromanii" target="_blank">Fabrício</a>
