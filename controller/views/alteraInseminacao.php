@@ -20,17 +20,19 @@
 <?php require_once("../includes/header.php");?>
 
 <form action="" class="container-historicos" method="post" enctype="multipart/form-data">
-  <h2>CADASTRO DE INSEMINAÇÃO</h2>
+
+  <h2>EDITAR INSEMINAÇÃO</h2>
+
+  <div class="div-metade">
+    <label class="label-cadastra" for="id_codAnimal">Código do animal </label>
+    <input type="number" name="field_codAnimal" id="id_codAnimal" value="<?=$codAnimal?>" > 
+  </div>
   <div class="div-metade">
     <label class="label-cadastra" for="id_retorno">É retorno </label>
     <select name="field_retorno" id="id_retorno" required >
           <option value="Não" value="<?=$retorno?>">Não</option>
           <option value="Sim" value="<?=$retorno?>">Sim</option>
     </select>
-  </div>
-  <div class="div-metade">
-    <label class="label-cadastra" for="id_codAnimal">Código do animal </label>
-    <input type="number" name="field_codAnimal" id="id_codAnimal" value="<?=$codAnimal?>" > 
   </div>
   <div class="div-metade">
     <label class="label-cadastra" for="id_dtInseminacao">Data de inseminação </label>

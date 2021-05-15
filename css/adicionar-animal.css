@@ -19,10 +19,22 @@ input[type=checkbox] {
     padding: 6px 10px;
     margin: 5px 0 5px 0;
     display: inline-block;
-    border: 0.5px solid #3c3b3b;
+    border: 1.8px solid #3c3b3b;
     box-sizing: border-box;
+    border-radius: 3px;
     font-size: 17px;
+    cursor: pointer;
     height: 40px;
+}
+
+input[type=date]:hover,
+input[type=text]:hover,
+input[type=file]:hover,
+select:hover,
+input[type=number]:hover,
+input[type=password]:hover,
+input[type=checkbox]:hover {
+    border: 1.8px solid #369e1c;
 }
 
 .label-cadastra {

@@ -23,13 +23,12 @@ a{
 }
 
 .login-a{
-    background-color: #c0c0c0;
     color: white;
     padding: 5px;
-    margin: 15px 0 0 10vw;
+    margin: 15px 0 0 40%;
     border: none;
     cursor: pointer;
-    width: 10vw;
+    width: 20%;
     font-size: 15px;
     font-weight: bold;
 }

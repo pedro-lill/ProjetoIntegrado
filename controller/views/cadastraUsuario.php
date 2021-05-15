@@ -12,6 +12,11 @@
   ?>
 </div>
 
+<br>
+<br>
+<br>
+<br>
+
 <form  action="" class="container-historicos" method="post" enctype="multipart/form-data">
 
   <h2>CADASTRO DE USUÁRIOS</h2>
@@ -20,11 +25,11 @@
     <label class="label-cadastra" for="id_nomeLogin">Login</label>
     <input type="text" id="id_nomeLogin" name="field_nomeLogin" value="<?=$nomeLogin ?>" required>
   </div>
-  <div class="div-inteira">  
+  <div class="div-metade">  
     <label class="label-cadastra" for="id_senha">Senha</label>
     <input type="password" id="id_senha" minlength="6" name="field_senha" value="<?=$senha ?>" required>
   </div>
-  <div class="div-inteira">
+  <div class="div-metade">
     <label class="label-cadastra" for="id_senhaConfirma">Confirmar senha</label>
     <input type="password" name="field_senhaConfirma" minlength="6" id="id_senhaConfirma" value="<?=$senha ?>" required>
   </div>

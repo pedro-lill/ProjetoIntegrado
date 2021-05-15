@@ -22,7 +22,9 @@
 <?php require_once("../includes/header.php");?>
 
 <form action="" class="container-historicos" method="post" enctype="multipart/form-data">
-  <h2>CADASTRO DE TRATAMENTO</h2>
+
+  <h2>EDITAR TRATAMENTO</h2>
+
   <div class="div-metade">
     <label class="label-cadastra" for="id_codAnimal">Código do animal </label>
     <input type="number" name="field_codAnimal" id="id_codAnimal" autofocus value="<?=$codAnimal ?>" required>
