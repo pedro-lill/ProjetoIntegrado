@@ -1,4 +1,4 @@
-# COOPTAR
+# COOPTAR - MST
 
 [<img src="img/mst.png" width="40" height="40" style="border-radius:50%">](https://mst.org.br/)
 
