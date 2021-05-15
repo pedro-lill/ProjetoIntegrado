@@ -7,6 +7,9 @@
         private $nomePai;
         private $estadoVida;
         private $nomeImagem;
+        private $motivoMorte;
+        private $dataMorte;
+
 
         public function getCodAnimal(){
             return $this->codAnimal;
@@ -38,6 +41,22 @@
 
         public function setNomePai($nomePai){
             $this->nomePai = $nomePai;
+        }
+
+        public function getDataMorte(){
+            return $this->dataMorte;
+        }
+
+        public function setDataMorte($dataMorte){
+            $this->dataMorte = $dataMorte;
+        }
+
+        public function getMotivoMorte(){
+            return $this->motivoMorte;
+        }
+
+        public function setMotivoMorte($motivoMorte){
+            $this->motivoMorte = $motivoMorte;
         }     
         
         public function getEstadoVida(){

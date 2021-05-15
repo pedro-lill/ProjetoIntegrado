@@ -19,7 +19,6 @@ else {
                 $obj->setInseminadorResponsavel($_POST['field_inseminadorResponsavel']);
                 $obj->setRetorno( $_POST['field_retorno']);
                 $obj->setObs( $_POST['field_obs']);
-                $obj->setNovaDtInseminacao($_POST['field_novaDtInseminacao']);
                 $erros = $obj->validate();
                 if(count($erros) != 0){ 
                     include "views/cadastraInseminacao.php";                       
@@ -47,7 +46,6 @@ else {
                 $obj->setInseminadorResponsavel($_POST['field_inseminadorResponsavel']);
                 $obj->setRetorno( $_POST['field_retorno']);
                 $obj->setObs( $_POST['field_obs']);
-                $obj->setnovaDtInseminacao($_POST['field_novaDtInseminacao']);
                 $obj->setCodAnimal($_POST['field_codAnimal']);
                 $erros = $obj->validate();
                 if(count($erros) != 0){

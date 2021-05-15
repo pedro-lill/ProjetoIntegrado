@@ -8,7 +8,6 @@
         private $inseminadorResponsavel;
         private $retorno;
         private $obs;
-        private $novaDtInseminacao;
     
 
         public function getCodInseminacao(){
@@ -67,15 +66,6 @@
             $this->obs = $obs;
         }
 
-        public function getNovaDtInseminacao(){
-            return $this->novaDtInseminacao;
-        }
-
-        public function setNovaDtInseminacao($novaDtInseminacao){
-            $this->novaDtInseminacao = $novaDtInseminacao;
-        } 
-
-
         public function validate(){
             $erros = array();
             if(empty($this->getCodAnimal()))
@@ -92,8 +82,6 @@
                // $erros[] = "É necessário informar a previsão de secagem";
            // if(empty($this->getPrevisaoParto()))
              //   $erros[] = "É necessário informar a previsão de parto";
-            //if(empty($this->getNovaDtInseminacao()))
-               //$erros[] = "É necessário informar a nova data de inseminação";
             //if(empty($this->getNovaPrevisaoSecagem()))
               //  $erros[] = "É necessário informar a nova previsão de secagem";
             //if(empty($this->getNovaPrevisaoParto()))

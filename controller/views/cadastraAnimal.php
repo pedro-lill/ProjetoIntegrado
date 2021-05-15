@@ -14,6 +14,8 @@
       $nomePai = isset($_POST['field_nomePai']) ? $_POST['field_nomePai'] : "";
       $estadoVida = isset($_POST['field_estadoVida']) ? $_POST['field_estadoVida'] : "";
       $nomeImagem = isset($_FILES['field_imagem'])?($_FILES['field_imagem']) : "";
+      $motivoMorte = isset($_FILES['field_motivoMorte'])?($_FILES['field_motivoMorte']) : "";
+      $dataMorte = isset($_FILES['field_dataMorte'])?($_FILES['field_dataMorte']) : "";
 
         ?>
     </div>
@@ -43,11 +45,20 @@
               <option value="Morta" value="<?=$estadoVida?>">Morta</option>
         </select>
         </div>
+        <div class="div-metade">
+          <label class="label-cadastra" for="id_dataMorte" id="id_dataMorte_label">Data da morte</label>
+          <input type="hidden" name="field_dataMorte" maxlength="50" id="id_dataMorte" value="<?=$dataMorte?>">
+        </div>
+        <div class="div-metade">
+          <label class="label-cadastra" for="id_motivoMorte" id="id_motivoMorte_label">Motivo da morte</label>
+          <input type="hidden" name="field_motivoMorte" maxlength="50" id="id_motivoMorte" value="<?=$motivoMorte?>">
+        </div>
         <div class="div-inteira">
           <label class="label-cadastra" for="id_nomeImagem">Imagem do animal </label>
           <input type="file" name="field_imagem" id="id_imagem" maxlength="50" id="id_nomeImagem" autofocus value="<?=$nomeImagem?>" required>
         </div>
         <button name="adiciona" class="button-form" type="submit">Salvar</button>
     </form>
+    <script src="../js/cadastraAnimal.js"></script>
 
   <?php require_once("../includes/footer.php");?>

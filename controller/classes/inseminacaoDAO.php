@@ -70,7 +70,6 @@
                 $query->bindValue(":ir", $inseminacao->getInseminadorResponsavel());
                 $query->bindValue(":r", $inseminacao->getRetorno());
                 $query->bindValue(":o", $inseminacao->getObs());
-                $query->bindValue(":ni", $inseminacao->getNovaDtInseminacao());
                 return $query->execute();
             }
             catch(PDOException $e){
@@ -81,7 +80,7 @@
         public function alterar(inseminacao $inseminacao){
             try{
                 $query = $this->conexao->prepare("update inseminacao set codAnimal = :c, dtInseminacao = :d, touroInseminador = :t, inseminadorResponsavel = :ir, retorno = :r, 
-                obs = :o, novaDtInseminacao = :ni where codInseminacao = :i");
+                obs = :o, where codInseminacao = :i");
                 $query->bindValue(":i", $inseminacao->getCodInseminacao());
                 $query->bindValue(":c", $inseminacao->getCodAnimal());
                 $query->bindValue(":d", $inseminacao->getDtInseminacao());
@@ -89,7 +88,6 @@
                 $query->bindValue(":ir", $inseminacao->getInseminadorResponsavel());
                 $query->bindValue(":r", $inseminacao->getRetorno());
                 $query->bindValue(":o", $inseminacao->getObs());
-                $query->bindValue(":ni", $inseminacao->getNovaDtInseminacao());
                
                 return $query->execute();
             }

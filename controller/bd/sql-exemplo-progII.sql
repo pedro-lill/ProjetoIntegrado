@@ -23,6 +23,8 @@ create table animal(
   codMae INTEGER NOT NULL,
   nomePai VARCHAR(30) NOT NULL,
   estadoVida VARCHAR(10) NOT NULL,
+  motivoMorte VARCHAR(30) NULL,
+  dataMorte DATE NULL,
   nomeImagem VARCHAR(30) NOT NULL,
   PRIMARY KEY (codAnimal)
 );
@@ -35,7 +37,7 @@ create table inseminacao(
   inseminadorResponsavel VARCHAR(40) NOT NULL,
   retorno VARCHAR(10) NOT NULL,
   obs TEXT,
-  novaDtInseminacao DATE,/*if (retorno==true){crio uma novaDataInseminacao} 
+  /*novaDtInseminacao DATE if (retorno==true){crio uma novaDataInseminacao} 
   previsaoSecagem DATE, automatico =dataInseminacao + 7 meses    DATE_format   select DATE_format(...) 
   previsaoParto DATE,automatico =dataInseminacao + 9 meses
   novaPrevisaoSecagem DATE,automatico =novaDataInseminacao + 7 meses
@@ -88,34 +90,34 @@ insert into animal (codAnimal, dtNascimento, codMae, nomePai, nomeImagem, estado
   (853, '209-05-04', 888, 'padrao', "101.jpg", 'Viva'),  
   (861, '209-05-04', 888, 'padrao', "101.jpg", 'Viva');
 
-insert into inseminacao (codInseminacao, codAnimal, dtInseminacao, touroInseminador, inseminadorResponsavel, retorno, obs, novadtInseminacao) values
-  (NULL, 101,'2021-05-04','benz','Gilmar', 'Não', 'ok', '2021-05-15'),
-  (NULL, 102,'2021-10-04','polita','Felipe', 'Não', 'ok', '2021-05-15'),
-  (NULL, 101,'2021-05-04','benz','Gilmar', 'Não', 'ok', '2021-05-15'),
-  (NULL, 102,'2021-10-04','polita','Felipe', 'Não', 'ok', '2021-05-15'),
-  (NULL, 101,'2021-05-04','benz','Gilmar', 'Não', 'ok', '2021-05-15'),
-  (NULL, 102,'2021-10-04','polita','Felipe', 'Não', 'ok', '2021-05-15'),
-  (NULL, 101,'2021-05-04','benz','Gilmar', 'Não', 'ok', '2021-05-15'),
-  (NULL, 102,'2021-10-04','polita','Felipe', 'Não', 'ok', '2021-05-15'),
-  (NULL, 104,'2021-12-04','polita','Felipe', 'Não', 'ok', '2021-05-18'),
-  (NULL, 144,'2021-05-04','benz','Gilmar', 'Não', 'ok', '2021-05-18'),
-  (NULL, 1, '2020-03-29', 'sekita troler', 'gilmar', 'Não', 'ok', '2020-03-29'),
-  (NULL, 8, '2020-03-06', 'sekita troler', 'gilmar', 'sim', 'ok', '2020-03-25'),	
-  (NULL, 13, '2020-03-02', 'sekita troler', 'gilmar', 'Não', 'ok','2020-03-02'),
-  (NULL, 20, '2020-03-05', 'seleno', 'gilmar', 'Não', 'ok','2020-03-05'),
-  (NULL, 27, '2020-03-26', 'sekita troler', 'gilmar'	, 'Não', 'ok','2020-03-26'),
-  (NULL, 101, '2020-03-26', 'sekita troler', 'gilmar', 'Não', 'ok','2020-03-26'),	
-  (NULL, 196, '2020-03-11', 'lockdon', 'gilmar', 'Não', 'ok',	'2020-03-11'),
-  (NULL, 218, '2020-03-16', 'sekita troler', 'gilmar', 'Não', 'ok','2020-03-16'),	
-  (NULL, 226, '2020-03-18', 'sekita troler', 'gilmar', 'Não', 'ok','2020-03-18'),	
-  (NULL, 240, '2020-03-04', 'sekita troler', 'gilmar', 'Não', 'ok','2020-03-04'),	
-  (NULL, 243, '2020-03-11', 'lockdon', 'gilmar', 'Não', 'ok',	'2020-03-11'),
-  (NULL, 246, '2020-03-12', 'sembra', 'gilmar', 'Não', 'ok','2020-03-12'),
-  (NULL, 291, '2020-03-16', 'sekita troler', 'gilmar', 'Não', 'ok','2020-03-16'),	
-  (NULL, 319, '2020-03-04', 'masas','gilmar', 'Não', 'ok', '2020-03-04'),
-  (NULL, 852, '2020-03-25', 'sekita troler', 'gilmar', 'Não', 'ok','2020-03-25'),	
-  (NULL, 853, '2020-03-06', 'sekita troler', 'gilmar', 'Não', 'ok','2020-03-06'),
-  (NULL, 861, '2020-03-06', 'sekita troler', 'gilmar', 'Não', 'ok','2020-03-06');
+insert into inseminacao (codInseminacao, codAnimal, dtInseminacao, touroInseminador, inseminadorResponsavel, retorno, obs) values
+  (NULL, 101,'2021-05-04','benz','Gilmar', 'Não', 'ok'),
+  (NULL, 102,'2021-10-04','polita','Felipe', 'Não', 'ok'),
+  (NULL, 101,'2021-05-04','benz','Gilmar', 'Não', 'ok'),
+  (NULL, 102,'2021-10-04','polita','Felipe', 'Não', 'ok'),
+  (NULL, 101,'2021-05-04','benz','Gilmar', 'Não', 'ok'),
+  (NULL, 102,'2021-10-04','polita','Felipe', 'Não', 'ok'),
+  (NULL, 101,'2021-05-04','benz','Gilmar', 'Não', 'ok'),
+  (NULL, 102,'2021-10-04','polita','Felipe', 'Não', 'ok'),
+  (NULL, 104,'2021-12-04','polita','Felipe', 'Não', 'ok'),
+  (NULL, 144,'2021-05-04','benz','Gilmar', 'Não', 'ok'),
+  (NULL, 1, '2020-03-29', 'sekita troler', 'gilmar', 'Não', 'ok'),
+  (NULL, 8, '2020-03-06', 'sekita troler', 'gilmar', 'sim', 'ok'),	
+  (NULL, 13, '2020-03-02', 'sekita troler', 'gilmar', 'Não', 'ok'),
+  (NULL, 20, '2020-03-05', 'seleno', 'gilmar', 'Não', 'ok'),
+  (NULL, 27, '2020-03-26', 'sekita troler', 'gilmar'	, 'Não', 'ok'),
+  (NULL, 101, '2020-03-26', 'sekita troler', 'gilmar', 'Não', 'ok'),	
+  (NULL, 196, '2020-03-11', 'lockdon', 'gilmar', 'Não', 'ok'),
+  (NULL, 218, '2020-03-16', 'sekita troler', 'gilmar', 'Não', 'ok'),	
+  (NULL, 226, '2020-03-18', 'sekita troler', 'gilmar', 'Não', 'ok'),	
+  (NULL, 240, '2020-03-04', 'sekita troler', 'gilmar', 'Não', 'ok'),	
+  (NULL, 243, '2020-03-11', 'lockdon', 'gilmar', 'Não', 'ok'),
+  (NULL, 246, '2020-03-12', 'sembra', 'gilmar', 'Não', 'ok'),
+  (NULL, 291, '2020-03-16', 'sekita troler', 'gilmar', 'Não', 'ok'),	
+  (NULL, 319, '2020-03-04', 'masas','gilmar', 'Não', 'ok'),
+  (NULL, 852, '2020-03-25', 'sekita troler', 'gilmar', 'Não', 'ok'),	
+  (NULL, 853, '2020-03-06', 'sekita troler', 'gilmar', 'Não', 'ok'),
+  (NULL, 861, '2020-03-06', 'sekita troler', 'gilmar', 'Não', 'ok');
 
 insert into producao(codProducao, codAnimal, dtColeta, litros, periodoDia)values
   (NULL, 101,'2021-05-04', 20.6, 'manha'),
