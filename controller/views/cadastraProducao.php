@@ -19,20 +19,20 @@
 
       <form action="" class="container-historicos" method="post" enctype="multipart/form-data">
           <h2>CADASTRO DE PRODUÇÃO</h2>
-          <div>
+          <div class="div-metade">
             <label class="label-cadastra" for="id_codAnimal">Código do animal </label>
             <input type="number" name="field_codAnimal" id="id_codAnimal" autofocus value="<?=$codAnimal ?>" required>
           </div>
-          <div>
+          <div class="div-metade">
             <label class="label-cadastra" for="id_dtColeta">Data da coleta </label>
             <input type="date" name="field_dtColeta" maxlength="100" id="id_dtColeta" value="<?=$dtColeta?>" required>
           </div>
-          <div>
+          <div class="div-inteira">
             <label class="label-cadastra" for="id_litros">Produção em litros </label>
             <input type="number" step="0.01" name="field_litros" id="id_litros" autofocus value="<?=$litros?>" required>
           </div>
           
-          <div>
+          <div class="div-inteira">
             <label class="label-cadastra" for="id_periodoDia">Periodo do dia </label>
             <select name="field_periodoDia" id="id_periodoDia" required >
               <option value="manha" autofocus value="<?=$periodoDia?>">Manhã</option>

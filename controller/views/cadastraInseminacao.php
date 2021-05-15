@@ -25,34 +25,34 @@
 
   <form action="" class="container-historicos" method="post" enctype="multipart/form-data">
       <h2>CADASTRO DE INSEMINAÇÃO</h2>
-      <div>
+      <div class="div-metade">
         <label class="label-cadastra" for="id_codAnimal">Código do animal </label>
         <input type="number" name="field_codAnimal" id="id_codAnimal" value="<?=$codAnimal?>" > 
       </div>
-      <div>
+      <div class="div-metade">
         <label class="label-cadastra" for="id_dtInseminacao">Data de inseminação </label>
         <input type="date" name="field_dtInseminacao" id="id_dtInseminacao" value="<?=$dtInseminacao?>" > 
       </div>
-      <div>
+      <div class="div-inteira">
         <label class="label-cadastra" for="id_touroInseminador">Touro inseminador </label>
         <input type="text"  name="field_touroInseminador" maxlength="100" id="id_touroInseminador" value="<?=$touroInseminador?>"required>
       </div>
-      <div>
-        <label class="label-cadastra" for="id_touroInseminador">Inseminador responsável </label>
+      <div class="div-inteira">
+        <label class="label-cadastra" for="id_inseminadorResponsavel">Inseminador responsável </label>
         <input type="text" name="field_inseminadorResponsavel" maxlength="100" id="id_inseminadorResponsavel" value="<?=$inseminadorResponsavel?>" required>
       </div>
-      <div>
+      <div class="div-inteira">
         <label class="label-cadastra" for="id_retorno">Retorno </label>
         <select name="field_retorno" id="id_retorno" onChange="retorno()" required >
               <option value="Não" value="<?=$retorno?>">Não</option>
               <option value="Sim" value="<?=$retorno?>">Sim</option>
         </select>
       </div>
-      <div>
+      <div class="div-inteira">
         <label class="label-cadastra" for="id_novaDtInseminacao" id="id_novaDtInseminacao_label">Nova data de inseminação: </label>
         <input type="hidden" name="field_novaDtInseminacao" id="id_novaDtInseminacao" value="<?=$novaDtInseminacao?>"> <!--data de retorno da nova inseminacao-->
       </div>
-      <div>
+      <div class="div-inteira">
         <label class="label-cadastra" for="id_obs">Observação: </label>
         <input type="text" name="field_obs" maxlength="100" id="id_obs" value="<?=$obs?>">
       </div>

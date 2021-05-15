@@ -3,8 +3,8 @@
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
-    margin-left: 35vw;
-    width: 30vw;
+    margin-left: 30%;
+    width: 40%;
 }
 
 input[type=date],
@@ -15,13 +15,14 @@ input[type=number],
 input[type=password],
 input[type=checkbox] {
     background-color: #e2e1e1;
-    width: 30vw;
+    width: 100%;
     padding: 6px 10px;
     margin: 5px 0 5px 0;
     display: inline-block;
     border: 0.5px solid #3c3b3b;
     box-sizing: border-box;
     font-size: 17px;
+    height: 40px;
 }
 
 .label-cadastra {
@@ -33,7 +34,8 @@ input[type=checkbox] {
 }
 
 .container-historicos h2{
-    margin-left:0;
+    margin-left:15%;
+    width: 70%;
 }
   
 .historico {
@@ -58,10 +60,10 @@ input[type=checkbox] {
     background-color: #0ca011;
     color: white;
     padding: 10px;
-    margin: 15px 0 0 10vw;
+    margin: 15px 0 0 40%;
     border: none;
     cursor: pointer;
-    width: 10vw;
+    width: 20%;
     font-size: 15px;
     font-weight: bold;
 }
@@ -77,6 +79,16 @@ input[type=checkbox] {
     height: 40px;
     font-size: 15px;
     font-weight: bold;
+}
+
+.div-metade{
+    width: 48%;
+    margin: 0 1% 0 1%;
+ }
+
+.div-inteira{
+    width: 98%;
+    margin: 0 1% 0 1%;
 }
 
 .button-form-adicionar-animal:hover {

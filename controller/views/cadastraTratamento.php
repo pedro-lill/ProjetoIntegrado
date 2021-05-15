@@ -23,31 +23,31 @@
  
     <form action="" class="container-historicos" method="post" enctype="multipart/form-data">
         <h2>CADASTRO DE TRATAMENTO</h2>
-        <div>
+        <div class="div-metade">
           <label class="label-cadastra" for="id_codAnimal">Código do animal </label>
           <input type="number" name="field_codAnimal" id="id_codAnimal" autofocus value="<?=$codAnimal ?>" required>
         </div>
-        <div>
+        <div class="div-metade">
           <label class="label-cadastra" for="id_dtTratamento">Data do tratamento </label>
           <input type="date" name="field_dtTratamento" id="id_dtTratamento" maxlength="100" value="<?=$dtTratamento?>">
         </div>
-        <div>
+        <div class="div-inteira">
           <label class="label-cadastra" for="id_motivoTratamento">Motivo do tratamento </label>
           <input type="text" name="field_motivoTratamento" maxlength="100" id="id_motivoTratamento" value="<?=$motivoTratamento?>">
         </div>
-        <div>
+        <div class="div-inteira">
           <label class="label-cadastra" for="id_nomeMedicamento">Nome do medicamento </label>
           <input type="text" name="field_nomeMedicamento" id="id_nomeMedicamento" maxlength="50" autofocus value="<?=$nomeMedicamento?>">
         </div>
-        <div>
+        <div class="div-inteira">
           <label class="label-cadastra" for="id_quantidadeMedicamento">Quantidade de medicamento </label>
           <input type="number" name="field_quantidadeMedicamento" maxlength="50" id="id_quantidadeMedicamento" autofocus value="<?=$quantidadeMedicamento?>">
         </div>
-        <div>
+        <div class="div-inteira">
           <label class="label-cadastra" for="id_responsavel">Responsável </label>
           <input type="text" name="field_responsavel" maxlength="50" id="id_responsavel" autofocus value="<?=$responsavel?>">
         </div>
-        <div>
+        <div class="div-inteira">
           <label class="label-cadastra" for="id_obs">Observação </label>
           <input type="text" name="field_obs" maxlength="50" id="id_obs" autofocus value="<?=$obs?>">
         </div>

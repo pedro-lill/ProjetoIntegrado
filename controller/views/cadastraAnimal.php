@@ -20,30 +20,30 @@
 
     <form action="" class="container-historicos" name="form-inseminacao" method="post" enctype="multipart/form-data">
         <h2>CADASTRO DE ANIMAL</h2>
-        <div>
+        <div class="div-metade">
           <label class="label-cadastra" for="id_codAnimal">Código do animal </label>
           <input type="number" name="field_codAnimal" id="id_codAnimal" autofocus value="<?=$codAnimal ?>" required>
         </div>
-        <div>
+        <div class="div-metade">
           <label class="label-cadastra" for="id_dtNascimento">Data de nascimento </label>
           <input type="date" name="field_dtNascimento" maxlength="100" id="id_dtNascimento" value="<?=$dtNascimento?>" required>
         </div>
-        <div>
+        <div class="div-inteira">
           <label class="label-cadastra" for="id_codMae">Código da vaca-mãe </label>
           <input type="number" name="field_codMae" maxlength="100" id="id_codMae" value="<?=$codMae?>" required>
         </div>
-        <div>
+        <div class="div-inteira">
           <label class="label-cadastra" for="id_nomePai">Nome do touro-pai </label>
           <input type="text" name="field_nomePai" maxlength="50" id="id_nomePai" value="<?=$nomePai?>" required>
         </div>
-        <div>
+        <div class="div-inteira">
           <label class="label-cadastra" for="id_estadoVida">Estado de vida </label>
           <select name="field_estadoVida" id="id_estadoVida" onChange="estadoVida()" required >
               <option value="Viva" value="<?=$estadoVida?>">Viva</option>
               <option value="Morta" value="<?=$estadoVida?>">Morta</option>
         </select>
         </div>
-        <div>
+        <div class="div-inteira">
           <label class="label-cadastra" for="id_nomeImagem">Imagem do animal </label>
           <input type="file" name="field_imagem" id="id_imagem" maxlength="50" id="id_nomeImagem" autofocus value="<?=$nomeImagem?>" required>
         </div>
