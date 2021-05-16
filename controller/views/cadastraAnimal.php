@@ -23,7 +23,7 @@
   
   <div class="div-metade">
     <label class="label-cadastra" for="id_codAnimal">Código do animal </label>
-    <input type="number" name="field_codAnimal" id="id_codAnimal" autofocus value="<?=$codAnimal ?>" required>
+    <input type="number" name="field_codAnimal" id="id_codAnimal" autofocus value="<?=$codAnimal?>" required>
   </div>
   <div class="div-metade">
     <label class="label-cadastra" for="id_dtNascimento">Data de nascimento </label>

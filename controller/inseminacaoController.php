@@ -8,8 +8,8 @@ if(!isset($_GET['acao'])){
 else {    
 	switch($_GET['acao']){
         case 'adiciona':
-            if(!isset($_POST['adiciona'])){ 
-                include "views/cadastraInseminacao.php";              
+            if(!isset($_POST['adiciona'])){  
+                include "views/cadastraInseminacao.php";       
             }
             else{
                 $obj = new Inseminacao();
