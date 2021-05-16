@@ -3,7 +3,7 @@ include_once "../controller/classes/UsuarioDAO.php";
 if(!isset($_GET['acao'])){
     $obj = new UsuarioDAO();
     
-    include "views/listaAnimal.php";
+    include "../views/configuracoes.php";
 }
 else {    
 	switch($_GET['acao']){
@@ -37,7 +37,7 @@ else {
                     $obj->setSenha($_POST['field_senha']);
                     $erros = $obj->validate();
                     if(count($erros) != 0){ 
-                        include "views/cadastraUsuario.php";                       
+                        include "views/alteraUsuario.php";                       
                     }
                     else{
                         $bd = new UsuarioDAO();

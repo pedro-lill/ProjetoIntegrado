@@ -35,6 +35,7 @@
 .icone-configuracoes i{
   color: rgb(141, 141, 141);
   font-size:27px;
+  height: 100%;
 }
 
 .icone-configuracoes i:hover{
