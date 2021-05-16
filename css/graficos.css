@@ -11,6 +11,6 @@
 }
 
 .graficos-container{
+    margin-top: 40px;
     display:flex;
-    color: rgb(226, 121, 065);
 }

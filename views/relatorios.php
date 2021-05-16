@@ -12,7 +12,6 @@
 
     ?>
 </div>
-<h3>RELATÓRIOS</h3>
 
 <div class="container-filtros-relatorio">
 

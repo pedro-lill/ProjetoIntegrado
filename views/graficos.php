@@ -1,8 +1,5 @@
 <?php require_once("../includes/header.php");?>
 
-<h3>GRÁFICOS</h3>
-
-
 <div class="graficos-container">
     
     <div class="grafico-prox-partos">
