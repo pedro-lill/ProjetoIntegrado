@@ -29,7 +29,7 @@
     <input type="password" id="id_senha" minlength="6" name="field_senha" value="<?=$senha ?>" required>
   </div>
   <div class="div-metade">
-    <label class="label-cadastra" for="id_senhaConfirma">Confirmar senha</label>
+    <label class="label-cadastra" for="id_senhaConfirma">Nova senha</label>
     <input type="password" name="field_senhaConfirma" minlength="6" id="id_senhaConfirma" value="<?=$senha ?>" required>
   </div>
   <button name="adiciona" class="button-form" type="submit">Editar</button>
