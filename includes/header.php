@@ -18,7 +18,7 @@
     <link href="../css/relatorios.css" rel="stylesheet">
     <link href="../css/previsoes.css" rel="stylesheet">
     <link href="../css/configuracoes.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../css/login.css">
+    <link href="../../css/login.css" rel="stylesheet">
     <title>COOPTAR</title>
 </head>
 
