@@ -33,3 +33,18 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+
+var cty = document.getElementById('myChartProdLeite').getContext('2d');
+var myChart = new Chart(cty, {
+    type: 'line',
+    data: {
+        labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+        datasets: [{
+          label: 'Produção de leite / 2020',
+          data: [0, 65, 59, 80, 81, 56, 55, 40, 20, 40, 50, 61],
+          fill: false,
+          borderColor: 'rgb(75, 192, 192)',
+          tension: 0.1
+        }]
+    },
+});
