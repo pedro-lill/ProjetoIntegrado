@@ -13,9 +13,9 @@
 </head>
 
     <?php require_once("../includes/header.php");?>
-
+    <h3>LISTA DE ANIMAIS</h3>
     <div class="lista_animais">
-
+        
         <button class="button-form-adicionar-animal" onclick="window.location.href='animalController.php?acao=adiciona'">Adicionar animal</button>
 
           <?php

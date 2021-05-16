@@ -5,15 +5,18 @@
     flex-wrap: wrap;
     margin-top: 10px;
 }
+
 h3{
-    margin-left: 45vw;
+    width: 100%;
+    text-align: center;
     font-size:25px;
     font-weight: bold;
 }
 
 .lista_animais h3 {
+    width: 80%;
+    margin-left: 10%;
     border-top: 1.5px solid #109431;
-    margin-left: 35vw;
 }
 
 .animal {

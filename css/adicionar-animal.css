@@ -58,8 +58,8 @@ input[type=checkbox]:focus {
 }
 
 .container-historicos h2{
-    margin-left:15%;
-    width: 70%;
+    width: 100%;
+    text-align: center;
 }
   
 .historico {
@@ -95,7 +95,7 @@ input[type=checkbox]:focus {
     background-color: #115a13;
     color: white;
     padding: 10px;
-    margin: 15px 0 0 10vw;
+    margin: -60px 0 0 10vw;
     border: none;
     cursor: pointer;
     width: 15vw;
