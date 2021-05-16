@@ -6,43 +6,43 @@
     <th>Data de Inseminacao</th>
   </tr>
 <?php
-$parto=00;
+$parto=$_GET['mes'];
 $obj = new inseminacaoDAO();
-if($_GET['mes']==1){
-  $parto=6;
-} else if($_GET['mes']==2){
-    $parto=7;
-  }
-  else if($_GET['mes']==3){
-    $parto=8;
-  }
-  else if($_GET['mes']==4){
-    $parto=9;
-  }
-  else if($_GET['mes']==5){
-    $parto=10;
-  }
-  else if($_GET['mes']==6){
-    $parto=11;
-  }
-  else if($_GET['mes']==7){
-    $parto=12;
-  }
-  else if($_GET['mes']==8){
-    $parto=1;
-  }
-  else if($_GET['mes']==9){
-    $parto=2;
-  }
-  else if($_GET['mes']==10){
-    $parto=3;
-  }
-  else if($_GET['mes']==11){
-    $parto=4;
-  }
-  else if($_GET['mes']==12){
-    $parto=5;
-  }
+// if($parto==1){
+//   $parto=6;
+// } else if($parto==2){
+//     $parto=7;
+//   }
+//   else if($parto==3){
+//     $parto=8;
+//   }
+//   else if($parto==4){
+//     $parto=9;
+//   }
+//   else if($parto==5){
+//     $parto=10;
+//   }
+//   else if($parto==6){
+//     $parto=11;
+//   }
+//   else if($parto==7){
+//     $parto=12;
+//   }
+//   else if($parto==8){
+//     $parto=1;
+//   }
+//   else if($parto==9){
+//     $parto=2;
+//   }
+//   else if($parto==10){
+//     $parto=3;
+//   }
+//   else if($parto==11){
+//     $parto=4;
+//   }
+//   else if($parto==12){
+//     $parto=5;
+//   }
 $lista = $obj->buscaMes($parto);
 if(count($lista) == 0){
     //echo "Nenhum relatório encontrado.";
