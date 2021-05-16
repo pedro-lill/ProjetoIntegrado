@@ -89,6 +89,6 @@ document.querySelector(".next").addEventListener("click", () => {
 
 renderCalendar();
 
-function funcaoCalendario(x){
-  console.log(x);
+function funcaoCalendario(dia){
+  return window.location.href='../controller/previsoesController.php?acao=previsao&dia=' + dia;
 }

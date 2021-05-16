@@ -9,13 +9,14 @@ if(!isset($_GET['acao'])){
 else {    
 	switch($_GET['acao']){
         
-        case 'filtro':
-            if(!isset($_POST['filtro'])){ 
-               
-                include("../views/previsoes.php");
-                include("views/relatorioInseminacao.php");
-                include("../includes/footer.php");
-
+        case 'previsao':
+            if(!isset($_POST['previsao'])){
+                include_once "../controller/classes/ProducaoDAO.php";
+                include "../views/previsoes.php";
+                include "views/previsaoParto.php";
+                include "../includes/footer.php";
+            }else{
+                include "../views/previsoes.php";
             }
             break;
         

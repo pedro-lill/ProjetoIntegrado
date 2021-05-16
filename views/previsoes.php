@@ -28,4 +28,3 @@
     <script src="../js/previsoes.js"></script>
 
 
-<?php require_once("../includes/footer.php");?>

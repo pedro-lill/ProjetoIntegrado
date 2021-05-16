@@ -14,7 +14,7 @@ if(count($lista) == 0){
 
   <tr>
     <td><?=$inseminacao->getCodAnimal()?> </td>
-    <td><?=date('d/m/Y', strtotime("+284 days",strtotime($inseminacao->getDtInseminacao())));?></td>
+    <td><?=date('d/m/Y', strtotime("+0 days",strtotime($inseminacao->getDtInseminacao())));?></td>
   </tr>
 
 <?php
