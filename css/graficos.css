@@ -1,11 +1,15 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css");
 
 .grafico-prod-leite{
-    width: 60%;
-    margin-left: 20%;
+    width: 40%;
+    margin-left: 5%;
 }
 
 .grafico-prox-partos{
-    width: 60%;
-    margin-left: 20%;
+    width: 40%;
+    margin-left: 5%;
+}
+
+.graficos-container{
+    display:flex;
 }
