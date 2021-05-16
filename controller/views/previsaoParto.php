@@ -1,9 +1,10 @@
+<div class="container-tabela-previsao">
 <h3>Previsões de parto</h3>
-<table>
-  <tr>
-    <th>Código do Animal</th>
-    <th>Data de previsão do parto</th>
-    <th>Data de Inseminacao</th>
+<table class="table">
+  <tr class="tr">
+    <th class="th">Código do Animal</th>
+    <th class="th">Data de previsão do parto</th>
+    <th class="th">Data de Inseminacao</th>
   </tr>
 <?php
 $parto=$_GET['mes'];
@@ -50,10 +51,10 @@ if(count($lista) == 0){
     foreach ($lista as $inseminacao){
 ?>     
 
-  <tr>
-    <td><?=$inseminacao->getCodAnimal()?> </td>
-    <td><?=date('d/m/Y', strtotime("+284 days",strtotime($inseminacao->getDtInseminacao())));?></td>
-    <td><?=date('d/m/Y', strtotime("+0 days",strtotime($inseminacao->getDtInseminacao())));?></td>
+  <tr class="tr">
+    <td class="td"><?=$inseminacao->getCodAnimal()?> </td>
+    <td class="td"><?=date('d/m/Y', strtotime("+284 days",strtotime($inseminacao->getDtInseminacao())));?></td>
+    <td class="td"><?=date('d/m/Y', strtotime("+0 days",strtotime($inseminacao->getDtInseminacao())));?></td>
   </tr>
 
 <?php
@@ -61,3 +62,5 @@ if(count($lista) == 0){
     }
 ?>
 </table>
+</div>
+  </div>

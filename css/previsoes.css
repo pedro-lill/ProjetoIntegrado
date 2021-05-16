@@ -1,12 +1,16 @@
+.container-previsoes{
+display: flex;
+}
+
 .container {
-    width: 50%;
+    width: 40%;
     height: 60vh;
     color: #eee;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 40px;
-    margin-left: 25%;
+    margin-left: 10%;
   }
   
   .calendar {
@@ -103,4 +107,28 @@
 
   .today:hover {
     background-color: #0b6306;
+  }
+
+
+.container-tabela-previsao{
+  width: 40%;
+    margin-left: 10%;
+}
+  .table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 30px;
+    margin-left: 0;
+
+  }
+  
+  .td, .th, .tr {
+    border-bottom: 1px solid #8d8d8d;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  .tr:nth-child(even) {
+    background-color: #c4c3c3;
   }

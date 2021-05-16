@@ -37,12 +37,14 @@
 
         public function inserir(Animal $animal){
             try{
-                $query = $this->conexao->prepare("insert into animal values (:c, :d, :m, :p, :e, :i)");
+                $query = $this->conexao->prepare("insert into animal values (:c, :d, :m, :p, :e, :mm, :dm, :i)");
                 $query->bindValue(":c", $animal->getCodAnimal());
                 $query->bindValue(":d", $animal->getDtNascimento());
                 $query->bindValue(":m", $animal->getCodMae());
                 $query->bindValue(":p", $animal->getNomePai());
                 $query->bindValue(":e", $animal->getEstadoVida());
+                $query->bindValue(":mm", $animal->getMotivoMorte());
+                $query->bindValue(":dm", $animal->getDataMorte());
                 $query->bindValue(":i", $animal->getNomeImagem());
                 return $query->execute();
             }

@@ -123,6 +123,27 @@ input[type=checkbox]:focus {
     background-color: #03a308;
 }
 
+.botoes-adiciona{
+    width: 60%;
+    margin-left: 20%;
+    text-align: center;
+}
+
+.button-adiciona-historico-altera{
+    background-color: #164818;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    font-size: 15px;
+    font-weight: bold;
+}
+.button-adiciona-historico-altera:hover {
+    background-color: #0c7b0e;
+}
+
 @media (max-width:800px) {
 
     .container-historicos {

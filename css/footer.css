@@ -8,7 +8,7 @@ footer {
     border-top: 4px solid;
     border-image-source: linear-gradient(-90deg, #00ff00, #1a610b);
     border-image-slice: 1;
-    margin-top: 700px;
+    margin-top: 600px;
 }
 
 .container__footer {

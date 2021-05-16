@@ -62,6 +62,12 @@
   <button name="adiciona" class="button-form" type="submit">Alterar</button>
 </form>
 
+<div class="botoes-adiciona">
+  <button name="adiciona" class="button-adiciona-historico-altera" onclick="adicionaHistoricoInse(<?=$codAnimal ?>)">+ histórico de inseminação</button>
+  <button name="adiciona" class="button-adiciona-historico-altera" onclick="adicionaHistoricoProd(<?=$codAnimal ?>)">+ histórico de produção</button>
+  <button name="adiciona" class="button-adiciona-historico-altera" onclick="adicionaHistoricoTrat(<?=$codAnimal ?>)">+ histórico de tratamento</button>
+</div>
+
 <script src="../js/cadastraAnimal.js"></script>
 
 <br>

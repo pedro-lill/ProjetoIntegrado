@@ -12,8 +12,8 @@
     $nomePai = isset($_POST['field_nomePai']) ? $_POST['field_nomePai'] : "";
     $estadoVida = isset($_POST['field_estadoVida']) ? $_POST['field_estadoVida'] : "";
     $nomeImagem = isset($_FILES['field_imagem'])?($_FILES['field_imagem']) : "";
-    $motivoMorte = isset($_FILES['field_motivoMorte'])?($_FILES['field_motivoMorte']) : "";
-    $dataMorte = isset($_FILES['field_dataMorte'])?($_FILES['field_dataMorte']) : "";
+    $motivoMorte = isset($_POST['field_motivoMorte'])?($_POST['field_motivoMorte']) : "";
+    $dataMorte = isset($_POST['field_dataMorte'])?($_POST['field_dataMorte']) : "";
   ?>
 </div>
 

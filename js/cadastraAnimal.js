@@ -17,3 +17,15 @@ function estadoVida(){
         document.getElementById("id_dataMorte").setAttribute("type", "hidden");
     }
 }
+
+function adicionaHistoricoInse(x){
+    return window.location.href='../controller/inseminacaoController.php?acao=adiciona&codAnimal=' + x;
+}
+
+function adicionaHistoricoProd(x){
+    return window.location.href='../controller/producaoController.php?acao=adiciona&codAnimal=' + x;
+}
+
+function adicionaHistoricoTrat(x){
+    return window.location.href='../controller/tratamentoController.php?acao=adiciona&codAnimal=' + x;
+}

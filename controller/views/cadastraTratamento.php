@@ -6,6 +6,7 @@
       foreach($erros as $e)
         echo "<li>$e</li>";
     }
+    $codAnimalPadrao = $_GET['codAnimal'] ? $_GET['codAnimal'] : "";
     $codAnimal = isset($_POST['field_codAnimal']) ? $_POST['field_codAnimal'] : "";
     $dtTratamento = isset($_POST['field_dtTratamento']) ? $_POST['field_dtTratamento'] : "";
     $motivoTratamento = isset($_POST['field_motivoTratamento']) ? $_POST['field_motivoTratamento'] : "";
@@ -23,7 +24,7 @@
   
   <div class="div-metade">
     <label class="label-cadastra" for="id_codAnimal">Código do animal </label>
-    <input type="number" name="field_codAnimal" id="id_codAnimal" autofocus value="<?=$codAnimal ?>" required>
+    <input type="number" name="field_codAnimal" id="id_codAnimal" autofocus value="<?=$codAnimalPadrao ?>" required>
   </div>
   <div class="div-metade">
     <label class="label-cadastra" for="id_dtTratamento">Data do tratamento </label>
