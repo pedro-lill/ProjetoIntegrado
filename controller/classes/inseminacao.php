@@ -70,7 +70,7 @@
             $erros = array();
             if(empty($this->getCodAnimal()))
                 $erros[] = "É necessário informar o codigo do animal";
-           if(empty($this->getTouroInseminador()))
+            if(empty($this->getTouroInseminador()))
                 $erros[] = "É necessário informar o touro inseminador";
             if(empty($this->getInseminadorResponsavel()))
                 $erros[] = "É necessário informar o inseminador responsavel";
@@ -80,7 +80,7 @@
                 $erros[] = "É necessário informar a observação";
             //if(empty($this->getPrevisaoSecagem()))
                // $erros[] = "É necessário informar a previsão de secagem";
-           // if(empty($this->getPrevisaoParto()))
+            // if(empty($this->getPrevisaoParto()))
              //   $erros[] = "É necessário informar a previsão de parto";
             //if(empty($this->getNovaPrevisaoSecagem()))
               //  $erros[] = "É necessário informar a nova previsão de secagem";

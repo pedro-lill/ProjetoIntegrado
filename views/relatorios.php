@@ -18,7 +18,7 @@
 
     <div class="div-filtros-relatorio-tipo">
         <label class="" for="id_tipo">Tipo de relatório</label>
-        <select class="select-relatorio" id="id_tipo"  name="filtroTipo" required >
+        <select class="select-relatorio" id="id_tipo"  name="filtroTipo" onchange="fazerRelatorio()" required >
             <option value="prod" value="<?=$tipo?>" <?=($_GET['acao']  == 'prod')?'selected':''?>>Produção</option>
             <option value="ins" value="<?=$tipo?>" <?=($_GET['acao']  == 'ins')?'selected':''?>>Inseminação</option>
             <option value="prevSec" value="<?=$tipo?>" <?=($_GET['acao']  == 'prevSec')?'selected':''?>>Previsão de secagem</option>
@@ -28,7 +28,7 @@
 
     <div  class="div-filtros-relatorio-mes">
         <label class="" for="id_mes">Mês do relatório</label>
-        <select class="select-relatorio" id="id_mes"  name="filtroMes" required >
+        <select  class="select-relatorio" id="id_mes"  name="filtroMes" onchange="fazerRelatorio()" required >
             <option value="01" value="<?=$mes?>" <?=($_GET['filtroMes']  == '01')?'selected':''?>>Janeiro</option>
             <option value="02" value="<?=$mes?>" <?=($_GET['filtroMes']  == '02')?'selected':''?>>Fevereiro</option>
             <option value="03" value="<?=$mes?>" <?=($_GET['filtroMes']  == '03')?'selected':''?>>Março</option>
