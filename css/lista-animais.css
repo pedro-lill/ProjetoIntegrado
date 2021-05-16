@@ -14,9 +14,10 @@ h3{
 }
 
 .lista_animais h3 {
-    width: 80%;
-    margin-left: 10%;
-    border-top: 1.5px solid #109431;
+    width: 60%;
+    margin-left: 20%;
+    border-top: 1px solid #109431;
+    padding-top: 5px;
 }
 
 .animal {
