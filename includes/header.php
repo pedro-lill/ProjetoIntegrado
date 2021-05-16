@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="../img/mst.png">
+    <link rel="shortcut icon" href="../img/mstRedondo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Fabrício Romani e Pedro Lill">
     <meta name="description" content="Cooptar - cooperativa agropecuária">
@@ -38,7 +38,7 @@
             <li><a href="../controller/tratamentoController.php?acao=adiciona">+  Tratamento</a></li>
         </ul>
         <a class="icone-configuracoes" href="../views/configuracoes.php"><i class="fas fa-cog"></i></a>
-        <a class="logo-header" href="../index.php"><img title="Logo do mst" src="/img/mst.png" /></a>
+        <a class="logo-header"><img title="Logo do mst" src="/img/mst.png" /></a>
     </header>
 
 <script src="../js/header.js"></script>

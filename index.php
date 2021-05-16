@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="shortcut icon" href="../img/mst.png">
+  <link rel="shortcut icon" href="../img/mstRedondo.png">
   <meta name="author" content="Fabrício Romani e Pedro Lill">
   <meta name="description" content="Cooptar - cooperativa agropecuária">
   <meta name="keywords" content="mst, cooperativa, pontão, agropecuária, bovino">
@@ -22,7 +22,7 @@
   <br>
   <br>
 
-  <div class="logo-mst"><img title="Logo do mst" src="/img/mst.png"/></div>
+  <div class="logo-mst"><img title="Logo do mst" src="/img/mstHeader.png"/></div>
 
   <form  action="/views/previsoes.php" class="container-historicos" onsubmit="return validarLogin()">
     <div class="div-inteira">

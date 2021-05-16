@@ -1,8 +1,11 @@
+.logo-mst{
+    width:100%;
+    text-align: center;
+    margin-top: 150px;
+}
 .logo-mst img {
-    width: 100px;
     height: 100px;
-    margin: 6% 0 0 45vw;
-    border-radius: 80px;
+    border-radius: 15px;
 }
 
 .button-login {
