@@ -3,14 +3,15 @@ display: flex;
 }
 
 .container {
-    width: 40%;
+    width: 45%;
     height: 60vh;
     color: #eee;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
-    margin-left: 10%;
+    margin-left: 5%;
+    margin-top: 60px;
+
   }
   
   .calendar {
@@ -111,8 +112,10 @@ display: flex;
 
 
 .container-tabela-previsao{
-  width: 40%;
-    margin-left: 10%;
+  width: 45%;
+    margin-left: 5%;
+    margin-top: 60px;
+
 }
   .table {
     font-family: arial, sans-serif;

@@ -24,7 +24,7 @@
 
   <div class="logo-mst"><img title="Logo do mst" src="/img/mstHeader.png"/></div>
 
-  <form  action="/views/previsoes.php" class="container-historicos" onsubmit="return validarLogin()">
+  <form  action="/views/graficos.php" class="container-historicos" onsubmit="return validarLogin()">
     <div class="div-inteira">
       <label class="label-cadastra" for="id_nomeLogin">Login</label>
       <input type="text" id="id_nomeLogin" name="field_nomeLogin" value="" required>
