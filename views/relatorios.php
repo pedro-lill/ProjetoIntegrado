@@ -23,7 +23,19 @@
             <option value="prevSec" value="<?=$tipo?>" <?=($_GET['acao']  == 'prevSec')?'selected':''?>>Previsão de secagem</option>
             <option value="prevPa" value="<?=$tipo?>" <?=($_GET['acao']  == 'prevPa')?'selected':''?>>Previsão de parto</option>
         </select>
-    </div>    
+    </div>
+
+    <div  class="div-filtros-relatorio-mes">
+        <label class="" for="id_ano">Ano do relatório</label>
+        <select  class="select-relatorio" id="id_ano"  name="filtroAno" onchange="fazerRelatorio()" required >
+            <option value="2018" value="<?=$ano?>" <?=($_GET['filtroAno']  == '2018')?'selected':''?>>2018</option>
+            <option value="2019" value="<?=$ano?>" <?=($_GET['filtroAno']  == '2019')?'selected':''?>>2019</option>
+            <option value="2020" value="<?=$ano?>" <?=($_GET['filtroAno']  == '2020')?'selected':''?>>2020</option>
+            <option value="2021" value="<?=$ano?>" <?=($_GET['filtroAno']  == '2021')?'selected':''?>>2021</option>
+            <option value="2022" value="<?=$ano?>" <?=($_GET['filtroAno']  == '2022')?'selected':''?>>2022</option>
+            <option value="2023" value="<?=$ano?>" <?=($_GET['filtroAno']  == '2023')?'selected':''?>>2023</option>
+        </select>
+    </div>
 
     <div  class="div-filtros-relatorio-mes">
         <label class="" for="id_mes">Mês do relatório</label>

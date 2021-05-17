@@ -7,7 +7,7 @@
         echo "<li>$e</li>";
     }
     $codAnimal = isset($_POST['field_codAnimal']) ? $_POST['field_codAnimal'] : "";
-    $dtNascimento = isset($_POST['field_dtNascimento']) ? $_POST['field_dtNascimento'] : "";
+    $dtNascimento = isset($_POST['field_dtNascimento']) ? $_POST['field_dtNascimento'] : date("Y-m-d");
     $codMae = isset($_POST['field_codMae']) ? $_POST['field_codMae'] : "";
     $nomePai = isset($_POST['field_nomePai']) ? $_POST['field_nomePai'] : "";
     $estadoVida = isset($_POST['field_estadoVida']) ? $_POST['field_estadoVida'] : "";
