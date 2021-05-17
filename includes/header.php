@@ -30,8 +30,8 @@
         <ul id="PrecisoParajs">
             <li><a href="../controller/animalController.php">Animais</a></li>
             <li><a href="../views/graficos.php">Gráficos</a></li>
-            <li><a href="../controller/previsoesController.php?acao=previsao&mes=00&filtroAno=2021">Previsões</a></li>
-            <li><a href="../controller/relatorioController.php?acao=prod&filtroMes=00">Relatórios</a></li>
+            <li><a href="../controller/previsoesController.php?acao=previsao&mes=00">Previsões</a></li>
+            <li><a href="../controller/relatorioController.php?acao=prod&filtroMes=00&filtroAno=2021">Relatórios</a></li>
             <li><a href="../controller/animalController.php?acao=adiciona">+  Animal</a></li>
             <li><a href="../controller/producaoController.php?acao=adiciona">+  Produção</a></li>
             <li><a href="../controller/inseminacaoController.php?acao=adiciona">+  Inseminação</a></li>
