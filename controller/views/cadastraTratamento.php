@@ -23,7 +23,7 @@
   
   <div class="div-metade">
     <label class="label-cadastra" for="id_codAnimal">Código do animal </label>
-    <input type="number" name="field_codAnimal" id="id_codAnimal" autofocus value="<?=$codAnimal?>" required>
+    <input type="number" name="field_codAnimal" id="id_codAnimal" value="<?=$codAnimal?>" required>
   </div>
   <div class="div-metade">
     <label class="label-cadastra" for="id_dtTratamento">Data do tratamento </label>
@@ -35,19 +35,19 @@
   </div>
   <div class="div-inteira">
     <label class="label-cadastra" for="id_nomeMedicamento">Nome do medicamento </label>
-    <input type="text" name="field_nomeMedicamento" id="id_nomeMedicamento" maxlength="50" autofocus value="<?=$nomeMedicamento?>">
+    <input type="text" name="field_nomeMedicamento" id="id_nomeMedicamento" maxlength="50" value="<?=$nomeMedicamento?>">
   </div>
   <div class="div-inteira">
     <label class="label-cadastra" for="id_quantidadeMedicamento">Quantidade de medicamento </label>
-    <input type="number" name="field_quantidadeMedicamento" maxlength="50" id="id_quantidadeMedicamento" autofocus value="<?=$quantidadeMedicamento?>">
+    <input type="number" name="field_quantidadeMedicamento" maxlength="50" id="id_quantidadeMedicamento" value="<?=$quantidadeMedicamento?>">
   </div>
   <div class="div-inteira">
     <label class="label-cadastra" for="id_responsavel">Responsável </label>
-    <input type="text" name="field_responsavel" maxlength="50" id="id_responsavel" autofocus value="<?=$responsavel?>">
+    <input type="text" name="field_responsavel" maxlength="50" id="id_responsavel" value="<?=$responsavel?>">
   </div>
   <div class="div-inteira">
     <label class="label-cadastra" for="id_obs">Observação </label>
-    <input type="text" name="field_obs" maxlength="50" id="id_obs" autofocus value="<?=$obs?>">
+    <input type="text" name="field_obs" maxlength="50" id="id_obs" value="<?=$obs?>">
   </div>
   <button name="adiciona" class="button-form" type="submit">Salvar</button>
 

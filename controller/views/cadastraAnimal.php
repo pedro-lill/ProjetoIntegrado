@@ -23,7 +23,7 @@
   
   <div class="div-metade">
     <label class="label-cadastra" for="id_codAnimal">Código do animal </label>
-    <input type="number" name="field_codAnimal" id="id_codAnimal" autofocus value="<?=$codAnimal?>" required>
+    <input type="number" name="field_codAnimal" id="id_codAnimal" value="<?=$codAnimal?>" required>
   </div>
   <div class="div-metade">
     <label class="label-cadastra" for="id_dtNascimento">Data de nascimento </label>
@@ -54,7 +54,7 @@
   </div>
   <div class="div-inteira">
     <label class="label-cadastra" for="id_nomeImagem">Imagem do animal </label>
-    <input type="file" name="field_imagem" id="id_imagem" maxlength="50" id="id_nomeImagem" autofocus value="<?=$nomeImagem?>" required>
+    <input type="file" name="field_imagem" id="id_imagem" maxlength="50" id="id_nomeImagem" value="<?=$nomeImagem?>" required>
   </div>
   <button name="adiciona" class="button-form" type="submit">Salvar</button>
 </form>
