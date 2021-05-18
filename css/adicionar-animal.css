@@ -91,6 +91,36 @@ input[type=checkbox]:focus {
     font-size: 15px;
     font-weight: bold;
 }
+
+.button-form-altera {
+    background-color: #115a13;
+    color: white;
+    padding: 10px;
+    margin: 15px 0 0 5%;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.button-form-voltar {
+    background-color: #e2e1e1;
+    color: black;
+    padding: 10px;
+    margin: 15px 0 0 30%;
+    border: none;
+    cursor: pointer;
+    border: 1px solid #3c3b3b;
+    width: 20%;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.button-form-voltar:hover{
+    background-color: #aeaeae;
+}
+
 .button-form-adicionar-animal {
     background-color: #115a13;
     color: white;

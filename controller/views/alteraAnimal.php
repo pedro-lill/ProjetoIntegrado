@@ -59,7 +59,8 @@
     <label class="label-cadastra" for="id_nomeImagem">Imagem do animal </label>
     <input type="file" name="field_imagem" id="id_imagem" maxlength="50" id="id_nomeImagem" value="<?=$nomeImagem?>" required>
   </div>
-  <button name="adiciona" class="button-form" type="submit">Alterar</button>
+  <button name="adiciona" class="button-form-voltar" type="button" onclick="botaoVoltar('alteraAnimal')">Voltar</button>
+  <button name="adiciona" class="button-form-altera" type="submit">Alterar</button>
 </form>
 
 <div class="botoes-adiciona">
