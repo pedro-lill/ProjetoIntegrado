@@ -47,9 +47,9 @@ else {
                     }
                 }
                 break;
-                case 'login':
+                case 'logar':
                         $obj = new Usuario();
-                        $obj->setNomeLogin($_POST['usuario']);
+                        $obj->setNomeLogin($_POST['login']);
                         $senhaCriptografada = base64_encode($_POST['senha']);
                         $obj->setSenha($senhaCriptografada);
                         $bd = new UsuarioDAO();
@@ -59,7 +59,7 @@ else {
                         else{
                             header("Location: ../views/configuracoes.php"); 
                         }
-                    break;
+                break;
 
         default:
             echo "Ação não permitida";  

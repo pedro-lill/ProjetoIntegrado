@@ -37,7 +37,7 @@
 
         public function login(Usuario $usuario){
                 try{
-                    $query = $this->conexao->prepare("SELECT * FROM usuarios WHERE usuario=:nl AND senha=:s)");
+                    $query = $this->conexao->prepare("select * from usuario WHERE usuario = :nl AND senha = :s");
                     $query->bindValue(":nl", $usuario->getNomeLogin());
                     $query->bindValue(":s", $usuario->getSenha());
                     $query->execute();

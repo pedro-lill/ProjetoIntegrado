@@ -13,7 +13,7 @@ function validarLogin(){
         return false
       }
     }else{
-      return window.location.href='../controller/usuarioController.php?acao=login&login=' + usuario +'&senha=' + senha;
+      return window.location.href='/controller/usuarioController.php?acao=login&login=' + usuario +'&senha=' + senha;
     }
 
 }

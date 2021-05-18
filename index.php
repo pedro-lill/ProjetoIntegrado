@@ -45,7 +45,7 @@
       <label class="label-cadastra" for="id_senha">Senha</label>
       <input type="password" id="id_senha" name="senha" value="<?=$senha ?>" required>
     </div>
-    <button class="button-form" type="submit">Login</button>
+    <button name="login" class="button-form" type="submit">Login</button>
   </form>
 
 <script src="/js/login.js"></script> -->
