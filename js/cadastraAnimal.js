@@ -18,6 +18,14 @@ function estadoVida(){
     }
 }
 
+function botaoVoltar(x){
+    if(x = "alteraAnimal")
+        return window.location.href='../controller/animalController.php';
+    else if(x = "alteraInseminacao")
+        return window.location.href='../controller/animalController.php';
+
+}
+
 function adicionaHistoricoInse(x){
     return window.location.href='../controller/inseminacaoController.php?acao=adiciona&codAnimal=' + x;
 }

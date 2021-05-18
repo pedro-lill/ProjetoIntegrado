@@ -77,6 +77,8 @@ else {
             if($bd->excluir($_GET['codAnimal']))
                 header("Location: animalController.php"); 
 
+
+                
             break;
         
         default:

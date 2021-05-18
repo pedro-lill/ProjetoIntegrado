@@ -12,7 +12,7 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON projetointegrado.* TO 'admcooptar'@'loca
 
 CREATE TABLE usuario(
   nomeLogin VARCHAR(40) NOT NULL, 
-  senha VARCHAR(30) NOT NULL,
+  senha VARCHAR(100) NOT NULL,
   PRIMARY KEY (nomeLogin)
 );
 
