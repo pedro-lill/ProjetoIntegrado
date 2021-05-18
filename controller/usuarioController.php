@@ -14,7 +14,8 @@ else {
             else{
                 $obj = new Usuario();
                 $obj->setNomeLogin($_POST['field_nomeLogin']);
-                $obj->setSenha($_POST['field_senha']);
+                $senhaCriptografada = base64_encode($_POST['field_senha']);
+                $obj->setSenha($senhaCriptografada);
                 $erros = $obj->validate();
                 if(count($erros) != 0){ 
                     include "views/cadastraUsuario.php";                       
