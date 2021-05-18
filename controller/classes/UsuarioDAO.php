@@ -35,6 +35,20 @@
             }
         }
 
+        public function login(Usuario $usuario){
+                try{
+                    $query = $this->conexao->prepare("SELECT * FROM usuarios WHERE usuario=:nl AND senha=:s)");
+                    $query->bindValue(":nl", $usuario->getNomeLogin());
+                    $query->bindValue(":s", $usuario->getSenha());
+                    $query->execute();
+                    $registros = $query->fetchAll(PDO::FETCH_CLASS, "Usuario");
+                    return $registros;
+                }
+                catch(PDOException $e){
+                    echo "Erro no acesso aos dados: ". $e->getMessage();
+                }
+        }
+
     }
 
 ?>   

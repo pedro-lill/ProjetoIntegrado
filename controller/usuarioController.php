@@ -47,6 +47,19 @@ else {
                     }
                 }
                 break;
+                case 'login':
+                        $obj = new Usuario();
+                        $obj->setNomeLogin($_POST['usuario']);
+                        $senhaCriptografada = base64_encode($_POST['senha']);
+                        $obj->setSenha($senhaCriptografada);
+                        $bd = new UsuarioDAO();
+                        $query = $bd->login($obj);
+                        if(count($query) == 1)
+                            header("Location: ../views/graficos.php"); 
+                        else{
+                            header("Location: ../views/configuracoes.php"); 
+                        }
+                    break;
 
         default:
             echo "Ação não permitida";  

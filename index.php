@@ -15,6 +15,18 @@
   <title>LOGIN</title>
 </head>
 
+<div class="erro_cadastro">
+<?php
+  if(isset($erros) && count($erros) !=0){
+    echo "<ul>";
+    foreach($erros as $e)
+      echo "<li>$e</li>";
+  }
+  $login = isset($_POST['login']) ? $_POST['login'] : "";
+  $senha = isset($_POST['senha']) ? $_POST['senha'] : "";
+?>
+</div>
+
 <body>
 
   <br>
@@ -24,19 +36,19 @@
 
   <div class="logo-mst"><img title="Logo do mst" src="/img/mstHeader.png"/></div>
 
-  <form  action="/views/graficos.php" class="container-historicos" onsubmit="return validarLogin()">
+  <form action="" class="container-historicos" onsubmit="return validarLogin()">
     <div class="div-inteira">
       <label class="label-cadastra" for="id_nomeLogin">Login</label>
-      <input type="text" id="id_nomeLogin" name="field_nomeLogin" value="" required>
+      <input type="text" id="id_nomeLogin" name="login" value="<?=$login ?>" required>
     </div>
     <div class="div-inteira">
       <label class="label-cadastra" for="id_senha">Senha</label>
-      <input type="password" id="id_senha" name="field_senha" value="" required>
+      <input type="password" id="id_senha" name="senha" value="<?=$senha ?>" required>
     </div>
     <button class="button-form" type="submit">Login</button>
   </form>
 
-  <script src="/js/login.js"></script>
+<script src="/js/login.js"></script> -->
 
 </body>
 </html>
