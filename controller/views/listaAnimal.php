@@ -26,7 +26,8 @@
               echo "Nenhuma animal encontrada.";
           }else{
               foreach ($lista as $animal){
-          ?>     
+          ?>
+             
 
           <div class="animal">
               <div class="label">
