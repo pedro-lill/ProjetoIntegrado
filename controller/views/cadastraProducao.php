@@ -7,7 +7,8 @@
       foreach($erros as $e)
         echo "<li>$e</li>";
     }
-    $codAnimal = isset($_POST['field_codAnimal']) ? $_POST['field_codAnimal'] : "";
+    $codAnimalPadrao = isset($_GET['codAnimal']) ? $_GET['codAnimal'] : "" ;
+    $codAnimal = isset($_POST['field_codAnimal']) ? $_POST['field_codAnimal'] : $codAnimalPadrao;
     $dtColeta = isset($_POST['field_dtColeta']) ? $_POST['field_dtColeta'] : date("Y-m-d");
     $litros = isset($_POST['field_litros']) ? $_POST['field_litros'] : "";
     $periodoDia = isset($_POST['field_periodoDia']) ? $_POST['field_periodoDia'] : "";
