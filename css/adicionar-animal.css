@@ -95,7 +95,7 @@ input[type=checkbox]:focus {
     background-color: #115a13;
     color: white;
     padding: 10px;
-    margin: 15px 0 0 5%;
+    margin: 15px 0 0 1%;
     border: none;
     cursor: pointer;
     width: 20%;
@@ -107,7 +107,7 @@ input[type=checkbox]:focus {
     background-color: #e2e1e1;
     color: black;
     padding: 10px;
-    margin: 15px 0 0 30%;
+    margin: 15px 1% 0 30%;
     border: none;
     cursor: pointer;
     border: 1px solid #3c3b3b;
