@@ -14,3 +14,21 @@
     margin-top: 40px;
     display:flex;
 }
+
+@media (max-width:500px) {
+    .grafico-prod-leite{
+        width: 90%;
+        margin-left: 5%;
+    }
+    
+    .grafico-prox-partos{
+        width: 90%;
+        margin-left: 5%;
+    }
+    
+    .graficos-container{
+        margin-top: 40px;
+        display:block;
+    }
+    
+}

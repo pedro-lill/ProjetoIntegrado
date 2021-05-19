@@ -46,9 +46,42 @@ table {
 
   @media (max-width:800px) {
 
-    select{
+    .select-relatorio{
         width: 34vw;
         font-size: 15px;
     }
 
+  }
+
+  @media (max-width:500px) {
+    .select-relatorio{
+      width: 50vw;
+      font-size: 15px;
+      margin-left: 1vw;
+
+  }
+
+  table {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  td, th, tr {
+    font-size: 12px;
+    padding: 4px;
+  }
+
+  .container-filtros-relatorio{
+    display: block;
+    }
+
+    .div-filtros-relatorio-tipo{
+      margin-left: 3vw;
+    }
+    .div-filtros-relatorio-mes{
+      margin-left: 3vw;
+    }
+    .relatorio-a{
+      display: none;
+    }
   }

@@ -35,11 +35,11 @@
     </select>
   </div>
   <div class="div-metade">
-    <label class="label-cadastra" for="id_dtInseminacao">Data de inseminação </label>
+    <label class="label-cadastra" for="id_dtInseminacao">Inseminação </label>
     <input type="date" name="field_dtInseminacao" id="id_dtInseminacao" value="<?=$dtInseminacao?>" > 
   </div>
   <div class="div-metade">
-    <label class="label-cadastra" for="id_touroInseminador">Touro inseminador </label>
+    <label class="label-cadastra" for="id_touroInseminador">Cód. touro</label>
     <input type="text"  name="field_touroInseminador" maxlength="100" id="id_touroInseminador" value="<?=$touroInseminador?>"required>
   </div>
   <div class="div-inteira">

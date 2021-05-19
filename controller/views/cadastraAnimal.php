@@ -26,7 +26,7 @@
     <input type="number" name="field_codAnimal" id="id_codAnimal" value="<?=$codAnimal?>" required>
   </div>
   <div class="div-metade">
-    <label class="label-cadastra" for="id_dtNascimento">Data de nascimento </label>
+    <label class="label-cadastra" for="id_dtNascimento">Nascimento </label>
     <input type="date" name="field_dtNascimento" maxlength="100" id="id_dtNascimento" value="<?=$dtNascimento?>" required>
   </div>
   <div class="div-inteira">

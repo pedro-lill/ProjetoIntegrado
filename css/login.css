@@ -39,3 +39,13 @@ a{
 .container-historicos  .login-a:hover{
     background-color: #949494;
 }
+
+@media (max-width:500px) {
+    .logo-mst{
+        margin-top: 80px;
+    }
+    .logo-mst img {
+        height: 60px;
+    }
+    
+}

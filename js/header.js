@@ -7,12 +7,10 @@ if (checkbox.checked == false) {
 
 function MeuBotaoMenu() {
     var checkbox = document.getElementById("check");
-    var minhasopcoesdemenu = document.getElementById("PrecisoParajs");
 
-    if (checkbox.checked == true) {
+    if (checkbox.checked == true) 
         minhasopcoesdemenu.style.left = "0vw";
-    } else {
+     if(checkbox.checked == false) 
         minhasopcoesdemenu.style.left = "-50vw";
-    }
 
 }

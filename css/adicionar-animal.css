@@ -48,9 +48,8 @@ input[type=checkbox]:focus {
     outline: 0;
 }
 
-
 .label-cadastra {
-    width: 30vw;
+    width: 100%;
     margin: 5px 0 0 0;
     display: block;
     box-sizing: border-box;
@@ -188,12 +187,11 @@ input[type=checkbox]:focus {
     input[type=number],
     input[type=password],
     input[type=checkbox] {
-        width: 60vw;
+        width: 100%;
         font-size: 15px;
     }
 
     .button-form {
-        margin: 15px 0 0 20vw;
         width: 20vw;
         font-size: 13px;
     }
@@ -205,7 +203,35 @@ input[type=checkbox]:focus {
         font-size: 15px;
     }
     .label-cadastra {
-        width:60vw;
+        width: 100%;
+        font-size: 13px;
+    }
+}
+
+@media (max-width:500px) {
+    .container-historicos {
+        font-size: 13px;
+        margin-left: 10%;
+        width: 80%;
+    }
+
+    .button-form-adicionar-animal {
+        margin: 0;
+        padding: 0;
+        width: 40vw;
+        margin-left: 30vw;  
+        height: 35px;
+        font-size: 13px;
+    }
+    
+    input[type=date],
+    input[type=text],
+    input[type=file],
+    select,
+    input[type=number],
+    input[type=password],
+    input[type=checkbox] {
+        width: 100%;
         font-size: 13px;
     }
 }
