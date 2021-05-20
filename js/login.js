@@ -1,7 +1,7 @@
 function validarLogin(){
 
-    var usuario = document.getElementsByName('field_nomeLogin')[0].value;
-    var senha = document.getElementsByName('field_senha')[0].value;
+    var usuario = document.getElementsByName('login')[0].value;
+    var senha = document.getElementsByName('senha')[0].value;
 
     if(usuario == "" && senha== ""){
       if(usuario == ""){
@@ -13,7 +13,7 @@ function validarLogin(){
         return false
       }
     }else{
-      return window.location.href='/controller/usuarioController.php?acao=login&login=' + usuario +'&senha=' + senha;
+      return window.location.href='/controller/usuarioController.php?acao=logar&nomeLogin=' + usuario +'&senha=' + senha;
     }
 
 }

@@ -48,8 +48,11 @@ else {
                 }
                 break;
                 case 'logar':
+                    if(!isset($_POST['logar'])){ 
+                        include "../index.php";              
+                    }else{
                         $obj = new Usuario();
-                        $obj->setNomeLogin($_POST['login']);
+                        $obj->setNomeLogin($_POST['nomeLogin']);
                         $senhaCriptografada = base64_encode($_POST['senha']);
                         $obj->setSenha($senhaCriptografada);
                         $bd = new UsuarioDAO();
@@ -59,6 +62,8 @@ else {
                         else{
                             header("Location: ../views/configuracoes.php"); 
                         }
+                    }
+                        
                 break;
 
         default:
