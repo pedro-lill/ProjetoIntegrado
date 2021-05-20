@@ -14,8 +14,8 @@ else {
             else{
                 $obj = new Usuario();
                 $obj->setNomeLogin($_POST['field_nomeLogin']);
-                $senhaCriptografada = base64_encode($_POST['field_senha']);
-                $obj->setSenha($senhaCriptografada);
+                // $senhaCriptografada = base64_encode($_POST['field_senha']);
+                $obj->setSenha($_POST['field_senha']);
                 $erros = $obj->validate();
                 if(count($erros) != 0){ 
                     include "views/cadastraUsuario.php";                       
@@ -51,16 +51,17 @@ else {
                     if(!isset($_POST['logar'])){ 
                         include "../index.php";              
                     }else{
-                        $bd = new UsuarioDAO();
+                        $obj = new Usuario();
                         $obj->setNomeLogin($_POST['nomeLogin']);
+                        // $senhaCriptografada = base64_encode($_POST['senha']);
                         $obj->setSenha($_POST['senha']);
-                        $senhaCriptografada = base64_encode($_POST['senha']);
-                        $query = $bd->acessar($obj->setNomeLogin($_POST['nomeLogin']), $senhaCriptografada);
-                        if(count($query) == 1)
+                        $bd = new UsuarioDAO();
+                        $query = $bd->acessar($obj->getNomeLogin(), $obj->getSenha());
+                        if($query == true)
                             header("Location: ../views/graficos.php"); 
-                        else{
-                            header("Location: ../views/configuracoes.php"); 
-                        }
+                        if($query == false)
+                            header("Location: ../views/relatorios.php"); 
+                        
                     }
                         
                 break;

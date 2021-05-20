@@ -14,7 +14,7 @@
             try{
                 $query = $this->conexao->prepare("select * from inseminacao order by codInseminacao");
                 $query->execute();
-                $registros = $query->fetchAll(PDO::FETCH_CLASS, "inseminacao");
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
                 return $registros;
             }
             catch(PDOException $e){
@@ -27,7 +27,7 @@
                 $query = $this->conexao->prepare("select * from inseminacao where codInseminacao = :i");
                 $query->bindParam(":i", $codInseminacao);
                 $query->execute();
-                $registros = $query->fetchAll(PDO::FETCH_CLASS, "inseminacao");
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
                 return $registros[0];
             }
             catch(PDOException $e){
@@ -40,7 +40,7 @@
                 $query = $this->conexao->prepare("select * from inseminacao where codAnimal = :c");//data
                 $query->bindParam(":c", $codAnimal, PDO::PARAM_INT);
                 $query->execute();
-                $registros = $query->fetchAll(PDO::FETCH_CLASS, "inseminacao");
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
                 return $registros;
             }
             catch(PDOException $e){
@@ -53,7 +53,7 @@
                 $query = $this->conexao->prepare("select * FROM inseminacao WHERE MONTH(dtInseminacao) = :m");//data
                 $query->bindParam(":m", $mes, PDO::PARAM_INT);
                 $query->execute();
-                $registros = $query->fetchAll(PDO::FETCH_CLASS, "inseminacao");
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
                 return $registros;
             }
             catch(PDOException $e){
@@ -66,7 +66,7 @@
                 $query = $this->conexao->prepare("select * FROM inseminacao WHERE YEAR(dtInseminacao) = :a");//data
                 $query->bindParam(":a", $ano, PDO::PARAM_INT);
                 $query->execute();
-                $registros = $query->fetchAll(PDO::FETCH_CLASS, "inseminacao");
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
                 return $registros;
             }
             catch(PDOException $e){
@@ -80,7 +80,7 @@
                 $query->bindParam(":m", $mes, PDO::PARAM_INT);
                 $query->bindParam(":a", $ano, PDO::PARAM_INT);
                 $query->execute();
-                $registros = $query->fetchAll(PDO::FETCH_CLASS, "inseminacao");
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
                 return $registros;
             }
             catch(PDOException $e){

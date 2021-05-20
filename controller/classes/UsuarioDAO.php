@@ -12,22 +12,18 @@
 
         public function acessar($nomeLogin, $senha){
             try{
-                $query = $this->conexao->prepare("select nomeLogin, senha from usuario where nomeLogin = :nl");
+                $query = $this->conexao->prepare("select * from usuario where nomeLogin = :nl");
                 $query->bindParam(":nl", $nomeLogin);
                 $query->execute();
                 $registro = $query->fetchAll(PDO::FETCH_CLASS, "Usuario");
-                // verificacao do e-mail / senha     
-                if($query->rowCount() == 1){ // email informado existe no BD
-                    if(!password_verify($senha, $registro[0]->getSenha())){
-                        return false; // senha incorreta
-                    }
-                    else{ // email e senha estão corretos
-                        return $registro[0];
-                    }
+                if($query->rowCount() == 1){
+                    if($senha != $registro[0]->getSenha())
+                        return false; 
+                    if($senha == $registro[0]->getSenha())
+                        return true;
                 }       
-                else{
-                    return false; // nao encontrou email
-                }     
+                else
+                    return false; 
             }
             catch(PDOException $e){
                 echo "Erro no acesso aos dados: ". $e->getMessage();

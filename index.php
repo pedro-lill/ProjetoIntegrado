@@ -2,25 +2,25 @@
 <html lang="pt-br">
 
 <?php
-if(isset($_POST['logar'])){
-    $nomeLogin = $_POST['nomeLogin'];
-    $senha = $_POST['senha'];
-
-    if($nomeLogin == 'pedro'){ // senha: pb123
-        if(password_verify($senha, 'dG9tYW5vY3U=')){ // acesso liberado
-            session_start();
-            $_SESSION['logado'] = true;
-            $_SESSION['inicio'] = date("d/m/Y h:i:s");
-            header("Location: /controller/usuarioController.php");
-        }
-        else{
-            $erro = "Senha incorreta";
-        }
-    }
-    else{ // login incorreto
-        $erro = "Login incorreto";
-    }
-}
+//if(isset($_POST['logar'])){
+//    $nomeLogin = $_POST['nomeLogin'];
+//    $senha = $_POST['senha'];
+//
+//    if($nomeLogin == 'pedro'){  
+//        if(password_verify($senha, 'dG9tYW5vY3U=')){ 
+//            session_start();
+//            $_SESSION['logado'] = true;
+//            $_SESSION['inicio'] = date("d/m/Y h:i:s");
+//            header("Location: /controller/usuarioController.php");
+//        }
+//        else{
+//            $erro = "Senha incorreta";
+//        }
+//    }
+//    else{ 
+//        $erro = "Login incorreto";
+//    }
+//}
 ?>
 
 <head>
@@ -44,8 +44,8 @@ if(isset($_POST['logar'])){
     foreach($erros as $e)
       echo "<li>$e</li>";
   }
-  $nomeLogin = isset($_POST['nomeLogin']) ? $_POST['nomeLogin'] : "";
-  $senha = isset($_POST['senha']) ? $_POST['senha'] : "";
+  $nomeLogin = isset($_POST['nomeLogin']) ? ($_POST['nomeLogin']) : "";
+  $senha = isset($_POST['senha']) ? ($_POST['senha']) : "";
 ?>
 </div>
 
