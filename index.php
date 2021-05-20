@@ -1,6 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
+<?php
+if(isset($_POST['logar'])){
+    $nomeLogin = $_POST['nomeLogin'];
+    $senha = $_POST['senha'];
+
+    if($nomeLogin == 'pedro'){ // senha: pb123
+        if(password_verify($senha, 'dG9tYW5vY3U=')){ // acesso liberado
+            session_start();
+            $_SESSION['logado'] = true;
+            $_SESSION['inicio'] = date("d/m/Y h:i:s");
+            header("Location: /controller/usuarioController.php");
+        }
+        else{
+            $erro = "Senha incorreta";
+        }
+    }
+    else{ // login incorreto
+        $erro = "Login incorreto";
+    }
+}
+?>
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,7 +58,7 @@
 
   <div class="logo-mst"><img title="Logo do mst" src="/img/mstHeader.png"/></div>
 
-  <form action="" class="container-historicos" >
+  <form action="/controller/usuarioController.php?acao=logar" class="container-historicos" method="post" enctype="multipart/form-data">
     <div class="div-inteira">
       <label class="label-cadastra" for="id_nomeLogin">Login</label>
       <input type="text" id="id_nomeLogin" name="nomeLogin" value="<?=$nomeLogin?>" required>
@@ -48,7 +70,7 @@
     <button name="logar" class="button-form" onclick= "validarLogin()" type="submit">Login</button>
   </form>
 
-<script src="/js/login.js"></script>
+<!-- <script src="/js/login.js"></script> -->
 
 </body>
 </html>

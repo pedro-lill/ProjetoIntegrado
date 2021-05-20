@@ -1,9 +1,9 @@
 function validarLogin(){
 
-    var usuario = document.getElementsByName('login')[0].value;
+    var usuario = document.getElementsByName('nomeLogin')[0].value;
     var senha = document.getElementsByName('senha')[0].value;
 
-    if(usuario == "" && senha== ""){
+    if(usuario == "" || senha== ""){
       if(usuario == ""){
         alert("Inserir nome de usuario");
         return false
@@ -13,7 +13,7 @@ function validarLogin(){
         return false
       }
     }else{
-      return window.location.href='/controller/usuarioController.php?acao=logar&nomeLogin=' + usuario +'&senha=' + senha;
+      return window.location.href="/controller/usuarioController.php?acao=logar&nomeLogin=" + usuario + "&senha=" + senha;
     }
 
 }

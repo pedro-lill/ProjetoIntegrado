@@ -51,12 +51,11 @@ else {
                     if(!isset($_POST['logar'])){ 
                         include "../index.php";              
                     }else{
-                        $obj = new Usuario();
-                        $obj->setNomeLogin($_POST['nomeLogin']);
-                        $senhaCriptografada = base64_encode($_POST['senha']);
-                        $obj->setSenha($senhaCriptografada);
                         $bd = new UsuarioDAO();
-                        $query = $bd->login($obj);
+                        $obj->setNomeLogin($_POST['nomeLogin']);
+                        $obj->setSenha($_POST['senha']);
+                        $senhaCriptografada = base64_encode($_POST['senha']);
+                        $query = $bd->acessar($obj->setNomeLogin($_POST['nomeLogin']), $senhaCriptografada);
                         if(count($query) == 1)
                             header("Location: ../views/graficos.php"); 
                         else{
