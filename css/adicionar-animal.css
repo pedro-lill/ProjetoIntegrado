@@ -92,7 +92,7 @@ input[type=checkbox]:focus {
 }
 
 .button-form-altera {
-    background-color: #115a13;
+    background-color: #157018;
     color: white;
     padding: 10px;
     margin: 15px 0 0 1%;
@@ -101,6 +101,10 @@ input[type=checkbox]:focus {
     width: 20%;
     font-size: 15px;
     font-weight: bold;
+}
+
+.button-form-altera:hover {
+    background-color: #104312;
 }
 
 .button-form-voltar {
@@ -117,7 +121,7 @@ input[type=checkbox]:focus {
 }
 
 .button-form-voltar:hover{
-    background-color: #aeaeae;
+    background-color: #bbbaba;
 }
 
 .button-form-adicionar-animal {
