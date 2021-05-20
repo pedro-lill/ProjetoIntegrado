@@ -60,7 +60,7 @@ else {
                         if($query == true)
                             header("Location: ../views/graficos.php"); 
                         if($query == false)
-                            header("Location: ../views/relatorios.php"); 
+                            header("Location: ../index.php"); 
                         
                     }
                         
