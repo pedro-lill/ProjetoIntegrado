@@ -14,8 +14,8 @@
 
 <div class="lista_animais">
   <?php
-    require_once "../controller/classes/inseminacaoDAO.php";
-    $obj = new inseminacaoDAO();
+    require_once "../controller/classes/InseminacaoDAO.php";
+    $obj = new InseminacaoDAO();
     $lista = $obj->buscaLista($codAnimal); 
     ?>
     <h3>Históricos de inseminações do animal (cód. <?=$codAnimal?>)</h3>      

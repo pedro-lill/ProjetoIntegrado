@@ -7,7 +7,7 @@
   </tr>
 <?php
 $secagem=00;
-$obj = new inseminacaoDAO();
+$obj = new InseminacaoDAO();
 if($_GET['filtroMes']==1){
   $secagem=6;
 } else if($_GET['filtroMes']==2){

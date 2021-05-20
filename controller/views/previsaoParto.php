@@ -8,7 +8,7 @@
   </tr>
 <?php
 $parto=$_GET['mes'];
-$obj = new inseminacaoDAO();
+$obj = new InseminacaoDAO();
 // if($parto==1){
 //   $parto=6;
 // } else if($parto==2){

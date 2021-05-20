@@ -6,7 +6,7 @@
   </tr>
 <?php
 $parto=00;
-$obj = new inseminacaoDAO();
+$obj = new InseminacaoDAO();
 if($_GET['filtroMes']==1){
   $parto=4;
 } else if($_GET['filtroMes']==2){

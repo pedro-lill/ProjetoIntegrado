@@ -1,6 +1,6 @@
 <?php require_once("../includes/header.php");?>
 <?php
-include_once "../controller/classes/inseminacaoDAO.php";
+include_once "../controller/classes/InseminacaoDAO.php";
 if(!isset($_GET['acao'])){
     $obj = new InseminacaoDAO();
     $lista = $obj->listar();

@@ -1,7 +1,7 @@
 <?php
-include_once "../controller/classes/inseminacaoDAO.php";
+include_once "../controller/classes/InseminacaoDAO.php";
 if(!isset($_GET['acao'])){
-    $obj = new inseminacaoDAO();
+    $obj = new InseminacaoDAO();
     $lista = $obj->listar();
     include "views/listaAnimal.php";
 }
@@ -24,7 +24,7 @@ else {
                     include "views/cadastraInseminacao.php";                       
                 }
                 else{
-                    $bd = new inseminacaoDAO();
+                    $bd = new InseminacaoDAO();
                     if($bd->inserir($obj))
                         header("Location: inseminacaoController.php"); 
                 }

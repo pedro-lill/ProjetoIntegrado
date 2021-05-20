@@ -5,7 +5,7 @@
     <th>Data da inseminação</th>
   </tr>
 <?php
-$obj = new inseminacaoDAO();
+$obj = new InseminacaoDAO();
 $mes = ($_GET['filtroMes']);
 $ano=($_GET['filtroAno']);
 $lista = $obj->buscaMesAno($mes, $ano);

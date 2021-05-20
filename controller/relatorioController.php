@@ -8,7 +8,7 @@ else {
         
         case 'ins':
             if(!isset($_POST['ins'])){
-                include_once "../controller/classes/inseminacaoDAO.php";
+                include_once "../controller/classes/InseminacaoDAO.php";
                 include "../views/relatorios.php";
                 include "views/relatorioInseminacao.php";
                 include "../includes/footer.php";
@@ -31,7 +31,7 @@ else {
             
             case 'prevSec':
                 if(!isset($_POST['prevSec'])){
-                    include_once "../controller/classes/inseminacaoDAO.php";
+                    include_once "../controller/classes/InseminacaoDAO.php";
                     include "../views/relatorios.php";
                     include "views/relatorioPrevisaoSecagem.php";
                     include "../includes/footer.php";
@@ -43,7 +43,7 @@ else {
 
             case 'prevPa':
                 if(!isset($_POST['prevPa'])){
-                    include_once "../controller/classes/inseminacaoDAO.php";
+                    include_once "../controller/classes/InseminacaoDAO.php";
                     include "../views/relatorios.php";
                     include "views/relatorioPrevisaoPartos.php";
                     include "../includes/footer.php";
