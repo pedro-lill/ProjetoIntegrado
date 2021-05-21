@@ -16,8 +16,15 @@ header {
   position: relative;
   padding: 0px 15px;
   display: flex;
+  transition: 2s;
+  z-index: 10;
 }
     
+header.PassouDaImagem {
+  position: fixed;
+  transition: 2s;
+}
+
 header a{
   text-decoration: none;
   color: #fff;
@@ -39,6 +46,7 @@ header ul {
   list-style-type: none;
   margin: 0;
   text-decoration: none;
+  position: relative;
 }
 
 header ul li {
@@ -61,6 +69,43 @@ header ul li {
   width: 40%;
   height: 400px;
   margin-left:10%;
+}
+
+table {
+  text-align: center;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+  margin-left: 15%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  font-size: 17px;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.button-rota {
+  width: 30%;
+  margin-left: 35%;
+  height: 40px;
+  padding: 7px;
+  background-color: #0f8213;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 0;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 3px 3px 3px #353434;
+}
+
+.button-rota:hover {
+  background-color: #0e5c11;
 }
 
 header ul li a {    

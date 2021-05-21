@@ -18,9 +18,9 @@
     <header>
       <a href="login.php">COOPTAR - Cooperativa de produção agropecuaria Cascata</a> 
       <ul id="PrecisoParajs">
-          <li><a href="">Ligue agora</a></li>
-          <li><a href="https://www.google.com/maps/dir//'-27.994195,-52.788219'/@-27.9941773,-52.8582593,12z/data=!4m6!4m5!1m0!1m3!2m2!1d-52.788219!2d-27.994195">Ver rota</a></li>
-          <li><a href="">Horario de atendimento</a></li>
+          <li><a class="altura_js" href="">Ligue agora</a></li>
+          <li><a class="altura_js" href="https://www.google.com/maps/dir//'-27.994195,-52.788219'/@-27.9941773,-52.8582593,12z/data=!4m6!4m5!1m0!1m3!2m2!1d-52.788219!2d-27.994195">Ver rota</a></li>
+          <li><a class="altura_js" href="#Atendimento">Horario de atendimento</a></li>
       </ul>
     </header>
 
@@ -69,10 +69,10 @@
     <div class="container-divs">
         <div class="div-rota">
             <h2>Localização</h2>
-            <button class="">Rota</button>
+            <button class="button-rota">Rota</button>
         </div>
 
-        <div class="div-funcionamento">
+        <div class="div-funcionamento" id="Atendimento">
             <h2>Horário de funcionamento</h2></h2>
             <table>
                 <tr>
@@ -131,6 +131,6 @@
         </div>
 
     </footer>
-
+<script src="js/index.js"></script>
 </body>
 </html>
