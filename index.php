@@ -36,12 +36,12 @@
     <div class="fotosCooperativa" id="FotosJS">
         <h2>Galeria de fotos</h2>
         <section class="galeria">
-            <a><img src="img/imagemPizzaria1.jfif"onclick="" /></a>
-            <a><img src="img/imagemPizzaria2.jfif"onclick="" /></a>
-            <a><img src="img/imagemPizzaria3.jfif"onclick="" /></a>
-            <a><img src="img/imagemPizzaria4.jpg" onclick="" /></a>
-            <a><img src="img/imagemPizzaria5.jfif"onclick="" /></a>
-            <a><img src="img/imagemPizzaria6.jpg" onclick="" /></a>
+            <a><img src="img/imgCoop1.jpg" onclick="" /></a>
+            <a><img src="img/imgCoop2.jpg" onclick="" /></a>
+            <a><img src="img/imgCoop3.jpg" onclick="" /></a>
+            <a><img src="img/imgCoop4.jpg" onclick="" /></a>
+            <a><img src="img/imgCoop5.jpg" onclick="" /></a>
+            <a><img src="img/imgCoop6.jpg" onclick="" /></a>
         </section>
     </div>
 
