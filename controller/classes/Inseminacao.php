@@ -35,6 +35,14 @@
             $this->dtInseminacao = $dtInseminacao;
         }
 
+        public function getDtPrevisaoSecagem(){
+            return $this->dtPrevisaoSecagem;
+        }
+
+        public function setDtPrevisaoSecagem($dtPrevisaoSecagem){
+            $this->dtPrevisaoSecagem = $dtPrevisaoSecagem;
+        }
+
         public function getDtPrevisaoParto(){
             return $this->dtPrevisaoParto;
         }

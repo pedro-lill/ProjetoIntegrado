@@ -90,10 +90,11 @@
 
         public function inserir(inseminacao $inseminacao){
             try{
-                $query = $this->conexao->prepare("insert into inseminacao values (NULL, :c, :d, :pp, :t, :ir, :r, :o)");
+                $query = $this->conexao->prepare("insert into inseminacao values (NULL, :c, :d, :ps, :pp, :t, :ir, :r, :o)");
                 $query->bindValue(":c", $inseminacao->getCodAnimal());
                 $query->bindValue(":d", $inseminacao->getDtInseminacao());
                 $query->bindValue(":pp", $inseminacao->getDtPrevisaoParto());
+                $query->bindValue(":ps", $inseminacao->getDtPrevisaoSecagem());
                 $query->bindValue(":t", $inseminacao->getTouroInseminador());
                 $query->bindValue(":ir", $inseminacao->getInseminadorResponsavel());
                 $query->bindValue(":r", $inseminacao->getRetorno());
@@ -112,6 +113,7 @@
                 $query->bindValue(":i", $inseminacao->getCodInseminacao());
                 $query->bindValue(":c", $inseminacao->getCodAnimal());
                 $query->bindValue(":d", $inseminacao->getDtInseminacao());
+                $query->bindValue(":ps", $inseminacao->getDtPrevisaoSecagem());
                 $query->bindValue(":pp", $inseminacao->getDtPrevisaoParto());
                 $query->bindValue(":t", $inseminacao->getTouroInseminador());
                 $query->bindValue(":ir", $inseminacao->getInseminadorResponsavel());
