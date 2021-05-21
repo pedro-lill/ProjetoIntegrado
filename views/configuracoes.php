@@ -5,7 +5,7 @@
 <ul class="lista-configuracoes">
     <li><a href="../controller/usuarioController.php?acao=adiciona"><i class="fas fa-user-plus"></i>     Cadastrar novo usuario</a></li>
     <li><a href="../controller/usuarioController.php?acao=altera"><i class="fas fa-user-cog"></i>     Editar minha conta</a></li>
-    <li><a href="../index.php"><i class="fas fa-sign-out-alt"></i>     Sair</a></li>
+    <li><a href="../login.php"><i class="fas fa-sign-out-alt"></i>     Sair</a></li>
 
 </ul>
 

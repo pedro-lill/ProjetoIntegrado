@@ -49,7 +49,7 @@ else {
                 break;
                 case 'logar':
                     if(!isset($_POST['logar'])){ 
-                        include "../index.php";              
+                        include "../login.php";              
                     }else{
                         $obj = new Usuario();
                         $obj->setNomeLogin($_POST['nomeLogin']);
@@ -60,7 +60,7 @@ else {
                         if($query == true)
                             header("Location: ../views/graficos.php"); 
                         if($query == false)
-                            header("Location: ../index.php"); 
+                            header("Location: ../login.php"); 
                         
                     }
                         
