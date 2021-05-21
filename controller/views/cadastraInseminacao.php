@@ -67,24 +67,27 @@ document.getElementById("id_dtPrevSecagem_label").style.display = "none";
 
 function dataPrevisaoParto(){
   const dtInseminacao = document.getElementById("id_dtInseminacao").value;
+  console.log(dtInseminacao);
+  const dtInseminacaoo = dtInseminacao + ""
+  console.log(dtInseminacaoo);
 
-  <?=
+    <?=
   $inseminacaophp = "2020-11-11";
   $dataFormatadaPrevParto = date('Y-m-d', strtotime("+284 days",strtotime($inseminacaophp)));
   $dataFormatadaPrevSecagem =  date('Y-m-d', strtotime("+224 days",strtotime($inseminacaophp)));
   ?>
 
-  var dataFormatadaPrevParto =  "<?php echo $dataFormatadaPrevParto;?>";
-  var dataFormatadaPrevSecagem = "<?php echo $dataFormatadaPrevSecagem;?>";
+    var dataFormatadaPrevParto =  "<?php echo $dataFormatadaPrevParto;?>";
+    var dataFormatadaPrevSecagem = "<?php echo $dataFormatadaPrevSecagem;?>";
 
-  document.getElementById("id_dtPrevParto_label").style.display = "block";
-  document.getElementById("id_dtPrevSecagem_label").style.display = "block";
+    document.getElementById("id_dtPrevParto_label").style.display = "block";
+    document.getElementById("id_dtPrevSecagem_label").style.display = "block";
 
-  document.getElementById("id_dtPrevParto").setAttribute("type", "date");
-  document.getElementById("id_dtPrevParto").setAttribute("value", dataFormatadaPrevParto);
+    document.getElementById("id_dtPrevParto").setAttribute("type", "date");
+    document.getElementById("id_dtPrevParto").setAttribute("value", dataFormatadaPrevParto);
 
-  document.getElementById("id_dtPrevSecagem").setAttribute("type", "date");
-  document.getElementById("id_dtPrevSecagem").setAttribute("value", dataFormatadaPrevSecagem);
+    document.getElementById("id_dtPrevSecagem").setAttribute("type", "date");
+    document.getElementById("id_dtPrevSecagem").setAttribute("value", dataFormatadaPrevSecagem);
 }
 
 </script>
