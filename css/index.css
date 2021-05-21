@@ -264,13 +264,15 @@ input:hover, textarea:hover {
   padding: 15px 15px 0px 45.8px;
 }
 
-.container__icons ul {
-  list-style: none;
+.container__icons ul{
+ list-style: none;
 }
 
 .container__icons ul li {
   display: inline-block;
   margin-left: 10px;
+  cursor: pointer;
+
 }
 
 .container__icons ul li:last-child {
