@@ -14,7 +14,15 @@
 </head>
 
 <body>
-<h1>INICIO</h1>
+<header>
+  <input type="checkbox" id="check" onclick="MeuBotaoMenu()">
+  <label for="check" class="checkbtn">&#9776;</label>
+  <ul id="PrecisoParajs">
+      <li><a href="">Ligue agora</a></li>
+      <li><a href="">Ver rota</a></li>
+      <li><a href="">Horario de atendimento</a></li>
+  </ul>
+</header>
 
 <a href="login.php">Login</a>
 
