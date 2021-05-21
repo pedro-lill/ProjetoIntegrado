@@ -53,7 +53,7 @@ if(count($lista) == 0){
 
   <tr class="tr">
     <td class="td"><?=$inseminacao->getCodAnimal()?> </td>
-    <td class="td"><?=date('d/m/Y', strtotime("+284 days",strtotime($inseminacao->getDtInseminacao())));?></td>
+    <td class="td"><?=date('d/m/Y', strtotime("+0 days",strtotime($inseminacao->getDtPrevisaoParto())));?></td>
     <td class="td"><?=date('d/m/Y', strtotime("+0 days",strtotime($inseminacao->getDtInseminacao())));?></td>
   </tr>
 

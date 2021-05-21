@@ -15,6 +15,7 @@ else {
                 $obj = new Inseminacao();
                 $obj->setCodAnimal($_POST['field_codAnimal']);
                 $obj->setDtInseminacao($_POST['field_dtInseminacao']);
+                $obj->setDtPrevisaoParto(date('y/m/d', strtotime("+283 days",strtotime($_POST['field_dtInseminacao']))));
                 $obj->setTouroInseminador($_POST['field_touroInseminador']);
                 $obj->setInseminadorResponsavel($_POST['field_inseminadorResponsavel']);
                 $obj->setRetorno( $_POST['field_retorno']);
@@ -42,6 +43,7 @@ else {
                 $obj->setCodInseminacao($_POST['field_codInseminacao']);
                 $obj->setCodAnimal($_POST['field_codAnimal']);
                 $obj->setDtInseminacao($_POST['field_dtInseminacao']);
+                $obj->setDtPrevisaoParto(date('y/m/d', strtotime("+283 days",strtotime($_POST['field_dtInseminacao']))));
                 $obj->setTouroInseminador($_POST['field_touroInseminador']);
                 $obj->setInseminadorResponsavel($_POST['field_inseminadorResponsavel']);
                 $obj->setRetorno( $_POST['field_retorno']);

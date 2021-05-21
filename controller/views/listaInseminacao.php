@@ -34,7 +34,8 @@
               <div class="animal_descricao">
               <strong>Touro: </strong> <?=$inseminacao->getTouroInseminador()?> <br>
               <strong>Responsável: </strong> <?=$inseminacao->getInseminadorResponsavel()?> <br>
-              <strong>Data: </strong> <?=date('d/m/Y', strtotime("+0 days",strtotime($inseminacao->getDtInseminacao())));?>
+              <strong>Data: </strong> <?=date('d/m/Y', strtotime("+0 days",strtotime($inseminacao->getDtInseminacao())));?> <br>
+              <strong>Previsão parto: </strong> <?=date('d/m/Y', strtotime("+0 days",strtotime($inseminacao->getDtPrevisaoParto())));?>
             </div>
             <div>
               <button name="altera" class="button-edit" onclick="window.location.href='inseminacaoController.php?acao=altera&codInseminacao=<?=$inseminacao->getCodInseminacao() ?>'"><i class="fa fa-edit fa-1x"></i></button>

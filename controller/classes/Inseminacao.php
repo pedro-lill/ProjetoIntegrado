@@ -4,6 +4,7 @@
         private $codInseminacao;
         private $codAnimal;
         private $dtInseminacao;
+        private $dtPrevisaoParto;
         private $touroInseminador;
         private $inseminadorResponsavel;
         private $retorno;
@@ -32,6 +33,14 @@
 
         public function setDtInseminacao($dtInseminacao){
             $this->dtInseminacao = $dtInseminacao;
+        }
+
+        public function getDtPrevisaoParto(){
+            return $this->dtPrevisaoParto;
+        }
+
+        public function setDtPrevisaoParto($dtPrevisaoParto){
+            $this->dtPrevisaoParto = $dtPrevisaoParto;
         }
 
         public function getTouroInseminador(){
