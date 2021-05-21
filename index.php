@@ -66,6 +66,42 @@
         </form>
     </div>
 
+    <div class="container-divs">
+        <div class="div-rota">
+            <h2>Localização</h2>
+            <button class="">Rota</button>
+        </div>
+
+        <div class="div-funcionamento">
+            <h2>Horário de funcionamento</h2></h2>
+            <table>
+                <tr>
+                    <th>Dia</th>
+                    <th>Horário</th>
+                </tr>
+                <tr>
+                    <td>Segunda</td>
+                    <td>08:00 - 12:00, 13:30 - 17:30</td>
+                </tr>
+                <tr>
+                    <td>Terça</td>
+                    <td>08:00 - 12:00, 13:30 - 17:30</td>
+                </tr>
+                <tr>
+                    <td>Quarta</td>
+                    <td>08:00 - 12:00, 13:30 - 17:30</td>
+                </tr>
+                <tr>
+                    <td>Quinta</td>
+                    <td>08:00 - 12:00, 13:30 - 17:30</td>
+                </tr>
+                <tr>
+                    <td>Sexta</td>
+                    <td>08:00 - 12:00, 13:30 - 17:30</td>
+                </tr>
+            </table>
+        </div>
+    </div>
 
     <footer class="main__footer" id="FooterJS">
 
@@ -80,10 +116,11 @@
             </div>
 
             <div class="container__text">
-                <span>Cooperativa Cascata</span>
-                <span>cooptarcascata@gmail.com</span>
+                <span>Assentamento 16 de Março</span>
+                <span>CEP: 99190-000</span>
                 <span>Pontão - RS</span>
-                <span>(54) 999223311</span>
+                <span>cooptarcascata@gmail.com</span>
+                <span>(54) 3503-0195</span>
                 <span>CNPJ: 22333991100</span>
             </div>
 

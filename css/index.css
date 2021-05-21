@@ -47,6 +47,22 @@ header ul li {
   float: right;
 }
 
+.container-divs{
+  display: flex;
+}
+
+.div-funcionamento{
+  width: 40%;
+  height: 400px;
+  margin-left:10%;
+}
+
+.div-rota{
+  width: 40%;
+  height: 400px;
+  margin-left:10%;
+}
+
 header ul li a {    
   padding: 8px;
   font-size:15px;
