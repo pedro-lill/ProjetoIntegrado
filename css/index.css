@@ -1,83 +1,77 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 body{
-    padding: 0;
-    margin: 0;
-    font-family: 'Lato', sans-serif;
-    transition: transform 0.3s;
-    background-color: #ebebeb;
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  transition: transform 0.3s;
+  background-color: #ebebeb;
 }
 
 header {
-    background-color: #073a18;
-    color: #fff;
-    font-size: 130%;
-    height: 60px;
-    position: relative;
-    padding: 0px 15px;
-
-    display: flex;
+  background-color: #073a18;
+  color: #fff;
+  font-size: 130%;
+  height: 60px;
+  position: relative;
+  padding: 0px 15px;
+  display: flex;
 }
     
-    header a{
-text-decoration: none;
-color: #fff;
-width: 50vw;
-
-padding: 10px;
-font-size:18px;
-font-weight: 600;
-color: #fff;
-text-decoration: none;
-transition: 0.5s;
-line-height: 25px;
-border-radius: 4px;
-text-transform: uppercase;
-margin-right: 5px;
-
-    }
-
-  header ul {
-    width: 80vw;
-    list-style-type: none;
-    margin: 0;
-    text-decoration: none;
-  }
-  
-  header ul li {
-    list-style: none;
-    padding-top:15px;
-    display: inline-block;
-  }
-  
-  header ul li a {    
-    padding: 8px;
-    font-size:15px;
-    font-weight: 600;
-    color: #fff;
-    text-decoration: none;
-    transition: 0.5s;
-    line-height: 25px;
-    border-radius: 4px;
-    text-transform: uppercase;
-    margin-right: 5px;
-  }
-  
-  header ul li a:hover{
-    background-color:#027005;
-    cursor: pointer;
-  }
-  
-
-  .banner {
-    width: 100%;
+header a{
+  text-decoration: none;
+  color: #fff;
+  width: 50vw;
+  padding: 15px;
+  font-size:18px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.5s;
+  line-height: 25px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  margin-right: 5px;
 }
 
+header ul {
+  width: 80vw;
+  list-style-type: none;
+  margin: 0;
+  text-decoration: none;
+}
+
+header ul li {
+  list-style: none;
+  padding-top:15px;
+  float: right;
+}
+
+header ul li a {    
+  padding: 8px;
+  font-size:15px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.5s;
+  line-height: 25px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  margin-right: 5px;
+}
+
+header ul li a:hover{
+  background-color:#027005;
+  cursor: pointer;
+}
+
+.banner {
+  width: 100%;
+}
 
 .galeria{
   width:90vw;
   margin-left: 5vw;
-  
 }
 
 .galeria img{
@@ -90,7 +84,6 @@ margin-right: 5px;
   border: 3.5px solid #027005;
   cursor: pointer;
 }
-
 
 .textoCooperativa{
   width: 80%;
@@ -120,12 +113,8 @@ h2{
   justify-content: center;
   margin-top: 40px;
   margin-bottom: 50px;
-  
 }
-h2{
-  width: 100%;
-  text-align: center;
-}
+
 .form {
   width: 80vw;
   display: block;
@@ -135,19 +124,13 @@ h2{
   flex-wrap: wrap;
 }
 
-input[type=date],
-input[type=text],
-input[type=email],
-select,
-input[type=number],
-textarea,
-input[type=password]{
-
+input[type=date], input[type=text], input[type=email], 
+select, input[type=number], textarea, input[type=password]{
   width: 100%;
   height: 30px;
   margin-bottom: 15px;
   background-color: #fff;
-  border: 1.5px solid #373636;
+  border: 2px solid #373636;
   border-radius: 5px;
   padding: 5px 0px 5px 10px;
   font-family: "Poppins", sans-serif;
@@ -156,19 +139,19 @@ input[type=password]{
   cursor: pointer;
 }
 
-input[type=date]:focus,
-input[type=text]:focus,
-input[type=email]:focus,
-select:focus,
-input[type=number]:focus,
-textarea,
-input[type=password]:focus{
+textarea{
+  height: 60px;
+}
+
+input[type=date]:focus, input[type=text]:focus,
+input[type=email]:focus, select:focus, input[type=number]:focus,
+textarea:focus, input[type=password]:focus{
   box-shadow: 0 0 0 0;
   outline: 0;
 }
 
-input:hover {
-  border: 1.5px solid #027005;
+input:hover, textarea:hover {
+  border: 2px solid #03a508;
 }
 
 .field-enviar {
@@ -176,7 +159,7 @@ input:hover {
   margin-left: 85%;
   height: 40px;
   padding: 7px;
-  background-color: #027005;
+  background-color: #0f8213;
   color: #ffffff;
   cursor: pointer;
   border-radius: 10px;
@@ -187,7 +170,7 @@ input:hover {
 }
 
 .field-enviar:hover {
-  background-color: #027005;
+  background-color: #035e06;
 }
 
 .div-metade{
@@ -208,7 +191,7 @@ input:hover {
   height: 240px;
   width: 100%;
   border-top: 3px solid;
-  border-image-source: linear-gradient(-90deg, #1d43b5, #00fff7);
+  border-image-source: linear-gradient(-90deg, #045912, #09ba17);
   border-image-slice: 1;
 }
 
@@ -222,6 +205,11 @@ input:hover {
 
 .container__icons ul {
   list-style: none;
+}
+
+.container__icons ul li {
+  display: inline-block;
+  margin-left: 10px;
 }
 
 .container__icons ul li:last-child {
