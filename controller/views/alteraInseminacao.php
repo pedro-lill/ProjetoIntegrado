@@ -34,11 +34,15 @@
           <option value="Sim" value="<?=$retorno?>">Sim</option>
     </select>
   </div>
-  <div class="div-metade">
+  <div class="div-metade" id="div-data-insem">
     <label class="label-cadastra" for="id_dtInseminacao">Inseminação </label>
-    <input type="date" name="field_dtInseminacao" id="id_dtInseminacao" value="<?=$dtInseminacao?>" > 
+    <input type="date" name="field_dtInseminacao" id="id_dtInseminacao" value="<?=$dtInseminacao?>" onChange="dataPrevisaoParto()" > 
   </div>
-  <div class="div-metade">
+  <div class="div-metade" id="div-prev-parto">
+    <label class="label-cadastra" for="id_dtPrevisaoParto" id="id_dtPrevisaoParto_label">Previsão de parto</label>
+    <input type="hidden" name="field_dtPrevisaoParto" id="id_dtPrevisaoParto" disabled="disabled" value="" > 
+  </div>
+  <div class="div-metade" id="div-touro">
     <label class="label-cadastra" for="id_touroInseminador">Cód. touro</label>
     <input type="text"  name="field_touroInseminador" maxlength="100" id="id_touroInseminador" value="<?=$touroInseminador?>"required>
   </div>
@@ -52,5 +56,8 @@
   </div>
   <button name="adiciona" class="button-form" type="submit">Alterar</button>
 </form>
+
+<script src="../js/moment.js" ></script>
+<script src="../js/inseminacao.js"></script>
 
 <script src="../js/script.js"></script>

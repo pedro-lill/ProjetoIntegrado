@@ -32,15 +32,15 @@
           <option value="Sim" value="<?=$retorno?>">Sim</option>
     </select>
   </div>
-  <div class="div-inteira" id="div-data-insem">
+  <div class="div-metade" id="div-data-insem">
     <label class="label-cadastra" for="id_dtInseminacao">Inseminação </label>
     <input type="date" name="field_dtInseminacao" id="id_dtInseminacao" value="<?=$dtInseminacao?>" onChange="dataPrevisaoParto()" > 
   </div>
-  <div class="div-metade">
+  <div class="div-metade" id="div-prev-parto">
     <label class="label-cadastra" for="id_dtPrevisaoParto" id="id_dtPrevisaoParto_label">Previsão de parto</label>
     <input type="hidden" name="field_dtPrevisaoParto" id="id_dtPrevisaoParto" disabled="disabled" value="" > 
   </div>
-  <div class="div-inteira">
+  <div class="div-metade" id="div-touro">
     <label class="label-cadastra" for="id_touroInseminador">Cód. touro </label>
     <input type="text"  name="field_touroInseminador" maxlength="100" id="id_touroInseminador" value="<?=$touroInseminador?>"required>
   </div>
