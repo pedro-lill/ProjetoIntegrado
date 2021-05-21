@@ -6,7 +6,7 @@ function dataPrevisaoParto(){
     var dtInseminacao = document.getElementById("id_dtInseminacao").value;
     
     var dataFormatada = moment(dtInseminacao, "YYYY-MM-DD").add(10, 'months');
-
+    var dataFormatada = moment(dataFormatada).format('YYYY-MM-DD');
     console.log(dtInseminacao);
     console.log(dataFormatada)
 
@@ -15,6 +15,6 @@ function dataPrevisaoParto(){
 
     document.getElementById("id_dtPrevisaoParto_label").style.display = "block";
     document.getElementById("id_dtPrevisaoParto").setAttribute("type", "date");
-    document.getElementById("id_dtPrevisaoParto").setAttribute("value", "2222-12-12");
+    document.getElementById("id_dtPrevisaoParto").setAttribute("value", dataFormatada);
 
 }
