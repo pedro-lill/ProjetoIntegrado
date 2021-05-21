@@ -5,9 +5,8 @@
     <th>Data de Inseminacao</th>
   </tr>
 <?php
-$parto=00;
 $obj = new InseminacaoDAO();
-$lista = $obj->buscaMes($parto);
+$lista = $obj->buscaParto($_GET['filtroMes']);
 if(count($lista) == 0){
     //echo "Nenhum relatório encontrado.";
 }else{

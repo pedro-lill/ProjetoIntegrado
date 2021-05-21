@@ -4,6 +4,7 @@
         private $codInseminacao;
         private $codAnimal;
         private $dtInseminacao;
+        private $dtPrevSecagem;
         private $dtPrevParto;
         private $touroInseminador;
         private $inseminadorResponsavel;

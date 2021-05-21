@@ -100,6 +100,32 @@
             }
         }
 
+        public function buscaAnoSecagem($ano){
+            try{
+                $query = $this->conexao->prepare("select * FROM inseminacao WHERE YEAR(dtPrevSecagem) = :a");//data
+                $query->bindParam(":a", $ano, PDO::PARAM_INT);
+                $query->execute();
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
+                return $registros;
+            }
+            catch(PDOException $e){
+                echo "Erro no acesso aos dados: ". $e->getMessage();
+            }
+        }
+
+        public function buscaAnoParto($ano){
+            try{
+                $query = $this->conexao->prepare("select * FROM inseminacao WHERE YEAR(dtPrevParto) = :a");//data
+                $query->bindParam(":a", $ano, PDO::PARAM_INT);
+                $query->execute();
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
+                return $registros;
+            }
+            catch(PDOException $e){
+                echo "Erro no acesso aos dados: ". $e->getMessage();
+            }
+        }
+
         public function buscaMesAno($mes, $ano){
             try{
                 $query = $this->conexao->prepare("select * FROM inseminacao WHERE MONTH(dtInseminacao) = :m and YEAR(dtInseminacao) = :a");//data
@@ -119,8 +145,8 @@
                 $query = $this->conexao->prepare("insert into inseminacao values (NULL, :c, :d, :ps, :pp, :t, :ir, :r, :o)");
                 $query->bindValue(":c", $inseminacao->getCodAnimal());
                 $query->bindValue(":d", $inseminacao->getDtInseminacao());
-                $query->bindValue(":pp", $inseminacao->getDtPrevParto());
                 $query->bindValue(":ps", $inseminacao->getDtPrevSecagem());
+                $query->bindValue(":pp", $inseminacao->getDtPrevParto());
                 $query->bindValue(":t", $inseminacao->getTouroInseminador());
                 $query->bindValue(":ir", $inseminacao->getInseminadorResponsavel());
                 $query->bindValue(":r", $inseminacao->getRetorno());
