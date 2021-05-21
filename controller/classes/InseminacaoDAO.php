@@ -61,6 +61,32 @@
             }
         }
 
+        public function buscaSecagem($mes){
+            try{
+                $query = $this->conexao->prepare("select * FROM inseminacao WHERE MONTH(dtPrevSecagem) = :m");//data
+                $query->bindParam(":m", $mes, PDO::PARAM_INT);
+                $query->execute();
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
+                return $registros;
+            }
+            catch(PDOException $e){
+                echo "Erro no acesso aos dados: ". $e->getMessage();
+            }
+        }
+
+        public function buscaParto($mes){
+            try{
+                $query = $this->conexao->prepare("select * FROM inseminacao WHERE MONTH(dtPrevParto) = :m");//data
+                $query->bindParam(":m", $mes, PDO::PARAM_INT);
+                $query->execute();
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
+                return $registros;
+            }
+            catch(PDOException $e){
+                echo "Erro no acesso aos dados: ". $e->getMessage();
+            }
+        }
+
         public function buscaAno($ano){
             try{
                 $query = $this->conexao->prepare("select * FROM inseminacao WHERE YEAR(dtInseminacao) = :a");//data
@@ -93,8 +119,8 @@
                 $query = $this->conexao->prepare("insert into inseminacao values (NULL, :c, :d, :ps, :pp, :t, :ir, :r, :o)");
                 $query->bindValue(":c", $inseminacao->getCodAnimal());
                 $query->bindValue(":d", $inseminacao->getDtInseminacao());
-                $query->bindValue(":pp", $inseminacao->getDtPrevisaoParto());
-                $query->bindValue(":ps", $inseminacao->getDtPrevisaoSecagem());
+                $query->bindValue(":pp", $inseminacao->getDtPrevParto());
+                $query->bindValue(":ps", $inseminacao->getDtPrevSecagem());
                 $query->bindValue(":t", $inseminacao->getTouroInseminador());
                 $query->bindValue(":ir", $inseminacao->getInseminadorResponsavel());
                 $query->bindValue(":r", $inseminacao->getRetorno());
@@ -108,13 +134,13 @@
 
         public function alterar(inseminacao $inseminacao){
             try{
-                $query = $this->conexao->prepare("update inseminacao set codAnimal = :c, dtInseminacao = :d, dtPrevisaoParto = :pp, touroInseminador = :t, inseminadorResponsavel = :ir, retorno = :r, 
+                $query = $this->conexao->prepare("update inseminacao set codAnimal = :c, dtInseminacao = :d, dtPrevParto = :pp, touroInseminador = :t, inseminadorResponsavel = :ir, retorno = :r, 
                 obs = :o, where codInseminacao = :i");
                 $query->bindValue(":i", $inseminacao->getCodInseminacao());
                 $query->bindValue(":c", $inseminacao->getCodAnimal());
                 $query->bindValue(":d", $inseminacao->getDtInseminacao());
-                $query->bindValue(":ps", $inseminacao->getDtPrevisaoSecagem());
-                $query->bindValue(":pp", $inseminacao->getDtPrevisaoParto());
+                $query->bindValue(":ps", $inseminacao->getDtPrevSecagem());
+                $query->bindValue(":pp", $inseminacao->getDtPrevParto());
                 $query->bindValue(":t", $inseminacao->getTouroInseminador());
                 $query->bindValue(":ir", $inseminacao->getInseminadorResponsavel());
                 $query->bindValue(":r", $inseminacao->getRetorno());

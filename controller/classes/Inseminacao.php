@@ -4,7 +4,7 @@
         private $codInseminacao;
         private $codAnimal;
         private $dtInseminacao;
-        private $dtPrevisaoParto;
+        private $dtPrevParto;
         private $touroInseminador;
         private $inseminadorResponsavel;
         private $retorno;
@@ -35,20 +35,20 @@
             $this->dtInseminacao = $dtInseminacao;
         }
 
-        public function getDtPrevisaoSecagem(){
-            return $this->dtPrevisaoSecagem;
+        public function getDtPrevSecagem(){
+            return $this->dtPrevSecagem;
         }
 
-        public function setDtPrevisaoSecagem($dtPrevisaoSecagem){
-            $this->dtPrevisaoSecagem = $dtPrevisaoSecagem;
+        public function setDtPrevSecagem($dtPrevSecagem){
+            $this->dtPrevSecagem = $dtPrevSecagem;
         }
 
-        public function getDtPrevisaoParto(){
-            return $this->dtPrevisaoParto;
+        public function getDtPrevParto(){
+            return $this->dtPrevParto;
         }
 
-        public function setDtPrevisaoParto($dtPrevisaoParto){
-            $this->dtPrevisaoParto = $dtPrevisaoParto;
+        public function setDtPrevParto($dtPrevParto){
+            $this->dtPrevParto = $dtPrevParto;
         }
 
         public function getTouroInseminador(){

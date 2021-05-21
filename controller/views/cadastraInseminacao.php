@@ -34,19 +34,19 @@
   </div>
   <div class="div-metade" >
     <label class="label-cadastra" for="id_dtInseminacao">Inseminação </label>
-    <input type="date" name="field_dtInseminacao" id="id_dtInseminacao" value="<?=$dtInseminacao?>" onChange="dataPrevisaoParto()" > 
+    <input type="date" name="field_dtInseminacao" id="id_dtInseminacao" value="<?=$dtInseminacao?>" onclick="dataPrevisaoParto()" > 
   </div>
   <div class="div-metade" >
     <label class="label-cadastra" for="id_touroInseminador">Cód. touro </label>
     <input type="text"  name="field_touroInseminador" maxlength="100" id="id_touroInseminador" value="<?=$touroInseminador?>"required>
   </div>
   <div class="div-metade" >
-    <label class="label-cadastra" for="id_dtPrevisaoParto" id="id_dtPrevisaoParto_label">Previsão de parto</label>
-    <input type="hidden" name="field_dtPrevisaoParto" id="id_dtPrevisaoParto" disabled="disabled" value="" > 
+    <label class="label-cadastra" for="id_dtPrevSecagem" id="id_dtPrevSecagem_label">Previsão de secagem</label>
+    <input type="hidden" name="field_dtPrevSecagem" id="id_dtPrevSecagem" disabled="disabled" value="" > 
   </div>
   <div class="div-metade" >
-    <label class="label-cadastra" for="id_dtPrevisaoSecagem" id="id_dtPrevisaoSecagem_label">Previsão de secagem</label>
-    <input type="hidden" name="field_dtPrevisaoSecagem" id="id_dtPrevisaoSecagem" disabled="disabled" value="" > 
+    <label class="label-cadastra" for="id_dtPrevParto" id="id_dtPrevParto_label">Previsão de parto</label>
+    <input type="hidden" name="field_dtPrevParto" id="id_dtPrevParto" disabled="disabled" value="" > 
   </div>
   <div class="div-inteira">
     <label class="label-cadastra" for="id_inseminadorResponsavel">Inseminador responsável </label>

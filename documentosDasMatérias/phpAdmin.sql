@@ -32,8 +32,8 @@ create table inseminacao(
   codInseminacao INTEGER AUTO_INCREMENT PRIMARY KEY,
   codAnimal INTEGER NOT NULL,
   dtInseminacao DATE NOT NULL,
-  dtPrevisaoSecagem DATE NOT NULL,
-  dtPrevisaoParto DATE NOT NULL,
+  dtPrevSecagem DATE NOT NULL,
+  dtPrevParto DATE NOT NULL,
   touroInseminador VARCHAR(20) NOT NULL,
   inseminadorResponsavel VARCHAR(40) NOT NULL,
   retorno VARCHAR(10) NOT NULL,
@@ -91,7 +91,7 @@ insert into animal (codAnimal, dtNascimento, codMae, nomePai, nomeImagem, estado
   (853, '2021-05-04', 888, 'padrao', "101.jpg", 'Viva'),  
   (861, '2021-05-04', 888, 'padrao', "101.jpg", 'Viva');
 
-insert into inseminacao (codInseminacao, codAnimal, dtInseminacao, dtPrevisaoSecagem, dtPrevisaoParto, touroInseminador, inseminadorResponsavel, retorno, obs) values
+insert into inseminacao (codInseminacao, codAnimal, dtInseminacao, dtPrevSecagem, dtPrevParto, touroInseminador, inseminadorResponsavel, retorno, obs) values
   (NULL, 101,'2021-05-04', '2021-10-04', '2021-12-04','benz','Gilmar', 'Não', 'ok'),
   (NULL, 102,'2021-10-04', '2021-10-04', '2021-12-04','polita','Felipe', 'Não', 'ok'),
   (NULL, 101,'2021-05-04', '2021-10-04', '2021-12-04','benz','Gilmar', 'Não', 'ok'),
