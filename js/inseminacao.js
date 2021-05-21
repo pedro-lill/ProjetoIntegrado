@@ -6,6 +6,8 @@ function dataPrevisaoParto(){
 
     
     var dtInseminacao = document.getElementById("id_dtInseminacao").value;
+
+    var dataFormatadaPrevParto =  <?=date('d/m/Y', strtotime("+0 days",strtotime($animal->getDtNascimento())));?>
     
     var dataFormatadaPrevParto = moment(dtInseminacao, "YYYY-MM-DD").add(284, 'days');
     var dataFormatadaPrevSecagem = moment(dtInseminacao, "YYYY-MM-DD").add(224, 'days');

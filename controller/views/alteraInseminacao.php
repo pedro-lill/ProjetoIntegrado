@@ -61,7 +61,27 @@
   <button name="adiciona" class="button-form" type="submit">Alterar</button>
 </form>
 
-<script src="../js/moment.js" ></script>
-<script src="../js/inseminacao.js"></script>
+<script>
+  
+document.getElementById("id_dtPrevParto_label").style.display = "none";
+document.getElementById("id_dtPrevSecagem_label").style.display = "none";
+
+function dataPrevisaoParto(){
+    var dtInseminacao = document.getElementById("id_dtInseminacao").value;
+
+    var dataFormatadaPrevParto =  <?=date('y-m-d', strtotime("+284 days",strtotime($animal->getDtNascimento())));?>
+    var dataFormatadaPrevSecagem =  <?=date('y-m-d', strtotime("+224 days",strtotime($animal->getDtNascimento())));?>
+
+    document.getElementById("id_dtPrevParto_label").style.display = "block";
+    document.getElementById("id_dtPrevSecagem_label").style.display = "block";
+
+    document.getElementById("id_dtPrevParto").setAttribute("type", "date");
+    document.getElementById("id_dtPrevParto").setAttribute("value", dataPrevParto);
+
+    document.getElementById("id_dtPrevSecagem").setAttribute("type", "date");
+    document.getElementById("id_dtPrevSecagem").setAttribute("value", dataPrevSecagem);
+}
+
+</script>
 
 <script src="../js/script.js"></script>
