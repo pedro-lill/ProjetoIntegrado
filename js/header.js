@@ -11,6 +11,6 @@ function MeuBotaoMenu() {
     if (checkbox.checked == true) 
         minhasopcoesdemenu.style.left = "0vw";
      if(checkbox.checked == false) 
-        minhasopcoesdemenu.style.left = "-50vw";
+        minhasopcoesdemenu.style.left = "-100vw";
 
 }

@@ -14,9 +14,9 @@
 </head>
 
 <body>
+
 <header>
-  <input type="checkbox" id="check" onclick="MeuBotaoMenu()">
-  <label for="check" class="checkbtn">&#9776;</label>
+  <a href="login.php">COOPTAR - Cooperativa de produção agropecuaria Cascata</a> 
   <ul id="PrecisoParajs">
       <li><a href="">Ligue agora</a></li>
       <li><a href="">Ver rota</a></li>
@@ -24,7 +24,22 @@
   </ul>
 </header>
 
-<a href="login.php">Login</a>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="opcoes-menu-index">
+  <a href="login.php" name="leiteiro" id="leiteiro"></a>
+  <label for="leiteiro"> Leiteiro</label>
+  <label> Leiteiro</label>
+  <label> Leiteiro</label>
+  <label> Leiteiro</label>
+</div>
+
+<script src="js/header.js"></script>
+
 
 </body>
 </html>

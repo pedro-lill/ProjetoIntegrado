@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    transition: transform 0.3s;
+    background-color: #ebebeb;
+}
+
+header {
+    background-color: #073a18;
+    color: #fff;
+    font-size: 130%;
+    height: 60px;
+    position: relative;
+    padding: 0px 15px;
+
+    display: flex;
+}
+    
+    header a{
+text-decoration: none;
+color: #fff;
+width: 50vw;
+
+padding: 10px;
+font-size:18px;
+font-weight: 600;
+color: #fff;
+text-decoration: none;
+transition: 0.5s;
+line-height: 25px;
+border-radius: 4px;
+text-transform: uppercase;
+margin-right: 5px;
+
+    }
+
+  header ul {
+    width: 80vw;
+    list-style-type: none;
+    margin: 0;
+    text-decoration: none;
+  }
+  
+  header ul li {
+    list-style: none;
+    padding-top:15px;
+    display: inline-block;
+  }
+  
+  header ul li a {    
+    padding: 8px;
+    font-size:15px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+    line-height: 25px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin-right: 5px;
+  }
+  
+  header ul li a:hover{
+    background-color:#027005;
+    cursor: pointer;
+  }
+  
+
+  .opcoes-menu-index{
+      width: 80vw;
+    display: grid;
+    text-align: center;
+    margin-left: 10vw;
+  }
+
+  .opcoes-menu-index label{
+    width: 60%;
+    background-color: rgb(44, 77, 13);
+    margin: 10px;
+    margin-left: 20%;
+    padding: 20px;
+    font-size:15px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;  
+    cursor: pointer;  
+}
+
