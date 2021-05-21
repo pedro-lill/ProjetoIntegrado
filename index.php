@@ -15,51 +15,53 @@
 
 <body>
 
-<header>
-  <a href="login.php">COOPTAR - Cooperativa de produção agropecuaria Cascata</a> 
-  <ul id="PrecisoParajs">
-      <li><a href="">Ligue agora</a></li>
-      <li><a href="">Ver rota</a></li>
-      <li><a href="">Horario de atendimento</a></li>
-  </ul>
-</header>
+    <header>
+      <a href="login.php">COOPTAR - Cooperativa de produção agropecuaria Cascata</a> 
+      <ul id="PrecisoParajs">
+          <li><a href="">Ligue agora</a></li>
+          <li><a href="">Ver rota</a></li>
+          <li><a href="">Horario de atendimento</a></li>
+      </ul>
+    </header>
 
-<div>
-        <img class="banner" title="Foto da pizzaria" src="img/banner.png" />
+    <div>
+        <img class="banner" title="Foto da cooperativa" src="img/banner.png" />
     </div>
 
-    <div class="textoPizzaria" id="TextoSobreJS">
-        <h2>Pizzaria Hermanos</h2>
-        <p>Acreditamos que cada pedaço de pizza representa em seu próprio ser uma experiência completa.</p>
+    <div class="textoCooperativa" id="TextoSobreJS">
+        <h2>COOPTAR - Cascata</h2></h2>
+        <p>Acreditamos que cada litro de leite representa em seu próprio ser uma experiência completa.</p>
     </div>
 
-    <div class="fotosPizzaria" id="FotosJS">
+    <div class="fotosCooperativa" id="FotosJS">
         <h2>Galeria de fotos</h2>
 
         <section class="galeria">
-            <a href="views/quemSomos.php"><img src="img/imagemPizzaria1.jfif" alt="imagem-promocao" onclick="" /></a>
-            <a href="views/quemSomos.php"><img src="img/imagemPizzaria2.jfif" alt="imagem-promocao" onclick="" /></a>
-            <a href="views/quemSomos.php"><img src="img/imagemPizzaria3.jfif" alt="imagem-promocao" onclick="" /></a>
-            <a href="views/quemSomos.php"><img src="img/imagemPizzaria4.jpg" alt="imagem-promocao" onclick="" /></a>
-            <a href="views/quemSomos.php"><img src="img/imagemPizzaria5.jfif" alt="imagem-promocao" onclick="" /></a>
-            <a href="views/quemSomos.php"><img src="img/imagemPizzaria6.jpg" alt="imagem-promocao" onclick="" /></a>
+            <a><img src="img/imagemPizzaria1.jfif"onclick="" /></a>
+            <a><img src="img/imagemPizzaria2.jfif"onclick="" /></a>
+            <a><img src="img/imagemPizzaria3.jfif"onclick="" /></a>
+            <a><img src="img/imagemPizzaria4.jpg" onclick="" /></a>
+            <a><img src="img/imagemPizzaria5.jfif"onclick="" /></a>
+            <a><img src="img/imagemPizzaria6.jpg" onclick="" /></a>
         </section>
     </div>
 
     <div class="contato" id="ContatoJS">
-        <form class="form">
+        <form class="form" action="https://api.staticforms.xyz/submit" method="post">
             <h2>Faça seu pedido!</h2>
+            <input type="hidden" name="accessKey" value="591db03e-aa17-4129-a006-22cbee72565c"> 
+            <input type="hidden" name="redirectTo" value="https://google.com">
             <div class="div-metade">
-            <input placeholder="Nome" type="text" required>
+            <input placeholder="Nome" name="name" type="text" required>
             </div>
             <div class="div-metade">
-            <input placeholder="Telefone" type="number" required>
+            <input placeholder="Telefone" name="phone" type="number" required>
             </div>
             <div class="div-inteira">
-            <input placeholder="E-mail" type="email" required>
+            <input placeholder="E-mail" name="email" type="email" required>
             </div>
             <div class="div-inteira">
-            <input type="text" placeholder="Digite sua mensagem aqui" maxlength="600" required></input>
+            <textarea name="message" maxlength="600" required></textarea>
             </div>
             <button class="field-enviar" type="submit">Enviar</button>
         </form>
@@ -88,24 +90,20 @@
     </div>
 
     <div class="container__text">
-        <span>Universidade Federal da Fronteira Sul</span>
-        <span>Sala 222 - Bloco B</span>
+        <span>Cooperativa Cascata</span>
         <span>festec@fronteiratec.com</span>
-        <span>Chapecó - SC</span>
+        <span>Pontão - RS</span>
         <span>(54) 999223311</span>
         <span>CNPJ 22333991100</span>
         <span>CEP 11993-1</span>
     </div>
 
     <div class="container__location">
-        <iframe class="map--google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d113646.78846818066!2d-52.732016345498185!3d-27.11024528476605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fb4b2bbbd96a4b%3A0x5871f4d6809cb67e!2sUniversidade%20Federal%20da%20Fronteira%20Sul%2C%20Campus%20Chapec%C3%B3!5e0!3m2!1spt-BR!2sbr!4v1597082565539!5m2!1spt-BR!2sbr"
+    <iframe class="map--google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1519.9125122962685!2d-52.788805162943426!3d-27.994238030769274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fcd41d897baa35%3A0x32d693b15a02d822!2sCooptar%20-%20Cooperativa%20de%20Produ%C3%A7%C3%A3o%20Agropecu%C3%A1ria%20Cascata!5e0!3m2!1spt-BR!2sbr!4v1621616755945!5m2!1spt-BR!2sbr" 
             style="border:none;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
 </div>
 
-<div class="container__copy">
-    <h5>&copy Desenvolvido por FronteiraTec</h5>
-</div>
 </footer>
 </body>
 </html>
