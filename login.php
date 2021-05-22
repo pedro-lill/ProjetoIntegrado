@@ -67,7 +67,8 @@
       <label class="label-cadastra" for="id_senha">Senha</label>
       <input type="password" id="id_senha" name="senha" value="<?=$senha ?>" required>
     </div>
-    <button name="logar" class="button-form" onclick= "validarLogin()" type="submit">Login</button>
+    <button class="button-form-voltar" type="button"><a href="index.php">Voltar</a></button>
+    <button name="logar" class="button-form-altera" onclick= "validarLogin()" type="submit">Login</button>
   </form>
 
 <!-- <script src="/js/login.js"></script> -->

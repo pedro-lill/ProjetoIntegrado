@@ -103,6 +103,16 @@ input[type=checkbox]:focus {
     font-weight: bold;
 }
 
+.button-form-voltar a {
+    width: 100%;
+    height: 100%;
+}
+
+.button-form-altera a {
+    width: 100%;
+    height: 100%;
+}
+
 .button-form-altera:hover {
     background-color: #104312;
 }
