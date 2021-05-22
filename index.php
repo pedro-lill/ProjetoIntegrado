@@ -19,7 +19,7 @@
       <a href="login.php">COOPTAR - Cooperativa de produção agropecuaria Cascata</a> 
       <ul id="PrecisoParajs">
           <li><a href="" onclick="window.open('http://api.whatsapp.com/send?1=pt_BR&phone=5554999939468','_system', 'location=yes'); return false;">Contato</a></li>
-          <li><a href="https://www.google.com/maps/dir//'-27.994195,-52.788219'/@-27.9941773,-52.8582593,12z/data=!4m6!4m5!1m0!1m3!2m2!1d-52.788219!2d-27.994195">Ver rota</a></li>
+          <li><a href="https://www.google.com/maps/dir//'-27.994195,-52.788219'/@-27.9941773,-52.8582593,12z/data=!4m6!4m5!1m0!1m3!2m2!1d-52.788219!2d-27.994195" target="_blank">Ver rota</a></li>
           <li><a href="#Atendimento">Horario de atendimento</a></li>
       </ul>
     </header>
@@ -112,9 +112,9 @@
 
             <div class="container__icons">
                 <ul>
-                    <li><a href="https://www.instagram.com/movimentosemterra/?hl=pt-br"><img src="/img/instagram.svg" height="45" width="45"></a></li>
-                    <li><a onclick="window.open('http://api.whatsapp.com/send?1=pt_BR&phone=5554999939468','_system', 'location=yes'); return false;"><img src="img/whatsapp.svg" height="45" width="45"></a></li>
-                    <li><a href="cooptarcascata@gmail.com"><img src="img/o-email.svg" width="45" height="45"></a></li>
+                    <li><a href="https://www.instagram.com/movimentosemterra/?hl=pt-br" target="_blank"><img src="/img/instagram.svg" height="45" width="45"></a></li>
+                    <li><a onclick="window.open('http://api.whatsapp.com/send?1=pt_BR&phone=5554999939468','_system', 'location=yes'); return false;" target="_blank"><img src="img/whatsapp.svg" height="45" width="45"></a></li>
+                    <li><a href=mailto:cooptarcascata@gmail.com><img src="img/o-email.svg" width="45" height="45"></a></li>
                 </ul>
             </div>
 
@@ -125,7 +125,7 @@
             </div>
 
             <div class="container__location">
-                <iframe class="map--google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1519.9125122962685!2d-52.788805162943426!3d-27.994238030769274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fcd41d897baa35%3A0x32d693b15a02d822!2sCooptar%20-%20Cooperativa%20de%20Produ%C3%A7%C3%A3o%20Agropecu%C3%A1ria%20Cascata!5e0!3m2!1spt-BR!2sbr!4v1621616755945!5m2!1spt-BR!2sbr" style="border:none;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <iframe class="map--google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1519.9125122962685!2d-52.788805162943426!3d-27.994238030769274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fcd41d897baa35%3A0x32d693b15a02d822!2sCooptar%20-%20Cooperativa%20de%20Produ%C3%A7%C3%A3o%20Agropecu%C3%A1ria%20Cascata!5e0!3m2!1spt-BR!2sbr!4v1621616755945!5m2!1spt-BR!2sbr" target="_blank" style="border:none;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
 
         </div>
