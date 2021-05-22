@@ -18,9 +18,9 @@
     <header>
       <a href="login.php">COOPTAR - Cooperativa de produção agropecuaria Cascata</a> 
       <ul id="PrecisoParajs">
-          <li><a class="altura_js" href="" onclick="window.open('http://api.whatsapp.com/send?1=pt_BR&phone=5554999939468','_system', 'location=yes'); return false;">Contato</a></li>
-          <li><a class="altura_js" href="https://www.google.com/maps/dir//'-27.994195,-52.788219'/@-27.9941773,-52.8582593,12z/data=!4m6!4m5!1m0!1m3!2m2!1d-52.788219!2d-27.994195">Ver rota</a></li>
-          <li><a class="altura_js" href="#Atendimento">Horario de atendimento</a></li>
+          <li><a href="" onclick="window.open('http://api.whatsapp.com/send?1=pt_BR&phone=5554999939468','_system', 'location=yes'); return false;">Contato</a></li>
+          <li><a href="https://www.google.com/maps/dir//'-27.994195,-52.788219'/@-27.9941773,-52.8582593,12z/data=!4m6!4m5!1m0!1m3!2m2!1d-52.788219!2d-27.994195">Ver rota</a></li>
+          <li><a href="#Atendimento">Horario de atendimento</a></li>
       </ul>
     </header>
 
@@ -69,6 +69,9 @@
     <div class="container-divs">
         <div class="div-rota">
             <h2>Localização</h2>
+            <span>Assentamento 16 de Março</span>
+            <span>Pontão - RS</span>
+            <span>CEP: 99190-000</span>
             <button class="button-rota">Rota</button>
         </div>
 
@@ -116,9 +119,6 @@
             </div>
 
             <div class="container__text">
-                <span>Assentamento 16 de Março</span>
-                <span>CEP: 99190-000</span>
-                <span>Pontão - RS</span>
                 <span>cooptarcascata@gmail.com</span>
                 <span>(54) 3503-0195</span>
                 <span>CNPJ: 22333991100</span>

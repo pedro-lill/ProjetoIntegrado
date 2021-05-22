@@ -63,6 +63,9 @@ header ul li {
   width: 40%;
   height: 400px;
   margin-left:10%;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+
 }
 
 .div-rota{
@@ -277,6 +280,23 @@ input:hover, textarea:hover {
 
 .container__icons ul li:last-child {
   margin-top: -6px;
+}
+
+.div-rota {
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.div-rota span {
+  font-size: 20px;
+  color: rgb(72, 72, 72);
+  font-weight: bold;
+  font-family: "Montserrat Bold", Helvetica, sans-serif;
+  padding:5px;
 }
 
 .container__text {
