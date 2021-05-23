@@ -45,34 +45,18 @@
         </section>
     </div>
 
-    <div class="contato" id="ContatoJS">
-        <form class="form" action="https://api.staticforms.xyz/submit" method="post">
-            <h2>Entre em contato conosco!</h2>
-            <input type="hidden" name="accessKey" value="591db03e-aa17-4129-a006-22cbee72565c"> 
-            <input type="hidden" name="redirectTo" value="https://google.com">
-            <div class="div-metade">
-            <input placeholder="Nome" name="name" type="text" required>
-            </div>
-            <div class="div-metade">
-            <input placeholder="Telefone" name="phone" type="number" required>
-            </div>
-            <div class="div-inteira">
-            <input placeholder="E-mail" name="email" type="email" required>
-            </div>
-            <div class="div-inteira">
-            <textarea placeholder="Digite a sua mensagem" name="message" maxlength="600" required></textarea>
-            </div>
-            <button class="field-enviar" type="submit">Enviar</button>
-        </form>
-    </div>
-
-    <div class="container-divs">
         <div class="div-rota">
             <h2>Localização</h2>
-            <span>Assentamento 16 de Março</span>
-            <span>Pontão - RS</span>
-            <span>CEP: 99190-000</span>
-            <button class="button-rota">Rota</button>
+            <div class="div-rota-text">
+                <span>Assentamento 16 de Março</span><br>
+                <span>Pontão - RS</span><br>
+                <span>CEP: 99190-000</span><br>
+                <button class="button-rota">Rota</button>
+            </div>
+            <div class="container__location">
+                <iframe class="map--google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1519.9125122962685!2d-52.788805162943426!3d-27.994238030769274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fcd41d897baa35%3A0x32d693b15a02d822!2sCooptar%20-%20Cooperativa%20de%20Produ%C3%A7%C3%A3o%20Agropecu%C3%A1ria%20Cascata!5e0!3m2!1spt-BR!2sbr!4v1621616755945!5m2!1spt-BR!2sbr" target="_blank" style="border:none;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+
         </div>
 
         <div class="div-funcionamento" id="Atendimento">
@@ -104,6 +88,26 @@
                 </tr>
             </table>
         </div>
+
+    <div class="contato" id="ContatoJS">
+        <form class="form" action="https://api.staticforms.xyz/submit" method="post">
+            <h2>Entre em contato conosco!</h2>
+            <input type="hidden" name="accessKey" value="591db03e-aa17-4129-a006-22cbee72565c"> 
+            <input type="hidden" name="redirectTo" value="https://google.com">
+            <div class="div-metade">
+            <input placeholder="Nome" name="name" type="text" required>
+            </div>
+            <div class="div-metade">
+            <input placeholder="Telefone" name="phone" type="number" required>
+            </div>
+            <div class="div-inteira">
+            <input placeholder="E-mail" name="email" type="email" required>
+            </div>
+            <div class="div-inteira">
+            <textarea placeholder="Digite a sua mensagem" name="message" maxlength="600" required></textarea>
+            </div>
+            <button class="field-enviar" type="submit">Enviar</button>
+        </form>
     </div>
 
     <footer class="main__footer" id="FooterJS">
@@ -122,10 +126,6 @@
                 <span>cooptarcascata@gmail.com</span>
                 <span>(54) 3503-0195</span>
                 <span>CNPJ: 22333991100</span>
-            </div>
-
-            <div class="container__location">
-                <iframe class="map--google" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1519.9125122962685!2d-52.788805162943426!3d-27.994238030769274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94fcd41d897baa35%3A0x32d693b15a02d822!2sCooptar%20-%20Cooperativa%20de%20Produ%C3%A7%C3%A3o%20Agropecu%C3%A1ria%20Cascata!5e0!3m2!1spt-BR!2sbr!4v1621616755945!5m2!1spt-BR!2sbr" target="_blank" style="border:none;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
 
         </div>
