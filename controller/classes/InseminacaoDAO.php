@@ -99,6 +99,7 @@
                 echo "Erro no acesso aos dados: ". $e->getMessage();
             }
         }
+        
 
         public function buscaAnoSecagem($ano){
             try{

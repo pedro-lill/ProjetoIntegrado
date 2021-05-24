@@ -48,6 +48,33 @@
             }
         }
 
+        public function buscaAno($ano){
+            try{
+                $query = $this->conexao->prepare("select * FROM producao WHERE YEAR(dtColeta) = :a");//data
+                $query->bindParam(":a", $ano, PDO::PARAM_INT);
+                $query->execute();
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Producao");
+                return $registros;
+            }
+            catch(PDOException $e){
+                echo "Erro no acesso aos dados: ". $e->getMessage();
+            }
+        }
+
+        public function buscaMesAno($mes, $ano){
+            try{
+                $query = $this->conexao->prepare("select * FROM producao WHERE MONTH(dtColeta) = :m and YEAR(dtColeta) = :a");//data
+                $query->bindParam(":m", $mes, PDO::PARAM_INT);
+                $query->bindParam(":a", $ano, PDO::PARAM_INT);
+                $query->execute();
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Producao");
+                return $registros;
+            }
+            catch(PDOException $e){
+                echo "Erro no acesso aos dados: ". $e->getMessage();
+            }
+        } 
+
         public function buscaLista($codAnimal){
             try{
                 $query = $this->conexao->prepare("select * from producao where codAnimal = :c");

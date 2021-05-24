@@ -6,12 +6,14 @@
   </tr>
 <?php
 $obj = new ProducaoDAO();
-$lista = $obj->buscaMes($_GET['filtroMes']);
+$mes = ($_GET['filtroMes']);
+$ano=($_GET['filtroAno']);
+$lista = $obj->buscaMesAno($mes, $ano);
 if(count($lista) == 0){
     //echo "Nenhum relatório encontrado.";
 }else{
     foreach ($lista as $producao){
-?>     
+?>      
 
   <tr>
     <td><?=$producao->getCodAnimal()?> </td>
