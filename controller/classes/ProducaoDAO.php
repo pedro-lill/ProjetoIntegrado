@@ -68,7 +68,6 @@
                 $query->bindValue(":d", $producao->getDtColeta());
                 $query->bindValue(":l", $producao->getLitros());
                 $query->bindValue(":pd", $producao->getPeriodoDia());
-                echo $producao->getPeriodoDia();
                 return $query->execute();
             }
             catch(PDOException $e){
