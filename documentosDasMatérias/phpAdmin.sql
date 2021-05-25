@@ -136,3 +136,4 @@ insert into tratamento(codTratamento, codAnimal, dtTratamento, motivoTratamento,
 
 insert into usuario(nomeLogin, senha)values
 ('pedro', '123')
+('pedro', 'projeto2021');

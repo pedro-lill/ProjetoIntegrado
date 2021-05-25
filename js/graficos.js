@@ -53,7 +53,7 @@ var myChart = new Chart(cty, {
         labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
         datasets: [{
           label: 'Produção de leite / 2020',
-          data: [0, 65, 59, 80, 81, 56, 55, 40, 20, 40, 50, 61],
+          data: [58, 65, 59, 80, 81, 73, 80, 70, 65, 70, 75, 68],
           fill: false,
           borderColor: 'rgb(75, 192, 192)',
           tension: 0.1
