@@ -11,10 +11,10 @@ body{
 header {
   background-color: #073a18;
   color: #fff;
+  width: 100%;
   font-size: 130%;
   height: 60px;
   position: relative;
-  padding: 0px 15px;
   display: flex;
   transition: 2s;
   z-index: 10;
@@ -28,9 +28,10 @@ header.PassouDaImagem {
 header a{
   text-decoration: none;
   color: #fff;
-  width: 80vw;
+  text-align: center;
+  width: 60%;
   padding: 15px;
-  font-size:18px;
+  font-size:16px;
   font-weight: 600;
   color: #fff;
   text-decoration: none;
@@ -42,10 +43,11 @@ header a{
 }
 
 header ul {
-  width: 80vw;
+  width: 40%;
   list-style-type: none;
   margin: 0;
   text-decoration: none;
+  margin-left:0%;
   position: relative;
   display: flex;
 }
@@ -58,7 +60,7 @@ header ul li {
 
 .div-funcionamento{
   width: 70%;
-  height: 400px;
+  height: 10%;
   margin-left:15%;
   margin-top: 20px;
 }
@@ -201,7 +203,7 @@ select, input[type=number], textarea, input[type=password]{
   height: 30px;
   margin-bottom: 15px;
   background-color: #fff;
-  border: 2px solid #373636;
+  border: 1px solid #373636;
   border-radius: 5px;
   padding: 5px 0px 5px 10px;
   font-family: "Poppins", sans-serif;
@@ -222,7 +224,7 @@ textarea:focus, input[type=password]:focus{
 }
 
 input:hover, textarea:hover {
-  border: 2px solid #03a508;
+  border: 1px solid #03a508;
 }
 
 .field-enviar {
@@ -254,12 +256,12 @@ input:hover, textarea:hover {
   margin: 0 1% 0 1%;
 }
 
-.main__footer {
+footer {
   background-color: rgb(58, 58, 58);
   position: relative;
   bottom: 0;
   top: 6px;
-  height: 240px;
+  height: 170px;
   width: 100%;
   border-top: 3px solid;
   border-image-source: linear-gradient(-90deg, #045912, #09ba17);
@@ -270,8 +272,8 @@ input:hover, textarea:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 91%;
-  padding: 15px 15px 0px 45.8px;
+  height: 100%;
+  padding: 0px 150px 0px 150px;
 }
 
 .container__icons ul{
@@ -333,7 +335,7 @@ input:hover, textarea:hover {
   margin-top: -250px;
 }
 
-.container__location .map--google {
+.container__location iframe {
   width: 100%;
   height: 100%;
 }
