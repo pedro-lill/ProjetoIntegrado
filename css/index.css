@@ -335,7 +335,7 @@ input:hover, textarea:hover {
   margin-top: -250px;
 }
 
-.container__location .map--google {
+.container__location iframe {
   width: 100%;
   height: 100%;
 }
