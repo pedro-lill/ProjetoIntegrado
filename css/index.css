@@ -256,12 +256,12 @@ input:hover, textarea:hover {
   margin: 0 1% 0 1%;
 }
 
-.main__footer {
+footer {
   background-color: rgb(58, 58, 58);
   position: relative;
   bottom: 0;
   top: 6px;
-  height: 240px;
+  height: 170px;
   width: 100%;
   border-top: 3px solid;
   border-image-source: linear-gradient(-90deg, #045912, #09ba17);
@@ -272,8 +272,8 @@ input:hover, textarea:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 91%;
-  padding: 15px 15px 0px 45.8px;
+  height: 100%;
+  padding: 0px 150px 0px 150px;
 }
 
 .container__icons ul{
