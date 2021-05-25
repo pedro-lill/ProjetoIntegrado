@@ -55,3 +55,5 @@
   </div>
   <button name="adiciona" class="button-form" type="submit">Alterar</button>
 </form>
+
+<?php require_once("../includes/footer.php");?>
