@@ -86,5 +86,4 @@ function dataPrevisaoParto(){
 }
 
 </script>
-
-<script src="../js/script.js"></script>
+<?php require_once("../includes/footer.php");?>
