@@ -47,7 +47,7 @@ header ul {
   list-style-type: none;
   margin: 0;
   text-decoration: none;
-  margin-left:20%;
+  margin-left:0%;
   position: relative;
   display: flex;
 }
@@ -60,7 +60,7 @@ header ul li {
 
 .div-funcionamento{
   width: 70%;
-  height: 400px;
+  height: 10%;
   margin-left:15%;
   margin-top: 20px;
 }
@@ -203,7 +203,7 @@ select, input[type=number], textarea, input[type=password]{
   height: 30px;
   margin-bottom: 15px;
   background-color: #fff;
-  border: 2px solid #373636;
+  border: 1px solid #373636;
   border-radius: 5px;
   padding: 5px 0px 5px 10px;
   font-family: "Poppins", sans-serif;
@@ -224,7 +224,7 @@ textarea:focus, input[type=password]:focus{
 }
 
 input:hover, textarea:hover {
-  border: 2px solid #03a508;
+  border: 1px solid #03a508;
 }
 
 .field-enviar {
