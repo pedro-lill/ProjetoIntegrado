@@ -135,5 +135,4 @@ insert into tratamento(codTratamento, codAnimal, dtTratamento, motivoTratamento,
   (NULL, 109, '2021-05-04','mastite', 'promastite', 0.40, 'gilmar', 'ok');
 
 insert into usuario(nomeLogin, senha)values
-('pedro', '123')
-('pedro', 'projeto2021');
+('pedro', '123');
