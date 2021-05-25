@@ -32,7 +32,7 @@
     <label class="label-cadastra" for="id_senhaConfirma">Nova senha</label>
     <input type="password" name="field_senhaConfirma" minlength="6" id="id_senhaConfirma" value="<?=$senha ?>" required>
   </div>
-  <button name="adiciona" class="button-form" type="submit">Editar</button>
-  <button class="login-a"><a href="../views/configuracoes.php">Voltar</a></button>
+  <button class="button-form-voltar"><a href="../views/configuracoes.php">Voltar</a></button>
+  <button name="adiciona" class="button-form-altera" type="submit">Editar</button>
 
 </form>

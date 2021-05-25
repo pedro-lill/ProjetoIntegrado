@@ -16,9 +16,9 @@
 <body>
 
     <header>
-      <a href="login.php">COOPTAR - Cooperativa de produção agropecuaria Cascata</a> 
+      <a class="titulo" href="login.php">COOPTAR - Cooperativa de produção agropecuaria Cascata</a> 
       <ul id="PrecisoParajs">
-          <li><a href="" onclick="window.open('http://api.whatsapp.com/send?1=pt_BR&phone=5554999939468','_system', 'location=yes'); return false;">Contato</a></li>
+          <li><a href="" onclick="window.open('http://api.whatsapp.com/send?1=pt_BR&phone=5554984326791','_system', 'location=yes'); return false;">Contato</a></li>
           <li><a href="https://www.google.com/maps/dir//'-27.994195,-52.788219'/@-27.9941773,-52.8582593,12z/data=!4m6!4m5!1m0!1m3!2m2!1d-52.788219!2d-27.994195" target="_blank">Ver rota</a></li>
           <li><a href="#Atendimento">Horario de atendimento</a></li>
       </ul>
@@ -119,8 +119,8 @@
             <div class="container__icons">
                 <ul>
                     <li><a href="https://www.instagram.com/movimentosemterra/?hl=pt-br" target="_blank"><img src="/img/instagram.svg" alt="instagram" height="45" width="45"></a></li>
-                    <li><a href="" onclick="window.open('http://api.whatsapp.com/send?1=pt_BR&phone=5554999939468','_system', 'location=yes'); return false;" target="_blank"><img src="img/whatsapp.svg" alt="whatsapp" height="45" width="45"></a></li>
-                    <li><a href=mailto:cooptarcascata@gmail.com><img src="img/o-email.svg" alt="email" width="45" height="45"></a></li>
+                    <li><a href="" onclick="window.open('http://api.whatsapp.com/send?1=pt_BR&phone=5554984326791','_system', 'location=yes'); return false;" target="_blank"><img src="img/whatsapp.svg" alt="whatsapp" height="45" width="45"></a></li>
+                    <li><a href=mailto:cooptarcascata@gmail.com><img src="img/email.svg" alt="email" width="45" height="45"></a></li>
                 </ul>
             </div>
 

@@ -25,10 +25,9 @@ header.PassouDaImagem {
   transition: 2s;
 }
 
-header a{
+header .titulo{
   text-decoration: none;
   color: #fff;
-  text-align: center;
   width: 60%;
   padding: 15px;
   font-size:16px;
@@ -39,11 +38,10 @@ header a{
   line-height: 25px;
   border-radius: 4px;
   text-transform: uppercase;
-  margin-right: 5px;
+  margin-left: 20px;
 }
 
 header ul {
-  width: 40%;
   list-style-type: none;
   margin: 0;
   text-decoration: none;
@@ -62,14 +60,12 @@ header ul li {
   width: 70%;
   height: 10%;
   margin-left:15%;
-  margin-top: 20px;
 }
 
 .div-rota{
   width: 80%;
   height: 400px;
   margin-left:10%;
-  margin-top: 20px;
 }
 
 .div-rota-text{
@@ -98,14 +94,14 @@ tr:nth-child(even) {
 
 .button-rota {
   width: 40%;
-  height: 40px;
+  height: 30px;
   padding: 7px;
   background-color: #0f8213;
   color: #ffffff;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 0;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   box-shadow: 3px 3px 3px #353434;
 }
@@ -173,7 +169,8 @@ h1{
 
 h2{
   width: 100%;
-  margin-top: 60px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   text-align: center;
 }
 
@@ -230,14 +227,14 @@ input:hover, textarea:hover {
 .field-enviar {
   width: 15%;
   margin-left: 85%;
-  height: 40px;
+  height: 30px;
   padding: 7px;
   background-color: #0f8213;
   color: #ffffff;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 0;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   box-shadow: 3px 3px 3px #353434;
 }
@@ -301,8 +298,8 @@ footer {
 }
 
 .div-rota span {
-  font-size: 20px;
-  color: rgb(72, 72, 72);
+  font-size: 18px;
+  color: rgb(44, 44, 44);
   font-weight: bold;
   font-family: "Montserrat Bold", Helvetica, sans-serif;
   padding:5px;
