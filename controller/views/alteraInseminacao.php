@@ -61,6 +61,7 @@
   <button name="adiciona" class="button-form" type="submit">Alterar</button>
 </form>
 
+<script>
 function dataPrevisaoParto(){
   const dtInseminacao = document.getElementById("id_dtInseminacao").value;
   console.log(dtInseminacao);
