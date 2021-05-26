@@ -20,7 +20,7 @@
 <form action="" class="container-historicos" method="post" enctype="multipart/form-data">
 
   <h2>EDITAR PRODUÇÃO</h2>
-  
+  <input type="hidden" name="field_codProducao" value="<?=$codProducao?>">
   <div class="div-metade">
     <label class="label-cadastra" for="id_codAnimal">Código do animal </label>
     <input type="number" name="field_codAnimal" id="id_codAnimal" value="<?=$codAnimal ?>" required>
@@ -41,7 +41,7 @@
       <option value="tarde" value="<?=$periodoDia?>">Tarde</option>
     </select>
   </div>
-    <button name="adiciona" class="button-form" type="submit">Alterar</button>
+    <button name="altera" class="button-form" type="submit">Alterar</button>
 </form>
 
 <?php require_once("../includes/footer.php");?>

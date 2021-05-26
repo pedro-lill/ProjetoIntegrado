@@ -23,6 +23,7 @@
 
   <h2>EDITAR INSEMINAÇÃO</h2>
 
+  <input type="hidden" name="field_codInseminacao" value="<?=$codInseminacao?>">
   <div class="div-metade">
     <label class="label-cadastra" for="id_codAnimal">Código do animal </label>
     <input type="number" name="field_codAnimal" id="id_codAnimal" value="<?=$codAnimal?>" > 

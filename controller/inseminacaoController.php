@@ -49,6 +49,7 @@ else {
                 $obj->setInseminadorResponsavel($_POST['field_inseminadorResponsavel']);
                 $obj->setRetorno( $_POST['field_retorno']);
                 $obj->setObs( $_POST['field_obs']);
+                $obj->setCodInseminacao($_POST['field_codInseminacao']);
                 $erros = $obj->validate();
                 if(count($erros) != 0){
                     include "views/alteraInseminacao.php";                      

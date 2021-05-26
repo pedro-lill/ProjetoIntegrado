@@ -47,7 +47,7 @@ else {
                 $obj->setQuantidadeMedicamento($_POST['field_quantidadeMedicamento']);
                 $obj->setResponsavel($_POST['field_responsavel']);
                 $obj->setObs($_POST['field_obs']);
-                $obj->setCodTratamento($_POST['field_codTratamento']);
+                    
                 $erros = $obj->validate();
                 if(count($erros) != 0){
                     include "views/alteraTratamento.php";                      

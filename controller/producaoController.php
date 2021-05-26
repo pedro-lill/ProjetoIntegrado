@@ -3,7 +3,7 @@ include_once "../controller/classes/ProducaoDAO.php";
 if(!isset($_GET['acao'])){
     $obj = new ProducaoDAO();
     $lista = $obj->listar();
-    include "views/cadastraProducao.php";
+    include "views/listaAnimal.php";
 }
 else {    
 	switch($_GET['acao']){

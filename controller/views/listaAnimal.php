@@ -42,7 +42,7 @@
                   </div>
                   <div>
                       <button class="button-edit" onclick="window.location.href='animalController.php?acao=altera&codAnimal=<?=$animal->getCodAnimal() ?>'"><i class="fa fa-edit fa-1x"></i></button>
-                      <button class="button-delete" onclick='verificarExcluir(<?=$animal->getCodAnimal()?>)'><i class="fa fa-trash-alt fa-1x"></i></button>
+                      <button class="button-delete" onclick="window.location.href='animalController.php?acao=exclui&codAnimal=<?=$animal->getCodAnimal() ?>'"><i class="fa fa-trash-alt fa-1x"></i></button>
                   </div>
               </div>
           </div>
@@ -55,5 +55,3 @@
     </div>
 
     <?php require_once("../includes/footer.php");?>
-
-    <script src="/js/lista-animais.js"></script>

@@ -104,12 +104,13 @@
 
         public function alterar(producao $producao){
             try{
-                $query = $this->conexao->prepare("update producao set codAnimal = :c, dtColeta = :d, litros = :l, periodoDia = :pd where codProducao = :p");
-                $query->bindValue(":p", $producao->getCodProducao());
+                $query = $this->conexao->prepare("update producao set codAnimal = :c, dtColeta = :d, litros = :l, 
+                periodoDia = :pd where codProducao = :p");
                 $query->bindValue(":c", $producao->getCodAnimal());
                 $query->bindValue(":d", $producao->getDtColeta());
                 $query->bindValue(":l", $producao->getLitros());
                 $query->bindValue(":pd", $producao->getPeriodoDia());
+                $query->bindValue(":p", $producao->getCodProducao(), PDO::PARAM_INT);
              
                 return $query->execute();
             }

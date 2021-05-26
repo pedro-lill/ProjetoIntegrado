@@ -25,7 +25,7 @@
         public function buscarAltera($codInseminacao){
             try{
                 $query = $this->conexao->prepare("select * from inseminacao where codInseminacao = :i");
-                $query->bindParam(":i", $codInseminacao);
+                $query->bindParam(":i", $codInseminacao, PDO::PARAM_INT);
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
                 return $registros[0];
@@ -141,7 +141,7 @@
             }
         } 
 
-        public function inserir(inseminacao $inseminacao){
+        public function inserir(Inseminacao $inseminacao){
             try{
                 $query = $this->conexao->prepare("insert into inseminacao values (NULL, :c, :d, :ps, :pp, :t, :ir, :r, :o)");
                 $query->bindValue(":c", $inseminacao->getCodAnimal());
@@ -159,10 +159,11 @@
             }
         }
 
-        public function alterar(inseminacao $inseminacao){
+        public function alterar(Inseminacao $inseminacao){
             try{
-                $query = $this->conexao->prepare("update inseminacao set codAnimal = :c, dtInseminacao = :d, dtPrevSecagem =:ps, dtPrevParto = :pp, touroInseminador = :t, inseminadorResponsavel = :ir, retorno = :r, 
-                obs = :o, where codInseminacao = :i");
+                $query = $this->conexao->prepare("update inseminacao set codAnimal = :c, dtInseminacao = :d, dtPrevSecagem =:ps, 
+                dtPrevParto = :pp, touroInseminador = :t, inseminadorResponsavel = :ir, retorno = :r, 
+                obs = :o where codInseminacao = :i");
                 $query->bindValue(":c", $inseminacao->getCodAnimal());
                 $query->bindValue(":d", $inseminacao->getDtInseminacao());
                 $query->bindValue(":ps", $inseminacao->getDtPrevSecagem());
@@ -171,7 +172,7 @@
                 $query->bindValue(":ir", $inseminacao->getInseminadorResponsavel());
                 $query->bindValue(":r", $inseminacao->getRetorno());
                 $query->bindValue(":o", $inseminacao->getObs());
-                $query->bindValue(":i", $inseminacao->getCodInseminacao());
+                $query->bindValue(":i", $inseminacao->getCodInseminacao(), PDO::PARAM_INT);
                
                 return $query->execute();
             }
