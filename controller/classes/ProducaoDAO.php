@@ -88,7 +88,7 @@
             }
         }        
 
-        public function inserir(producao $producao){
+        public function inserir(Producao $producao){
             try{
                 $query = $this->conexao->prepare("insert into producao values (NULL, :c, :d, :l, :pd)");
                 $query->bindValue(":c", $producao->getCodAnimal());
@@ -102,7 +102,7 @@
             }
         }
 
-        public function alterar(producao $producao){
+        public function alterar(Producao $producao){
             try{
                 $query = $this->conexao->prepare("update producao set codAnimal = :c, dtColeta = :d, litros = :l, 
                 periodoDia = :pd where codProducao = :p");
