@@ -61,10 +61,11 @@
             }
         }
 
-        public function buscaSecagem($mes){
+        public function buscaMesAnoSecagem($mes, $ano){
             try{
-                $query = $this->conexao->prepare("select * FROM inseminacao WHERE MONTH(dtPrevSecagem) = :m");//data
+                $query = $this->conexao->prepare("select * FROM inseminacao WHERE MONTH(dtPrevSecagem) = :m and YEAR(dtPrevSecagem) = :a");//data
                 $query->bindParam(":m", $mes, PDO::PARAM_INT);
+                $query->bindParam(":a", $ano, PDO::PARAM_INT);
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
                 return $registros;
@@ -74,10 +75,11 @@
             }
         }
 
-        public function buscaParto($mes){
+        public function buscaMesAnoParto($mes, $ano){
             try{
-                $query = $this->conexao->prepare("select * FROM inseminacao WHERE MONTH(dtPrevParto) = :m");//data
+                $query = $this->conexao->prepare("select * FROM inseminacao WHERE MONTH(dtPrevParto) = :m and YEAR(dtPrevParto) = :a");//data
                 $query->bindParam(":m", $mes, PDO::PARAM_INT);
+                $query->bindParam(":a", $ano, PDO::PARAM_INT);
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Inseminacao");
                 return $registros;

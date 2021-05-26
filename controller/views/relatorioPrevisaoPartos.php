@@ -6,7 +6,9 @@
   </tr>
 <?php
 $obj = new InseminacaoDAO();
-$lista = $obj->buscaParto($_GET['filtroMes']);
+$mes=($_GET['filtroMes']);
+$ano=($_GET['filtroAno']);
+$lista = $obj->buscaMesAnoParto($mes, $ano);
 if(count($lista) == 0){
     //echo "Nenhum relatório encontrado.";
 }else{
