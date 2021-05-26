@@ -38,14 +38,18 @@ else {
             }
             else{ 
                 $obj = new Producao();
-                $obj->setCodProducao($_POST['field_codProducao']);
                 $obj->setCodAnimal($_POST['field_codAnimal']);
                 $obj->setDtColeta($_POST['field_dtColeta']);
                 $obj->setLitros($_POST['field_litros']);
                 $obj->setPeriodoDia($_POST['field_periodoDia']);
+                $obj->setCodProducao($_POST['field_codProducao']);
                 $erros = $obj->validate();
                 if(count($erros) != 0){
                     include "views/alteraProducao.php";                      
+                }else{
+                    $bd = new ProducaoDAO();
+                    if($bd->alterar($obj))
+                        header("Location: producaoController.php"); 
                 }
             }
             break;

@@ -104,7 +104,7 @@
 
         public function alterar(producao $producao){
             try{
-                $query = $this->conexao->prepare("update producao set codAnimal = : c, dtColeta = :d, litros = :l, periodoDia = :pd where codProducao = :p");
+                $query = $this->conexao->prepare("update producao set codAnimal = :c, dtColeta = :d, litros = :l, periodoDia = :pd where codProducao = :p");
                 $query->bindValue(":p", $producao->getCodProducao());
                 $query->bindValue(":c", $producao->getCodAnimal());
                 $query->bindValue(":d", $producao->getDtColeta());

@@ -25,7 +25,7 @@
         public function buscarAltera($codTratamento){
             try{
                 $query = $this->conexao->prepare("select * from tratamento where codTratamento = :i");
-                $query->bindParam(":i", $codTratamento);
+                $query->bindParam(":i", $codTratamento, PDO::PARAM_INT);
                 $query->execute();
                 $registros = $query->fetchAll(PDO::FETCH_CLASS, "Tratamento");
                 return $registros[0];
@@ -67,14 +67,16 @@
 
         public function alterar(Tratamento $tratamento){
             try{
-                $query = $this->conexao->prepare("update tratamento set codAnimal = : c, codTratamento = :t, motivoTratamento = :mt, nomeMedicamento = :nm, quantidadeMedicamento = :qm, responsavel = :r, obs = :o where codTratamento = :t");
+                $query = $this->conexao->prepare("update tratamento set codAnimal = :c, dtTratamento = :d, motivoTratamento = :mt, nomeMedicamento = :nm, 
+                quantidadeMedicamento = :qm, responsavel = :r, obs = :o where codTratamento = :t");
                 $query->bindValue(":c", $tratamento->getCodAnimal());
-                $query->bindValue(":t", $tratamento->getCodTratamento());
+                $query->bindValue(":d", $tratamento->getDtTratamento());
                 $query->bindValue(":mt", $tratamento->getMotivoTratamento());
                 $query->bindValue(":nm", $tratamento->getNomeMedicamento());
                 $query->bindValue(":qm", $tratamento->getQuantidadeMedicamento());
                 $query->bindValue(":r", $tratamento->getResponsavel());
                 $query->bindValue(":o", $tratamento->getObs());
+                $query->bindValue(":t", $tratamento->getCodTratamento(), PDO::PARAM_INT);
                 return $query->execute();
             }
             catch(PDOException $e){

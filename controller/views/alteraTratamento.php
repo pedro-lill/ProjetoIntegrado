@@ -12,8 +12,7 @@
   $dtTratamento = isset($_POST['field_dtTratamento']) ? $_POST['field_dtTratamento'] : $tratamento->getDtTratamento();
   $motivoTratamento = isset($_POST['field_motivoTratamento']) ? $_POST['field_motivoTratamento'] : $tratamento->getMotivoTratamento();
   $nomeMedicamento = isset($_POST['field_nomeMedicamento']) ? $_POST['field_nomeMedicamento'] : $tratamento->getNomeMedicamento();
-  $dtTratamento = isset($_POST['field_dtTratamento']) ? $_POST['field_dtTratamento'] : $tratamento->getDtTratamento();
-  $quantidadeMedicamento = isset($_POST['field_quantidadeMedicamento']) ? $_POST['field_quantidadeMedicamento'] : $tratamento->getMotivoTratamento();
+  $quantidadeMedicamento = isset($_POST['field_quantidadeMedicamento']) ? $_POST['field_quantidadeMedicamento'] : $tratamento->getQuantidadeMedicamento();
   $responsavel = isset($_POST['field_responsavel']) ? $_POST['field_responsavel'] : $tratamento->getResponsavel();
   $obs = isset($_POST['field_obs']) ? $_POST['field_obs'] : $tratamento->getObs();
   ?>
@@ -24,7 +23,7 @@
 <form action="" class="container-historicos" method="post" enctype="multipart/form-data">
 
   <h2>EDITAR TRATAMENTO</h2>
-
+  <input type="hidden" name="field_codTratamento" value="<?=$codTratamento?>">
   <div class="div-metade">
     <label class="label-cadastra" for="id_codAnimal">Código do animal </label>
     <input type="number" name="field_codAnimal" id="id_codAnimal" value="<?=$codAnimal ?>" required>
@@ -53,7 +52,7 @@
     <label class="label-cadastra" for="id_obs">Observação </label>
     <input type="text" name="field_obs" maxlength="50" id="id_obs" value="<?=$obs?>">
   </div>
-  <button name="adiciona" class="button-form" type="submit">Alterar</button>
+  <button name="altera" class="button-form" type="submit">Alterar</button>
 </form>
 
 <?php require_once("../includes/footer.php");?>
