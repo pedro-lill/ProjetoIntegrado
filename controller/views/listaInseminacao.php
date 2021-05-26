@@ -39,7 +39,7 @@
             </div>
             <div>
               <button name="altera" class="button-edit" onclick="window.location.href='inseminacaoController.php?acao=altera&codInseminacao=<?=$inseminacao->getCodInseminacao() ?>'"><i class="fa fa-edit fa-1x"></i></button>
-              <button name="exclui" class="button-delete" onclick=""><i class="fa fa-trash-alt fa-1x"></i></button>
+              <button name="exclui" class="button-delete" onclick="window.location.href='inseminacaoController.php?acao=exclui&codInseminacao=<?=$inseminacao->getCodInseminacao() ?>'"><i class="fa fa-trash-alt fa-1x"></i></button>
             </div>
           </div>
       </div>

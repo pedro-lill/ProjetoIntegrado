@@ -23,6 +23,7 @@
 
   <h2>EDITAR INSEMINAÇÃO</h2>
 
+  <input type="hidden" name="field_codInseminacao" value="<?=$codInseminacao?>">
   <div class="div-metade">
     <label class="label-cadastra" for="id_codAnimal">Código do animal </label>
     <input type="number" name="field_codAnimal" id="id_codAnimal" value="<?=$codAnimal?>" > 
@@ -58,7 +59,7 @@
     <label class="label-cadastra" for="id_obs">Observação: </label>
     <input type="text" name="field_obs" maxlength="100" id="id_obs" value="<?=$obs?>">
   </div>
-  <button name="adiciona" class="button-form" type="submit">Alterar</button>
+  <button name="altera" class="button-form" type="submit">Alterar</button>
 </form>
 
 <script>

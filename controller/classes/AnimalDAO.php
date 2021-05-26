@@ -55,12 +55,14 @@
 
         public function alterar(Animal $animal){
             try{
-                $query = $this->conexao->prepare("update animal set dtNascimento = :d, codMae = :m, nomePai = :p, estadoVida = :e, nomeImagem = :i where codAnimal = :c");
+                $query = $this->conexao->prepare("update animal set dtNascimento = :d, codMae = :m, nomePai = :p, estadoVida = :e, motivoMorte = :mm, dataMorte = :dm, nomeImagem = :i where codAnimal = :c");
                 $query->bindValue(":c", $animal->getCodAnimal());
                 $query->bindValue(":d", $animal->getDtNascimento());
                 $query->bindValue(":m", $animal->getCodMae());
                 $query->bindValue(":p", $animal->getNomePai());
                 $query->bindValue(":e", $animal->getEstadoVida());
+                $query->bindValue(":mm", $animal->getMotivoMorte());
+                $query->bindValue(":dm", $animal->getDataMorte());
                 $query->bindValue(":i", $animal->getNomeImagem());
                 return $query->execute();
             }
@@ -71,7 +73,10 @@
 
         public function excluir($codAnimal){
             try{
-                $query = $this->conexao->prepare("delete from animal where codAnimal = :c");
+                $query = $this->conexao->prepare("SET foreign_key_checks = 0;
+                delete from 'animal','inseminacao', 'producao', 'tratamento' where 'inseminacao'.'codAnimal' = :c
+                and 'producao'.'codAnimal' = :c and 'tratamento'.'codAnimal' = :c and 'producao'.'codAnimal' = :c and  'animal'.'codAnimal' = :c;
+                SET foreign_key_checks = 1");
                 $query->bindValue(":c", $codAnimal);
                 return $query->execute();
             }

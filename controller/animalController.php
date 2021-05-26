@@ -47,12 +47,14 @@ else {
             }
             else{ 
                 $obj = new Animal();
+                $obj->setCodAnimal($_POST['field_codAnimal']);
                 $obj->setDtNascimento($_POST['field_dtNascimento']);
                 $obj->setCodMae($_POST['field_codMae']);
                 $obj->setNomePai($_POST['field_nomePai']);
                 $obj->setEstadoVida($_POST['field_estadoVida']);
+                $obj->setMotivoMorte($_POST['field_motivoMorte']);
+                $obj->setDataMorte($_POST['field_dataMorte']);
                 $obj->setNomeImagem($_FILES['field_imagem']['name']);
-                $obj->setCodAnimal($_POST['field_codAnimal']);
                 $erros = $obj->validate();
                 if(count($erros) != 0){
                     include "views/alteraAnimal.php";                      

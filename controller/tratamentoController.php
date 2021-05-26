@@ -40,17 +40,21 @@ else {
             }
             else{ 
                 $obj = new Tratamento();
-                $obj->setCodTratamento($_POST['field_codTratamento']);
-                $obj->setDtTratamento($_POST['field_dtTratamento']);
                 $obj->setCodAnimal($_POST['field_codAnimal']);
+                $obj->setDtTratamento($_POST['field_dtTratamento']);
                 $obj->setMotivoTratamento($_POST['field_motivoTratamento']);
                 $obj->setNomeMedicamento($_POST['field_nomeMedicamento']);
                 $obj->setQuantidadeMedicamento($_POST['field_quantidadeMedicamento']);
                 $obj->setResponsavel($_POST['field_responsavel']);
                 $obj->setObs($_POST['field_obs']);
+                    
                 $erros = $obj->validate();
                 if(count($erros) != 0){
                     include "views/alteraTratamento.php";                      
+                }else{
+                    $bd = new TratamentoDAO();
+                    if($bd->alterar($obj))
+                        header("Location: tratamentoController.php"); 
                 }
             }
             break;
