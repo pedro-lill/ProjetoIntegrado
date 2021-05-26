@@ -22,6 +22,7 @@
             <option value="ins"     <?=($_GET['acao']  == 'ins')?'selected':''?>>Inseminação</option>
             <option value="prevSec" <?=($_GET['acao']  == 'prevSec')?'selected':''?>>Previsão de secagem</option>
             <option value="prevPa"  <?=($_GET['acao']  == 'prevPa')?'selected':''?>>Previsão de parto</option>
+            <option value="nasc"  <?=($_GET['acao']  == 'nasc')?'selected':''?>>Nascimentos</option>
         </select>
     </div>
 

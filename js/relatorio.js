@@ -11,5 +11,7 @@ function fazerRelatorio(){
         return window.location.href='../controller/relatorioController.php?acao=prevSec&filtroMes=' + filtromes +'&filtroAno='+filtroano;
     }if(filtrotipo == "prevPa"){
         return window.location.href='../controller/relatorioController.php?acao=prevPa&filtroMes=' + filtromes +'&filtroAno='+filtroano;
+    }if(filtrotipo == "nasc"){
+        return window.location.href='../controller/relatorioController.php?acao=nasc&filtroMes=' + filtromes +'&filtroAno='+filtroano;
     }
 }

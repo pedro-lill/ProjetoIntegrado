@@ -22,6 +22,20 @@
             }
         }
 
+        public function buscaMesAnoAnimal($mes, $ano){
+            try{
+                $query = $this->conexao->prepare("select * FROM animal WHERE MONTH(dtNascimento) = :m and YEAR(dtNascimento) = :a");//data
+                $query->bindParam(":m", $mes, PDO::PARAM_INT);
+                $query->bindParam(":a", $ano, PDO::PARAM_INT);
+                $query->execute();
+                $registros = $query->fetchAll(PDO::FETCH_CLASS, "Animal");
+                return $registros;
+            }
+            catch(PDOException $e){
+                echo "Erro no acesso aos dados: ". $e->getMessage();
+            }
+        }
+
         public function buscar($codAnimal){
             try{
                 $query = $this->conexao->prepare("select * from animal where codAnimal=:c");

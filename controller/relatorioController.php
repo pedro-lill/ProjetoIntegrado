@@ -52,6 +52,17 @@ else {
                 }
                 break;
 
+            case 'nasc':
+                if(!isset($_POST['nasc'])){
+                    include_once "../controller/classes/AnimalDAO.php";
+                    include "../views/relatorios.php";
+                    include "views/relatorioAnimais.php";
+                    include "../includes/footer.php";
+                }else{
+                    include "../views/relatorios.php";
+                }
+                break;
+
             default:
                 echo "Ação não permitida"; 
         }
