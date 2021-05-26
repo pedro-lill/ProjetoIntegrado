@@ -67,11 +67,8 @@ document.getElementById("id_dtPrevSecagem_label").style.display = "none";
 
 function dataPrevisaoParto(){
   const dtInseminacao = document.getElementById("id_dtInseminacao").value;
-  console.log(dtInseminacao);
-  const dtInseminacaoo = dtInseminacao + ""
-  console.log(dtInseminacaoo);
 
-    <?=
+  <?php
   $inseminacaophp = "2020-11-11";
   $dataFormatadaPrevParto = date('Y-m-d', strtotime("+284 days",strtotime($inseminacaophp)));
   $dataFormatadaPrevSecagem =  date('Y-m-d', strtotime("+224 days",strtotime($inseminacaophp)));

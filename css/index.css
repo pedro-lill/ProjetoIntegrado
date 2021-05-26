@@ -9,7 +9,7 @@ body{
 }
 
 header {
-  background-color: #073a18;
+  background-color: #2b2b2b;
   color: #fff;
   width: 100%;
   font-size: 130%;
@@ -96,7 +96,7 @@ tr:nth-child(even) {
   width: 40%;
   height: 30px;
   padding: 7px;
-  background-color: #0f8213;
+  background-color: #1c851f;
   color: #ffffff;
   cursor: pointer;
   border-radius: 5px;
