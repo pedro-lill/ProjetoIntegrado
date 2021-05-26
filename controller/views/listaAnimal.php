@@ -42,7 +42,7 @@
                   </div>
                   <div>
                       <button class="button-edit" onclick="window.location.href='animalController.php?acao=altera&codAnimal=<?=$animal->getCodAnimal() ?>'"><i class="fa fa-edit fa-1x"></i></button>
-                      <button class="button-delete" onclick="window.location.href='animalController.php?acao=exclui&codAnimal=<?=$animal->getCodAnimal() ?>'"><i class="fa fa-trash-alt fa-1x"></i></button>
+                      <button class="button-delete" onclick="if(confirm('Voce tem certeza que deseja excluir o animal cód. <?=$animal->getCodAnimal() ?>?')){window.location.href='animalController.php?acao=exclui&codAnimal=<?=$animal->getCodAnimal() ?>'; return true}else return false"><i class="fa fa-trash-alt fa-1x"></i></button>
                   </div>
               </div>
           </div>
