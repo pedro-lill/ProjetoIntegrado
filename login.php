@@ -1,28 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<?php
-//if(isset($_POST['logar'])){
-//    $nomeLogin = $_POST['nomeLogin'];
-//    $senha = $_POST['senha'];
-//
-//    if($nomeLogin == 'pedro'){  
-//        if(password_verify($senha, 'dG9tYW5vY3U=')){ 
-//            session_start();
-//            $_SESSION['logado'] = true;
-//            $_SESSION['inicio'] = date("d/m/Y h:i:s");
-//            header("Location: /controller/usuarioController.php");
-//        }
-//        else{
-//            $erro = "Senha incorreta";
-//        }
-//    }
-//    else{ 
-//        $erro = "Login incorreto";
-//    }
-//}
-?>
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
