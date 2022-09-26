@@ -1,9 +1,6 @@
-<img src="img/imgReadme/mst.png" title="MST" href="https://mst.org.br/"
-    align="right"  width="90px" heigth="90px">
-
 ## Sistema de controle de dados do setor bovino leiteiro 
 
-# COOPTAR/MST
+# COOPTAR
 
 <b>Desenvolvedores:   </b><a href="https://github.com/pedro-lill" target="_blank"><b>Pedro Manfio</b></a> <b>  e  </b>
 <a href="https://github.com/fabricioromanii" target="_blank"><b>Fabrício Romani</b></a>
